@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.NodeSocketFloatUnsigned.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:49:01 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NodeSocketFloatUnsigned(NodeSocketStandard) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.NodeSocketInt.html" rel="next" title="NodeSocketInt(NodeSocketStandard)"/>
+<link href="bpy.types.NodeSocketFloatTime.html" rel="prev" title="NodeSocketFloatTime(NodeSocketStandard)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.NodeSocketInt.html" title="NodeSocketInt(NodeSocketStandard)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.NodeSocketFloatTime.html" title="NodeSocketFloatTime(NodeSocketStandard)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="nodesocketfloatunsigned-nodesocketstandard"></span><h1>NodeSocketFloatUnsigned(NodeSocketStandard)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base classes — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a>, <a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket" title="bpy.types.NodeSocket"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket</span></code></a>, <a class="reference internal" href="bpy.types.NodeSocketStandard.html#bpy.types.NodeSocketStandard" title="bpy.types.NodeSocketStandard"><code class="xref py py-class docutils literal"><span class="pre">NodeSocketStandard</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.NodeSocketFloatUnsigned"><a name="//apple_ref/cpp/Class/bpy.types.NodeSocketFloatUnsigned"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">NodeSocketFloatUnsigned</code><span class="sig-paren">(</span><em>NodeSocketStandard</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.NodeSocketFloatUnsigned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Floating point number socket of a node</p>
+<dl class="attribute">
+<dt id="bpy.types.NodeSocketFloatUnsigned.default_value"><a name="//apple_ref/cpp/Attribute/bpy.types.NodeSocketFloatUnsigned.default_value"></a>
+<code class="descname">default_value</code><a class="headerlink" href="#bpy.types.NodeSocketFloatUnsigned.default_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input value used for unconnected socket</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.NodeSocketFloatUnsigned.links"><a name="//apple_ref/cpp/Constant/bpy.types.NodeSocketFloatUnsigned.links"></a>
+<code class="descname">links</code><a class="headerlink" href="#bpy.types.NodeSocketFloatUnsigned.links" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of node links from or to this socket
+(readonly)</p>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.name" title="bpy.types.NodeSocket.name"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.name</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.identifier" title="bpy.types.NodeSocket.identifier"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.identifier</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.is_output" title="bpy.types.NodeSocket.is_output"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.is_output</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.hide" title="bpy.types.NodeSocket.hide"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.hide</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.enabled" title="bpy.types.NodeSocket.enabled"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.enabled</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.link_limit" title="bpy.types.NodeSocket.link_limit"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.link_limit</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.is_linked" title="bpy.types.NodeSocket.is_linked"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.is_linked</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.show_expanded" title="bpy.types.NodeSocket.show_expanded"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.show_expanded</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.hide_value" title="bpy.types.NodeSocket.hide_value"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.hide_value</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.node" title="bpy.types.NodeSocket.node"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.node</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.type" title="bpy.types.NodeSocket.type"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.type</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.bl_idname" title="bpy.types.NodeSocket.bl_idname"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.bl_idname</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.links" title="bpy.types.NodeSocket.links"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.links</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.links" title="bpy.types.NodeSocket.links"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.links</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocketStandard.html#bpy.types.NodeSocketStandard.links" title="bpy.types.NodeSocketStandard.links"><code class="xref py py-class docutils literal"><span class="pre">NodeSocketStandard.links</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocketStandard.html#bpy.types.NodeSocketStandard.links" title="bpy.types.NodeSocketStandard.links"><code class="xref py py-class docutils literal"><span class="pre">NodeSocketStandard.links</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.draw" title="bpy.types.NodeSocket.draw"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.draw</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocket.html#bpy.types.NodeSocket.draw_color" title="bpy.types.NodeSocket.draw_color"><code class="xref py py-class docutils literal"><span class="pre">NodeSocket.draw_color</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocketStandard.html#bpy.types.NodeSocketStandard.draw" title="bpy.types.NodeSocketStandard.draw"><code class="xref py py-class docutils literal"><span class="pre">NodeSocketStandard.draw</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.NodeSocketStandard.html#bpy.types.NodeSocketStandard.draw_color" title="bpy.types.NodeSocketStandard.draw_color"><code class="xref py py-class docutils literal"><span class="pre">NodeSocketStandard.draw_color</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.NodeSocketFloatTime.html" title="previous chapter">NodeSocketFloatTime(NodeSocketStandard)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.NodeSocketInt.html" title="next chapter">NodeSocketInt(NodeSocketStandard)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.NodeSocketInt.html" title="NodeSocketInt(NodeSocketStandard)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.NodeSocketFloatTime.html" title="NodeSocketFloatTime(NodeSocketStandard)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.NodeSocketFloatUnsigned.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:49:01 GMT -->
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.PointDensity.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:49:01 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>PointDensity(bpy_struct) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.PointDensityTexture.html" rel="next" title="PointDensityTexture(Texture)"/>
+<link href="bpy.types.PointCaches.html" rel="prev" title="PointCaches(bpy_struct)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.PointDensityTexture.html" title="PointDensityTexture(Texture)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.PointCaches.html" title="PointCaches(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="pointdensity-bpy-struct"></span><h1>PointDensity(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.PointDensity"><a name="//apple_ref/cpp/Class/bpy.types.PointDensity"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">PointDensity</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.PointDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point density settings</p>
+<dl class="data">
+<dt id="bpy.types.PointDensity.color_ramp"><a name="//apple_ref/cpp/Constant/bpy.types.PointDensity.color_ramp"></a>
+<code class="descname">color_ramp</code><a class="headerlink" href="#bpy.types.PointDensity.color_ramp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ColorRamp.html#bpy.types.ColorRamp" title="bpy.types.ColorRamp"><code class="xref py py-class docutils literal"><span class="pre">ColorRamp</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.color_source"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.color_source"></a>
+<code class="descname">color_source</code><a class="headerlink" href="#bpy.types.PointDensity.color_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data to derive color results from</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">CONSTANT</span></code> Constant.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_AGE</span></code> Particle Age, Lifetime mapped as 0.0 - 1.0 intensity.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_SPEED</span></code> Particle Speed, Particle speed (absolute magnitude of velocity) mapped as 0.0-1.0 intensity.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_VELOCITY</span></code> Particle Velocity, XYZ velocity mapped to RGB colors.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘CONSTANT’, ‘PARTICLE_AGE’, ‘PARTICLE_SPEED’, ‘PARTICLE_VELOCITY’], default ‘CONSTANT’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.falloff"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.falloff"></a>
+<code class="descname">falloff</code><a class="headerlink" href="#bpy.types.PointDensity.falloff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method of attenuating density by distance from the point</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">STANDARD</span></code> Standard.</li>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth.</li>
+<li><code class="docutils literal"><span class="pre">SOFT</span></code> Soft.</li>
+<li><code class="docutils literal"><span class="pre">CONSTANT</span></code> Constant, Density is constant within lookup radius.</li>
+<li><code class="docutils literal"><span class="pre">ROOT</span></code> Root.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_AGE</span></code> Particle Age.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_VELOCITY</span></code> Particle Velocity.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘STANDARD’, ‘SMOOTH’, ‘SOFT’, ‘CONSTANT’, ‘ROOT’, ‘PARTICLE_AGE’, ‘PARTICLE_VELOCITY’], default ‘STANDARD’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.PointDensity.falloff_curve"><a name="//apple_ref/cpp/Constant/bpy.types.PointDensity.falloff_curve"></a>
+<code class="descname">falloff_curve</code><a class="headerlink" href="#bpy.types.PointDensity.falloff_curve" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.CurveMapping.html#bpy.types.CurveMapping" title="bpy.types.CurveMapping"><code class="xref py py-class docutils literal"><span class="pre">CurveMapping</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.falloff_soft"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.falloff_soft"></a>
+<code class="descname">falloff_soft</code><a class="headerlink" href="#bpy.types.PointDensity.falloff_soft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Softness of the ‘soft’ falloff option</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.01, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.falloff_speed_scale"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.falloff_speed_scale"></a>
+<code class="descname">falloff_speed_scale</code><a class="headerlink" href="#bpy.types.PointDensity.falloff_speed_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplier to bring particle speed within an acceptable range</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.001, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.noise_basis"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.noise_basis"></a>
+<code class="descname">noise_basis</code><a class="headerlink" href="#bpy.types.PointDensity.noise_basis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Noise formula used for turbulence</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">BLENDER_ORIGINAL</span></code> Blender Original, Noise algorithm - Blender original: Smooth interpolated noise.</li>
+<li><code class="docutils literal"><span class="pre">ORIGINAL_PERLIN</span></code> Original Perlin, Noise algorithm - Original Perlin: Smooth interpolated noise.</li>
+<li><code class="docutils literal"><span class="pre">IMPROVED_PERLIN</span></code> Improved Perlin, Noise algorithm - Improved Perlin: Smooth interpolated noise.</li>
+<li><code class="docutils literal"><span class="pre">VORONOI_F1</span></code> Voronoi F1, Noise algorithm - Voronoi F1: Returns distance to the closest feature point.</li>
+<li><code class="docutils literal"><span class="pre">VORONOI_F2</span></code> Voronoi F2, Noise algorithm - Voronoi F2: Returns distance to the 2nd closest feature point.</li>
+<li><code class="docutils literal"><span class="pre">VORONOI_F3</span></code> Voronoi F3, Noise algorithm - Voronoi F3: Returns distance to the 3rd closest feature point.</li>
+<li><code class="docutils literal"><span class="pre">VORONOI_F4</span></code> Voronoi F4, Noise algorithm - Voronoi F4: Returns distance to the 4th closest feature point.</li>
+<li><code class="docutils literal"><span class="pre">VORONOI_F2_F1</span></code> Voronoi F2-F1, Noise algorithm - Voronoi F1-F2.</li>
+<li><code class="docutils literal"><span class="pre">VORONOI_CRACKLE</span></code> Voronoi Crackle, Noise algorithm - Voronoi Crackle: Voronoi tessellation with sharp edges.</li>
+<li><code class="docutils literal"><span class="pre">CELL_NOISE</span></code> Cell Noise, Noise algorithm - Cell Noise: Square cell tessellation.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘BLENDER_ORIGINAL’, ‘ORIGINAL_PERLIN’, ‘IMPROVED_PERLIN’, ‘VORONOI_F1’, ‘VORONOI_F2’, ‘VORONOI_F3’, ‘VORONOI_F4’, ‘VORONOI_F2_F1’, ‘VORONOI_CRACKLE’, ‘CELL_NOISE’], default ‘BLENDER_ORIGINAL’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.object"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.object"></a>
+<code class="descname">object</code><a class="headerlink" href="#bpy.types.PointDensity.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object to take point data from</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object" title="bpy.types.Object"><code class="xref py py-class docutils literal"><span class="pre">Object</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.particle_cache_space"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.particle_cache_space"></a>
+<code class="descname">particle_cache_space</code><a class="headerlink" href="#bpy.types.PointDensity.particle_cache_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinate system to cache particles in</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘OBJECT_LOCATION’, ‘OBJECT_SPACE’, ‘WORLD_SPACE’], default ‘OBJECT_LOCATION’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.particle_system"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.particle_system"></a>
+<code class="descname">particle_system</code><a class="headerlink" href="#bpy.types.PointDensity.particle_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Particle System to render as points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ParticleSystem.html#bpy.types.ParticleSystem" title="bpy.types.ParticleSystem"><code class="xref py py-class docutils literal"><span class="pre">ParticleSystem</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.point_source"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.point_source"></a>
+<code class="descname">point_source</code><a class="headerlink" href="#bpy.types.PointDensity.point_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point data to use as renderable point density</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">PARTICLE_SYSTEM</span></code> Particle System, Generate point density from a particle system.</li>
+<li><code class="docutils literal"><span class="pre">OBJECT</span></code> Object Vertices, Generate point density from an object’s vertices.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘PARTICLE_SYSTEM’, ‘OBJECT’], default ‘PARTICLE_SYSTEM’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.radius"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.radius"></a>
+<code class="descname">radius</code><a class="headerlink" href="#bpy.types.PointDensity.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radius from the shaded sample to look for points within</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.001, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.speed_scale"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.speed_scale"></a>
+<code class="descname">speed_scale</code><a class="headerlink" href="#bpy.types.PointDensity.speed_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplier to bring particle speed within an acceptable range</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.001, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.turbulence_depth"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.turbulence_depth"></a>
+<code class="descname">turbulence_depth</code><a class="headerlink" href="#bpy.types.PointDensity.turbulence_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Level of detail in the added turbulent noise</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 30], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.turbulence_influence"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.turbulence_influence"></a>
+<code class="descname">turbulence_influence</code><a class="headerlink" href="#bpy.types.PointDensity.turbulence_influence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for driving added turbulent noise</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">STATIC</span></code> Static, Noise patterns will remain unchanged, faster and suitable for stills.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_VELOCITY</span></code> Particle Velocity, Turbulent noise driven by particle velocity.</li>
+<li><code class="docutils literal"><span class="pre">PARTICLE_AGE</span></code> Particle Age, Turbulent noise driven by the particle’s age between birth and death.</li>
+<li><code class="docutils literal"><span class="pre">GLOBAL_TIME</span></code> Global Time, Turbulent noise driven by the global current frame.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘STATIC’, ‘PARTICLE_VELOCITY’, ‘PARTICLE_AGE’, ‘GLOBAL_TIME’], default ‘STATIC’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.turbulence_scale"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.turbulence_scale"></a>
+<code class="descname">turbulence_scale</code><a class="headerlink" href="#bpy.types.PointDensity.turbulence_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale of the added turbulent noise</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.01, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.turbulence_strength"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.turbulence_strength"></a>
+<code class="descname">turbulence_strength</code><a class="headerlink" href="#bpy.types.PointDensity.turbulence_strength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Strength of the added turbulent noise</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.01, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.use_falloff_curve"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.use_falloff_curve"></a>
+<code class="descname">use_falloff_curve</code><a class="headerlink" href="#bpy.types.PointDensity.use_falloff_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use a custom falloff curve</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.use_turbulence"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.use_turbulence"></a>
+<code class="descname">use_turbulence</code><a class="headerlink" href="#bpy.types.PointDensity.use_turbulence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add directed noise to the density at render-time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.PointDensity.vertex_cache_space"><a name="//apple_ref/cpp/Attribute/bpy.types.PointDensity.vertex_cache_space"></a>
+<code class="descname">vertex_cache_space</code><a class="headerlink" href="#bpy.types.PointDensity.vertex_cache_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinate system to cache vertices in</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘OBJECT_LOCATION’, ‘OBJECT_SPACE’, ‘WORLD_SPACE’], default ‘OBJECT_LOCATION’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.PointDensityTexture.html#bpy.types.PointDensityTexture.point_density" title="bpy.types.PointDensityTexture.point_density"><code class="xref py py-class docutils literal"><span class="pre">PointDensityTexture.point_density</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.PointCaches.html" title="previous chapter">PointCaches(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.PointDensityTexture.html" title="next chapter">PointDensityTexture(Texture)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.PointDensityTexture.html" title="PointDensityTexture(Texture)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.PointCaches.html" title="PointCaches(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.PointDensity.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:49:01 GMT -->
+</html>

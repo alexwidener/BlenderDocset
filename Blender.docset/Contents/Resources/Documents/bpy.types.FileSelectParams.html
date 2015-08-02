@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.FileSelectParams.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:59 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>FileSelectParams(bpy_struct) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.Filter2DActuator.html" rel="next" title="Filter2DActuator(Actuator)"/>
+<link href="bpy.types.FileBrowserFSMenuEntry.html" rel="prev" title="FileBrowserFSMenuEntry(bpy_struct)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.Filter2DActuator.html" title="Filter2DActuator(Actuator)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.FileBrowserFSMenuEntry.html" title="FileBrowserFSMenuEntry(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="fileselectparams-bpy-struct"></span><h1>FileSelectParams(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.FileSelectParams"><a name="//apple_ref/cpp/Class/bpy.types.FileSelectParams"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">FileSelectParams</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.FileSelectParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>File Select Parameters</p>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.directory"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.directory"></a>
+<code class="descname">directory</code><a class="headerlink" href="#bpy.types.FileSelectParams.directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directory displayed in the file browser</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.display_type"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.display_type"></a>
+<code class="descname">display_type</code><a class="headerlink" href="#bpy.types.FileSelectParams.display_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display mode for the file list</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">FILE_SHORTDISPLAY</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">FILE_LONGDISPLAY</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">FILE_IMGDISPLAY</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘FILE_SHORTDISPLAY’, ‘FILE_LONGDISPLAY’, ‘FILE_IMGDISPLAY’], default ‘FILE_SHORTDISPLAY’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.filename"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.filename"></a>
+<code class="descname">filename</code><a class="headerlink" href="#bpy.types.FileSelectParams.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Active file in the file browser</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.filter_glob"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.filter_glob"></a>
+<code class="descname">filter_glob</code><a class="headerlink" href="#bpy.types.FileSelectParams.filter_glob" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.filter_search"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.filter_search"></a>
+<code class="descname">filter_search</code><a class="headerlink" href="#bpy.types.FileSelectParams.filter_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter by name, supports ‘*’ wildcard</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.show_hidden"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.show_hidden"></a>
+<code class="descname">show_hidden</code><a class="headerlink" href="#bpy.types.FileSelectParams.show_hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show hidden dot files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.sort_method"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.sort_method"></a>
+<code class="descname">sort_method</code><a class="headerlink" href="#bpy.types.FileSelectParams.sort_method" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘FILE_SORT_ALPHA’, ‘FILE_SORT_EXTENSION’, ‘FILE_SORT_TIME’, ‘FILE_SORT_SIZE’], default ‘FILE_SORT_ALPHA’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.thumbnail_size"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.thumbnail_size"></a>
+<code class="descname">thumbnail_size</code><a class="headerlink" href="#bpy.types.FileSelectParams.thumbnail_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the size of the thumbnails</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘TINY’, ‘SMALL’, ‘NORMAL’, ‘LARGE’], default ‘TINY’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.FileSelectParams.title"><a name="//apple_ref/cpp/Constant/bpy.types.FileSelectParams.title"></a>
+<code class="descname">title</code><a class="headerlink" href="#bpy.types.FileSelectParams.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Title for the file browser</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (readonly, never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter"></a>
+<code class="descname">use_filter</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable filtering of files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_backup"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_backup"></a>
+<code class="descname">use_filter_backup</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show .blend1, .blend2, etc. files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_blender"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_blender"></a>
+<code class="descname">use_filter_blender</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_blender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show .blend files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_folder"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_folder"></a>
+<code class="descname">use_filter_folder</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show folders</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_font"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_font"></a>
+<code class="descname">use_filter_font</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_font" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show font files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_image"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_image"></a>
+<code class="descname">use_filter_image</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show image files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_movie"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_movie"></a>
+<code class="descname">use_filter_movie</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_movie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show movie files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_script"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_script"></a>
+<code class="descname">use_filter_script</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show script files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_sound"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_sound"></a>
+<code class="descname">use_filter_sound</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show sound files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.FileSelectParams.use_filter_text"><a name="//apple_ref/cpp/Attribute/bpy.types.FileSelectParams.use_filter_text"></a>
+<code class="descname">use_filter_text</code><a class="headerlink" href="#bpy.types.FileSelectParams.use_filter_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show text files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.SpaceFileBrowser.html#bpy.types.SpaceFileBrowser.params" title="bpy.types.SpaceFileBrowser.params"><code class="xref py py-class docutils literal"><span class="pre">SpaceFileBrowser.params</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.FileBrowserFSMenuEntry.html" title="previous chapter">FileBrowserFSMenuEntry(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.Filter2DActuator.html" title="next chapter">Filter2DActuator(Actuator)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.Filter2DActuator.html" title="Filter2DActuator(Actuator)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.FileBrowserFSMenuEntry.html" title="FileBrowserFSMenuEntry(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.FileSelectParams.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:59 GMT -->
+</html>

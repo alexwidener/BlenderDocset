@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.Speaker.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Speaker(ID) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.SpeedControlSequence.html" rel="next" title="SpeedControlSequence(EffectSequence)"/>
+<link href="bpy.types.SpaceView3D.html" rel="prev" title="SpaceView3D(Space)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.SpeedControlSequence.html" title="SpeedControlSequence(EffectSequence)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.SpaceView3D.html" title="SpaceView3D(Space)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="speaker-id"></span><h1>Speaker(ID)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base classes — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a>, <a class="reference internal" href="bpy.types.ID.html#bpy.types.ID" title="bpy.types.ID"><code class="xref py py-class docutils literal"><span class="pre">ID</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.Speaker"><a name="//apple_ref/cpp/Class/bpy.types.Speaker"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">Speaker</code><span class="sig-paren">(</span><em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.Speaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Speaker datablock for 3D audio speaker objects</p>
+<dl class="data">
+<dt id="bpy.types.Speaker.animation_data"><a name="//apple_ref/cpp/Constant/bpy.types.Speaker.animation_data"></a>
+<code class="descname">animation_data</code><a class="headerlink" href="#bpy.types.Speaker.animation_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animation data for this datablock</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.AnimData.html#bpy.types.AnimData" title="bpy.types.AnimData"><code class="xref py py-class docutils literal"><span class="pre">AnimData</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.attenuation"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.attenuation"></a>
+<code class="descname">attenuation</code><a class="headerlink" href="#bpy.types.Speaker.attenuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>How strong the distance affects volume, depending on distance model</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.cone_angle_inner"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.cone_angle_inner"></a>
+<code class="descname">cone_angle_inner</code><a class="headerlink" href="#bpy.types.Speaker.cone_angle_inner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angle of the inner cone, in degrees, inside the cone the volume is 100 %</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 360], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.cone_angle_outer"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.cone_angle_outer"></a>
+<code class="descname">cone_angle_outer</code><a class="headerlink" href="#bpy.types.Speaker.cone_angle_outer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angle of the outer cone, in degrees, outside this cone the volume is the outer cone volume, between inner and outer cone the volume is interpolated</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 360], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.cone_volume_outer"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.cone_volume_outer"></a>
+<code class="descname">cone_volume_outer</code><a class="headerlink" href="#bpy.types.Speaker.cone_volume_outer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume outside the outer cone</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.distance_max"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.distance_max"></a>
+<code class="descname">distance_max</code><a class="headerlink" href="#bpy.types.Speaker.distance_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum distance for volume calculation, no matter how far away the object is</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.distance_reference"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.distance_reference"></a>
+<code class="descname">distance_reference</code><a class="headerlink" href="#bpy.types.Speaker.distance_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference distance at which volume is 100 %</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.muted"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.muted"></a>
+<code class="descname">muted</code><a class="headerlink" href="#bpy.types.Speaker.muted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mute the speaker</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.pitch"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.pitch"></a>
+<code class="descname">pitch</code><a class="headerlink" href="#bpy.types.Speaker.pitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Playback pitch of the sound</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.1, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.Speaker.relative"><a name="//apple_ref/cpp/Constant/bpy.types.Speaker.relative"></a>
+<code class="descname">relative</code><a class="headerlink" href="#bpy.types.Speaker.relative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the source is relative to the camera or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.sound"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.sound"></a>
+<code class="descname">sound</code><a class="headerlink" href="#bpy.types.Speaker.sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sound datablock used by this speaker</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.Sound.html#bpy.types.Sound" title="bpy.types.Sound"><code class="xref py py-class docutils literal"><span class="pre">Sound</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.volume"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.volume"></a>
+<code class="descname">volume</code><a class="headerlink" href="#bpy.types.Speaker.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>How loud the sound is</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.volume_max"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.volume_max"></a>
+<code class="descname">volume_max</code><a class="headerlink" href="#bpy.types.Speaker.volume_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum volume, no matter how near the object is</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Speaker.volume_min"><a name="//apple_ref/cpp/Attribute/bpy.types.Speaker.volume_min"></a>
+<code class="descname">volume_min</code><a class="headerlink" href="#bpy.types.Speaker.volume_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum volume, no matter how far away the object is</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.name" title="bpy.types.ID.name"><code class="xref py py-class docutils literal"><span class="pre">ID.name</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.users" title="bpy.types.ID.users"><code class="xref py py-class docutils literal"><span class="pre">ID.users</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.use_fake_user" title="bpy.types.ID.use_fake_user"><code class="xref py py-class docutils literal"><span class="pre">ID.use_fake_user</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.tag" title="bpy.types.ID.tag"><code class="xref py py-class docutils literal"><span class="pre">ID.tag</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.is_updated" title="bpy.types.ID.is_updated"><code class="xref py py-class docutils literal"><span class="pre">ID.is_updated</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.is_updated_data" title="bpy.types.ID.is_updated_data"><code class="xref py py-class docutils literal"><span class="pre">ID.is_updated_data</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.is_library_indirect" title="bpy.types.ID.is_library_indirect"><code class="xref py py-class docutils literal"><span class="pre">ID.is_library_indirect</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.library" title="bpy.types.ID.library"><code class="xref py py-class docutils literal"><span class="pre">ID.library</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.copy" title="bpy.types.ID.copy"><code class="xref py py-class docutils literal"><span class="pre">ID.copy</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.user_clear" title="bpy.types.ID.user_clear"><code class="xref py py-class docutils literal"><span class="pre">ID.user_clear</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.animation_data_create" title="bpy.types.ID.animation_data_create"><code class="xref py py-class docutils literal"><span class="pre">ID.animation_data_create</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.animation_data_clear" title="bpy.types.ID.animation_data_clear"><code class="xref py py-class docutils literal"><span class="pre">ID.animation_data_clear</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.ID.html#bpy.types.ID.update_tag" title="bpy.types.ID.update_tag"><code class="xref py py-class docutils literal"><span class="pre">ID.update_tag</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.context.html#bpy.context.speaker" title="bpy.context.speaker"><code class="xref py py-mod docutils literal"><span class="pre">bpy.context.speaker</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.BlendData.html#bpy.types.BlendData.speakers" title="bpy.types.BlendData.speakers"><code class="xref py py-class docutils literal"><span class="pre">BlendData.speakers</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.BlendDataSpeakers.html#bpy.types.BlendDataSpeakers.new" title="bpy.types.BlendDataSpeakers.new"><code class="xref py py-class docutils literal"><span class="pre">BlendDataSpeakers.new</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.BlendDataSpeakers.html#bpy.types.BlendDataSpeakers.remove" title="bpy.types.BlendDataSpeakers.remove"><code class="xref py py-class docutils literal"><span class="pre">BlendDataSpeakers.remove</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.SpaceView3D.html" title="previous chapter">SpaceView3D(Space)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.SpeedControlSequence.html" title="next chapter">SpeedControlSequence(EffectSequence)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.SpeedControlSequence.html" title="SpeedControlSequence(EffectSequence)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.SpaceView3D.html" title="SpaceView3D(Space)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.Speaker.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+</html>

@@ -1,0 +1,860 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/gpu.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:52 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>GPU functions (gpu) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="aud.html" rel="next" title="Audio System (aud)"/>
+<link href="blf.html" rel="prev" title="Font Drawing (blf)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="aud.html" title="Audio System (aud)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="blf.html" title="Font Drawing (blf)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-gpu">
+<span id="gpu-functions-gpu"></span><h1><a name="//apple_ref/cpp/Module/gpu"></a>GPU functions (gpu)<a class="headerlink" href="#module-gpu" title="Permalink to this headline">¶</a></h1>
+<p>This module provides access to materials GLSL shaders.</p>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>Module to provide functions concerning the GPU implementation in Blender, in particular
+the GLSL shaders that blender generates automatically to render materials in the 3D view
+and in the game engine.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The API provided by this module should be consider unstable. The data exposed by the API
+are are closely related to Blender’s internal GLSL code and may change if the GLSL code
+is modified (e.g. new uniform type).</p>
+</div>
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="glsl-data-type">
+<h3>GLSL data type<a class="headerlink" href="#glsl-data-type" title="Permalink to this headline">¶</a></h3>
+<p id="data-type">Type of GLSL data.
+For shader uniforms, the data type determines which glUniform function
+variant to use to send the uniform value to the GPU.
+For vertex attributes, the data type determines which glVertexAttrib function
+variant to use to send the vertex attribute to the GPU.</p>
+<p>See <a class="reference internal" href="#export-shader">export_shader</a></p>
+<dl class="data">
+<dt id="gpu.GPU_DATA_1I"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_1I"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_1I</code><a class="headerlink" href="#gpu.GPU_DATA_1I" title="Permalink to this definition">¶</a></dt>
+<dd><p>one integer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">1</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_1F"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_1F"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_1F</code><a class="headerlink" href="#gpu.GPU_DATA_1F" title="Permalink to this definition">¶</a></dt>
+<dd><p>one float</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">2</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_2F"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_2F"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_2F</code><a class="headerlink" href="#gpu.GPU_DATA_2F" title="Permalink to this definition">¶</a></dt>
+<dd><p>two floats</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">3</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_3F"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_3F"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_3F</code><a class="headerlink" href="#gpu.GPU_DATA_3F" title="Permalink to this definition">¶</a></dt>
+<dd><p>three floats</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">4</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_4F"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_4F"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_4F</code><a class="headerlink" href="#gpu.GPU_DATA_4F" title="Permalink to this definition">¶</a></dt>
+<dd><p>four floats</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">5</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_9F"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_9F"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_9F</code><a class="headerlink" href="#gpu.GPU_DATA_9F" title="Permalink to this definition">¶</a></dt>
+<dd><p>matrix 3x3 in column-major order</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">6</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_16F"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_16F"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_16F</code><a class="headerlink" href="#gpu.GPU_DATA_16F" title="Permalink to this definition">¶</a></dt>
+<dd><p>matrix 4x4 in column-major order</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">7</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DATA_4UB"><a name="//apple_ref/cpp/Constant/gpu.GPU_DATA_4UB"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DATA_4UB</code><a class="headerlink" href="#gpu.GPU_DATA_4UB" title="Permalink to this definition">¶</a></dt>
+<dd><p>four unsigned byte</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">8</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+<div class="section" id="glsl-uniform-type">
+<h3>GLSL uniform type<a class="headerlink" href="#glsl-uniform-type" title="Permalink to this headline">¶</a></h3>
+<p id="uniform-type">Constants that specify the type of uniform used in a GLSL shader.
+The uniform type determines the data type, origin and method
+of calculation used by Blender to compute the uniform value.</p>
+<p>The calculation of some of the uniforms is based on matrices available in the scene:</p>
+<blockquote>
+<div><dl class="docutils" id="mat4-world-to-cam">
+<span id="mat4-cam-to-world"></span><dt><em>mat4_cam_to_world</em></dt>
+<dd><p class="first">Model matrix of the camera. OpenGL 4x4 matrix that converts
+camera local coordinates to world coordinates. In blender this is obtained from the
+‘matrix_world’ attribute of the camera object.</p>
+<p class="last">Some uniform will need the <em>mat4_world_to_cam</em>
+matrix computed as the inverse of this matrix.</p>
+</dd>
+</dl>
+<dl class="docutils" id="mat4-world-to-object">
+<span id="mat4-object-to-world"></span><dt><em>mat4_object_to_world</em></dt>
+<dd><p class="first">Model matrix of the object that is being rendered. OpenGL 4x4 matric that converts
+object local coordinates to world coordinates. In blender this is obtained from the
+‘matrix_world’ attribute of the object.</p>
+<p class="last">Some uniform will need the <em>mat4_world_to_object</em> matrix, computed as the inverse of this matrix.</p>
+</dd>
+</dl>
+<dl class="docutils" id="mat4-world-to-lamp">
+<span id="mat4-lamp-to-world"></span><dt><em>mat4_lamp_to_world</em></dt>
+<dd><p class="first">Model matrix of the lamp lighting the object. OpenGL 4x4 matrix that converts lamp
+local coordinates to world coordinates. In blender this is obtained from the
+‘matrix_world’ attribute of the lamp object.</p>
+<p class="last">Some uniform will need the <em>mat4_world_to_lamp</em> matrix
+computed as the inverse of this matrix.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_OBJECT_VIEWMAT"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_OBJECT_VIEWMAT"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_OBJECT_VIEWMAT</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_OBJECT_VIEWMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a 4x4 GL matrix that converts world coordinates to
+camera coordinates (see <a class="reference internal" href="#mat4-world-to-cam">mat4_world_to_cam</a>). Can be set once per frame.
+There is at most one uniform of that type per shader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">1</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_OBJECT_MAT"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_OBJECT_MAT"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_OBJECT_MAT</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_OBJECT_MAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a 4x4 GL matrix that converts object coordinates
+to world coordinates (see <a class="reference internal" href="#mat4-object-to-world">mat4_object_to_world</a>). Must be set before drawing the object.
+There is at most one uniform of that type per shader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">2</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_OBJECT_VIEWIMAT"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_OBJECT_VIEWIMAT"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_OBJECT_VIEWIMAT</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_OBJECT_VIEWIMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a 4x4 GL matrix that converts coordinates
+in camera space to world coordinates (see <a class="reference internal" href="#mat4-cam-to-world">mat4_cam_to_world</a>).
+Can be set once per frame.
+There is at most one uniform of that type per shader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">3</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_OBJECT_IMAT"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_OBJECT_IMAT"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_OBJECT_IMAT</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_OBJECT_IMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a 4x4 GL matrix that converts world coodinates
+to object coordinates (see <a class="reference internal" href="#mat4-world-to-object">mat4_world_to_object</a>).
+Must be set before drawing the object.
+There is at most one uniform of that type per shader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">4</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_OBJECT_COLOR"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_OBJECT_COLOR"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_OBJECT_COLOR</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_OBJECT_COLOR" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a vector of 4 float representing a RGB color + alpha defined at object level.
+Each values between 0.0 and 1.0. In blender it corresponds to the ‘color’ attribute of the object.
+Must be set before drawing the object.
+There is at most one uniform of that type per shader.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">5</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_LAMP_DYNVEC"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_LAMP_DYNVEC"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_LAMP_DYNVEC</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_LAMP_DYNVEC" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a vector of 3 float representing the direction of light in camera space.
+In Blender, this is computed by</p>
+<p><a class="reference internal" href="#mat4-world-to-cam">mat4_world_to_cam</a> * (-vec3_lamp_Z_axis)</p>
+<p>as the lamp Z axis points to the opposite direction of light.
+The norm of the vector should be unity. Can be set once per frame.
+There is one uniform of that type per lamp lighting the material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">6</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_LAMP_DYNCO"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_LAMP_DYNCO"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_LAMP_DYNCO</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_LAMP_DYNCO" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a vector of 3 float representing the position of the light in camera space.
+Computed as</p>
+<p><a class="reference internal" href="#mat4-world-to-cam">mat4_world_to_cam</a> * vec3_lamp_pos</p>
+<p>Can be set once per frame.
+There is one uniform of that type per lamp lighting the material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">7</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_LAMP_DYNIMAT"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_LAMP_DYNIMAT"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_LAMP_DYNIMAT</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_LAMP_DYNIMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a 4x4 GL matrix that converts vector in camera space to lamp space.
+Computed as</p>
+<p><a class="reference internal" href="#mat4-world-to-lamp">mat4_world_to_lamp</a> * <a class="reference internal" href="#mat4-cam-to-world">mat4_cam_to_world</a></p>
+<p>Can be set once per frame.
+There is one uniform of that type per lamp lighting the material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">8</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_LAMP_DYNPERSMAT</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a 4x4 GL matrix that converts a vector in camera space to shadow buffer depth space.
+Computed as</p>
+<p><a class="reference internal" href="#mat4-perspective-to-depth">mat4_perspective_to_depth</a> * <a class="reference internal" href="#mat4-lamp-to-perspective">mat4_lamp_to_perspective</a> * <a class="reference internal" href="#mat4-world-to-lamp">mat4_world_to_lamp</a> * <a class="reference internal" href="#mat4-cam-to-world">mat4_cam_to_world</a>.</p>
+<p id="mat4-perspective-to-depth"><em>mat4_perspective_to_depth</em> is a fixed matrix defined as follow:</p>
+<div class="highlight-python"><div class="highlight"><pre>0.5 0.0 0.0 0.5
+0.0 0.5 0.0 0.5
+0.0 0.0 0.5 0.5
+0.0 0.0 0.0 1.0
+</pre></div>
+</div>
+<p>This uniform can be set once per frame. There is one uniform of that type per lamp casting shadow in the scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">9</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_LAMP_DYNENERGY"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_LAMP_DYNENERGY"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_LAMP_DYNENERGY</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_LAMP_DYNENERGY" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a single float representing the lamp energy. In blender it corresponds
+to the ‘energy’ attribute of the lamp data block.
+There is one uniform of that type per lamp lighting the material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">10</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_LAMP_DYNCOL"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_LAMP_DYNCOL"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_LAMP_DYNCOL</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_LAMP_DYNCOL" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is a vector of 3 float representing the lamp color.
+Color elements are between 0.0 and 1.0. In blender it corresponds
+to the ‘color’ attribute of the lamp data block.
+There is one uniform of that type per lamp lighting the material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">11</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_SAMPLER_2DBUFFER</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is an integer representing an internal texture used for certain effect
+(color band, etc).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">12</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_SAMPLER_2DIMAGE</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is an integer representing a texture loaded from an image file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">13</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_SAMPLER_2DSHADOW</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is an float representing the bumpmap scaling.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">14</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.GPU_DYNAMIC_OBJECT_AUTOBUMPSCALE"><a name="//apple_ref/cpp/Constant/gpu.GPU_DYNAMIC_OBJECT_AUTOBUMPSCALE"></a>
+<code class="descclassname">gpu.</code><code class="descname">GPU_DYNAMIC_OBJECT_AUTOBUMPSCALE</code><a class="headerlink" href="#gpu.GPU_DYNAMIC_OBJECT_AUTOBUMPSCALE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform is an integer representing a shadow buffer corresponding to a lamp
+casting shadow.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">15</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+<div class="section" id="glsl-attribute-type">
+<h3>GLSL attribute type<a class="headerlink" href="#glsl-attribute-type" title="Permalink to this headline">¶</a></h3>
+<p id="attribute-type">Type of the vertex attribute used in the GLSL shader. Determines the mesh custom data
+layer that contains the vertex attribute.</p>
+<dl class="data">
+<dt id="gpu.CD_MTFACE"><a name="//apple_ref/cpp/Constant/gpu.CD_MTFACE"></a>
+<code class="descclassname">gpu.</code><code class="descname">CD_MTFACE</code><a class="headerlink" href="#gpu.CD_MTFACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex attribute is a UV Map. Data type is vector of 2 float.</p>
+<p>There can be more than one attribute of that type, they are differenciated by name.
+In blender, you can retrieve the attribute data with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mesh</span><span class="o">.</span><span class="n">uv_textures</span><span class="p">[</span><span class="n">attribute</span><span class="p">[</span><span class="s">"name"</span><span class="p">]]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">5</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.CD_MCOL"><a name="//apple_ref/cpp/Constant/gpu.CD_MCOL"></a>
+<code class="descclassname">gpu.</code><code class="descname">CD_MCOL</code><a class="headerlink" href="#gpu.CD_MCOL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex attribute is color layer. Data type is vector 4 unsigned byte (RGBA).</p>
+<p>There can be more than one attribute of that type, they are differenciated by name.
+In blender you can retrieve the attribute data with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mesh</span><span class="o">.</span><span class="n">vertex_colors</span><span class="p">[</span><span class="n">attribute</span><span class="p">[</span><span class="s">"name"</span><span class="p">]]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">6</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.CD_ORCO"><a name="//apple_ref/cpp/Constant/gpu.CD_ORCO"></a>
+<code class="descclassname">gpu.</code><code class="descname">CD_ORCO</code><a class="headerlink" href="#gpu.CD_ORCO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex attribute is original coordinates. Data type is vector 3 float.</p>
+<p>There can be only 1 attribute of that type per shader.
+In blender you can retrieve the attribute data with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mesh</span><span class="o">.</span><span class="n">vertices</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">14</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="gpu.CD_TANGENT"><a name="//apple_ref/cpp/Constant/gpu.CD_TANGENT"></a>
+<code class="descclassname">gpu.</code><code class="descname">CD_TANGENT</code><a class="headerlink" href="#gpu.CD_TANGENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex attribute is the tangent vector. Data type is vector 4 float.</p>
+<p>There can be only 1 attribute of that type per shader.
+There is currently no way to retrieve this attribute data via the RNA API but a standalone
+C function to compute the tangent layer from the other layers can be obtained from
+blender.org.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Value:</th><td class="field-body">18</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="export-shader"></span><dl class="function">
+<dt id="gpu.export_shader"><a name="//apple_ref/cpp/Function/gpu.export_shader"></a>
+<code class="descclassname">gpu.</code><code class="descname">export_shader</code><span class="sig-paren">(</span><em>scene</em>, <em>material</em><span class="sig-paren">)</span><a class="headerlink" href="#gpu.export_shader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the GLSL shader producing the visual effect of material in scene for the purpose of
+reusing the shader in an external engine. This function is meant to be used in material exporter
+so that the GLSL shader can be exported entirely. The return value is a dictionary containing the
+shader source code and all associated data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scene</strong> (<a class="reference internal" href="bpy.types.Scene.html#bpy.types.Scene" title="bpy.types.Scene"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Scene</span></code></a>) – the scene in which the material in rendered.</li>
+<li><strong>material</strong> (<a class="reference internal" href="bpy.types.Material.html#bpy.types.Material" title="bpy.types.Material"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Material</span></code></a>) – the material that you want to export the GLSL shader</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the shader source code and all associated data in a dictionary</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dictionary</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The dictionary contains the following elements:</p>
+<ul>
+<li><dl class="first docutils">
+<dt>[“fragment”] <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">fragment shader source code.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“vertex”] <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">vertex shader source code.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“uniforms”] <span class="classifier-delimiter">:</span> <span class="classifier">sequence</span></dt>
+<dd><p class="first">list of uniforms used in fragment shader, can be empty list. Each element of the
+sequence is a dictionary with the following elements:</p>
+<ul class="last">
+<li><dl class="first docutils">
+<dt>[“varname”] <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">name of the uniform in the fragment shader. Always of the form ‘unf&lt;number&gt;’.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“datatype”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first">data type of the uniform variable. Can be one of the following:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#gpu.GPU_DATA_1I" title="gpu.GPU_DATA_1I"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_1I</span></code></a> : use glUniform1i</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_1F" title="gpu.GPU_DATA_1F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_1F</span></code></a> : use glUniform1fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_2F" title="gpu.GPU_DATA_2F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_2F</span></code></a> : use glUniform2fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_3F" title="gpu.GPU_DATA_3F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_3F</span></code></a> : use glUniform3fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_4F" title="gpu.GPU_DATA_4F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_4F</span></code></a> : use glUniform4fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_9F" title="gpu.GPU_DATA_9F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_9F</span></code></a> : use glUniformMatrix3fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_16F" title="gpu.GPU_DATA_16F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_16F</span></code></a> : use glUniformMatrix4fv</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“type”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first last">type of uniform, determines the origin and method of calculation. See <a class="reference internal" href="#uniform-type">uniform-type</a>.
+Depending on the type, more elements will be be present.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“lamp”] <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object" title="bpy.types.Object"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Object</span></code></a></span></dt>
+<dd><p class="first">Reference to the lamp object from which the uniforms value are extracted. Set for the following uniforms types:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNVEC" title="gpu.GPU_DYNAMIC_LAMP_DYNVEC"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNVEC</span></code></a></li>
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNCO" title="gpu.GPU_DYNAMIC_LAMP_DYNCO"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNCO</span></code></a></li>
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNIMAT" title="gpu.GPU_DYNAMIC_LAMP_DYNIMAT"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNIMAT</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT" title="gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT</span></code></a></li>
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNENERGY" title="gpu.GPU_DYNAMIC_LAMP_DYNENERGY"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNENERGY</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNCOL" title="gpu.GPU_DYNAMIC_LAMP_DYNCOL"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNCOL</span></code></a></li>
+<li><a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW" title="gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW</span></code></a></li>
+</ul>
+</td></tr></table>
+<p>Notes:</p>
+<ul class="last">
+<li><dl class="first docutils">
+<dt>The uniforms <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNVEC" title="gpu.GPU_DYNAMIC_LAMP_DYNVEC"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNVEC</span></code></a>, <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNCO" title="gpu.GPU_DYNAMIC_LAMP_DYNCO"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNCO</span></code></a>, <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNIMAT" title="gpu.GPU_DYNAMIC_LAMP_DYNIMAT"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNIMAT</span></code></a> and <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT" title="gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT</span></code></a></dt>
+<dd><p class="first">refer to the lamp object position and orientation, both of can be derived from the object world matrix:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">obmat</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">[</span><span class="s">"lamp"</span><span class="p">]</span><span class="o">.</span><span class="n">matrix_world</span>
+</pre></div>
+</div>
+<p class="last">where obmat is the <a class="reference internal" href="#mat4-lamp-to-world">mat4_lamp_to_world</a> matrix of the lamp as a 2 dimensional array,
+the lamp world location location is in obmat[3].</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">The uniform types <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNENERGY" title="gpu.GPU_DYNAMIC_LAMP_DYNENERGY"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNENERGY</span></code></a> and <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNCOL" title="gpu.GPU_DYNAMIC_LAMP_DYNCOL"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNCOL</span></code></a> refer to the lamp data bloc that you get from:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">la</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">[</span><span class="s">"lamp"</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+<p>from which you get la.energy and la.color</p>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Lamp duplication is not supported: if you have duplicated lamps in your scene</dt>
+<dd><p class="first last">(i.e. lamp that are instantiated by dupligroup, etc), this element will only
+give you a reference to the orignal lamp and you will not know which instance
+of the lamp it is refering too. You can still handle that case in the exporter
+by distributing the uniforms amongst the duplicated lamps.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“image”] <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="bpy.types.Image.html#bpy.types.Image" title="bpy.types.Image"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Image</span></code></a></span></dt>
+<dd><p class="first">Reference to the image databloc. Set for uniform type <a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE" title="gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE</span></code></a>. You can get the image data from:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="c"># full path to image file</span>
+<span class="n">uniform</span><span class="p">[</span><span class="s">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">filepath</span>
+<span class="c"># image size as a 2-dimensional array of int</span>
+<span class="n">uniform</span><span class="p">[</span><span class="s">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“texnumber”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first">Channel number to which the texture is bound when drawing the object.
+Set for uniform types <a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER" title="gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER</span></code></a>, <a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE" title="gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DIMAGE</span></code></a> and <a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW" title="gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DSHADOW</span></code></a>.</p>
+<p class="last">This is provided for information only: when reusing the shader outside blencer,
+you are free to assign the textures to the channel of your choice and to pass
+that number channel to the GPU in the uniform.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“texpixels”] <span class="classifier-delimiter">:</span> <span class="classifier">byte array</span></dt>
+<dd><p class="first last">texture data for uniform type <a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER" title="gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER</span></code></a>. Although
+the corresponding uniform is a 2D sampler, the texture is always a 1D texture
+of n x 1 pixel. The texture size n is provided in [“texsize”] element.
+These texture are only used for computer generated texture (colorband, etc).
+The texture data is provided so that you can make a real image out of it in the
+exporter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“texsize”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first last">horizontal size of texture for uniform type <a class="reference internal" href="#gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER" title="gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_SAMPLER_2DBUFFER</span></code></a>.
+The texture data is in [“texpixels”].</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“attributes”] <span class="classifier-delimiter">:</span> <span class="classifier">sequence</span></dt>
+<dd><p class="first">list of attributes used in vertex shader, can be empty. Blender doesn’t use
+standard attributes except for vertex position and normal. All other vertex
+attributes must be passed using the generic glVertexAttrib functions.
+The attribute data can be found in the derived mesh custom data using RNA.
+Each element of the sequence is a dictionary containing the following elements:</p>
+<ul class="last">
+<li><dl class="first docutils">
+<dt>[“varname”] <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">name of the uniform in the vertex shader. Always of the form ‘att&lt;number&gt;’.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“datatype”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first">data type of vertex attribute, can be one of the following:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#gpu.GPU_DATA_2F" title="gpu.GPU_DATA_2F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_2F</span></code></a> : use glVertexAttrib2fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_3F" title="gpu.GPU_DATA_3F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_3F</span></code></a> : use glVertexAttrib3fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_4F" title="gpu.GPU_DATA_4F"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_4F</span></code></a> : use glVertexAttrib4fv</li>
+<li><a class="reference internal" href="#gpu.GPU_DATA_4UB" title="gpu.GPU_DATA_4UB"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DATA_4UB</span></code></a> : use glVertexAttrib4ubv</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“number”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first">generic attribute number. This is provided for information only. Blender
+doesn’t use glBindAttribLocation to place generic attributes at specific location,
+it lets the shader compiler place the attributes automatically and query the
+placement with glGetAttribLocation. The result of this placement is returned in
+this element.</p>
+<p class="last">When using this shader in a render engine, you should either use
+glBindAttribLocation to force the attribute at this location or use
+glGetAttribLocation to get the placement chosen by the compiler of your GPU.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“type”] <span class="classifier-delimiter">:</span> <span class="classifier">integer</span></dt>
+<dd><p class="first last">type of the mesh custom data from which the vertex attribute is loaded.
+See <a class="reference internal" href="#attribute-type">attribute-type</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[“name”] <span class="classifier-delimiter">:</span> <span class="classifier">string or integer</span></dt>
+<dd><p class="first last">custom data layer name, used for attribute type <a class="reference internal" href="#gpu.CD_MTFACE" title="gpu.CD_MTFACE"><code class="xref py py-data docutils literal"><span class="pre">gpu.CD_MTFACE</span></code></a> and <a class="reference internal" href="#gpu.CD_MCOL" title="gpu.CD_MCOL"><code class="xref py py-data docutils literal"><span class="pre">gpu.CD_MCOL</span></code></a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">gpu</span>
+<span class="c"># get GLSL shader of material Mat.001 in scene Scene.001</span>
+<span class="n">scene</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">scenes</span><span class="p">[</span><span class="s">"Scene.001"</span><span class="p">]</span>
+<span class="n">material</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">materials</span><span class="p">[</span><span class="s">"Mat.001"</span><span class="p">]</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="n">gpu</span><span class="o">.</span><span class="n">export_shader</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span><span class="n">material</span><span class="p">)</span>
+<span class="c"># scan the uniform list and find the images used in the shader</span>
+<span class="k">for</span> <span class="n">uniform</span> <span class="ow">in</span> <span class="n">shader</span><span class="p">[</span><span class="s">"uniforms"</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">uniform</span><span class="p">[</span><span class="s">"type"</span><span class="p">]</span> <span class="o">==</span> <span class="n">gpu</span><span class="o">.</span><span class="n">GPU_DYNAMIC_SAMPLER_2DIMAGE</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"uniform {0} is using image {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uniform</span><span class="p">[</span><span class="s">"varname"</span><span class="p">],</span> <span class="n">uniform</span><span class="p">[</span><span class="s">"image"</span><span class="p">]</span><span class="o">.</span><span class="n">filepath</span><span class="p">))</span>
+<span class="c"># scan the attribute list and find the UV Map used in the shader</span>
+<span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">shader</span><span class="p">[</span><span class="s">"attributes"</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">attribute</span><span class="p">[</span><span class="s">"type"</span><span class="p">]</span> <span class="o">==</span> <span class="n">gpu</span><span class="o">.</span><span class="n">CD_MTFACE</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"attribute {0} is using UV Map {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attribute</span><span class="p">[</span><span class="s">"varname"</span><span class="p">],</span> <span class="n">attribute</span><span class="p">[</span><span class="s">"name"</span><span class="p">]))</span>
+</pre></div>
+</div>
+</dd></dl>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic" id="mat4-lamp-to-perspective">
+<li><p class="first">Calculation of the <em>mat4_lamp_to_perspective</em> matrix for a spot lamp.</p>
+<p>The following pseudo code shows how the <em>mat4_lamp_to_perspective</em> matrix is computed
+in blender for uniforms of <a class="reference internal" href="#gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT" title="gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT"><code class="xref py py-data docutils literal"><span class="pre">gpu.GPU_DYNAMIC_LAMP_DYNPERSMAT</span></code></a> type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#Get the lamp datablock with:</span>
+<span class="n">lamp</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="p">[</span><span class="n">uniform</span><span class="p">[</span><span class="s">"lamp"</span><span class="p">]]</span><span class="o">.</span><span class="n">data</span>
+
+<span class="c"># Compute the projection matrix:</span>
+<span class="c">#  You will need these lamp attributes:</span>
+<span class="c">#  lamp.clipsta : near clip plane in world unit</span>
+<span class="c">#  lamp.clipend : far clip plane in world unit</span>
+<span class="c">#  lamp.spotsize : angle in degree of the spot light</span>
+
+<span class="c"># The size of the projection plane is computed with the usual formula:</span>
+<span class="n">wsize</span> <span class="o">=</span> <span class="n">lamp</span><span class="o">.</span><span class="n">clista</span> <span class="o">*</span> <span class="n">tan</span><span class="p">(</span><span class="n">lamp</span><span class="o">.</span><span class="n">spotsize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c">#And the projection matrix:</span>
+<span class="n">mat4_lamp_to_perspective</span> <span class="o">=</span> <span class="n">glFrustum</span><span class="p">(</span><span class="o">-</span><span class="n">wsize</span><span class="p">,</span> <span class="n">wsize</span><span class="p">,</span> <span class="o">-</span><span class="n">wsize</span><span class="p">,</span> <span class="n">wsize</span><span class="p">,</span> <span class="n">lamp</span><span class="o">.</span><span class="n">clista</span><span class="p">,</span> <span class="n">lamp</span><span class="o">.</span><span class="n">clipend</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Creation of the shadow map for a spot lamp.</p>
+<p>The shadow map is the depth buffer of a render performed by placing the camera at the
+spot light position. The size of the shadow map is given by the attribute lamp.bufsize :
+shadow map size in pixel, same size in both dimensions.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h3><a href="contents.html">Table Of Contents</a></h3>
+<ul>
+<li><a class="reference internal" href="#">GPU functions (gpu)</a><ul>
+<li><a class="reference internal" href="#intro">Intro</a></li>
+<li><a class="reference internal" href="#constants">Constants</a><ul>
+<li><a class="reference internal" href="#glsl-data-type">GLSL data type</a></li>
+<li><a class="reference internal" href="#glsl-uniform-type">GLSL uniform type</a></li>
+<li><a class="reference internal" href="#glsl-attribute-type">GLSL attribute type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+<h4>Previous topic</h4>
+<p class="topless"><a href="blf.html" title="previous chapter">Font Drawing (blf)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="aud.html" title="next chapter">Audio System (aud)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="aud.html" title="Audio System (aud)">next</a> |</li>
+<li class="right">
+<a href="blf.html" title="Font Drawing (blf)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/gpu.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:52 GMT -->
+</html>

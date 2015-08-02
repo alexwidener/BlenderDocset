@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.utils.units.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:49:03 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>bpy.utils submodule (bpy.utils.units) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy.utils.html" rel="up" title="Utilities (bpy.utils)"/>
+<link href="bpy.utils.previews.html" rel="next" title="bpy.utils submodule (bpy.utils.previews)"/>
+<link href="bpy.utils.previews.html" rel="prev" title="bpy.utils submodule (bpy.utils.previews)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.utils.previews.html" title="bpy.utils submodule (bpy.utils.previews)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.utils.previews.html" title="bpy.utils submodule (bpy.utils.previews)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.utils.html">Utilities (bpy.utils)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.utils.units">
+<span id="bpy-utils-submodule-bpy-utils-units"></span><h1><a name="//apple_ref/cpp/Module/bpy.utils.units"></a>bpy.utils submodule (bpy.utils.units)<a class="headerlink" href="#module-bpy.utils.units" title="Permalink to this headline">¶</a></h1>
+<p>This module contains some data/methods regarding units handling.</p>
+<dl class="data">
+<dt id="bpy.utils.units.categories"><a name="//apple_ref/cpp/Constant/bpy.utils.units.categories"></a>
+<code class="descclassname">bpy.utils.units.</code><code class="descname">categories</code><a class="headerlink" href="#bpy.utils.units.categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.utils.units.categories(NONE=’NONE’, LENGTH=’LENGTH’, AREA=’AREA’, VOLUME=’VOLUME’, MASS=’MASS’, ROTATION=’ROTATION’, TIME=’TIME’, VELOCITY=’VELOCITY’, ACCELERATION=’ACCELERATION’, CAMERA=’CAMERA’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.utils.units.systems"><a name="//apple_ref/cpp/Constant/bpy.utils.units.systems"></a>
+<code class="descclassname">bpy.utils.units.</code><code class="descname">systems</code><a class="headerlink" href="#bpy.utils.units.systems" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.utils.units.systems(NONE=’NONE’, METRIC=’METRIC’, IMPERIAL=’IMPERIAL’)</p>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.utils.units.to_string"><a name="//apple_ref/cpp/Function/bpy.utils.units.to_string"></a>
+<code class="descclassname">bpy.utils.units.</code><code class="descname">to_string</code><span class="sig-paren">(</span><em>unit_system</em>, <em>unit_category</em>, <em>value</em>, <em>precision=3</em>, <em>split_unit=False</em>, <em>compatible_unit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.units.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a given input float value into a string with units.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>unit_system</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – The unit system, from <a class="reference internal" href="#bpy.utils.units.systems" title="bpy.utils.units.systems"><code class="xref py py-attr docutils literal"><span class="pre">bpy.utils.units.systems</span></code></a>.</li>
+<li><strong>unit_category</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – The category of data we are converting (length, area, rotation, etc.),
+from <a class="reference internal" href="#bpy.utils.units.categories" title="bpy.utils.units.categories"><code class="xref py py-attr docutils literal"><span class="pre">bpy.utils.units.categories</span></code></a>.</li>
+<li><strong>value</strong> (<a class="reference internal" href="bpy.types.PropertyGroupItem.html#bpy.types.PropertyGroupItem.float" title="bpy.types.PropertyGroupItem.float"><em>float</em></a>) – The value to convert to a string.</li>
+<li><strong>precision</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.int" title="bmesh.types.BMLayerAccessEdge.int"><em>int</em></a>) – Number of digits after the comma.</li>
+<li><strong>split_unit</strong> (<em>bool</em>) – Whether to use several units if needed (1m1cm), or always only one (1.01m).</li>
+<li><strong>compatible_unit</strong> (<em>bool</em>) – Whether to use keyboard-friendly units (1m2) or nicer utf-8 ones (1m²).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The converted string.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">str</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises ValueError:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body"><p class="first last">if conversion fails to generate a valid python string.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.utils.units.to_value"><a name="//apple_ref/cpp/Function/bpy.utils.units.to_value"></a>
+<code class="descclassname">bpy.utils.units.</code><code class="descname">to_value</code><span class="sig-paren">(</span><em>unit_system</em>, <em>unit_category</em>, <em>str_input</em>, <em>str_ref_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.units.to_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a given input string into a float value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>unit_system</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – The unit system, from <a class="reference internal" href="#bpy.utils.units.systems" title="bpy.utils.units.systems"><code class="xref py py-attr docutils literal"><span class="pre">bpy.utils.units.systems</span></code></a>.</li>
+<li><strong>unit_category</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – The category of data we are converting (length, area, rotation, etc.),
+from <a class="reference internal" href="#bpy.utils.units.categories" title="bpy.utils.units.categories"><code class="xref py py-attr docutils literal"><span class="pre">bpy.utils.units.categories</span></code></a>.</li>
+<li><strong>str_input</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – The string to convert to a float value.</li>
+<li><strong>str_ref_unit</strong> (<em>string or None</em>) – A reference string from which to extract a default unit, if none is found in <code class="docutils literal"><span class="pre">str_input</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The converted/interpreted value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="bpy.types.PropertyGroupItem.html#bpy.types.PropertyGroupItem.float" title="bpy.types.PropertyGroupItem.float">float</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises ValueError:</th></tr>
+<tr class="field-even field"><td> </td><td class="field-body"><p class="first last">if conversion fails to generate a valid python float value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.utils.previews.html" title="previous chapter">bpy.utils submodule (bpy.utils.previews)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.utils.previews.html" title="next chapter">bpy.utils submodule (bpy.utils.previews)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.utils.previews.html" title="bpy.utils submodule (bpy.utils.previews)">next</a> |</li>
+<li class="right">
+<a href="bpy.utils.previews.html" title="bpy.utils submodule (bpy.utils.previews)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.utils.html">Utilities (bpy.utils)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.utils.units.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:49:03 GMT -->
+</html>

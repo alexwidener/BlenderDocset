@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.GPencilLayer.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:55 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>GPencilLayer(bpy_struct) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.GPencilStroke.html" rel="next" title="GPencilStroke(bpy_struct)"/>
+<link href="bpy.types.GPencilFrames.html" rel="prev" title="GPencilFrames(bpy_struct)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.GPencilStroke.html" title="GPencilStroke(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.GPencilFrames.html" title="GPencilFrames(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="gpencillayer-bpy-struct"></span><h1>GPencilLayer(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.GPencilLayer"><a name="//apple_ref/cpp/Class/bpy.types.GPencilLayer"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">GPencilLayer</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.GPencilLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collection of related sketches</p>
+<dl class="data">
+<dt id="bpy.types.GPencilLayer.active_frame"><a name="//apple_ref/cpp/Constant/bpy.types.GPencilLayer.active_frame"></a>
+<code class="descname">active_frame</code><a class="headerlink" href="#bpy.types.GPencilLayer.active_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frame currently being displayed for this layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.GPencilFrame.html#bpy.types.GPencilFrame" title="bpy.types.GPencilFrame"><code class="xref py py-class docutils literal"><span class="pre">GPencilFrame</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.after_color"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.after_color"></a>
+<code class="descname">after_color</code><a class="headerlink" href="#bpy.types.GPencilLayer.after_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base color for ghosts after the active frame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.alpha"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.alpha"></a>
+<code class="descname">alpha</code><a class="headerlink" href="#bpy.types.GPencilLayer.alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layer Opacity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.before_color"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.before_color"></a>
+<code class="descname">before_color</code><a class="headerlink" href="#bpy.types.GPencilLayer.before_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base color for ghosts before the active frame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.color"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.color"></a>
+<code class="descname">color</code><a class="headerlink" href="#bpy.types.GPencilLayer.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color for all strokes in this layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.fill_alpha"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.fill_alpha"></a>
+<code class="descname">fill_alpha</code><a class="headerlink" href="#bpy.types.GPencilLayer.fill_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opacity for filling region bounded by each stroke</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.fill_color"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.fill_color"></a>
+<code class="descname">fill_color</code><a class="headerlink" href="#bpy.types.GPencilLayer.fill_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color for filling region bounded by each stroke</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.GPencilLayer.frames"><a name="//apple_ref/cpp/Constant/bpy.types.GPencilLayer.frames"></a>
+<code class="descname">frames</code><a class="headerlink" href="#bpy.types.GPencilLayer.frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sketches for this layer on different frames</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.GPencilFrames.html#bpy.types.GPencilFrames" title="bpy.types.GPencilFrames"><code class="xref py py-class docutils literal"><span class="pre">GPencilFrames</span></code></a> <a class="reference internal" href="bpy.types.bpy_prop_collection.html#bpy.types.bpy_prop_collection" title="bpy.types.bpy_prop_collection"><code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code></a> of <a class="reference internal" href="bpy.types.GPencilFrame.html#bpy.types.GPencilFrame" title="bpy.types.GPencilFrame"><code class="xref py py-class docutils literal"><span class="pre">GPencilFrame</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.ghost_after_range"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.ghost_after_range"></a>
+<code class="descname">ghost_after_range</code><a class="headerlink" href="#bpy.types.GPencilLayer.ghost_after_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of frames to show after current frame (0 = show only the next sketch)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 120], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.ghost_before_range"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.ghost_before_range"></a>
+<code class="descname">ghost_before_range</code><a class="headerlink" href="#bpy.types.GPencilLayer.ghost_before_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of frames to show before current frame (0 = show only the previous sketch)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 120], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.hide"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.hide"></a>
+<code class="descname">hide</code><a class="headerlink" href="#bpy.types.GPencilLayer.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set layer Visibility</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.info"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.info"></a>
+<code class="descname">info</code><a class="headerlink" href="#bpy.types.GPencilLayer.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layer name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.GPencilLayer.is_fill_visible"><a name="//apple_ref/cpp/Constant/bpy.types.GPencilLayer.is_fill_visible"></a>
+<code class="descname">is_fill_visible</code><a class="headerlink" href="#bpy.types.GPencilLayer.is_fill_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True when opacity of fill is set high enough to be visible</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.GPencilLayer.is_stroke_visible"><a name="//apple_ref/cpp/Constant/bpy.types.GPencilLayer.is_stroke_visible"></a>
+<code class="descname">is_stroke_visible</code><a class="headerlink" href="#bpy.types.GPencilLayer.is_stroke_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True when opacity of stroke is set high enough to be visible</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.line_width"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.line_width"></a>
+<code class="descname">line_width</code><a class="headerlink" href="#bpy.types.GPencilLayer.line_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thickness of strokes (in pixels)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [-32768, 32767], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.lock"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.lock"></a>
+<code class="descname">lock</code><a class="headerlink" href="#bpy.types.GPencilLayer.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Protect layer from further editing and/or frame changes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.lock_frame"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.lock_frame"></a>
+<code class="descname">lock_frame</code><a class="headerlink" href="#bpy.types.GPencilLayer.lock_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock current frame displayed by layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.select"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.select"></a>
+<code class="descname">select</code><a class="headerlink" href="#bpy.types.GPencilLayer.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layer is selected for editing in the Dope Sheet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.show_points"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.show_points"></a>
+<code class="descname">show_points</code><a class="headerlink" href="#bpy.types.GPencilLayer.show_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the points which make up the strokes (for debugging purposes)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.show_x_ray"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.show_x_ray"></a>
+<code class="descname">show_x_ray</code><a class="headerlink" href="#bpy.types.GPencilLayer.show_x_ray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the layer draw in front of objects</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.use_ghost_custom_colors"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.use_ghost_custom_colors"></a>
+<code class="descname">use_ghost_custom_colors</code><a class="headerlink" href="#bpy.types.GPencilLayer.use_ghost_custom_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use custom colors for ghost frames</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.use_onion_skinning"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.use_onion_skinning"></a>
+<code class="descname">use_onion_skinning</code><a class="headerlink" href="#bpy.types.GPencilLayer.use_onion_skinning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ghost frames on either side of frame</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.GPencilLayer.use_volumetric_strokes"><a name="//apple_ref/cpp/Attribute/bpy.types.GPencilLayer.use_volumetric_strokes"></a>
+<code class="descname">use_volumetric_strokes</code><a class="headerlink" href="#bpy.types.GPencilLayer.use_volumetric_strokes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw strokes as a series of circular blobs, resulting in a volumetric effect</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.types.GPencilLayer.clear"><a name="//apple_ref/cpp/Method/bpy.types.GPencilLayer.clear"></a>
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.GPencilLayer.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all the grease pencil layer data</p>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.context.html#bpy.context.active_gpencil_layer" title="bpy.context.active_gpencil_layer"><code class="xref py py-mod docutils literal"><span class="pre">bpy.context.active_gpencil_layer</span></code></a></li>
+<li><a class="reference internal" href="bpy.context.html#bpy.context.editable_gpencil_layers" title="bpy.context.editable_gpencil_layers"><code class="xref py py-mod docutils literal"><span class="pre">bpy.context.editable_gpencil_layers</span></code></a></li>
+<li><a class="reference internal" href="bpy.context.html#bpy.context.visible_gpencil_layers" title="bpy.context.visible_gpencil_layers"><code class="xref py py-mod docutils literal"><span class="pre">bpy.context.visible_gpencil_layers</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.GreasePencil.html#bpy.types.GreasePencil.layers" title="bpy.types.GreasePencil.layers"><code class="xref py py-class docutils literal"><span class="pre">GreasePencil.layers</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.GreasePencilLayers.html#bpy.types.GreasePencilLayers.active" title="bpy.types.GreasePencilLayers.active"><code class="xref py py-class docutils literal"><span class="pre">GreasePencilLayers.active</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.GreasePencilLayers.html#bpy.types.GreasePencilLayers.new" title="bpy.types.GreasePencilLayers.new"><code class="xref py py-class docutils literal"><span class="pre">GreasePencilLayers.new</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.GreasePencilLayers.html#bpy.types.GreasePencilLayers.remove" title="bpy.types.GreasePencilLayers.remove"><code class="xref py py-class docutils literal"><span class="pre">GreasePencilLayers.remove</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.GPencilFrames.html" title="previous chapter">GPencilFrames(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.GPencilStroke.html" title="next chapter">GPencilStroke(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.GPencilStroke.html" title="GPencilStroke(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.GPencilFrames.html" title="GPencilFrames(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy.types.GPencilLayer.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+</html>

@@ -1,0 +1,924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.texture.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:52 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Video Texture (bge.texture) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bge.events.html" rel="next" title="Game Keys (bge.events)"/>
+<link href="bge.render.html" rel="prev" title="Rasterizer (bge.render)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.events.html" title="Game Keys (bge.events)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.render.html" title="Rasterizer (bge.render)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="video-texture-bge-texture"><a name="//apple_ref/cpp/Module/bge.texture"></a>
+<h1>Video Texture (bge.texture)<a class="headerlink" href="#video-texture-bge-texture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>The bge.texture module allows you to manipulate textures during the game.</p>
+<p>Several sources for texture are possible: video files, image files, video capture, memory buffer, camera render or a mix of that.</p>
+<p>The video and image files can be loaded from the internet using an URL instead of a file name.</p>
+<p>In addition, you can apply filters on the images before sending them to the GPU, allowing video effect: blue screen, color band, gray, normal map.</p>
+<p>bge.texture uses FFmpeg to load images and videos. All the formats and codecs that FFmpeg supports are supported by this module, including but not limited to:</p>
+<div class="highlight-python"><div class="highlight"><pre>* AVI
+* Ogg
+* Xvid
+* Theora
+* dv1394 camera
+* video4linux capture card (this includes many webcams)
+* videoForWindows capture card (this includes many webcams)
+* JPG
+</pre></div>
+</div>
+<p>The principle is simple: first you identify a texture on an existing object using
+the :materialID: function, then you create a new texture with dynamic content
+and swap the two textures in the GPU.</p>
+<p>The GE is not aware of the substitution and continues to display the object as always,
+except that you are now in control of the texture.</p>
+<p>When the texture object is deleted, the new texture is deleted and the old texture restored.</p>
+<span class="target" id="module-bge.texture"></span><div class="highlight-rest"><div class="highlight"><pre><span class="gh">Basic Video Playback</span>
+<span class="gh">++++++++++++++++++++</span>
+Example of how to replace a texture in game with a video. It needs to run everyframe
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">bge</span>
+<span class="kn">from</span> <span class="nn">bge</span> <span class="kn">import</span> <span class="n">texture</span>
+<span class="kn">from</span> <span class="nn">bge</span> <span class="kn">import</span> <span class="n">logic</span>
+
+<span class="n">cont</span> <span class="o">=</span> <span class="n">logic</span><span class="o">.</span><span class="n">getCurrentController</span><span class="p">()</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">cont</span><span class="o">.</span><span class="n">owner</span>
+
+<span class="c"># the creation of the texture must be done once: save the</span>
+<span class="c"># texture object in an attribute of bge.logic module makes it persistent</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">logic</span><span class="p">,</span> <span class="s">'video'</span><span class="p">):</span>
+
+    <span class="c"># identify a static texture by name</span>
+    <span class="n">matID</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">materialID</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s">'IMvideo.png'</span><span class="p">)</span>
+
+    <span class="c"># create a dynamic texture that will replace the static texture</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">video</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">matID</span><span class="p">)</span>
+
+    <span class="c"># define a source of image for the texture, here a movie</span>
+    <span class="n">movie</span> <span class="o">=</span> <span class="n">logic</span><span class="o">.</span><span class="n">expandPath</span><span class="p">(</span><span class="s">'//trailer_400p.ogg'</span><span class="p">)</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">VideoFFmpeg</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="c"># quick off the movie, but it wont play in the background</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+
+<span class="c"># you need to call this function every frame to ensure update of the texture.</span>
+<span class="n">logic</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-rest"><div class="highlight"><pre><span class="gh">Texture Replacement</span>
+<span class="gh">+++++++++++++++++++</span>
+Example of how to replace a texture in game with an external image.
+createTexture() and removeTexture() are to be called from a module Python
+Controller.
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">bge</span> <span class="kn">import</span> <span class="n">logic</span>
+<span class="kn">from</span> <span class="nn">bge</span> <span class="kn">import</span> <span class="n">texture</span>
+
+
+<span class="k">def</span> <span class="nf">createTexture</span><span class="p">(</span><span class="n">cont</span><span class="p">):</span>
+    <span class="sd">"""Create a new Dynamic Texture"""</span>
+    <span class="n">obj</span> <span class="o">=</span> <span class="n">cont</span><span class="o">.</span><span class="n">owner</span>
+
+    <span class="c"># get the reference pointer (ID) of the internal texture</span>
+    <span class="n">ID</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">materialID</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s">'IMoriginal.png'</span><span class="p">)</span>
+
+    <span class="c"># create a texture object</span>
+    <span class="n">object_texture</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span>
+
+    <span class="c"># create a new source with an external image</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">logic</span><span class="o">.</span><span class="n">expandPath</span><span class="p">(</span><span class="s">"//newtexture.jpg"</span><span class="p">)</span>
+    <span class="n">new_source</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">ImageFFmpeg</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="c"># the texture has to be stored in a permanent Python object</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="n">object_texture</span>
+
+    <span class="c"># update/replace the texture</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">new_source</span>
+    <span class="n">logic</span><span class="o">.</span><span class="n">texture</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">removeTexture</span><span class="p">(</span><span class="n">cont</span><span class="p">):</span>
+    <span class="sd">"""Delete the Dynamic Texture, reversing back the final to its original state."""</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">logic</span><span class="o">.</span><span class="n">texture</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<dl class="class">
+<dt id="bge.texture.VideoFFmpeg"><a name="//apple_ref/cpp/Class/bge.texture.VideoFFmpeg"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">VideoFFmpeg</code><span class="sig-paren">(</span><em>file</em><span class="optional">[</span>, <em>capture=-1</em>, <em>rate=25.0</em>, <em>width=0</em>, <em>height=0</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.VideoFFmpeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>FFmpeg video source</p>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.status"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.status"></a>
+<code class="descname">status</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>video status</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.range"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.range"></a>
+<code class="descname">range</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.range" title="Permalink to this definition">¶</a></dt>
+<dd><p>replay range</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.repeat"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.repeat"></a>
+<code class="descname">repeat</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>repeat count, -1 for infinite repeat</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.framerate"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.framerate"></a>
+<code class="descname">framerate</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.framerate" title="Permalink to this definition">¶</a></dt>
+<dd><p>frame rate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells if an image is available</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.image"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.size"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.size"></a>
+<code class="descname">size</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>image size</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.preseek"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.preseek"></a>
+<code class="descname">preseek</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.preseek" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of frames of preseek</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.VideoFFmpeg.deinterlace"><a name="//apple_ref/cpp/Attribute/bge.texture.VideoFFmpeg.deinterlace"></a>
+<code class="descname">deinterlace</code><a class="headerlink" href="#bge.texture.VideoFFmpeg.deinterlace" title="Permalink to this definition">¶</a></dt>
+<dd><p>deinterlace image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.VideoFFmpeg.play"><a name="//apple_ref/cpp/Method/bge.texture.VideoFFmpeg.play"></a>
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.VideoFFmpeg.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play (restart) video</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.VideoFFmpeg.pause"><a name="//apple_ref/cpp/Method/bge.texture.VideoFFmpeg.pause"></a>
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.VideoFFmpeg.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>pause video</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.VideoFFmpeg.stop"><a name="//apple_ref/cpp/Method/bge.texture.VideoFFmpeg.stop"></a>
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.VideoFFmpeg.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>stop video (play will replay it from start)</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.VideoFFmpeg.refresh"><a name="//apple_ref/cpp/Method/bge.texture.VideoFFmpeg.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.VideoFFmpeg.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh video - get its status</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.ImageFFmpeg"><a name="//apple_ref/cpp/Class/bge.texture.ImageFFmpeg"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">ImageFFmpeg</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageFFmpeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>FFmpeg image source</p>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.status"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.status"></a>
+<code class="descname">status</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>video status</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells if an image is available</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.image"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.size"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.size"></a>
+<code class="descname">size</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>image size</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageFFmpeg.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageFFmpeg.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.ImageFFmpeg.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageFFmpeg.refresh"><a name="//apple_ref/cpp/Method/bge.texture.ImageFFmpeg.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageFFmpeg.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh image, i.e. load it</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageFFmpeg.reload"><a name="//apple_ref/cpp/Method/bge.texture.ImageFFmpeg.reload"></a>
+<code class="descname">reload</code><span class="sig-paren">(</span><span class="optional">[</span><em>newname</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageFFmpeg.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload image, i.e. reopen it</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.ImageBuff"><a name="//apple_ref/cpp/Class/bge.texture.ImageBuff"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">ImageBuff</code><a class="headerlink" href="#bge.texture.ImageBuff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image source from image buffer</p>
+<dl class="attribute">
+<dt id="bge.texture.ImageBuff.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageBuff.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.ImageBuff.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageBuff.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageBuff.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.ImageBuff.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageBuff.image"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageBuff.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.ImageBuff.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageBuff.load"><a name="//apple_ref/cpp/Method/bge.texture.ImageBuff.load"></a>
+<code class="descname">load</code><span class="sig-paren">(</span><em>imageBuffer</em>, <em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageBuff.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load image from buffer</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageBuff.plot"><a name="//apple_ref/cpp/Method/bge.texture.ImageBuff.plot"></a>
+<code class="descname">plot</code><span class="sig-paren">(</span><em>imageBuffer</em>, <em>width</em>, <em>height</em>, <em>positionX</em>, <em>positionY</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageBuff.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>update image buffer</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageBuff.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageBuff.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.ImageBuff.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageBuff.size"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageBuff.size"></a>
+<code class="descname">size</code><a class="headerlink" href="#bge.texture.ImageBuff.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>image size</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageBuff.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageBuff.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.ImageBuff.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool to tell if an image is available</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.ImageMirror"><a name="//apple_ref/cpp/Class/bge.texture.ImageMirror"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">ImageMirror</code><span class="sig-paren">(</span><em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMirror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image source from mirror</p>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.alpha"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.alpha"></a>
+<code class="descname">alpha</code><a class="headerlink" href="#bge.texture.ImageMirror.alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>use alpha in texture</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.background"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.background"></a>
+<code class="descname">background</code><a class="headerlink" href="#bge.texture.ImageMirror.background" title="Permalink to this definition">¶</a></dt>
+<dd><p>background color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int or float list [r, g, b, a] in [0.0, 255.0]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.capsize"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.capsize"></a>
+<code class="descname">capsize</code><a class="headerlink" href="#bge.texture.ImageMirror.capsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of render area</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.clip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.clip"></a>
+<code class="descname">clip</code><a class="headerlink" href="#bge.texture.ImageMirror.clip" title="Permalink to this definition">¶</a></dt>
+<dd><p>clipping distance</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.ImageMirror.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.ImageMirror.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.image"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.ImageMirror.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageMirror.refresh"><a name="//apple_ref/cpp/Method/bge.texture.ImageMirror.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>imageMirror</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMirror.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh image - invalidate its current content</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.ImageMirror.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.size"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.size"></a>
+<code class="descname">size</code><a class="headerlink" href="#bge.texture.ImageMirror.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>image size</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.ImageMirror.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool to tell if an image is available</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMirror.whole"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMirror.whole"></a>
+<code class="descname">whole</code><a class="headerlink" href="#bge.texture.ImageMirror.whole" title="Permalink to this definition">¶</a></dt>
+<dd><p>use whole viewport to render</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.ImageMix"><a name="//apple_ref/cpp/Class/bge.texture.ImageMix"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">ImageMix</code><a class="headerlink" href="#bge.texture.ImageMix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image mixer</p>
+<dl class="attribute">
+<dt id="bge.texture.ImageMix.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMix.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.ImageMix.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMix.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMix.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.ImageMix.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageMix.getSource"><a name="//apple_ref/cpp/Method/bge.texture.ImageMix.getSource"></a>
+<code class="descname">getSource</code><span class="sig-paren">(</span><em>imageMix</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMix.getSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>get image source</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageMix.getWeight"><a name="//apple_ref/cpp/Method/bge.texture.ImageMix.getWeight"></a>
+<code class="descname">getWeight</code><span class="sig-paren">(</span><em>imageMix</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMix.getWeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>get image source weight</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMix.image"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMix.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.ImageMix.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageMix.refresh"><a name="//apple_ref/cpp/Method/bge.texture.ImageMix.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>imageMix</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMix.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh image - invalidate its current content</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMix.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMix.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.ImageMix.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageMix.setSource"><a name="//apple_ref/cpp/Method/bge.texture.ImageMix.setSource"></a>
+<code class="descname">setSource</code><span class="sig-paren">(</span><em>imageMix</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMix.setSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>set image source</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageMix.setWeight"><a name="//apple_ref/cpp/Method/bge.texture.ImageMix.setWeight"></a>
+<code class="descname">setWeight</code><span class="sig-paren">(</span><em>imageMix</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageMix.setWeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>set image source weight</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageMix.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageMix.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.ImageMix.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool to tell if an image is available</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.ImageRender"><a name="//apple_ref/cpp/Class/bge.texture.ImageRender"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">ImageRender</code><span class="sig-paren">(</span><em>scene</em>, <em>camera</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageRender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image source from render</p>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.alpha"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.alpha"></a>
+<code class="descname">alpha</code><a class="headerlink" href="#bge.texture.ImageRender.alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>use alpha in texture</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.background"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.background"></a>
+<code class="descname">background</code><a class="headerlink" href="#bge.texture.ImageRender.background" title="Permalink to this definition">¶</a></dt>
+<dd><p>background color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int or float list [r, g, b, a] in [0.0, 255.0]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.capsize"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.capsize"></a>
+<code class="descname">capsize</code><a class="headerlink" href="#bge.texture.ImageRender.capsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of render area</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.ImageRender.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.ImageRender.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.image"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.ImageRender.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageRender.refresh"><a name="//apple_ref/cpp/Method/bge.texture.ImageRender.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>imageRender</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageRender.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh image - invalidate its current content</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.ImageRender.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.size"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.size"></a>
+<code class="descname">size</code><a class="headerlink" href="#bge.texture.ImageRender.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>image size</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.ImageRender.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool to tell if an image is available</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.whole"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.whole"></a>
+<code class="descname">whole</code><a class="headerlink" href="#bge.texture.ImageRender.whole" title="Permalink to this definition">¶</a></dt>
+<dd><p>use whole viewport to render</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.depth"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.depth"></a>
+<code class="descname">depth</code><a class="headerlink" href="#bge.texture.ImageRender.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>use depth component of render as array of float -  not suitable for texture source,
+should only be used with bge.texture.imageToArray(mode=’F’)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageRender.zbuff"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageRender.zbuff"></a>
+<code class="descname">zbuff</code><a class="headerlink" href="#bge.texture.ImageRender.zbuff" title="Permalink to this definition">¶</a></dt>
+<dd><p>use depth component of render as grey scale color -  suitable for texture source</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.ImageViewport"><a name="//apple_ref/cpp/Class/bge.texture.ImageViewport"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">ImageViewport</code><a class="headerlink" href="#bge.texture.ImageViewport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image source from viewport</p>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.alpha"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.alpha"></a>
+<code class="descname">alpha</code><a class="headerlink" href="#bge.texture.ImageViewport.alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>use alpha in texture</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.capsize"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.capsize"></a>
+<code class="descname">capsize</code><a class="headerlink" href="#bge.texture.ImageViewport.capsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of viewport area being captured</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.filter"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.filter"></a>
+<code class="descname">filter</code><a class="headerlink" href="#bge.texture.ImageViewport.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>pixel filter</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.flip"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.flip"></a>
+<code class="descname">flip</code><a class="headerlink" href="#bge.texture.ImageViewport.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>flip image vertically</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.image"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.image"></a>
+<code class="descname">image</code><a class="headerlink" href="#bge.texture.ImageViewport.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>image data</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.position"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.position"></a>
+<code class="descname">position</code><a class="headerlink" href="#bge.texture.ImageViewport.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>upper left corner of captured area</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.ImageViewport.refresh"><a name="//apple_ref/cpp/Method/bge.texture.ImageViewport.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>imageViewport</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.ImageViewport.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh image - invalidate its current content</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.scale"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bge.texture.ImageViewport.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>fast scale of image (near neighbour)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.size"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.size"></a>
+<code class="descname">size</code><a class="headerlink" href="#bge.texture.ImageViewport.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>image size</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.valid"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.valid"></a>
+<code class="descname">valid</code><a class="headerlink" href="#bge.texture.ImageViewport.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>bool to tell if an image is available</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.whole"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.whole"></a>
+<code class="descname">whole</code><a class="headerlink" href="#bge.texture.ImageViewport.whole" title="Permalink to this definition">¶</a></dt>
+<dd><p>use whole viewport to capture</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.depth"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.depth"></a>
+<code class="descname">depth</code><a class="headerlink" href="#bge.texture.ImageViewport.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>use depth component of viewport as array of float -  not suitable for texture source,
+should only be used with bge.texture.imageToArray(mode=’F’)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.ImageViewport.zbuff"><a name="//apple_ref/cpp/Attribute/bge.texture.ImageViewport.zbuff"></a>
+<code class="descname">zbuff</code><a class="headerlink" href="#bge.texture.ImageViewport.zbuff" title="Permalink to this definition">¶</a></dt>
+<dd><p>use depth component of viewport as grey scale color -  suitable for texture source</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.Texture"><a name="//apple_ref/cpp/Class/bge.texture.Texture"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">Texture</code><span class="sig-paren">(</span><em>gameObj</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.Texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Texture objects</p>
+<dl class="attribute">
+<dt id="bge.texture.Texture.bindId"><a name="//apple_ref/cpp/Attribute/bge.texture.Texture.bindId"></a>
+<code class="descname">bindId</code><a class="headerlink" href="#bge.texture.Texture.bindId" title="Permalink to this definition">¶</a></dt>
+<dd><p>OpenGL Bind Name</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.Texture.close"><a name="//apple_ref/cpp/Method/bge.texture.Texture.close"></a>
+<code class="descname">close</code><span class="sig-paren">(</span><em>texture</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.Texture.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close dynamic texture and restore original</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.Texture.mipmap"><a name="//apple_ref/cpp/Attribute/bge.texture.Texture.mipmap"></a>
+<code class="descname">mipmap</code><a class="headerlink" href="#bge.texture.Texture.mipmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>mipmap texture</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.texture.Texture.refresh"><a name="//apple_ref/cpp/Method/bge.texture.Texture.refresh"></a>
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>texture</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.Texture.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh texture from source</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.Texture.source"><a name="//apple_ref/cpp/Attribute/bge.texture.Texture.source"></a>
+<code class="descname">source</code><a class="headerlink" href="#bge.texture.Texture.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source of texture</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterBGR24"><a name="//apple_ref/cpp/Class/bge.texture.FilterBGR24"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterBGR24</code><a class="headerlink" href="#bge.texture.FilterBGR24" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source filter BGR24 objects</p>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterBlueScreen"><a name="//apple_ref/cpp/Class/bge.texture.FilterBlueScreen"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterBlueScreen</code><a class="headerlink" href="#bge.texture.FilterBlueScreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter for Blue Screen objects</p>
+<dl class="attribute">
+<dt id="bge.texture.FilterBlueScreen.color"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterBlueScreen.color"></a>
+<code class="descname">color</code><a class="headerlink" href="#bge.texture.FilterBlueScreen.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>blue screen color</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.FilterBlueScreen.limits"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterBlueScreen.limits"></a>
+<code class="descname">limits</code><a class="headerlink" href="#bge.texture.FilterBlueScreen.limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>blue screen color limits</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.FilterBlueScreen.previous"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterBlueScreen.previous"></a>
+<code class="descname">previous</code><a class="headerlink" href="#bge.texture.FilterBlueScreen.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>previous pixel filter</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterColor"><a name="//apple_ref/cpp/Class/bge.texture.FilterColor"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterColor</code><a class="headerlink" href="#bge.texture.FilterColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter for color calculations</p>
+<dl class="attribute">
+<dt id="bge.texture.FilterColor.matrix"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterColor.matrix"></a>
+<code class="descname">matrix</code><a class="headerlink" href="#bge.texture.FilterColor.matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>matrix [4][5] for color calculation</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.FilterColor.previous"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterColor.previous"></a>
+<code class="descname">previous</code><a class="headerlink" href="#bge.texture.FilterColor.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>previous pixel filter</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterGray"><a name="//apple_ref/cpp/Class/bge.texture.FilterGray"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterGray</code><a class="headerlink" href="#bge.texture.FilterGray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter for gray scale effect</p>
+<dl class="attribute">
+<dt id="bge.texture.FilterGray.previous"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterGray.previous"></a>
+<code class="descname">previous</code><a class="headerlink" href="#bge.texture.FilterGray.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>previous pixel filter</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterLevel"><a name="//apple_ref/cpp/Class/bge.texture.FilterLevel"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterLevel</code><a class="headerlink" href="#bge.texture.FilterLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter for levels calculations</p>
+<dl class="attribute">
+<dt id="bge.texture.FilterLevel.levels"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterLevel.levels"></a>
+<code class="descname">levels</code><a class="headerlink" href="#bge.texture.FilterLevel.levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>levels matrix [4] (min, max)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.FilterLevel.previous"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterLevel.previous"></a>
+<code class="descname">previous</code><a class="headerlink" href="#bge.texture.FilterLevel.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>previous pixel filter</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterNormal"><a name="//apple_ref/cpp/Class/bge.texture.FilterNormal"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterNormal</code><a class="headerlink" href="#bge.texture.FilterNormal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter for Blue Screen objects</p>
+<dl class="attribute">
+<dt id="bge.texture.FilterNormal.colorIdx"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterNormal.colorIdx"></a>
+<code class="descname">colorIdx</code><a class="headerlink" href="#bge.texture.FilterNormal.colorIdx" title="Permalink to this definition">¶</a></dt>
+<dd><p>index of color used to calculate normal (0 - red, 1 - green, 2 - blue)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.FilterNormal.depth"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterNormal.depth"></a>
+<code class="descname">depth</code><a class="headerlink" href="#bge.texture.FilterNormal.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>depth of relief</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.texture.FilterNormal.previous"><a name="//apple_ref/cpp/Attribute/bge.texture.FilterNormal.previous"></a>
+<code class="descname">previous</code><a class="headerlink" href="#bge.texture.FilterNormal.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>previous pixel filter</p>
+</dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterRGB24"><a name="//apple_ref/cpp/Class/bge.texture.FilterRGB24"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterRGB24</code><a class="headerlink" href="#bge.texture.FilterRGB24" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new input filter object to be used with <a class="reference internal" href="#bge.texture.ImageBuff" title="bge.texture.ImageBuff"><code class="xref py py-class docutils literal"><span class="pre">ImageBuff</span></code></a> object when the image passed
+to the ImageBuff.load() function has the 3-bytes pixel format BGR.</p>
+</dd></dl>
+<dl class="class">
+<dt id="bge.texture.FilterRGBA32"><a name="//apple_ref/cpp/Class/bge.texture.FilterRGBA32"></a>
+<em class="property">class </em><code class="descclassname">bge.texture.</code><code class="descname">FilterRGBA32</code><a class="headerlink" href="#bge.texture.FilterRGBA32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source filter RGBA32 objects</p>
+</dd></dl>
+<dl class="function">
+<dt id="bge.texture.getLastError"><a name="//apple_ref/cpp/Function/bge.texture.getLastError"></a>
+<code class="descclassname">bge.texture.</code><code class="descname">getLastError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.getLastError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last error that occurred in a bge.texture function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the description of the last error occurred in a bge.texture function.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string">string</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bge.texture.imageToArray"><a name="//apple_ref/cpp/Function/bge.texture.imageToArray"></a>
+<code class="descclassname">bge.texture.</code><code class="descname">imageToArray</code><span class="sig-paren">(</span><em>image</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.imageToArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <code class="xref py py-class docutils literal"><span class="pre">buffer</span></code> corresponding to the current image stored in a texture source object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>image</strong> (object of type <a class="reference internal" href="#bge.texture.VideoFFmpeg" title="bge.texture.VideoFFmpeg"><code class="xref py py-class docutils literal"><span class="pre">VideoFFmpeg</span></code></a>, <a class="reference internal" href="#bge.texture.ImageFFmpeg" title="bge.texture.ImageFFmpeg"><code class="xref py py-class docutils literal"><span class="pre">ImageFFmpeg</span></code></a>, <a class="reference internal" href="#bge.texture.ImageBuff" title="bge.texture.ImageBuff"><code class="xref py py-class docutils literal"><span class="pre">ImageBuff</span></code></a>, <a class="reference internal" href="#bge.texture.ImageMix" title="bge.texture.ImageMix"><code class="xref py py-class docutils literal"><span class="pre">ImageMix</span></code></a>, <a class="reference internal" href="#bge.texture.ImageRender" title="bge.texture.ImageRender"><code class="xref py py-class docutils literal"><span class="pre">ImageRender</span></code></a>, <a class="reference internal" href="#bge.texture.ImageMirror" title="bge.texture.ImageMirror"><code class="xref py py-class docutils literal"><span class="pre">ImageMirror</span></code></a> or <a class="reference internal" href="#bge.texture.ImageViewport" title="bge.texture.ImageViewport"><code class="xref py py-class docutils literal"><span class="pre">ImageViewport</span></code></a>) – Image source object.</li>
+<li><strong>mode</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – optional argument representing the pixel format.
+You can use the characters R, G, B for the 3 color channels, A for the alpha channel,
+0 to force a fixed 0 color channel and 1 to force a fixed 255 color channel.
+Example: “BGR” will return 3 bytes per pixel with the Blue, Green and Red channels in that order.
+“RGB1” will return 4 bytes per pixel with the Red, Green, Blue channels in that order and the alpha channel forced to 255.
+A special mode “F” allows to return the image as an array of float. This mode should only be used to retrieve
+the depth buffer of the ImageViewport and ImageRender object.
+The default mode is “RGBA”.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><code class="xref py py-class docutils literal"><span class="pre">buffer</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A object representing the image as one dimensional array of bytes of size (pixel_size*width*height),
+line by line starting from the bottom of the image. The pixel size and format is determined by the mode
+parameter. For mode ‘F’, the array is a one dimensional array of float of size (width*height).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bge.texture.materialID"><a name="//apple_ref/cpp/Function/bge.texture.materialID"></a>
+<code class="descclassname">bge.texture.</code><code class="descname">materialID</code><span class="sig-paren">(</span><em>object</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.materialID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a numeric value that can be used in <a class="reference internal" href="#bge.texture.Texture" title="bge.texture.Texture"><code class="xref py py-class docutils literal"><span class="pre">Texture</span></code></a> to create a dynamic texture.</p>
+<p>The value corresponds to an internal material number that uses the texture identified
+by name. name is a string representing a texture name with IM prefix if you want to
+identify the texture directly.    This method works for basic tex face and for material,
+provided the material has a texture channel using that particular texture in first
+position of the texture stack.    name can also have MA prefix if you want to identify
+the texture by material. In that case the material must have a texture channel in first
+position.</p>
+<p>If the object has no material that matches name, it generates a runtime error. Use try/except to catch the exception.</p>
+<p>Ex: bge.texture.materialID(obj, ‘IMvideo.png’)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>object</strong> (<em>game object</em>) – the game object that uses the texture you want to make dynamic</li>
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – name of the texture/material you want to make dynamic.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">integer</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bge.texture.setLogFile"><a name="//apple_ref/cpp/Function/bge.texture.setLogFile"></a>
+<code class="descclassname">bge.texture.</code><code class="descname">setLogFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.texture.setLogFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of a text file in which runtime error messages will be written, in addition to the printing
+of the messages on the Python console. Only the runtime errors specific to the VideoTexture module
+are written in that file, ordinary runtime time errors are not written.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – name of error log file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h3><a href="contents.html">Table Of Contents</a></h3>
+<ul>
+<li><a class="reference internal" href="#">Video Texture (bge.texture)</a><ul>
+<li><a class="reference internal" href="#intro">Intro</a></li>
+</ul>
+</li>
+</ul>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.render.html" title="previous chapter">Rasterizer (bge.render)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.events.html" title="next chapter">Game Keys (bge.events)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.events.html" title="Game Keys (bge.events)">next</a> |</li>
+<li class="right">
+<a href="bge.render.html" title="Rasterizer (bge.render)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.texture.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:52 GMT -->
+</html>
