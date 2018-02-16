@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>SPHFluidSettings(bpy_struct) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.Scaling.html" rel="next" title="Scaling(KeyingSetInfo)"/>
+<link href="bpy.types.SCENE_UL_keying_set_paths.html" rel="prev" title="SCENE_UL_keying_set_paths(UIList)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.Scaling.html" title="Scaling(KeyingSetInfo)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.SCENE_UL_keying_set_paths.html" title="SCENE_UL_keying_set_paths(UIList)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="sphfluidsettings-bpy-struct"></span><h1>SPHFluidSettings(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.SPHFluidSettings"><a name="//apple_ref/cpp/Class/bpy.types.SPHFluidSettings"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">SPHFluidSettings</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.SPHFluidSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for particle fluids physics</p>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.buoyancy"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.buoyancy"></a>
+<code class="descname">buoyancy</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.buoyancy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artificial buoyancy force in negative gravity direction based on pressure differences inside the fluid</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.factor_radius"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.factor_radius"></a>
+<code class="descname">factor_radius</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.factor_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interaction radius is a factor of 4 * particle size</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.factor_repulsion"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.factor_repulsion"></a>
+<code class="descname">factor_repulsion</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.factor_repulsion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repulsion is a factor of stiffness</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.factor_rest_length"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.factor_rest_length"></a>
+<code class="descname">factor_rest_length</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.factor_rest_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spring rest length is a factor of 2 * particle size</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.factor_stiff_viscosity"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.factor_stiff_viscosity"></a>
+<code class="descname">factor_stiff_viscosity</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.factor_stiff_viscosity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stiff viscosity is a factor of normal viscosity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.fluid_radius"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.fluid_radius"></a>
+<code class="descname">fluid_radius</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.fluid_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fluid interaction radius</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 20], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.linear_viscosity"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.linear_viscosity"></a>
+<code class="descname">linear_viscosity</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.linear_viscosity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear viscosity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.plasticity"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.plasticity"></a>
+<code class="descname">plasticity</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.plasticity" title="Permalink to this definition">¶</a></dt>
+<dd><p>How much the spring rest length can change after the elastic limit is crossed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.repulsion"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.repulsion"></a>
+<code class="descname">repulsion</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.repulsion" title="Permalink to this definition">¶</a></dt>
+<dd><p>How strongly the fluid tries to keep from clustering (factor of stiffness)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.rest_density"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.rest_density"></a>
+<code class="descname">rest_density</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.rest_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fluid rest density</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.rest_length"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.rest_length"></a>
+<code class="descname">rest_length</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.rest_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spring rest length (factor of particle radius)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 2], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.solver"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.solver"></a>
+<code class="descname">solver</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>The code used to calculate internal forces on particles</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">DDR</span></code> Double-Density, An artistic solver with strong surface tension effects (original).</li>
+<li><code class="docutils literal"><span class="pre">CLASSICAL</span></code> Classical, A more physically-accurate solver.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘DDR’, ‘CLASSICAL’], default ‘DDR’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.spring_force"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.spring_force"></a>
+<code class="descname">spring_force</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.spring_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spring force</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.spring_frames"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.spring_frames"></a>
+<code class="descname">spring_frames</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.spring_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create springs for this number of frames since particles birth (0 is always)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 100], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.stiff_viscosity"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.stiff_viscosity"></a>
+<code class="descname">stiff_viscosity</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.stiff_viscosity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates viscosity for expanding fluid</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.stiffness"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.stiffness"></a>
+<code class="descname">stiffness</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.stiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>How incompressible the fluid is (speed of sound)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.use_factor_density"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.use_factor_density"></a>
+<code class="descname">use_factor_density</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.use_factor_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density is calculated as a factor of default density (depends on particle size)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.use_initial_rest_length"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.use_initial_rest_length"></a>
+<code class="descname">use_initial_rest_length</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.use_initial_rest_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the initial length as spring rest length instead of 2 * particle size</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.use_viscoelastic_springs"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.use_viscoelastic_springs"></a>
+<code class="descname">use_viscoelastic_springs</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.use_viscoelastic_springs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use viscoelastic springs instead of Hooke’s springs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.SPHFluidSettings.yield_ratio"><a name="//apple_ref/cpp/Attribute/bpy.types.SPHFluidSettings.yield_ratio"></a>
+<code class="descname">yield_ratio</code><a class="headerlink" href="#bpy.types.SPHFluidSettings.yield_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>How much the spring has to be stretched/compressed in order to change it’s rest length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.ParticleSettings.html#bpy.types.ParticleSettings.fluid" title="bpy.types.ParticleSettings.fluid"><code class="xref py py-class docutils literal"><span class="pre">ParticleSettings.fluid</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.SCENE_UL_keying_set_paths.html" title="previous chapter">SCENE_UL_keying_set_paths(UIList)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.Scaling.html" title="next chapter">Scaling(KeyingSetInfo)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.Scaling.html" title="Scaling(KeyingSetInfo)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.SCENE_UL_keying_set_paths.html" title="SCENE_UL_keying_set_paths(UIList)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

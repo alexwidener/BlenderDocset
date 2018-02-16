@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>View2D Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.view3d.html" rel="next" title="View3D Operators"/>
+<link href="bpy.ops.uv.html" rel="prev" title="Uv Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.view3d.html" title="View3D Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.uv.html" title="Uv Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.view2d">
+<span id="view2d-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.view2d"></a>View2D Operators<a class="headerlink" href="#module-bpy.ops.view2d" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.view2d.ndof"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.ndof"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">ndof</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.ndof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use a 3D mouse device to pan/zoom the view</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.pan"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.pan"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">pan</code><span class="sig-paren">(</span><em>deltax=0</em>, <em>deltay=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.pan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pan the view</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deltax</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta X</li>
+<li><strong>deltay</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta Y</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.reset"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.reset"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the view</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.scroll_down"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.scroll_down"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">scroll_down</code><span class="sig-paren">(</span><em>deltax=0</em>, <em>deltay=0</em>, <em>page=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.scroll_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scroll the view down</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deltax</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta X</li>
+<li><strong>deltay</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta Y</li>
+<li><strong>page</strong> (<em>boolean, (optional)</em>) – Page, Scroll down one page</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.scroll_left"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.scroll_left"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">scroll_left</code><span class="sig-paren">(</span><em>deltax=0</em>, <em>deltay=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.scroll_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scroll the view left</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deltax</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta X</li>
+<li><strong>deltay</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta Y</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.scroll_right"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.scroll_right"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">scroll_right</code><span class="sig-paren">(</span><em>deltax=0</em>, <em>deltay=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.scroll_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scroll the view right</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deltax</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta X</li>
+<li><strong>deltay</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta Y</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.scroll_up"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.scroll_up"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">scroll_up</code><span class="sig-paren">(</span><em>deltax=0</em>, <em>deltay=0</em>, <em>page=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.scroll_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scroll the view up</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deltax</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta X</li>
+<li><strong>deltay</strong> (<em>int in [-inf, inf], (optional)</em>) – Delta Y</li>
+<li><strong>page</strong> (<em>boolean, (optional)</em>) – Page, Scroll up one page</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.scroller_activate"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.scroller_activate"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">scroller_activate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.scroller_activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scroll view by mouse click and drag</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.smoothview"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.smoothview"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">smoothview</code><span class="sig-paren">(</span><em>gesture_mode=0</em>, <em>xmin=0</em>, <em>xmax=0</em>, <em>ymin=0</em>, <em>ymax=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.smoothview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>gesture_mode</strong> (<em>int in [-inf, inf], (optional)</em>) – Gesture Mode</li>
+<li><strong>xmin</strong> (<em>int in [-inf, inf], (optional)</em>) – X Min</li>
+<li><strong>xmax</strong> (<em>int in [-inf, inf], (optional)</em>) – X Max</li>
+<li><strong>ymin</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Min</li>
+<li><strong>ymax</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Max</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.zoom"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.zoom"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">zoom</code><span class="sig-paren">(</span><em>deltax=0.0</em>, <em>deltay=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.zoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zoom in/out the view</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deltax</strong> (<em>float in [-inf, inf], (optional)</em>) – Delta X</li>
+<li><strong>deltay</strong> (<em>float in [-inf, inf], (optional)</em>) – Delta Y</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.zoom_border"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.zoom_border"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">zoom_border</code><span class="sig-paren">(</span><em>gesture_mode=0</em>, <em>xmin=0</em>, <em>xmax=0</em>, <em>ymin=0</em>, <em>ymax=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.zoom_border" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zoom in the view to the nearest item contained in the border</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>gesture_mode</strong> (<em>int in [-inf, inf], (optional)</em>) – Gesture Mode</li>
+<li><strong>xmin</strong> (<em>int in [-inf, inf], (optional)</em>) – X Min</li>
+<li><strong>xmax</strong> (<em>int in [-inf, inf], (optional)</em>) – X Max</li>
+<li><strong>ymin</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Min</li>
+<li><strong>ymax</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Max</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.zoom_in"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.zoom_in"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">zoom_in</code><span class="sig-paren">(</span><em>zoomfacx=0.0</em>, <em>zoomfacy=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.zoom_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zoom in the view</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>zoomfacx</strong> (<em>float in [-inf, inf], (optional)</em>) – Zoom Factor X</li>
+<li><strong>zoomfacy</strong> (<em>float in [-inf, inf], (optional)</em>) – Zoom Factor Y</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.view2d.zoom_out"><a name="//apple_ref/cpp/Function/bpy.ops.view2d.zoom_out"></a>
+<code class="descclassname">bpy.ops.view2d.</code><code class="descname">zoom_out</code><span class="sig-paren">(</span><em>zoomfacx=0.0</em>, <em>zoomfacy=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.view2d.zoom_out" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zoom out the view</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>zoomfacx</strong> (<em>float in [-inf, inf], (optional)</em>) – Zoom Factor X</li>
+<li><strong>zoomfacy</strong> (<em>float in [-inf, inf], (optional)</em>) – Zoom Factor Y</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.uv.html" title="previous chapter">Uv Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.view3d.html" title="next chapter">View3D Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.view3d.html" title="View3D Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.uv.html" title="Uv Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

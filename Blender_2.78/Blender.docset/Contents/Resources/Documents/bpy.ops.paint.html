@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Paint Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.paintcurve.html" rel="next" title="Paintcurve Operators"/>
+<link href="bpy.ops.outliner.html" rel="prev" title="Outliner Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.paintcurve.html" title="Paintcurve Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.outliner.html" title="Outliner Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.paint">
+<span id="paint-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.paint"></a>Paint Operators<a class="headerlink" href="#module-bpy.ops.paint" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.paint.add_simple_uvs"><a name="//apple_ref/cpp/Function/bpy.ops.paint.add_simple_uvs"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">add_simple_uvs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.add_simple_uvs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add cube map uvs on mesh</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.add_texture_paint_slot"><a name="//apple_ref/cpp/Function/bpy.ops.paint.add_texture_paint_slot"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">add_texture_paint_slot</code><span class="sig-paren">(</span><em>type='DIFFUSE_COLOR'</em>, <em>name="Untitled"</em>, <em>width=1024</em>, <em>height=1024</em>, <em>color=(0.0</em>, <em>0.0</em>, <em>0.0</em>, <em>1.0)</em>, <em>alpha=True</em>, <em>generated_type='BLANK'</em>, <em>float=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.add_texture_paint_slot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a texture paint slot</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['DIFFUSE_COLOR', 'DIFFUSE_INTENSITY', 'ALPHA', 'TRANSLUCENCY', 'SPECULAR_COLOR', 'SPECULAR_INTENSITY', 'SPECULAR_HARDNESS', 'AMBIENT', 'EMIT', 'MIRROR_COLOR', 'RAYMIRROR', 'NORMAL', 'WARP', 'DISPLACE'], (optional)</em>) – Type, Merge method to use</li>
+<li><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Image datablock name</li>
+<li><strong>width</strong> (<em>int in [1, inf], (optional)</em>) – Width, Image width</li>
+<li><strong>height</strong> (<em>int in [1, inf], (optional)</em>) – Height, Image height</li>
+<li><strong>color</strong> (<em>float array of 4 items in [0, inf], (optional)</em>) – Color, Default fill color</li>
+<li><strong>alpha</strong> (<em>boolean, (optional)</em>) – Alpha, Create an image with an alpha channel</li>
+<li><strong>generated_type</strong> (<em>enum in ['BLANK', 'UV_GRID', 'COLOR_GRID'], (optional)</em>) – <p>Generated Type, Fill the image with a grid for UV map testing</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">BLANK</span></code> Blank, Generate a blank image.</li>
+<li><code class="docutils literal"><span class="pre">UV_GRID</span></code> UV Grid, Generated grid to test UV mappings.</li>
+<li><code class="docutils literal"><span class="pre">COLOR_GRID</span></code> Color Grid, Generated improved UV grid to test UV mappings.</li>
+</ul>
+</li>
+<li><strong>float</strong> (<em>boolean, (optional)</em>) – 32 bit Float, Create image with 32 bit floating point bit depth</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.brush_colors_flip"><a name="//apple_ref/cpp/Function/bpy.ops.paint.brush_colors_flip"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">brush_colors_flip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.brush_colors_flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle foreground and background brush colors</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.brush_select"><a name="//apple_ref/cpp/Function/bpy.ops.paint.brush_select"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">brush_select</code><span class="sig-paren">(</span><em>paint_mode='ACTIVE'</em>, <em>sculpt_tool='BLOB'</em>, <em>vertex_paint_tool='MIX'</em>, <em>weight_paint_tool='MIX'</em>, <em>texture_paint_tool='DRAW'</em>, <em>toggle=False</em>, <em>create_missing=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.brush_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a paint mode’s brush by tool type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>paint_mode</strong> (<em>enum in ['ACTIVE', 'SCULPT', 'VERTEX_PAINT', 'WEIGHT_PAINT', 'TEXTURE_PAINT'], (optional)</em>) – <p>Paint Mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">ACTIVE</span></code> Current, Set brush for active paint mode.</li>
+<li><code class="docutils literal"><span class="pre">SCULPT</span></code> Sculpt.</li>
+<li><code class="docutils literal"><span class="pre">VERTEX_PAINT</span></code> Vertex Paint.</li>
+<li><code class="docutils literal"><span class="pre">WEIGHT_PAINT</span></code> Weight Paint.</li>
+<li><code class="docutils literal"><span class="pre">TEXTURE_PAINT</span></code> Texture Paint.</li>
+</ul>
+</li>
+<li><strong>sculpt_tool</strong> (<em>enum in ['BLOB', 'CLAY', 'CLAY_STRIPS', 'CREASE', 'DRAW', 'FILL', 'FLATTEN', 'GRAB', 'INFLATE', 'LAYER', 'MASK', 'NUDGE', 'PINCH', 'ROTATE', 'SCRAPE', 'SIMPLIFY', 'SMOOTH', 'SNAKE_HOOK', 'THUMB'], (optional)</em>) – Sculpt Tool</li>
+<li><strong>vertex_paint_tool</strong> (<em>enum in ['MIX', 'ADD', 'SUB', 'MUL', 'BLUR', 'LIGHTEN', 'DARKEN'], (optional)</em>) – <p>Vertex Paint Tool</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">MIX</span></code> Mix, Use mix blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">ADD</span></code> Add, Use add blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">SUB</span></code> Subtract, Use subtract blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">MUL</span></code> Multiply, Use multiply blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">BLUR</span></code> Blur, Blur the color with surrounding values.</li>
+<li><code class="docutils literal"><span class="pre">LIGHTEN</span></code> Lighten, Use lighten blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">DARKEN</span></code> Darken, Use darken blending mode while painting.</li>
+</ul>
+</li>
+<li><strong>weight_paint_tool</strong> (<em>enum in ['MIX', 'ADD', 'SUB', 'MUL', 'BLUR', 'LIGHTEN', 'DARKEN'], (optional)</em>) – <p>Weight Paint Tool</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">MIX</span></code> Mix, Use mix blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">ADD</span></code> Add, Use add blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">SUB</span></code> Subtract, Use subtract blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">MUL</span></code> Multiply, Use multiply blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">BLUR</span></code> Blur, Blur the color with surrounding values.</li>
+<li><code class="docutils literal"><span class="pre">LIGHTEN</span></code> Lighten, Use lighten blending mode while painting.</li>
+<li><code class="docutils literal"><span class="pre">DARKEN</span></code> Darken, Use darken blending mode while painting.</li>
+</ul>
+</li>
+<li><strong>texture_paint_tool</strong> (<em>enum in ['DRAW', 'SOFTEN', 'SMEAR', 'CLONE', 'FILL', 'MASK'], (optional)</em>) – Texture Paint Tool</li>
+<li><strong>toggle</strong> (<em>boolean, (optional)</em>) – Toggle, Toggle between two brushes rather than cycling</li>
+<li><strong>create_missing</strong> (<em>boolean, (optional)</em>) – Create Missing, If the requested brush type does not exist, create a new brush</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.delete_texture_paint_slot"><a name="//apple_ref/cpp/Function/bpy.ops.paint.delete_texture_paint_slot"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">delete_texture_paint_slot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.delete_texture_paint_slot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete selected texture paint slot</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.face_select_all"><a name="//apple_ref/cpp/Function/bpy.ops.paint.face_select_all"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">face_select_all</code><span class="sig-paren">(</span><em>action='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.face_select_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change selection for all faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action</strong> (<em>enum in ['TOGGLE', 'SELECT', 'DESELECT', 'INVERT'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">TOGGLE</span></code> Toggle, Toggle selection for all elements.</li>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert selection of all elements.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.face_select_hide"><a name="//apple_ref/cpp/Function/bpy.ops.paint.face_select_hide"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">face_select_hide</code><span class="sig-paren">(</span><em>unselected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.face_select_hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide selected faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>unselected</strong> (<em>boolean, (optional)</em>) – Unselected, Hide unselected rather than selected objects</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.face_select_linked"><a name="//apple_ref/cpp/Function/bpy.ops.paint.face_select_linked"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">face_select_linked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.face_select_linked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select linked faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.face_select_linked_pick"><a name="//apple_ref/cpp/Function/bpy.ops.paint.face_select_linked_pick"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">face_select_linked_pick</code><span class="sig-paren">(</span><em>deselect=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.face_select_linked_pick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select linked faces under the cursor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deselect</strong> (<em>boolean, (optional)</em>) – Deselect, Deselect rather than select items</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.face_select_reveal"><a name="//apple_ref/cpp/Function/bpy.ops.paint.face_select_reveal"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">face_select_reveal</code><span class="sig-paren">(</span><em>unselected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.face_select_reveal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reveal hidden faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>unselected</strong> (<em>boolean, (optional)</em>) – Unselected, Hide unselected rather than selected objects</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.grab_clone"><a name="//apple_ref/cpp/Function/bpy.ops.paint.grab_clone"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">grab_clone</code><span class="sig-paren">(</span><em>delta=(0.0</em>, <em>0.0)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.grab_clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the clone source image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>delta</strong> (<em>float array of 2 items in [-inf, inf], (optional)</em>) – Delta, Delta offset of clone image in 0.0..1.0 coordinates</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.hide_show"><a name="//apple_ref/cpp/Function/bpy.ops.paint.hide_show"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">hide_show</code><span class="sig-paren">(</span><em>action='HIDE'</em>, <em>area='INSIDE'</em>, <em>xmin=0</em>, <em>xmax=0</em>, <em>ymin=0</em>, <em>ymax=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.hide_show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide/show some vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>action</strong> (<em>enum in ['HIDE', 'SHOW'], (optional)</em>) – <p>Action, Whether to hide or show vertices</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">HIDE</span></code> Hide, Hide vertices.</li>
+<li><code class="docutils literal"><span class="pre">SHOW</span></code> Show, Show vertices.</li>
+</ul>
+</li>
+<li><strong>area</strong> (<em>enum in ['OUTSIDE', 'INSIDE', 'ALL', 'MASKED'], (optional)</em>) – <p>Area, Which vertices to hide or show</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">OUTSIDE</span></code> Outside, Hide or show vertices outside the selection.</li>
+<li><code class="docutils literal"><span class="pre">INSIDE</span></code> Inside, Hide or show vertices inside the selection.</li>
+<li><code class="docutils literal"><span class="pre">ALL</span></code> All, Hide or show all vertices.</li>
+<li><code class="docutils literal"><span class="pre">MASKED</span></code> Masked, Hide or show vertices that are masked (minimum mask value of 0.5).</li>
+</ul>
+</li>
+<li><strong>xmin</strong> (<em>int in [-inf, inf], (optional)</em>) – X Min</li>
+<li><strong>xmax</strong> (<em>int in [-inf, inf], (optional)</em>) – X Max</li>
+<li><strong>ymin</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Min</li>
+<li><strong>ymax</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Max</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.image_from_view"><a name="//apple_ref/cpp/Function/bpy.ops.paint.image_from_view"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">image_from_view</code><span class="sig-paren">(</span><em>filepath=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.image_from_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make an image from the current 3D view for re-projection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Name of the file</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.image_paint"><a name="//apple_ref/cpp/Function/bpy.ops.paint.image_paint"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">image_paint</code><span class="sig-paren">(</span><em>stroke=None</em>, <em>mode='NORMAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.image_paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint a stroke into the image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stroke</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorStrokeElement</span></code>, (optional)) – Stroke</li>
+<li><strong>mode</strong> (<em>enum in ['NORMAL', 'INVERT', 'SMOOTH'], (optional)</em>) – <p>Stroke Mode, Action taken when a paint stroke is made</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NORMAL</span></code> Normal, Apply brush normally.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert action of brush for duration of stroke.</li>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Switch brush to smooth mode for duration of stroke.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.mask_flood_fill"><a name="//apple_ref/cpp/Function/bpy.ops.paint.mask_flood_fill"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">mask_flood_fill</code><span class="sig-paren">(</span><em>mode='VALUE'</em>, <em>value=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.mask_flood_fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill the whole mask with a given value, or invert its values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<em>enum in ['VALUE', 'VALUE_INVERSE', 'INVERT'], (optional)</em>) – <p>Mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">VALUE</span></code> Value, Set mask to the level specified by the ‘value’ property.</li>
+<li><code class="docutils literal"><span class="pre">VALUE_INVERSE</span></code> Value Inverted, Set mask to the level specified by the inverted ‘value’ property.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert the mask.</li>
+</ul>
+</li>
+<li><strong>value</strong> (<em>float in [0, 1], (optional)</em>) – Value, Mask level to use when mode is ‘Value’; zero means no masking and one is fully masked</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.mask_lasso_gesture"><a name="//apple_ref/cpp/Function/bpy.ops.paint.mask_lasso_gesture"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">mask_lasso_gesture</code><span class="sig-paren">(</span><em>path=None</em>, <em>mode='VALUE'</em>, <em>value=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.mask_lasso_gesture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add mask within the lasso as you move the brush</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorMousePath</span></code>, (optional)) – path</li>
+<li><strong>mode</strong> (<em>enum in ['VALUE', 'VALUE_INVERSE', 'INVERT'], (optional)</em>) – <p>Mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">VALUE</span></code> Value, Set mask to the level specified by the ‘value’ property.</li>
+<li><code class="docutils literal"><span class="pre">VALUE_INVERSE</span></code> Value Inverted, Set mask to the level specified by the inverted ‘value’ property.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert the mask.</li>
+</ul>
+</li>
+<li><strong>value</strong> (<em>float in [0, 1], (optional)</em>) – Value, Mask level to use when mode is ‘Value’; zero means no masking and one is fully masked</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.project_image"><a name="//apple_ref/cpp/Function/bpy.ops.paint.project_image"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">project_image</code><span class="sig-paren">(</span><em>image=''</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.project_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project an edited render from the active camera back onto the object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>image</strong> (<em>enum in [], (optional)</em>) – Image</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.sample_color"><a name="//apple_ref/cpp/Function/bpy.ops.paint.sample_color"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">sample_color</code><span class="sig-paren">(</span><em>location=(0</em>, <em>0)</em>, <em>merged=False</em>, <em>palette=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.sample_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the mouse to sample a color in the image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>location</strong> (<em>int array of 2 items in [0, inf], (optional)</em>) – Location</li>
+<li><strong>merged</strong> (<em>boolean, (optional)</em>) – Sample Merged, Sample the output display color</li>
+<li><strong>palette</strong> (<em>boolean, (optional)</em>) – Add to Palette</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.texture_paint_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.paint.texture_paint_toggle"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">texture_paint_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.texture_paint_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle texture paint mode in 3D view</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vert_select_all"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vert_select_all"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vert_select_all</code><span class="sig-paren">(</span><em>action='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vert_select_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change selection for all vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action</strong> (<em>enum in ['TOGGLE', 'SELECT', 'DESELECT', 'INVERT'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">TOGGLE</span></code> Toggle, Toggle selection for all elements.</li>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert selection of all elements.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vert_select_ungrouped"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vert_select_ungrouped"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vert_select_ungrouped</code><span class="sig-paren">(</span><em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vert_select_ungrouped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select vertices without a group</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_brightness_contrast"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_brightness_contrast"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_brightness_contrast</code><span class="sig-paren">(</span><em>brightness=0.0</em>, <em>contrast=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_brightness_contrast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust vertex color brightness/contrast</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>brightness</strong> (<em>float in [-100, 100], (optional)</em>) – Brightness</li>
+<li><strong>contrast</strong> (<em>float in [-100, 100], (optional)</em>) – Contrast</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_dirt"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_dirt"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_dirt</code><span class="sig-paren">(</span><em>blur_strength=1.0</em>, <em>blur_iterations=1</em>, <em>clean_angle=3.14159</em>, <em>dirt_angle=0.0</em>, <em>dirt_only=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_dirt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blur_strength</strong> (<em>float in [0.01, 1], (optional)</em>) – Blur Strength, Blur strength per iteration</li>
+<li><strong>blur_iterations</strong> (<em>int in [0, 40], (optional)</em>) – Blur Iterations, Number of times to blur the colors (higher blurs more)</li>
+<li><strong>clean_angle</strong> (<em>float in [0, 3.14159], (optional)</em>) – Highlight Angle, Less than 90 limits the angle used in the tonal range</li>
+<li><strong>dirt_angle</strong> (<em>float in [0, 3.14159], (optional)</em>) – Dirt Angle, Less than 90 limits the angle used in the tonal range</li>
+<li><strong>dirt_only</strong> (<em>boolean, (optional)</em>) – Dirt Only, Don’t calculate cleans for convex areas</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/vertexpaint_dirt.py">startup/bl_operators/vertexpaint_dirt.py</a>:178</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_hsv"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_hsv"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_hsv</code><span class="sig-paren">(</span><em>h=0.5</em>, <em>s=1.0</em>, <em>v=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_hsv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust vertex color HSV values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>h</strong> (<em>float in [0, 1], (optional)</em>) – Hue</li>
+<li><strong>s</strong> (<em>float in [0, 2], (optional)</em>) – Saturation</li>
+<li><strong>v</strong> (<em>float in [0, 2], (optional)</em>) – Value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_invert"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_invert"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_invert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_invert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invert RGB values</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_levels"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_levels"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_levels</code><span class="sig-paren">(</span><em>offset=0.0</em>, <em>gain=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust levels of vertex colors</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>offset</strong> (<em>float in [-1, 1], (optional)</em>) – Offset, Value to add to colors</li>
+<li><strong>gain</strong> (<em>float in [0, inf], (optional)</em>) – Gain, Value to multiply colors by</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_set"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_set"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill the active vertex color layer with the current paint color</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_color_smooth"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_color_smooth"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_color_smooth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_color_smooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smooth colors across vertices</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_paint"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_paint"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_paint</code><span class="sig-paren">(</span><em>stroke=None</em>, <em>mode='NORMAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint a stroke in the active vertex color layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stroke</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorStrokeElement</span></code>, (optional)) – Stroke</li>
+<li><strong>mode</strong> (<em>enum in ['NORMAL', 'INVERT', 'SMOOTH'], (optional)</em>) – <p>Stroke Mode, Action taken when a paint stroke is made</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NORMAL</span></code> Normal, Apply brush normally.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert action of brush for duration of stroke.</li>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Switch brush to smooth mode for duration of stroke.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.vertex_paint_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.paint.vertex_paint_toggle"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">vertex_paint_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.vertex_paint_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle the vertex paint mode in 3D view</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_from_bones"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_from_bones"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_from_bones</code><span class="sig-paren">(</span><em>type='AUTOMATIC'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_from_bones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the weights of the groups matching the attached armature’s selected bones, using the distance between the vertices and the bones</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in ['AUTOMATIC', 'ENVELOPES'], (optional)</em>) – <p>Type, Method to use for assigning weights</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">AUTOMATIC</span></code> Automatic, Automatic weights from bones.</li>
+<li><code class="docutils literal"><span class="pre">ENVELOPES</span></code> From Envelopes, Weights from envelopes with user defined radius.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_gradient"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_gradient"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_gradient</code><span class="sig-paren">(</span><em>type='LINEAR'</em>, <em>xstart=0</em>, <em>xend=0</em>, <em>ystart=0</em>, <em>yend=0</em>, <em>cursor=1002</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a line to apply a weight gradient to selected vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['LINEAR', 'RADIAL'], (optional)</em>) – Type</li>
+<li><strong>xstart</strong> (<em>int in [-inf, inf], (optional)</em>) – X Start</li>
+<li><strong>xend</strong> (<em>int in [-inf, inf], (optional)</em>) – X End</li>
+<li><strong>ystart</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Start</li>
+<li><strong>yend</strong> (<em>int in [-inf, inf], (optional)</em>) – Y End</li>
+<li><strong>cursor</strong> (<em>int in [0, inf], (optional)</em>) – Cursor, Mouse cursor style to use during the modal operator</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_paint"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_paint"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_paint</code><span class="sig-paren">(</span><em>stroke=None</em>, <em>mode='NORMAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint a stroke in the current vertex group’s weights</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stroke</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorStrokeElement</span></code>, (optional)) – Stroke</li>
+<li><strong>mode</strong> (<em>enum in ['NORMAL', 'INVERT', 'SMOOTH'], (optional)</em>) – <p>Stroke Mode, Action taken when a paint stroke is made</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NORMAL</span></code> Normal, Apply brush normally.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert action of brush for duration of stroke.</li>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Switch brush to smooth mode for duration of stroke.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_paint_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_paint_toggle"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_paint_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_paint_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle weight paint mode in 3D view</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_sample"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_sample"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the mouse to sample a weight in the 3D view</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_sample_group"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_sample_group"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_sample_group</code><span class="sig-paren">(</span><em>group='DEFAULT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_sample_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select one of the vertex groups available under current mouse position</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>group</strong> (<em>enum in ['DEFAULT'], (optional)</em>) – Keying Set, The Keying Set to use</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.paint.weight_set"><a name="//apple_ref/cpp/Function/bpy.ops.paint.weight_set"></a>
+<code class="descclassname">bpy.ops.paint.</code><code class="descname">weight_set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.paint.weight_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill the active vertex group with the current paint weight</p>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.outliner.html" title="previous chapter">Outliner Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.paintcurve.html" title="next chapter">Paintcurve Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.paintcurve.html" title="Paintcurve Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.outliner.html" title="Outliner Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

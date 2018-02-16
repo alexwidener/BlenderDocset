@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ed Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.export_anim.html" rel="next" title="Export Anim Operators"/>
+<link href="bpy.ops.dpaint.html" rel="prev" title="Dpaint Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.export_anim.html" title="Export Anim Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.dpaint.html" title="Dpaint Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.ed">
+<span id="ed-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.ed"></a>Ed Operators<a class="headerlink" href="#module-bpy.ops.ed" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.ed.flush_edits"><a name="//apple_ref/cpp/Function/bpy.ops.ed.flush_edits"></a>
+<code class="descclassname">bpy.ops.ed.</code><code class="descname">flush_edits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.ed.flush_edits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush edit data from active editing modes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.ed.redo"><a name="//apple_ref/cpp/Function/bpy.ops.ed.redo"></a>
+<code class="descclassname">bpy.ops.ed.</code><code class="descname">redo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.ed.redo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redo previous action</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.ed.undo"><a name="//apple_ref/cpp/Function/bpy.ops.ed.undo"></a>
+<code class="descclassname">bpy.ops.ed.</code><code class="descname">undo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.ed.undo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undo previous action</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.ed.undo_history"><a name="//apple_ref/cpp/Function/bpy.ops.ed.undo_history"></a>
+<code class="descclassname">bpy.ops.ed.</code><code class="descname">undo_history</code><span class="sig-paren">(</span><em>item=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.ed.undo_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redo specific action in history</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item</strong> (<em>int in [0, inf], (optional)</em>) – Item</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.ed.undo_push"><a name="//apple_ref/cpp/Function/bpy.ops.ed.undo_push"></a>
+<code class="descclassname">bpy.ops.ed.</code><code class="descname">undo_push</code><span class="sig-paren">(</span><em>message="Add an undo step *function may be moved*"</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.ed.undo_push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an undo state (internal use only)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> (<em>string, (optional, never None)</em>) – Undo Message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.dpaint.html" title="previous chapter">Dpaint Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.export_anim.html" title="next chapter">Export Anim Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.export_anim.html" title="Export Anim Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.dpaint.html" title="Dpaint Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

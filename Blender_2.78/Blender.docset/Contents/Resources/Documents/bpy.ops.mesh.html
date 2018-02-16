@@ -1,0 +1,2373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Mesh Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.nla.html" rel="next" title="Nla Operators"/>
+<link href="bpy.ops.mball.html" rel="prev" title="Mball Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.nla.html" title="Nla Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.mball.html" title="Mball Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.mesh">
+<span id="mesh-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.mesh"></a>Mesh Operators<a class="headerlink" href="#module-bpy.ops.mesh" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.mesh.beautify_fill"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.beautify_fill"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">beautify_fill</code><span class="sig-paren">(</span><em>angle_limit=3.14159</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.beautify_fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rearrange some faces to try to get less degenerated geometry</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle_limit</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Angle, Angle limit</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.bevel"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.bevel"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">bevel</code><span class="sig-paren">(</span><em>offset_type='OFFSET'</em>, <em>offset=0.0</em>, <em>segments=1</em>, <em>profile=0.5</em>, <em>vertex_only=False</em>, <em>clamp_overlap=False</em>, <em>loop_slide=True</em>, <em>material=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.bevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edge Bevel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>offset_type</strong> (<em>enum in ['OFFSET', 'WIDTH', 'DEPTH', 'PERCENT'], (optional)</em>) – <p>Amount Type, What distance Amount measures</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">OFFSET</span></code> Offset, Amount is offset of new edges from original.</li>
+<li><code class="docutils literal"><span class="pre">WIDTH</span></code> Width, Amount is width of new face.</li>
+<li><code class="docutils literal"><span class="pre">DEPTH</span></code> Depth, Amount is perpendicular distance from original edge to bevel face.</li>
+<li><code class="docutils literal"><span class="pre">PERCENT</span></code> Percent, Amount is percent of adjacent edge length.</li>
+</ul>
+</li>
+<li><strong>offset</strong> (<em>float in [-1e+06, 1e+06], (optional)</em>) – Amount</li>
+<li><strong>segments</strong> (<em>int in [1, 1000], (optional)</em>) – Segments, Segments for curved edge</li>
+<li><strong>profile</strong> (<em>float in [0.15, 1], (optional)</em>) – Profile, Controls profile shape (0.5 = round)</li>
+<li><strong>vertex_only</strong> (<em>boolean, (optional)</em>) – Vertex Only, Bevel only vertices</li>
+<li><strong>clamp_overlap</strong> (<em>boolean, (optional)</em>) – Clamp Overlap, Do not allow beveled edges/vertices to overlap each other</li>
+<li><strong>loop_slide</strong> (<em>boolean, (optional)</em>) – Loop Slide, Prefer slide along edge to even widths</li>
+<li><strong>material</strong> (<em>int in [-1, inf], (optional)</em>) – Material, Material for bevel faces (-1 means use adjacent faces)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.bisect"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.bisect"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">bisect</code><span class="sig-paren">(</span><em>plane_co=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>plane_no=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>use_fill=False</em>, <em>clear_inner=False</em>, <em>clear_outer=False</em>, <em>threshold=0.0001</em>, <em>xstart=0</em>, <em>xend=0</em>, <em>ystart=0</em>, <em>yend=0</em>, <em>cursor=1002</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.bisect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut geometry along a plane (click-drag to define plane)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>plane_co</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Plane Point, A point on the plane</li>
+<li><strong>plane_no</strong> (<em>float array of 3 items in [-1, 1], (optional)</em>) – Plane Normal, The direction the plane points</li>
+<li><strong>use_fill</strong> (<em>boolean, (optional)</em>) – Fill, Fill in the cut</li>
+<li><strong>clear_inner</strong> (<em>boolean, (optional)</em>) – Clear Inner, Remove geometry behind the plane</li>
+<li><strong>clear_outer</strong> (<em>boolean, (optional)</em>) – Clear Outer, Remove geometry in front of the plane</li>
+<li><strong>threshold</strong> (<em>float in [0, 10], (optional)</em>) – Axis Threshold</li>
+<li><strong>xstart</strong> (<em>int in [-inf, inf], (optional)</em>) – X Start</li>
+<li><strong>xend</strong> (<em>int in [-inf, inf], (optional)</em>) – X End</li>
+<li><strong>ystart</strong> (<em>int in [-inf, inf], (optional)</em>) – Y Start</li>
+<li><strong>yend</strong> (<em>int in [-inf, inf], (optional)</em>) – Y End</li>
+<li><strong>cursor</strong> (<em>int in [0, inf], (optional)</em>) – Cursor, Mouse cursor style to use during the modal operator</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.blend_from_shape"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.blend_from_shape"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">blend_from_shape</code><span class="sig-paren">(</span><em>shape=''</em>, <em>blend=1.0</em>, <em>add=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.blend_from_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blend in shape from a shape key</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>shape</strong> (<em>enum in [], (optional)</em>) – Shape, Shape key to use for blending</li>
+<li><strong>blend</strong> (<em>float in [-1000, 1000], (optional)</em>) – Blend, Blending factor</li>
+<li><strong>add</strong> (<em>boolean, (optional)</em>) – Add, Add rather than blend between shapes</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.bridge_edge_loops"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.bridge_edge_loops"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">bridge_edge_loops</code><span class="sig-paren">(</span><em>type='SINGLE'</em>, <em>use_merge=False</em>, <em>merge_factor=0.5</em>, <em>twist_offset=0</em>, <em>number_cuts=0</em>, <em>interpolation='PATH'</em>, <em>smoothness=1.0</em>, <em>profile_shape_factor=0.0</em>, <em>profile_shape='SMOOTH'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.bridge_edge_loops" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make faces between two or more edge loops</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['SINGLE', 'CLOSED', 'PAIRS'], (optional)</em>) – Connect Loops, Method of bridging multiple loops</li>
+<li><strong>use_merge</strong> (<em>boolean, (optional)</em>) – Merge, Merge rather than creating faces</li>
+<li><strong>merge_factor</strong> (<em>float in [0, 1], (optional)</em>) – Merge Factor</li>
+<li><strong>twist_offset</strong> (<em>int in [-1000, 1000], (optional)</em>) – Twist, Twist offset for closed loops</li>
+<li><strong>number_cuts</strong> (<em>int in [0, 1000], (optional)</em>) – Number of Cuts</li>
+<li><strong>interpolation</strong> (<em>enum in ['LINEAR', 'PATH', 'SURFACE'], (optional)</em>) – Interpolation, Interpolation method</li>
+<li><strong>smoothness</strong> (<em>float in [0, 1000], (optional)</em>) – Smoothness, Smoothness factor</li>
+<li><strong>profile_shape_factor</strong> (<em>float in [-1000, 1000], (optional)</em>) – Profile Factor, How much intermediary new edges are shrunk/expanded</li>
+<li><strong>profile_shape</strong> (<em>enum in ['SMOOTH', 'SPHERE', 'ROOT', 'INVERSE_SQUARE', 'SHARP', 'LINEAR'], (optional)</em>) – <p>Profile Shape, Shape of the profile</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Smooth falloff.</li>
+<li><code class="docutils literal"><span class="pre">SPHERE</span></code> Sphere, Spherical falloff.</li>
+<li><code class="docutils literal"><span class="pre">ROOT</span></code> Root, Root falloff.</li>
+<li><code class="docutils literal"><span class="pre">INVERSE_SQUARE</span></code> Inverse Square, Inverse Square falloff.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Sharp falloff.</li>
+<li><code class="docutils literal"><span class="pre">LINEAR</span></code> Linear, Linear falloff.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.colors_reverse"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.colors_reverse"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">colors_reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.colors_reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flip direction of vertex colors inside faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.colors_rotate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.colors_rotate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">colors_rotate</code><span class="sig-paren">(</span><em>use_ccw=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.colors_rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate vertex colors inside faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_ccw</strong> (<em>boolean, (optional)</em>) – Counter Clockwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.convex_hull"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.convex_hull"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">convex_hull</code><span class="sig-paren">(</span><em>delete_unused=True</em>, <em>use_existing_faces=True</em>, <em>make_holes=False</em>, <em>join_triangles=True</em>, <em>face_threshold=0.698132</em>, <em>shape_threshold=0.698132</em>, <em>uvs=False</em>, <em>vcols=False</em>, <em>seam=False</em>, <em>sharp=False</em>, <em>materials=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.convex_hull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enclose selected vertices in a convex polyhedron</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>delete_unused</strong> (<em>boolean, (optional)</em>) – Delete Unused, Delete selected elements that are not used by the hull</li>
+<li><strong>use_existing_faces</strong> (<em>boolean, (optional)</em>) – Use Existing Faces, Skip hull triangles that are covered by a pre-existing face</li>
+<li><strong>make_holes</strong> (<em>boolean, (optional)</em>) – Make Holes, Delete selected faces that are used by the hull</li>
+<li><strong>join_triangles</strong> (<em>boolean, (optional)</em>) – Join Triangles, Merge adjacent triangles into quads</li>
+<li><strong>face_threshold</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Face Angle, Face angle limit</li>
+<li><strong>shape_threshold</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Shape Angle, Shape angle limit</li>
+<li><strong>uvs</strong> (<em>boolean, (optional)</em>) – Compare UVs</li>
+<li><strong>vcols</strong> (<em>boolean, (optional)</em>) – Compare VCols</li>
+<li><strong>seam</strong> (<em>boolean, (optional)</em>) – Compare Seam</li>
+<li><strong>sharp</strong> (<em>boolean, (optional)</em>) – Compare Sharp</li>
+<li><strong>materials</strong> (<em>boolean, (optional)</em>) – Compare Materials</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.customdata_custom_splitnormals_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.customdata_custom_splitnormals_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">customdata_custom_splitnormals_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.customdata_custom_splitnormals_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a custom split normals layer, if none exists yet</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.customdata_custom_splitnormals_clear"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.customdata_custom_splitnormals_clear"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">customdata_custom_splitnormals_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.customdata_custom_splitnormals_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the custom split normals layer, if it exists</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.customdata_mask_clear"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.customdata_mask_clear"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">customdata_mask_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.customdata_mask_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear vertex sculpt masking data from the mesh</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.customdata_skin_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.customdata_skin_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">customdata_skin_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.customdata_skin_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a vertex skin layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.customdata_skin_clear"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.customdata_skin_clear"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">customdata_skin_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.customdata_skin_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear vertex skin layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.decimate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.decimate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">decimate</code><span class="sig-paren">(</span><em>ratio=1.0</em>, <em>use_vertex_group=False</em>, <em>vertex_group_factor=1.0</em>, <em>invert_vertex_group=False</em>, <em>use_symmetry=False</em>, <em>symmetry_axis='Y'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.decimate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simplify geometry by collapsing edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ratio</strong> (<em>float in [0, 1], (optional)</em>) – Ratio</li>
+<li><strong>use_vertex_group</strong> (<em>boolean, (optional)</em>) – Vertex Group, Use active vertex group as an influence</li>
+<li><strong>vertex_group_factor</strong> (<em>float in [0, 1000], (optional)</em>) – Weight, Vertex group strength</li>
+<li><strong>invert_vertex_group</strong> (<em>boolean, (optional)</em>) – Invert, Invert vertex group influence</li>
+<li><strong>use_symmetry</strong> (<em>boolean, (optional)</em>) – Symmetry, Maintain symmetry on an axis</li>
+<li><strong>symmetry_axis</strong> (<em>enum in ['X', 'Y', 'Z'], (optional)</em>) – Axis, Axis of symmetry</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.delete"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.delete"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">delete</code><span class="sig-paren">(</span><em>type='VERT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete selected vertices, edges or faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in ['VERT', 'EDGE', 'FACE', 'EDGE_FACE', 'ONLY_FACE'], (optional)</em>) – Type, Method used for deleting mesh data</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.delete_edgeloop"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.delete_edgeloop"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">delete_edgeloop</code><span class="sig-paren">(</span><em>use_face_split=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.delete_edgeloop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an edge loop by merging the faces on each side</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_face_split</strong> (<em>boolean, (optional)</em>) – Face Split, Split off face corners to maintain surrounding geometry</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.delete_loose"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.delete_loose"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">delete_loose</code><span class="sig-paren">(</span><em>use_verts=True</em>, <em>use_edges=True</em>, <em>use_faces=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.delete_loose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete loose vertices, edges or faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_verts</strong> (<em>boolean, (optional)</em>) – Vertices, Remove loose vertices</li>
+<li><strong>use_edges</strong> (<em>boolean, (optional)</em>) – Edges, Remove loose edges</li>
+<li><strong>use_faces</strong> (<em>boolean, (optional)</em>) – Faces, Remove loose faces</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dissolve_degenerate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dissolve_degenerate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dissolve_degenerate</code><span class="sig-paren">(</span><em>threshold=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dissolve_degenerate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve zero area faces and zero length edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>threshold</strong> (<em>float in [1e-06, 50], (optional)</em>) – Merge Distance, Minimum distance between elements to merge</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dissolve_edges"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dissolve_edges"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dissolve_edges</code><span class="sig-paren">(</span><em>use_verts=True</em>, <em>use_face_split=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dissolve_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve edges, merging faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_verts</strong> (<em>boolean, (optional)</em>) – Dissolve Verts, Dissolve remaining vertices</li>
+<li><strong>use_face_split</strong> (<em>boolean, (optional)</em>) – Face Split, Split off face corners to maintain surrounding geometry</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dissolve_faces"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dissolve_faces"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dissolve_faces</code><span class="sig-paren">(</span><em>use_verts=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dissolve_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_verts</strong> (<em>boolean, (optional)</em>) – Dissolve Verts, Dissolve remaining vertices</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dissolve_limited"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dissolve_limited"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dissolve_limited</code><span class="sig-paren">(</span><em>angle_limit=0.0872665</em>, <em>use_dissolve_boundaries=False</em>, <em>delimit={'NORMAL'}</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dissolve_limited" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve selected edges and verts, limited by the angle of surrounding geometry</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>angle_limit</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Angle, Angle limit</li>
+<li><strong>use_dissolve_boundaries</strong> (<em>boolean, (optional)</em>) – All Boundaries, Dissolve all vertices inbetween face boundaries</li>
+<li><strong>delimit</strong> (<em>enum set in {'NORMAL', 'MATERIAL', 'SEAM', 'SHARP', 'UV'}, (optional)</em>) – <p>Delimit, Delimit dissolve operation</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NORMAL</span></code> Normal, Delimit by face directions.</li>
+<li><code class="docutils literal"><span class="pre">MATERIAL</span></code> Material, Delimit by face material.</li>
+<li><code class="docutils literal"><span class="pre">SEAM</span></code> Seam, Delimit by edge seams.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Delimit by sharp edges.</li>
+<li><code class="docutils literal"><span class="pre">UV</span></code> UVs, Delimit by UV coordinates.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dissolve_mode"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dissolve_mode"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dissolve_mode</code><span class="sig-paren">(</span><em>use_verts=False</em>, <em>use_face_split=False</em>, <em>use_boundary_tear=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dissolve_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve geometry based on the selection mode</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_verts</strong> (<em>boolean, (optional)</em>) – Dissolve Verts, Dissolve remaining vertices</li>
+<li><strong>use_face_split</strong> (<em>boolean, (optional)</em>) – Face Split, Split off face corners to maintain surrounding geometry</li>
+<li><strong>use_boundary_tear</strong> (<em>boolean, (optional)</em>) – Tear Boundary, Split off face corners instead of merging faces</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dissolve_verts"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dissolve_verts"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dissolve_verts</code><span class="sig-paren">(</span><em>use_face_split=False</em>, <em>use_boundary_tear=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dissolve_verts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve verts, merge edges and faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_face_split</strong> (<em>boolean, (optional)</em>) – Face Split, Split off face corners to maintain surrounding geometry</li>
+<li><strong>use_boundary_tear</strong> (<em>boolean, (optional)</em>) – Tear Boundary, Split off face corners instead of merging faces</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.drop_named_image"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.drop_named_image"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">drop_named_image</code><span class="sig-paren">(</span><em>name="Image"</em>, <em>filepath="Path"</em>, <em>relative_path=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.drop_named_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign Image to active UV Map, or create an UV Map</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Image name to assign</li>
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – Filepath, Path to image file</li>
+<li><strong>relative_path</strong> (<em>boolean, (optional)</em>) – Relative Path, Select the file relative to the blend file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.dupli_extrude_cursor"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.dupli_extrude_cursor"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">dupli_extrude_cursor</code><span class="sig-paren">(</span><em>rotate_source=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.dupli_extrude_cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate and extrude selected vertices, edges or faces towards the mouse cursor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rotate_source</strong> (<em>boolean, (optional)</em>) – Rotate Source, Rotate initial selection giving better shape</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.duplicate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.duplicate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">duplicate</code><span class="sig-paren">(</span><em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate selected vertices, edges or faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> (<em>int in [0, inf], (optional)</em>) – Mode</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.duplicate_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.duplicate_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">duplicate_move</code><span class="sig-paren">(</span><em>MESH_OT_duplicate=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.duplicate_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate mesh and move</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_duplicate</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_duplicate</span></code>, (optional)) – Duplicate, Duplicate selected vertices, edges or faces</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.edge_collapse"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.edge_collapse"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">edge_collapse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.edge_collapse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collapse selected edges</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.edge_face_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.edge_face_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">edge_face_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.edge_face_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an edge or face to selected</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.edge_rotate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.edge_rotate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">edge_rotate</code><span class="sig-paren">(</span><em>use_ccw=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.edge_rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate selected edge or adjoining faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_ccw</strong> (<em>boolean, (optional)</em>) – Counter Clockwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.edge_split"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.edge_split"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">edge_split</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.edge_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split selected edges so that each neighbor face gets its own copy</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.edgering_select"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.edgering_select"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">edgering_select</code><span class="sig-paren">(</span><em>extend=False</em>, <em>deselect=False</em>, <em>toggle=False</em>, <em>ring=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.edgering_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an edge ring</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</li>
+<li><strong>deselect</strong> (<em>boolean, (optional)</em>) – Deselect, Remove from the selection</li>
+<li><strong>toggle</strong> (<em>boolean, (optional)</em>) – Toggle Select, Toggle the selection</li>
+<li><strong>ring</strong> (<em>boolean, (optional)</em>) – Select Ring, Select ring</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.edges_select_sharp"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.edges_select_sharp"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">edges_select_sharp</code><span class="sig-paren">(</span><em>sharpness=0.523599</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.edges_select_sharp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all sharp-enough edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sharpness</strong> (<em>float in [0.000174533, 3.14159], (optional)</em>) – Sharpness</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_edges_indiv"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_edges_indiv"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_edges_indiv</code><span class="sig-paren">(</span><em>mirror=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_edges_indiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude individual edges only</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mirror</strong> (<em>boolean, (optional)</em>) – Mirror Editing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_edges_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_edges_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_edges_move</code><span class="sig-paren">(</span><em>MESH_OT_extrude_edges_indiv=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_edges_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude edges and move result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_extrude_edges_indiv</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_extrude_edges_indiv</span></code>, (optional)) – Extrude Only Edges, Extrude individual edges only</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_faces_indiv"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_faces_indiv"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_faces_indiv</code><span class="sig-paren">(</span><em>mirror=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_faces_indiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude individual faces only</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mirror</strong> (<em>boolean, (optional)</em>) – Mirror Editing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_faces_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_faces_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_faces_move</code><span class="sig-paren">(</span><em>MESH_OT_extrude_faces_indiv=None</em>, <em>TRANSFORM_OT_shrink_fatten=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_faces_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude faces and move result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_extrude_faces_indiv</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_extrude_faces_indiv</span></code>, (optional)) – Extrude Individual Faces, Extrude individual faces only</li>
+<li><strong>TRANSFORM_OT_shrink_fatten</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_shrink_fatten</span></code>, (optional)) – Shrink/Fatten, Shrink/fatten selected vertices along normals</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_region"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_region"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_region</code><span class="sig-paren">(</span><em>mirror=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude region of faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mirror</strong> (<em>boolean, (optional)</em>) – Mirror Editing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_region_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_region_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_region_move</code><span class="sig-paren">(</span><em>MESH_OT_extrude_region=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_region_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude region and move result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_extrude_region</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_extrude_region</span></code>, (optional)) – Extrude Region, Extrude region of faces</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_region_shrink_fatten"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_region_shrink_fatten"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_region_shrink_fatten</code><span class="sig-paren">(</span><em>MESH_OT_extrude_region=None</em>, <em>TRANSFORM_OT_shrink_fatten=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_region_shrink_fatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude region and move result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_extrude_region</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_extrude_region</span></code>, (optional)) – Extrude Region, Extrude region of faces</li>
+<li><strong>TRANSFORM_OT_shrink_fatten</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_shrink_fatten</span></code>, (optional)) – Shrink/Fatten, Shrink/fatten selected vertices along normals</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_repeat"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_repeat"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_repeat</code><span class="sig-paren">(</span><em>offset=2.0</em>, <em>steps=10</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude selected vertices, edges or faces repeatedly</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>offset</strong> (<em>float in [0, inf], (optional)</em>) – Offset</li>
+<li><strong>steps</strong> (<em>int in [0, 1000000], (optional)</em>) – Steps</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_vertices_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_vertices_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_vertices_move</code><span class="sig-paren">(</span><em>MESH_OT_extrude_verts_indiv=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_vertices_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude vertices and move result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_extrude_verts_indiv</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_extrude_verts_indiv</span></code>, (optional)) – Extrude Only Vertices, Extrude individual vertices only</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.extrude_verts_indiv"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.extrude_verts_indiv"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">extrude_verts_indiv</code><span class="sig-paren">(</span><em>mirror=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.extrude_verts_indiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude individual vertices only</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mirror</strong> (<em>boolean, (optional)</em>) – Mirror Editing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.face_make_planar"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.face_make_planar"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">face_make_planar</code><span class="sig-paren">(</span><em>factor=1.0</em>, <em>repeat=1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.face_make_planar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten selected faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>factor</strong> (<em>float in [-10, 10], (optional)</em>) – Factor</li>
+<li><strong>repeat</strong> (<em>int in [1, 10000], (optional)</em>) – Iterations</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.face_split_by_edges"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.face_split_by_edges"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">face_split_by_edges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.face_split_by_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weld loose edges into faces (splitting them into new faces)</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.faces_mirror_uv"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.faces_mirror_uv"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">faces_mirror_uv</code><span class="sig-paren">(</span><em>direction='POSITIVE'</em>, <em>precision=3</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.faces_mirror_uv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy mirror UV coordinates on the X axis based on a mirrored mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>direction</strong> (<em>enum in ['POSITIVE', 'NEGATIVE'], (optional)</em>) – Axis Direction</li>
+<li><strong>precision</strong> (<em>int in [1, 16], (optional)</em>) – Precision, Tolerance for finding vertex duplicates</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/mesh.py">startup/bl_operators/mesh.py</a>:52</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.faces_select_linked_flat"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.faces_select_linked_flat"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">faces_select_linked_flat</code><span class="sig-paren">(</span><em>sharpness=0.0174533</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.faces_select_linked_flat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select linked faces by angle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sharpness</strong> (<em>float in [0.000174533, 3.14159], (optional)</em>) – Sharpness</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.faces_shade_flat"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.faces_shade_flat"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">faces_shade_flat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.faces_shade_flat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display faces flat</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.faces_shade_smooth"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.faces_shade_smooth"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">faces_shade_smooth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.faces_shade_smooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display faces smooth (using vertex normals)</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.fill"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.fill"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">fill</code><span class="sig-paren">(</span><em>use_beauty=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill a selected edge loop with faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_beauty</strong> (<em>boolean, (optional)</em>) – Beauty, Use best triangulation division</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.fill_grid"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.fill_grid"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">fill_grid</code><span class="sig-paren">(</span><em>span=1</em>, <em>offset=0</em>, <em>use_interp_simple=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.fill_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill grid from two loops</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>span</strong> (<em>int in [1, 1000], (optional)</em>) – Span, Number of sides (zero disables)</li>
+<li><strong>offset</strong> (<em>int in [-1000, 1000], (optional)</em>) – Offset, Number of sides (zero disables)</li>
+<li><strong>use_interp_simple</strong> (<em>boolean, (optional)</em>) – Simple Blending</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.fill_holes"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.fill_holes"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">fill_holes</code><span class="sig-paren">(</span><em>sides=4</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.fill_holes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill in holes (boundary edge loops)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sides</strong> (<em>int in [0, 1000], (optional)</em>) – Sides, Number of sides in hole required to fill (zero fills all holes)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.flip_normals"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.flip_normals"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">flip_normals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.flip_normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flip the direction of selected faces’ normals (and of their vertices)</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.hide"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.hide"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">hide</code><span class="sig-paren">(</span><em>unselected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide (un)selected vertices, edges or faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>unselected</strong> (<em>boolean, (optional)</em>) – Unselected, Hide unselected rather than selected</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.inset"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.inset"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">inset</code><span class="sig-paren">(</span><em>use_boundary=True</em>, <em>use_even_offset=True</em>, <em>use_relative_offset=False</em>, <em>use_edge_rail=False</em>, <em>thickness=0.01</em>, <em>depth=0.0</em>, <em>use_outset=False</em>, <em>use_select_inset=False</em>, <em>use_individual=False</em>, <em>use_interpolate=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.inset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inset new faces into selected faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_boundary</strong> (<em>boolean, (optional)</em>) – Boundary, Inset face boundaries</li>
+<li><strong>use_even_offset</strong> (<em>boolean, (optional)</em>) – Offset Even, Scale the offset to give more even thickness</li>
+<li><strong>use_relative_offset</strong> (<em>boolean, (optional)</em>) – Offset Relative, Scale the offset by surrounding geometry</li>
+<li><strong>use_edge_rail</strong> (<em>boolean, (optional)</em>) – Edge Rail, Inset the region along existing edges</li>
+<li><strong>thickness</strong> (<em>float in [0, inf], (optional)</em>) – Thickness</li>
+<li><strong>depth</strong> (<em>float in [-inf, inf], (optional)</em>) – Depth</li>
+<li><strong>use_outset</strong> (<em>boolean, (optional)</em>) – Outset, Outset rather than inset</li>
+<li><strong>use_select_inset</strong> (<em>boolean, (optional)</em>) – Select Outer, Select the new inset faces</li>
+<li><strong>use_individual</strong> (<em>boolean, (optional)</em>) – Individual, Individual Face Inset</li>
+<li><strong>use_interpolate</strong> (<em>boolean, (optional)</em>) – Interpolate, Blend face data across the inset</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.intersect"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.intersect"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">intersect</code><span class="sig-paren">(</span><em>mode='SELECT_UNSELECT'</em>, <em>use_separate=True</em>, <em>threshold=1e-06</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut an intersection into faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<em>enum in ['SELECT', 'SELECT_UNSELECT'], (optional)</em>) – <p>Source</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Self Intersect, Self intersect selected faces.</li>
+<li><code class="docutils literal"><span class="pre">SELECT_UNSELECT</span></code> Selected/Unselected, Intersect selected with unselected faces.</li>
+</ul>
+</li>
+<li><strong>use_separate</strong> (<em>boolean, (optional)</em>) – Separate</li>
+<li><strong>threshold</strong> (<em>float in [0, 0.01], (optional)</em>) – Merge threshold</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.intersect_boolean"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.intersect_boolean"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">intersect_boolean</code><span class="sig-paren">(</span><em>operation='DIFFERENCE'</em>, <em>use_swap=False</em>, <em>threshold=1e-06</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.intersect_boolean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut solid geometry from selected to unselected</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>operation</strong> (<em>enum in ['INTERSECT', 'UNION', 'DIFFERENCE'], (optional)</em>) – Boolean</li>
+<li><strong>use_swap</strong> (<em>boolean, (optional)</em>) – Swap, Use with difference intersection to swap which side is kept</li>
+<li><strong>threshold</strong> (<em>float in [0, 0.01], (optional)</em>) – Merge threshold</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.knife_project"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.knife_project"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">knife_project</code><span class="sig-paren">(</span><em>cut_through=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.knife_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use other objects outlines &amp; boundaries to project knife cuts</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cut_through</strong> (<em>boolean, (optional)</em>) – Cut through, Cut through all faces, not just visible ones</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.knife_tool"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.knife_tool"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">knife_tool</code><span class="sig-paren">(</span><em>use_occlude_geometry=True</em>, <em>only_selected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.knife_tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut new topology</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_occlude_geometry</strong> (<em>boolean, (optional)</em>) – Occlude Geometry, Only cut the front most geometry</li>
+<li><strong>only_selected</strong> (<em>boolean, (optional)</em>) – Only Selected, Only cut selected geometry</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.loop_multi_select"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.loop_multi_select"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">loop_multi_select</code><span class="sig-paren">(</span><em>ring=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.loop_multi_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a loop of connected edges by connection type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ring</strong> (<em>boolean, (optional)</em>) – Ring</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.loop_select"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.loop_select"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">loop_select</code><span class="sig-paren">(</span><em>extend=False</em>, <em>deselect=False</em>, <em>toggle=False</em>, <em>ring=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.loop_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a loop of connected edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend Select, Extend the selection</li>
+<li><strong>deselect</strong> (<em>boolean, (optional)</em>) – Deselect, Remove from the selection</li>
+<li><strong>toggle</strong> (<em>boolean, (optional)</em>) – Toggle Select, Toggle the selection</li>
+<li><strong>ring</strong> (<em>boolean, (optional)</em>) – Select Ring, Select ring</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.loop_to_region"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.loop_to_region"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">loop_to_region</code><span class="sig-paren">(</span><em>select_bigger=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.loop_to_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select region of faces inside of a selected loop of edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>select_bigger</strong> (<em>boolean, (optional)</em>) – Select Bigger, Select bigger regions instead of smaller ones</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.loopcut"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.loopcut"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">loopcut</code><span class="sig-paren">(</span><em>number_cuts=1</em>, <em>smoothness=0.0</em>, <em>falloff='INVERSE_SQUARE'</em>, <em>edge_index=-1</em>, <em>mesh_select_mode_init=(False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.loopcut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new loop between existing loops</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>number_cuts</strong> (<em>int in [1, 1000000], (optional)</em>) – Number of Cuts</li>
+<li><strong>smoothness</strong> (<em>float in [-1000, 1000], (optional)</em>) – Smoothness, Smoothness factor</li>
+<li><strong>falloff</strong> (<em>enum in ['SMOOTH', 'SPHERE', 'ROOT', 'INVERSE_SQUARE', 'SHARP', 'LINEAR'], (optional)</em>) – <p>Falloff, Falloff type the feather</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Smooth falloff.</li>
+<li><code class="docutils literal"><span class="pre">SPHERE</span></code> Sphere, Spherical falloff.</li>
+<li><code class="docutils literal"><span class="pre">ROOT</span></code> Root, Root falloff.</li>
+<li><code class="docutils literal"><span class="pre">INVERSE_SQUARE</span></code> Inverse Square, Inverse Square falloff.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Sharp falloff.</li>
+<li><code class="docutils literal"><span class="pre">LINEAR</span></code> Linear, Linear falloff.</li>
+</ul>
+</li>
+<li><strong>edge_index</strong> (<em>int in [-1, inf], (optional)</em>) – Edge Index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.loopcut_slide"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.loopcut_slide"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">loopcut_slide</code><span class="sig-paren">(</span><em>MESH_OT_loopcut=None</em>, <em>TRANSFORM_OT_edge_slide=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.loopcut_slide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut mesh loop and slide it</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_loopcut</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_loopcut</span></code>, (optional)) – Loop Cut, Add a new loop between existing loops</li>
+<li><strong>TRANSFORM_OT_edge_slide</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_edge_slide</span></code>, (optional)) – Edge Slide, Slide an edge loop along a mesh</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.mark_freestyle_edge"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.mark_freestyle_edge"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">mark_freestyle_edge</code><span class="sig-paren">(</span><em>clear=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.mark_freestyle_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Un)mark selected edges as Freestyle feature edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>clear</strong> (<em>boolean, (optional)</em>) – Clear</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.mark_freestyle_face"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.mark_freestyle_face"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">mark_freestyle_face</code><span class="sig-paren">(</span><em>clear=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.mark_freestyle_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Un)mark selected faces for exclusion from Freestyle feature edge detection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>clear</strong> (<em>boolean, (optional)</em>) – Clear</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.mark_seam"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.mark_seam"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">mark_seam</code><span class="sig-paren">(</span><em>clear=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.mark_seam" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Un)mark selected edges as a seam</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>clear</strong> (<em>boolean, (optional)</em>) – Clear</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.mark_sharp"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.mark_sharp"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">mark_sharp</code><span class="sig-paren">(</span><em>clear=False</em>, <em>use_verts=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.mark_sharp" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Un)mark selected edges as sharp</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>clear</strong> (<em>boolean, (optional)</em>) – Clear</li>
+<li><strong>use_verts</strong> (<em>boolean, (optional)</em>) – Vertices, Consider vertices instead of edges to select which edges to (un)tag as sharp</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.merge"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.merge"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">merge</code><span class="sig-paren">(</span><em>type='CENTER'</em>, <em>uvs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge selected vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['FIRST', 'LAST', 'CENTER', 'CURSOR', 'COLLAPSE'], (optional)</em>) – Type, Merge method to use</li>
+<li><strong>uvs</strong> (<em>boolean, (optional)</em>) – UVs, Move UVs according to merge</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.navmesh_clear"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.navmesh_clear"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">navmesh_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.navmesh_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove navmesh data from this mesh</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.navmesh_face_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.navmesh_face_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">navmesh_face_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.navmesh_face_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new index and assign it to selected faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.navmesh_face_copy"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.navmesh_face_copy"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">navmesh_face_copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.navmesh_face_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the index from the active face</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.navmesh_make"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.navmesh_make"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">navmesh_make</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.navmesh_make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create navigation mesh for selected objects</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.navmesh_reset"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.navmesh_reset"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">navmesh_reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.navmesh_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign a new index to every face</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.noise"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.noise"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">noise</code><span class="sig-paren">(</span><em>factor=0.1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use vertex coordinate as texture coordinate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> (<em>float in [-10000, 10000], (optional)</em>) – Factor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.normals_make_consistent"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.normals_make_consistent"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">normals_make_consistent</code><span class="sig-paren">(</span><em>inside=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.normals_make_consistent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make face and vertex normals point either outside or inside the mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inside</strong> (<em>boolean, (optional)</em>) – Inside</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.offset_edge_loops"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.offset_edge_loops"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">offset_edge_loops</code><span class="sig-paren">(</span><em>use_cap_endpoint=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.offset_edge_loops" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create offset edge loop from the current selection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_cap_endpoint</strong> (<em>boolean, (optional)</em>) – Cap Endpoint, Extend loop around end-points</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.offset_edge_loops_slide"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.offset_edge_loops_slide"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">offset_edge_loops_slide</code><span class="sig-paren">(</span><em>MESH_OT_offset_edge_loops=None</em>, <em>TRANSFORM_OT_edge_slide=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.offset_edge_loops_slide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Offset edge loop slide</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_offset_edge_loops</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_offset_edge_loops</span></code>, (optional)) – Offset Edge Loop, Create offset edge loop from the current selection</li>
+<li><strong>TRANSFORM_OT_edge_slide</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_edge_slide</span></code>, (optional)) – Edge Slide, Slide an edge loop along a mesh</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.poke"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.poke"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">poke</code><span class="sig-paren">(</span><em>offset=0.0</em>, <em>use_relative_offset=False</em>, <em>center_mode='MEAN_WEIGHTED'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.poke" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a face into a fan</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>offset</strong> (<em>float in [-1000, 1000], (optional)</em>) – Poke Offset, Poke Offset</li>
+<li><strong>use_relative_offset</strong> (<em>boolean, (optional)</em>) – Offset Relative, Scale the offset by surrounding geometry</li>
+<li><strong>center_mode</strong> (<em>enum in ['MEAN_WEIGHTED', 'MEAN', 'BOUNDS'], (optional)</em>) – <p>Poke Center, Poke Face Center Calculation</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">MEAN_WEIGHTED</span></code> Weighted Mean, Weighted Mean Face Center.</li>
+<li><code class="docutils literal"><span class="pre">MEAN</span></code> Mean, Mean Face Center.</li>
+<li><code class="docutils literal"><span class="pre">BOUNDS</span></code> Bounds, Face Bounds Center.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_circle_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_circle_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_circle_add</code><span class="sig-paren">(</span><em>vertices=32</em>, <em>radius=1.0</em>, <em>fill_type='NOTHING'</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_circle_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a circle mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vertices</strong> (<em>int in [3, 10000000], (optional)</em>) – Vertices</li>
+<li><strong>radius</strong> (<em>float in [0, inf], (optional)</em>) – Radius</li>
+<li><strong>fill_type</strong> (<em>enum in ['NOTHING', 'NGON', 'TRIFAN'], (optional)</em>) – <p>Fill Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NOTHING</span></code> Nothing, Don’t fill at all.</li>
+<li><code class="docutils literal"><span class="pre">NGON</span></code> Ngon, Use ngons.</li>
+<li><code class="docutils literal"><span class="pre">TRIFAN</span></code> Triangle Fan, Use triangle fans.</li>
+</ul>
+</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_cone_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_cone_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_cone_add</code><span class="sig-paren">(</span><em>vertices=32</em>, <em>radius1=1.0</em>, <em>radius2=0.0</em>, <em>depth=2.0</em>, <em>end_fill_type='NGON'</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_cone_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a conic mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vertices</strong> (<em>int in [3, 10000000], (optional)</em>) – Vertices</li>
+<li><strong>radius1</strong> (<em>float in [0, inf], (optional)</em>) – Radius 1</li>
+<li><strong>radius2</strong> (<em>float in [0, inf], (optional)</em>) – Radius 2</li>
+<li><strong>depth</strong> (<em>float in [0, inf], (optional)</em>) – Depth</li>
+<li><strong>end_fill_type</strong> (<em>enum in ['NOTHING', 'NGON', 'TRIFAN'], (optional)</em>) – <p>Base Fill Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NOTHING</span></code> Nothing, Don’t fill at all.</li>
+<li><code class="docutils literal"><span class="pre">NGON</span></code> Ngon, Use ngons.</li>
+<li><code class="docutils literal"><span class="pre">TRIFAN</span></code> Triangle Fan, Use triangle fans.</li>
+</ul>
+</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_cube_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_cube_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_cube_add</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_cube_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a cube mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>radius</strong> (<em>float in [0, inf], (optional)</em>) – Radius</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_cylinder_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_cylinder_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_cylinder_add</code><span class="sig-paren">(</span><em>vertices=32</em>, <em>radius=1.0</em>, <em>depth=2.0</em>, <em>end_fill_type='NGON'</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_cylinder_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a cylinder mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vertices</strong> (<em>int in [3, 10000000], (optional)</em>) – Vertices</li>
+<li><strong>radius</strong> (<em>float in [0, inf], (optional)</em>) – Radius</li>
+<li><strong>depth</strong> (<em>float in [0, inf], (optional)</em>) – Depth</li>
+<li><strong>end_fill_type</strong> (<em>enum in ['NOTHING', 'NGON', 'TRIFAN'], (optional)</em>) – <p>Cap Fill Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NOTHING</span></code> Nothing, Don’t fill at all.</li>
+<li><code class="docutils literal"><span class="pre">NGON</span></code> Ngon, Use ngons.</li>
+<li><code class="docutils literal"><span class="pre">TRIFAN</span></code> Triangle Fan, Use triangle fans.</li>
+</ul>
+</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_grid_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_grid_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_grid_add</code><span class="sig-paren">(</span><em>x_subdivisions=10</em>, <em>y_subdivisions=10</em>, <em>radius=1.0</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_grid_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a grid mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x_subdivisions</strong> (<em>int in [2, 10000000], (optional)</em>) – X Subdivisions</li>
+<li><strong>y_subdivisions</strong> (<em>int in [2, 10000000], (optional)</em>) – Y Subdivisions</li>
+<li><strong>radius</strong> (<em>float in [0, inf], (optional)</em>) – Radius</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_ico_sphere_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_ico_sphere_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_ico_sphere_add</code><span class="sig-paren">(</span><em>subdivisions=2</em>, <em>size=1.0</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_ico_sphere_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct an Icosphere mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>subdivisions</strong> (<em>int in [1, 10], (optional)</em>) – Subdivisions</li>
+<li><strong>size</strong> (<em>float in [0, inf], (optional)</em>) – Size</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_monkey_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_monkey_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_monkey_add</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_monkey_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a Suzanne mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>radius</strong> (<em>float in [0, inf], (optional)</em>) – Radius</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_plane_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_plane_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_plane_add</code><span class="sig-paren">(</span><em>radius=1.0</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_plane_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a filled planar mesh with 4 vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>radius</strong> (<em>float in [0, inf], (optional)</em>) – Radius</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_torus_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_torus_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_torus_add</code><span class="sig-paren">(</span><em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>view_align=False</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em>, <em>major_segments=48</em>, <em>minor_segments=12</em>, <em>mode='MAJOR_MINOR'</em>, <em>major_radius=1.0</em>, <em>minor_radius=0.25</em>, <em>abso_major_rad=1.25</em>, <em>abso_minor_rad=0.75</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_torus_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a torus mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layers</li>
+<li><strong>major_segments</strong> (<em>int in [3, 256], (optional)</em>) – Major Segments, Number of segments for the main ring of the torus</li>
+<li><strong>minor_segments</strong> (<em>int in [3, 256], (optional)</em>) – Minor Segments, Number of segments for the minor ring of the torus</li>
+<li><strong>mode</strong> (<em>enum in ['MAJOR_MINOR', 'EXT_INT'], (optional)</em>) – <p>Torus Dimensions</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">MAJOR_MINOR</span></code> Major/Minor, Use the major/minor radii for torus dimensions.</li>
+<li><code class="docutils literal"><span class="pre">EXT_INT</span></code> Exterior/Interior, Use the exterior/interior radii for torus dimensions.</li>
+</ul>
+</li>
+<li><strong>major_radius</strong> (<em>float in [0.01, 100], (optional)</em>) – Major Radius, Radius from the origin to the center of the cross sections</li>
+<li><strong>minor_radius</strong> (<em>float in [0.01, 100], (optional)</em>) – Minor Radius, Radius of the torus’ cross section</li>
+<li><strong>abso_major_rad</strong> (<em>float in [0.01, 100], (optional)</em>) – Exterior Radius, Total Exterior Radius of the torus</li>
+<li><strong>abso_minor_rad</strong> (<em>float in [0.01, 100], (optional)</em>) – Interior Radius, Total Interior Radius of the torus</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/add_mesh_torus.py">startup/bl_operators/add_mesh_torus.py</a>:195</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.primitive_uv_sphere_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.primitive_uv_sphere_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">primitive_uv_sphere_add</code><span class="sig-paren">(</span><em>segments=32</em>, <em>ring_count=16</em>, <em>size=1.0</em>, <em>calc_uvs=False</em>, <em>view_align=False</em>, <em>enter_editmode=False</em>, <em>location=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>rotation=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>layers=(False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False</em>, <em>False)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.primitive_uv_sphere_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a UV sphere mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>segments</strong> (<em>int in [3, 100000], (optional)</em>) – Segments</li>
+<li><strong>ring_count</strong> (<em>int in [3, 100000], (optional)</em>) – Rings</li>
+<li><strong>size</strong> (<em>float in [0, inf], (optional)</em>) – Size</li>
+<li><strong>calc_uvs</strong> (<em>boolean, (optional)</em>) – Generate UVs, Generate a default UV map</li>
+<li><strong>view_align</strong> (<em>boolean, (optional)</em>) – Align to View, Align the new object to the view</li>
+<li><strong>enter_editmode</strong> (<em>boolean, (optional)</em>) – Enter Editmode, Enter editmode when adding this object</li>
+<li><strong>location</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Location, Location for the newly added object</li>
+<li><strong>rotation</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Rotation, Rotation for the newly added object</li>
+<li><strong>layers</strong> (<em>boolean array of 20 items, (optional)</em>) – Layer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.quads_convert_to_tris"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.quads_convert_to_tris"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">quads_convert_to_tris</code><span class="sig-paren">(</span><em>quad_method='BEAUTY'</em>, <em>ngon_method='BEAUTY'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.quads_convert_to_tris" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triangulate selected faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>quad_method</strong> (<em>enum in ['BEAUTY', 'FIXED', 'FIXED_ALTERNATE', 'SHORTEST_DIAGONAL'], (optional)</em>) – <p>Quad Method, Method for splitting the quads into triangles</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">BEAUTY</span></code> Beauty , Split the quads in nice triangles, slower method.</li>
+<li><code class="docutils literal"><span class="pre">FIXED</span></code> Fixed, Split the quads on the first and third vertices.</li>
+<li><code class="docutils literal"><span class="pre">FIXED_ALTERNATE</span></code> Fixed Alternate, Split the quads on the 2nd and 4th vertices.</li>
+<li><code class="docutils literal"><span class="pre">SHORTEST_DIAGONAL</span></code> Shortest Diagonal, Split the quads based on the distance between the vertices.</li>
+</ul>
+</li>
+<li><strong>ngon_method</strong> (<em>enum in ['BEAUTY', 'CLIP'], (optional)</em>) – <p>Polygon Method, Method for splitting the polygons into triangles</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">BEAUTY</span></code> Beauty, Arrange the new triangles evenly (slow).</li>
+<li><code class="docutils literal"><span class="pre">CLIP</span></code> Clip, Split the polygons with an ear clipping algorithm.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.region_to_loop"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.region_to_loop"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">region_to_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.region_to_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select boundary edges around the selected faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.remove_doubles"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.remove_doubles"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">remove_doubles</code><span class="sig-paren">(</span><em>threshold=0.0001</em>, <em>use_unselected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.remove_doubles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove duplicate vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>threshold</strong> (<em>float in [1e-06, 50], (optional)</em>) – Merge Distance, Minimum distance between elements to merge</li>
+<li><strong>use_unselected</strong> (<em>boolean, (optional)</em>) – Unselected, Merge selected to other unselected vertices</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.reveal"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.reveal"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">reveal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.reveal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reveal all hidden vertices, edges and faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.rip"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.rip"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">rip</code><span class="sig-paren">(</span><em>mirror=False</em>, <em>proportional='DISABLED'</em>, <em>proportional_edit_falloff='SMOOTH'</em>, <em>proportional_size=1.0</em>, <em>release_confirm=False</em>, <em>use_fill=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.rip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect vertex or edges from connected geometry</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mirror</strong> (<em>boolean, (optional)</em>) – Mirror Editing</li>
+<li><strong>proportional</strong> (<em>enum in ['DISABLED', 'ENABLED', 'PROJECTED', 'CONNECTED'], (optional)</em>) – <p>Proportional Editing</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DISABLED</span></code> Disable, Proportional Editing disabled.</li>
+<li><code class="docutils literal"><span class="pre">ENABLED</span></code> Enable, Proportional Editing enabled.</li>
+<li><code class="docutils literal"><span class="pre">PROJECTED</span></code> Projected (2D), Proportional Editing using screen space locations.</li>
+<li><code class="docutils literal"><span class="pre">CONNECTED</span></code> Connected, Proportional Editing using connected geometry only.</li>
+</ul>
+</li>
+<li><strong>proportional_edit_falloff</strong> (<em>enum in ['SMOOTH', 'SPHERE', 'ROOT', 'INVERSE_SQUARE', 'SHARP', 'LINEAR', 'CONSTANT', 'RANDOM'], (optional)</em>) – <p>Proportional Editing Falloff, Falloff type for proportional editing mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Smooth falloff.</li>
+<li><code class="docutils literal"><span class="pre">SPHERE</span></code> Sphere, Spherical falloff.</li>
+<li><code class="docutils literal"><span class="pre">ROOT</span></code> Root, Root falloff.</li>
+<li><code class="docutils literal"><span class="pre">INVERSE_SQUARE</span></code> Inverse Square, Inverse Square falloff.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Sharp falloff.</li>
+<li><code class="docutils literal"><span class="pre">LINEAR</span></code> Linear, Linear falloff.</li>
+<li><code class="docutils literal"><span class="pre">CONSTANT</span></code> Constant, Constant falloff.</li>
+<li><code class="docutils literal"><span class="pre">RANDOM</span></code> Random, Random falloff.</li>
+</ul>
+</li>
+<li><strong>proportional_size</strong> (<em>float in [1e-06, inf], (optional)</em>) – Proportional Size</li>
+<li><strong>release_confirm</strong> (<em>boolean, (optional)</em>) – Confirm on Release, Always confirm operation when releasing button</li>
+<li><strong>use_fill</strong> (<em>boolean, (optional)</em>) – Fill, Fill the ripped region</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.rip_edge"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.rip_edge"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">rip_edge</code><span class="sig-paren">(</span><em>mirror=False</em>, <em>proportional='DISABLED'</em>, <em>proportional_edit_falloff='SMOOTH'</em>, <em>proportional_size=1.0</em>, <em>release_confirm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.rip_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend vertices along the edge closest to the cursor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mirror</strong> (<em>boolean, (optional)</em>) – Mirror Editing</li>
+<li><strong>proportional</strong> (<em>enum in ['DISABLED', 'ENABLED', 'PROJECTED', 'CONNECTED'], (optional)</em>) – <p>Proportional Editing</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DISABLED</span></code> Disable, Proportional Editing disabled.</li>
+<li><code class="docutils literal"><span class="pre">ENABLED</span></code> Enable, Proportional Editing enabled.</li>
+<li><code class="docutils literal"><span class="pre">PROJECTED</span></code> Projected (2D), Proportional Editing using screen space locations.</li>
+<li><code class="docutils literal"><span class="pre">CONNECTED</span></code> Connected, Proportional Editing using connected geometry only.</li>
+</ul>
+</li>
+<li><strong>proportional_edit_falloff</strong> (<em>enum in ['SMOOTH', 'SPHERE', 'ROOT', 'INVERSE_SQUARE', 'SHARP', 'LINEAR', 'CONSTANT', 'RANDOM'], (optional)</em>) – <p>Proportional Editing Falloff, Falloff type for proportional editing mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Smooth falloff.</li>
+<li><code class="docutils literal"><span class="pre">SPHERE</span></code> Sphere, Spherical falloff.</li>
+<li><code class="docutils literal"><span class="pre">ROOT</span></code> Root, Root falloff.</li>
+<li><code class="docutils literal"><span class="pre">INVERSE_SQUARE</span></code> Inverse Square, Inverse Square falloff.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Sharp falloff.</li>
+<li><code class="docutils literal"><span class="pre">LINEAR</span></code> Linear, Linear falloff.</li>
+<li><code class="docutils literal"><span class="pre">CONSTANT</span></code> Constant, Constant falloff.</li>
+<li><code class="docutils literal"><span class="pre">RANDOM</span></code> Random, Random falloff.</li>
+</ul>
+</li>
+<li><strong>proportional_size</strong> (<em>float in [1e-06, inf], (optional)</em>) – Proportional Size</li>
+<li><strong>release_confirm</strong> (<em>boolean, (optional)</em>) – Confirm on Release, Always confirm operation when releasing button</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.rip_edge_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.rip_edge_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">rip_edge_move</code><span class="sig-paren">(</span><em>MESH_OT_rip_edge=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.rip_edge_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend vertices and move the result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_rip_edge</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_rip_edge</span></code>, (optional)) – Extend Vertices, Extend vertices along the edge closest to the cursor</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.rip_move"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.rip_move"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">rip_move</code><span class="sig-paren">(</span><em>MESH_OT_rip=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.rip_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rip polygons and move the result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_rip</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_rip</span></code>, (optional)) – Rip, Disconnect vertex or edges from connected geometry</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.rip_move_fill"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.rip_move_fill"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">rip_move_fill</code><span class="sig-paren">(</span><em>MESH_OT_rip=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.rip_move_fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rip-fill polygons and move the result</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>MESH_OT_rip</strong> (<code class="xref py py-class docutils literal"><span class="pre">MESH_OT_rip</span></code>, (optional)) – Rip, Disconnect vertex or edges from connected geometry</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.screw"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.screw"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">screw</code><span class="sig-paren">(</span><em>steps=9</em>, <em>turns=1</em>, <em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>axis=(0.0</em>, <em>0.0</em>, <em>0.0)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.screw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude selected vertices in screw-shaped rotation around the cursor in indicated viewport</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>steps</strong> (<em>int in [1, 100000], (optional)</em>) – Steps, Steps</li>
+<li><strong>turns</strong> (<em>int in [1, 100000], (optional)</em>) – Turns, Turns</li>
+<li><strong>center</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Center, Center in global view space</li>
+<li><strong>axis</strong> (<em>float array of 3 items in [-1, 1], (optional)</em>) – Axis, Axis in global view space</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_all"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_all"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_all</code><span class="sig-paren">(</span><em>action='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>(De)select all vertices, edges or faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action</strong> (<em>enum in ['TOGGLE', 'SELECT', 'DESELECT', 'INVERT'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">TOGGLE</span></code> Toggle, Toggle selection for all elements.</li>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert selection of all elements.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_axis"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_axis"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_axis</code><span class="sig-paren">(</span><em>mode='POSITIVE'</em>, <em>axis='X_AXIS'</em>, <em>threshold=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all data in the mesh on a single axis</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<em>enum in ['POSITIVE', 'NEGATIVE', 'ALIGNED'], (optional)</em>) – Axis Mode, Axis side to use when selecting</li>
+<li><strong>axis</strong> (<em>enum in ['X_AXIS', 'Y_AXIS', 'Z_AXIS'], (optional)</em>) – Axis, Select the axis to compare each vertex on</li>
+<li><strong>threshold</strong> (<em>float in [1e-06, 50], (optional)</em>) – Threshold</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_face_by_sides"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_face_by_sides"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_face_by_sides</code><span class="sig-paren">(</span><em>number=4</em>, <em>type='EQUAL'</em>, <em>extend=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_face_by_sides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select vertices or faces by the number of polygon sides</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>number</strong> (<em>int in [3, inf], (optional)</em>) – Number of Vertices</li>
+<li><strong>type</strong> (<em>enum in ['LESS', 'EQUAL', 'GREATER', 'NOTEQUAL'], (optional)</em>) – Type, Type of comparison to make</li>
+<li><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_interior_faces"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_interior_faces"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_interior_faces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_interior_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select faces where all edges have more than 2 face users</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_less"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_less"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_less</code><span class="sig-paren">(</span><em>use_face_step=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_less" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deselect vertices, edges or faces at the boundary of each selection region</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_face_step</strong> (<em>boolean, (optional)</em>) – Face Step, Connected faces (instead of edges)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_linked"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_linked"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_linked</code><span class="sig-paren">(</span><em>delimit={'SEAM'}</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_linked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all vertices linked to the active mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>delimit</strong> (<em>enum set in {'NORMAL', 'MATERIAL', 'SEAM', 'SHARP', 'UV'}, (optional)</em>) – <p>Delimit, Delimit selected region</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">NORMAL</span></code> Normal, Delimit by face directions.</li>
+<li><code class="docutils literal"><span class="pre">MATERIAL</span></code> Material, Delimit by face material.</li>
+<li><code class="docutils literal"><span class="pre">SEAM</span></code> Seam, Delimit by edge seams.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Delimit by sharp edges.</li>
+<li><code class="docutils literal"><span class="pre">UV</span></code> UVs, Delimit by UV coordinates.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_linked_pick"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_linked_pick"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_linked_pick</code><span class="sig-paren">(</span><em>deselect=False</em>, <em>delimit={'SEAM'}</em>, <em>index=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_linked_pick" title="Permalink to this definition">¶</a></dt>
+<dd><p>(De)select all vertices linked to the edge under the mouse cursor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>deselect</strong> (<em>boolean, (optional)</em>) – Deselect</li>
+<li><strong>delimit</strong> (<em>enum set in {'NORMAL', 'MATERIAL', 'SEAM', 'SHARP', 'UV'}, (optional)</em>) – <p>Delimit, Delimit selected region</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NORMAL</span></code> Normal, Delimit by face directions.</li>
+<li><code class="docutils literal"><span class="pre">MATERIAL</span></code> Material, Delimit by face material.</li>
+<li><code class="docutils literal"><span class="pre">SEAM</span></code> Seam, Delimit by edge seams.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Delimit by sharp edges.</li>
+<li><code class="docutils literal"><span class="pre">UV</span></code> UVs, Delimit by UV coordinates.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_loose"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_loose"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_loose</code><span class="sig-paren">(</span><em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_loose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select loose geometry based on the selection mode</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_mirror"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_mirror"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_mirror</code><span class="sig-paren">(</span><em>axis={'X'}</em>, <em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_mirror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select mesh items at mirrored locations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>axis</strong> (<em>enum set in {'X', 'Y', 'Z'}, (optional)</em>) – Axis</li>
+<li><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the existing selection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_mode"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_mode"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_mode</code><span class="sig-paren">(</span><em>use_extend=False</em>, <em>use_expand=False</em>, <em>type='VERT'</em>, <em>action='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change selection mode</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_extend</strong> (<em>boolean, (optional)</em>) – Extend</li>
+<li><strong>use_expand</strong> (<em>boolean, (optional)</em>) – Expand</li>
+<li><strong>type</strong> (<em>enum in ['VERT', 'EDGE', 'FACE'], (optional)</em>) – Type</li>
+<li><strong>action</strong> (<em>enum in ['DISABLE', 'ENABLE', 'TOGGLE'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DISABLE</span></code> Disable, Disable selected markers.</li>
+<li><code class="docutils literal"><span class="pre">ENABLE</span></code> Enable, Enable selected markers.</li>
+<li><code class="docutils literal"><span class="pre">TOGGLE</span></code> Toggle, Toggle disabled flag for selected markers.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_more"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_more"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_more</code><span class="sig-paren">(</span><em>use_face_step=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_more" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select more vertices, edges or faces connected to initial selection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_face_step</strong> (<em>boolean, (optional)</em>) – Face Step, Connected faces (instead of edges)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_next_item"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_next_item"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_next_item</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_next_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select the next element (using selection order)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/mesh.py">startup/bl_operators/mesh.py</a>:163</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_non_manifold"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_non_manifold"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_non_manifold</code><span class="sig-paren">(</span><em>extend=True</em>, <em>use_wire=True</em>, <em>use_boundary=True</em>, <em>use_multi_face=True</em>, <em>use_non_contiguous=True</em>, <em>use_verts=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_non_manifold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all non-manifold vertices or edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</li>
+<li><strong>use_wire</strong> (<em>boolean, (optional)</em>) – Wire, Wire edges</li>
+<li><strong>use_boundary</strong> (<em>boolean, (optional)</em>) – Boundaries, Boundary edges</li>
+<li><strong>use_multi_face</strong> (<em>boolean, (optional)</em>) – Multiple Faces, Edges shared by 3+ faces</li>
+<li><strong>use_non_contiguous</strong> (<em>boolean, (optional)</em>) – Non Contiguous, Edges between faces pointing in alternate directions</li>
+<li><strong>use_verts</strong> (<em>boolean, (optional)</em>) – Vertices, Vertices connecting multiple face regions</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_nth"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_nth"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_nth</code><span class="sig-paren">(</span><em>nth=2</em>, <em>skip=1</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_nth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deselect every Nth element starting from the active vertex, edge or face</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nth</strong> (<em>int in [2, inf], (optional)</em>) – Nth Selection</li>
+<li><strong>skip</strong> (<em>int in [1, inf], (optional)</em>) – Skip</li>
+<li><strong>offset</strong> (<em>int in [-inf, inf], (optional)</em>) – Offset</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_prev_item"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_prev_item"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_prev_item</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_prev_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select the next element (using selection order)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/mesh.py">startup/bl_operators/mesh.py</a>:188</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_random"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_random"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_random</code><span class="sig-paren">(</span><em>percent=50.0</em>, <em>seed=0</em>, <em>action='SELECT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly select vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>percent</strong> (<em>float in [0, 100], (optional)</em>) – Percent, Percentage of objects to select randomly</li>
+<li><strong>seed</strong> (<em>int in [0, inf], (optional)</em>) – Random Seed, Seed for the random number generator</li>
+<li><strong>action</strong> (<em>enum in ['SELECT', 'DESELECT'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_similar"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_similar"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_similar</code><span class="sig-paren">(</span><em>type='NORMAL'</em>, <em>compare='EQUAL'</em>, <em>threshold=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_similar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select similar vertices, edges or faces by property types</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['NORMAL', 'FACE', 'VGROUP', 'EDGE', 'LENGTH', 'DIR', 'FACE', 'FACE_ANGLE', 'CREASE', 'BEVEL', 'SEAM', 'SHARP', 'FREESTYLE_EDGE', 'MATERIAL', 'IMAGE', 'AREA', 'SIDES', 'PERIMETER', 'NORMAL', 'COPLANAR', 'SMOOTH', 'FREESTYLE_FACE'], (optional)</em>) – Type</li>
+<li><strong>compare</strong> (<em>enum in ['EQUAL', 'GREATER', 'LESS'], (optional)</em>) – Compare</li>
+<li><strong>threshold</strong> (<em>float in [0, 1], (optional)</em>) – Threshold</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_similar_region"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_similar_region"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_similar_region</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_similar_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select similar face regions to the current selection</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.select_ungrouped"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.select_ungrouped"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">select_ungrouped</code><span class="sig-paren">(</span><em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.select_ungrouped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select vertices without a group</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.separate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.separate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">separate</code><span class="sig-paren">(</span><em>type='SELECTED'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.separate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Separate selected geometry into a new mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in ['SELECTED', 'MATERIAL', 'LOOSE'], (optional)</em>) – Type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.shape_propagate_to_all"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.shape_propagate_to_all"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">shape_propagate_to_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.shape_propagate_to_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply selected vertex locations to all other shape keys</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.shortest_path_pick"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.shortest_path_pick"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">shortest_path_pick</code><span class="sig-paren">(</span><em>use_face_step=False</em>, <em>use_topology_distance=False</em>, <em>use_fill=False</em>, <em>nth=1</em>, <em>skip=1</em>, <em>offset=0</em>, <em>index=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.shortest_path_pick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select shortest path between two selections</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_face_step</strong> (<em>boolean, (optional)</em>) – Face Stepping, Traverse connected faces (includes diagonals and edge-rings)</li>
+<li><strong>use_topology_distance</strong> (<em>boolean, (optional)</em>) – Topology Distance, Find the minimum number of steps, ignoring spatial distance</li>
+<li><strong>use_fill</strong> (<em>boolean, (optional)</em>) – Fill Region, Select all paths between the source/destination elements</li>
+<li><strong>nth</strong> (<em>int in [1, inf], (optional)</em>) – Nth Selection</li>
+<li><strong>skip</strong> (<em>int in [1, inf], (optional)</em>) – Skip</li>
+<li><strong>offset</strong> (<em>int in [-inf, inf], (optional)</em>) – Offset</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.shortest_path_select"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.shortest_path_select"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">shortest_path_select</code><span class="sig-paren">(</span><em>use_face_step=False</em>, <em>use_topology_distance=False</em>, <em>use_fill=False</em>, <em>nth=1</em>, <em>skip=1</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.shortest_path_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected vertex path between two vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_face_step</strong> (<em>boolean, (optional)</em>) – Face Stepping, Traverse connected faces (includes diagonals and edge-rings)</li>
+<li><strong>use_topology_distance</strong> (<em>boolean, (optional)</em>) – Topology Distance, Find the minimum number of steps, ignoring spatial distance</li>
+<li><strong>use_fill</strong> (<em>boolean, (optional)</em>) – Fill Region, Select all paths between the source/destination elements</li>
+<li><strong>nth</strong> (<em>int in [1, inf], (optional)</em>) – Nth Selection</li>
+<li><strong>skip</strong> (<em>int in [1, inf], (optional)</em>) – Skip</li>
+<li><strong>offset</strong> (<em>int in [-inf, inf], (optional)</em>) – Offset</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.solidify"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.solidify"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">solidify</code><span class="sig-paren">(</span><em>thickness=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.solidify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a solid skin by extruding, compensating for sharp angles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>thickness</strong> (<em>float in [-10000, 10000], (optional)</em>) – Thickness</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.sort_elements"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.sort_elements"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">sort_elements</code><span class="sig-paren">(</span><em>type='VIEW_ZAXIS'</em>, <em>elements={'VERT'}</em>, <em>reverse=False</em>, <em>seed=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.sort_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>The order of selected vertices/edges/faces is modified, based on a given method</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['VIEW_ZAXIS', 'VIEW_XAXIS', 'CURSOR_DISTANCE', 'MATERIAL', 'SELECTED', 'RANDOMIZE', 'REVERSE'], (optional)</em>) – <p>Type, Type of re-ordering operation to apply</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">VIEW_ZAXIS</span></code> View Z Axis, Sort selected elements from farthest to nearest one in current view.</li>
+<li><code class="docutils literal"><span class="pre">VIEW_XAXIS</span></code> View X Axis, Sort selected elements from left to right one in current view.</li>
+<li><code class="docutils literal"><span class="pre">CURSOR_DISTANCE</span></code> Cursor Distance, Sort selected elements from nearest to farthest from 3D cursor.</li>
+<li><code class="docutils literal"><span class="pre">MATERIAL</span></code> Material, Sort selected elements from smallest to greatest material index (faces only!).</li>
+<li><code class="docutils literal"><span class="pre">SELECTED</span></code> Selected, Move all selected elements in first places, preserving their relative order (WARNING: this will affect unselected elements’ indices as well!).</li>
+<li><code class="docutils literal"><span class="pre">RANDOMIZE</span></code> Randomize, Randomize order of selected elements.</li>
+<li><code class="docutils literal"><span class="pre">REVERSE</span></code> Reverse, Reverse current order of selected elements.</li>
+</ul>
+</li>
+<li><strong>elements</strong> (<em>enum set in {'VERT', 'EDGE', 'FACE'}, (optional)</em>) – Elements, Which elements to affect (vertices, edges and/or faces)</li>
+<li><strong>reverse</strong> (<em>boolean, (optional)</em>) – Reverse, Reverse the sorting effect</li>
+<li><strong>seed</strong> (<em>int in [0, inf], (optional)</em>) – Seed, Seed for random-based operations</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.spin"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.spin"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">spin</code><span class="sig-paren">(</span><em>steps=9</em>, <em>dupli=False</em>, <em>angle=1.5708</em>, <em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>axis=(0.0</em>, <em>0.0</em>, <em>0.0)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.spin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrude selected vertices in a circle around the cursor in indicated viewport</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>steps</strong> (<em>int in [0, 1000000], (optional)</em>) – Steps, Steps</li>
+<li><strong>dupli</strong> (<em>boolean, (optional)</em>) – Dupli, Make Duplicates</li>
+<li><strong>angle</strong> (<em>float in [-inf, inf], (optional)</em>) – Angle, Rotation for each step</li>
+<li><strong>center</strong> (<em>float array of 3 items in [-inf, inf], (optional)</em>) – Center, Center in global view space</li>
+<li><strong>axis</strong> (<em>float array of 3 items in [-1, 1], (optional)</em>) – Axis, Axis in global view space</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.split"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.split"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">split</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split off selected geometry from connected unselected geometry</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.subdivide"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.subdivide"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">subdivide</code><span class="sig-paren">(</span><em>number_cuts=1</em>, <em>smoothness=0.0</em>, <em>quadtri=False</em>, <em>quadcorner='STRAIGHT_CUT'</em>, <em>fractal=0.0</em>, <em>fractal_along_normal=0.0</em>, <em>seed=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.subdivide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subdivide selected edges</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>number_cuts</strong> (<em>int in [1, 100], (optional)</em>) – Number of Cuts</li>
+<li><strong>smoothness</strong> (<em>float in [0, 1000], (optional)</em>) – Smoothness, Smoothness factor</li>
+<li><strong>quadtri</strong> (<em>boolean, (optional)</em>) – Quad/Tri Mode, Tries to prevent ngons</li>
+<li><strong>quadcorner</strong> (<em>enum in ['INNERVERT', 'PATH', 'STRAIGHT_CUT', 'FAN'], (optional)</em>) – Quad Corner Type, How to subdivide quad corners (anything other than Straight Cut will prevent ngons)</li>
+<li><strong>fractal</strong> (<em>float in [0, 1e+06], (optional)</em>) – Fractal, Fractal randomness factor</li>
+<li><strong>fractal_along_normal</strong> (<em>float in [0, 1], (optional)</em>) – Along Normal, Apply fractal displacement along normal only</li>
+<li><strong>seed</strong> (<em>int in [0, inf], (optional)</em>) – Random Seed, Seed for the random number generator</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.subdivide_edgering"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.subdivide_edgering"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">subdivide_edgering</code><span class="sig-paren">(</span><em>number_cuts=10</em>, <em>interpolation='PATH'</em>, <em>smoothness=1.0</em>, <em>profile_shape_factor=0.0</em>, <em>profile_shape='SMOOTH'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.subdivide_edgering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>number_cuts</strong> (<em>int in [0, 1000], (optional)</em>) – Number of Cuts</li>
+<li><strong>interpolation</strong> (<em>enum in ['LINEAR', 'PATH', 'SURFACE'], (optional)</em>) – Interpolation, Interpolation method</li>
+<li><strong>smoothness</strong> (<em>float in [0, 1000], (optional)</em>) – Smoothness, Smoothness factor</li>
+<li><strong>profile_shape_factor</strong> (<em>float in [-1000, 1000], (optional)</em>) – Profile Factor, How much intermediary new edges are shrunk/expanded</li>
+<li><strong>profile_shape</strong> (<em>enum in ['SMOOTH', 'SPHERE', 'ROOT', 'INVERSE_SQUARE', 'SHARP', 'LINEAR'], (optional)</em>) – <p>Profile Shape, Shape of the profile</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SMOOTH</span></code> Smooth, Smooth falloff.</li>
+<li><code class="docutils literal"><span class="pre">SPHERE</span></code> Sphere, Spherical falloff.</li>
+<li><code class="docutils literal"><span class="pre">ROOT</span></code> Root, Root falloff.</li>
+<li><code class="docutils literal"><span class="pre">INVERSE_SQUARE</span></code> Inverse Square, Inverse Square falloff.</li>
+<li><code class="docutils literal"><span class="pre">SHARP</span></code> Sharp, Sharp falloff.</li>
+<li><code class="docutils literal"><span class="pre">LINEAR</span></code> Linear, Linear falloff.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.symmetrize"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.symmetrize"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">symmetrize</code><span class="sig-paren">(</span><em>direction='NEGATIVE_X'</em>, <em>threshold=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.symmetrize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enforce symmetry (both form and topological) across an axis</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>direction</strong> (<em>enum in ['NEGATIVE_X', 'POSITIVE_X', 'NEGATIVE_Y', 'POSITIVE_Y', 'NEGATIVE_Z', 'POSITIVE_Z'], (optional)</em>) – Direction, Which sides to copy from and to</li>
+<li><strong>threshold</strong> (<em>float in [0, 10], (optional)</em>) – Threshold</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.symmetry_snap"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.symmetry_snap"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">symmetry_snap</code><span class="sig-paren">(</span><em>direction='NEGATIVE_X'</em>, <em>threshold=0.05</em>, <em>factor=0.5</em>, <em>use_center=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.symmetry_snap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Snap vertex pairs to their mirrored locations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>direction</strong> (<em>enum in ['NEGATIVE_X', 'POSITIVE_X', 'NEGATIVE_Y', 'POSITIVE_Y', 'NEGATIVE_Z', 'POSITIVE_Z'], (optional)</em>) – Direction, Which sides to copy from and to</li>
+<li><strong>threshold</strong> (<em>float in [0, 10], (optional)</em>) – Threshold</li>
+<li><strong>factor</strong> (<em>float in [0, 1], (optional)</em>) – Factor</li>
+<li><strong>use_center</strong> (<em>boolean, (optional)</em>) – Center, Snap mid verts to the axis center</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.tris_convert_to_quads"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.tris_convert_to_quads"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">tris_convert_to_quads</code><span class="sig-paren">(</span><em>face_threshold=0.698132</em>, <em>shape_threshold=0.698132</em>, <em>uvs=False</em>, <em>vcols=False</em>, <em>seam=False</em>, <em>sharp=False</em>, <em>materials=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.tris_convert_to_quads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join triangles into quads</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>face_threshold</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Face Angle, Face angle limit</li>
+<li><strong>shape_threshold</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Shape Angle, Shape angle limit</li>
+<li><strong>uvs</strong> (<em>boolean, (optional)</em>) – Compare UVs</li>
+<li><strong>vcols</strong> (<em>boolean, (optional)</em>) – Compare VCols</li>
+<li><strong>seam</strong> (<em>boolean, (optional)</em>) – Compare Seam</li>
+<li><strong>sharp</strong> (<em>boolean, (optional)</em>) – Compare Sharp</li>
+<li><strong>materials</strong> (<em>boolean, (optional)</em>) – Compare Materials</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.unsubdivide"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.unsubdivide"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">unsubdivide</code><span class="sig-paren">(</span><em>iterations=2</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.unsubdivide" title="Permalink to this definition">¶</a></dt>
+<dd><p>UnSubdivide selected edges &amp; faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>iterations</strong> (<em>int in [1, 1000], (optional)</em>) – Iterations, Number of times to unsubdivide</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.uv_texture_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.uv_texture_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">uv_texture_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.uv_texture_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add UV Map</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.uv_texture_remove"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.uv_texture_remove"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">uv_texture_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.uv_texture_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove UV Map</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.uvs_reverse"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.uvs_reverse"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">uvs_reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.uvs_reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flip direction of UV coordinates inside faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.uvs_rotate"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.uvs_rotate"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">uvs_rotate</code><span class="sig-paren">(</span><em>use_ccw=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.uvs_rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate UV coordinates inside faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_ccw</strong> (<em>boolean, (optional)</em>) – Counter Clockwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vert_connect"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vert_connect"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vert_connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vert_connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect selected vertices of faces, splitting the face</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vert_connect_concave"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vert_connect_concave"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vert_connect_concave</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vert_connect_concave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make all faces convex</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vert_connect_nonplanar"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vert_connect_nonplanar"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vert_connect_nonplanar</code><span class="sig-paren">(</span><em>angle_limit=0.0872665</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vert_connect_nonplanar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split non-planar faces that exceed the angle threshold</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>angle_limit</strong> (<em>float in [0, 3.14159], (optional)</em>) – Max Angle, Angle limit</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vert_connect_path"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vert_connect_path"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vert_connect_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vert_connect_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect vertices by their selection order, creating edges, splitting faces</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vertex_color_add"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vertex_color_add"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vertex_color_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vertex_color_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add vertex color layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vertex_color_remove"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vertex_color_remove"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vertex_color_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vertex_color_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove vertex color layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vertices_smooth"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vertices_smooth"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vertices_smooth</code><span class="sig-paren">(</span><em>factor=0.5</em>, <em>repeat=1</em>, <em>xaxis=True</em>, <em>yaxis=True</em>, <em>zaxis=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vertices_smooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten angles of selected vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>factor</strong> (<em>float in [-10, 10], (optional)</em>) – Smoothing, Smoothing factor</li>
+<li><strong>repeat</strong> (<em>int in [1, 1000], (optional)</em>) – Repeat, Number of times to smooth the mesh</li>
+<li><strong>xaxis</strong> (<em>boolean, (optional)</em>) – X-Axis, Smooth along the X axis</li>
+<li><strong>yaxis</strong> (<em>boolean, (optional)</em>) – Y-Axis, Smooth along the Y axis</li>
+<li><strong>zaxis</strong> (<em>boolean, (optional)</em>) – Z-Axis, Smooth along the Z axis</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.vertices_smooth_laplacian"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.vertices_smooth_laplacian"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">vertices_smooth_laplacian</code><span class="sig-paren">(</span><em>repeat=1</em>, <em>lambda_factor=5e-05</em>, <em>lambda_border=5e-05</em>, <em>use_x=True</em>, <em>use_y=True</em>, <em>use_z=True</em>, <em>preserve_volume=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.vertices_smooth_laplacian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Laplacian smooth of selected vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>repeat</strong> (<em>int in [1, 1000], (optional)</em>) – Number of iterations to smooth the mesh</li>
+<li><strong>lambda_factor</strong> (<em>float in [1e-07, 1000], (optional)</em>) – Lambda factor</li>
+<li><strong>lambda_border</strong> (<em>float in [1e-07, 1000], (optional)</em>) – Lambda factor in border</li>
+<li><strong>use_x</strong> (<em>boolean, (optional)</em>) – Smooth X Axis, Smooth object along X axis</li>
+<li><strong>use_y</strong> (<em>boolean, (optional)</em>) – Smooth Y Axis, Smooth object along Y axis</li>
+<li><strong>use_z</strong> (<em>boolean, (optional)</em>) – Smooth Z Axis, Smooth object along Z axis</li>
+<li><strong>preserve_volume</strong> (<em>boolean, (optional)</em>) – Preserve Volume, Apply volume preservation after smooth</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.mesh.wireframe"><a name="//apple_ref/cpp/Function/bpy.ops.mesh.wireframe"></a>
+<code class="descclassname">bpy.ops.mesh.</code><code class="descname">wireframe</code><span class="sig-paren">(</span><em>use_boundary=True</em>, <em>use_even_offset=True</em>, <em>use_relative_offset=False</em>, <em>use_replace=True</em>, <em>thickness=0.01</em>, <em>offset=0.01</em>, <em>use_crease=False</em>, <em>crease_weight=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.mesh.wireframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a solid wire-frame from faces</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>use_boundary</strong> (<em>boolean, (optional)</em>) – Boundary, Inset face boundaries</li>
+<li><strong>use_even_offset</strong> (<em>boolean, (optional)</em>) – Offset Even, Scale the offset to give more even thickness</li>
+<li><strong>use_relative_offset</strong> (<em>boolean, (optional)</em>) – Offset Relative, Scale the offset by surrounding geometry</li>
+<li><strong>use_replace</strong> (<em>boolean, (optional)</em>) – Replace, Remove original faces</li>
+<li><strong>thickness</strong> (<em>float in [0, 10000], (optional)</em>) – Thickness</li>
+<li><strong>offset</strong> (<em>float in [0, 10000], (optional)</em>) – Offset</li>
+<li><strong>use_crease</strong> (<em>boolean, (optional)</em>) – Crease, Crease hub edges for improved subsurf</li>
+<li><strong>crease_weight</strong> (<em>float in [0, 1000], (optional)</em>) – Crease weight</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.mball.html" title="previous chapter">Mball Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.nla.html" title="next chapter">Nla Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.nla.html" title="Nla Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.mball.html" title="Mball Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>KX_SCA_ReplaceMeshActuator(SCA_IActuator) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bge.types.html" rel="up" title="Game Types (bge.types)"/>
+<link href="bge.types.KX_Scene.html" rel="next" title="KX_Scene(PyObjectPlus)"/>
+<link href="bge.types.KX_SCA_EndObjectActuator.html" rel="prev" title="KX_SCA_EndObjectActuator(SCA_IActuator)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.KX_Scene.html" title="KX_Scene(PyObjectPlus)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.KX_SCA_EndObjectActuator.html" title="KX_SCA_EndObjectActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="kx-sca-replacemeshactuator-sca-iactuator"></span><h1>KX_SCA_ReplaceMeshActuator(SCA_IActuator)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_IActuator.html#bge.types.SCA_IActuator" title="bge.types.SCA_IActuator"><code class="xref py py-class docutils literal"><span class="pre">SCA_IActuator</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.KX_SCA_ReplaceMeshActuator"><a name="//apple_ref/cpp/Class/bge.types.KX_SCA_ReplaceMeshActuator"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">KX_SCA_ReplaceMeshActuator</code><span class="sig-paren">(</span><em>SCA_IActuator</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SCA_ReplaceMeshActuator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit Object actuator, in Replace Mesh mode.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Replace mesh actuators will be ignored if at game start, the named mesh doesn’t exist.</p>
+<p>This will generate a warning in the console</p>
+<div class="last highlight-none"><div class="highlight"><pre><span></span>Error: GameObject 'Name' ReplaceMeshActuator 'ActuatorName' without object
+</pre></div>
+</div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Level-of-detail</span>
+<span class="c1"># Switch a game object's mesh based on its depth in the camera view.</span>
+<span class="c1"># +----------+     +-----------+     +-------------------------------------+</span>
+<span class="c1"># | Always   +-----+ Python    +-----+ Edit Object (Replace Mesh) LOD.Mesh |</span>
+<span class="c1"># +----------+     +-----------+     +-------------------------------------+</span>
+<span class="kn">from</span> <span class="nn">bge</span> <span class="kn">import</span> <span class="n">logic</span>
+
+<span class="c1"># List detail meshes here</span>
+<span class="c1"># Mesh (name, near, far)</span>
+<span class="c1"># Meshes overlap so that they don't 'pop' when on the edge of the distance.</span>
+<span class="n">meshes</span> <span class="o">=</span> <span class="p">((</span><span class="s2">".Hi"</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">20.0</span><span class="p">),</span>
+      <span class="p">(</span><span class="s2">".Med"</span><span class="p">,</span> <span class="o">-</span><span class="mf">15.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">50.0</span><span class="p">),</span>
+      <span class="p">(</span><span class="s2">".Lo"</span><span class="p">,</span> <span class="o">-</span><span class="mf">40.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">100.0</span><span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="n">cont</span> <span class="o">=</span> <span class="n">logic</span><span class="o">.</span><span class="n">getCurrentController</span><span class="p">()</span>
+<span class="nb">object</span> <span class="o">=</span> <span class="n">cont</span><span class="o">.</span><span class="n">owner</span>
+<span class="n">actuator</span> <span class="o">=</span> <span class="n">cont</span><span class="o">.</span><span class="n">actuators</span><span class="p">[</span><span class="s2">"LOD."</span> <span class="o">+</span> <span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+<span class="n">camera</span> <span class="o">=</span> <span class="n">logic</span><span class="o">.</span><span class="n">getCurrentScene</span><span class="p">()</span><span class="o">.</span><span class="n">active_camera</span>
+
+<span class="k">def</span> <span class="nf">Depth</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">plane</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">plane</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">plane</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">plane</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">plane</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># Depth is negative and decreasing further from the camera</span>
+<span class="n">depth</span> <span class="o">=</span> <span class="n">Depth</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">camera</span><span class="o">.</span><span class="n">world_to_camera</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">newmesh</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">curmesh</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="c1"># Find the lowest detail mesh for depth</span>
+<span class="k">for</span> <span class="n">mesh</span> <span class="ow">in</span> <span class="n">meshes</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">depth</span> <span class="o">&lt;</span> <span class="n">mesh</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="n">depth</span> <span class="o">&gt;</span> <span class="n">mesh</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+    <span class="n">newmesh</span> <span class="o">=</span> <span class="n">mesh</span>
+  <span class="k">if</span> <span class="s2">"ME"</span> <span class="o">+</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="n">mesh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">actuator</span><span class="o">.</span><span class="n">getMesh</span><span class="p">():</span>
+      <span class="n">curmesh</span> <span class="o">=</span> <span class="n">mesh</span>
+
+<span class="k">if</span> <span class="n">newmesh</span> <span class="o">!=</span> <span class="bp">None</span> <span class="ow">and</span> <span class="s2">"ME"</span> <span class="o">+</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="n">newmesh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">actuator</span><span class="o">.</span><span class="n">mesh</span><span class="p">:</span>
+  <span class="c1"># The mesh is a different mesh - switch it.</span>
+  <span class="c1"># Check the current mesh is not a better fit.</span>
+  <span class="k">if</span> <span class="n">curmesh</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">curmesh</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">depth</span> <span class="ow">or</span> <span class="n">curmesh</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">depth</span><span class="p">:</span>
+    <span class="n">actuator</span><span class="o">.</span><span class="n">mesh</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="n">newmesh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">cont</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">actuator</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_ReplaceMeshActuator.mesh"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_ReplaceMeshActuator.mesh"></a>
+<code class="descname">mesh</code><a class="headerlink" href="#bge.types.KX_SCA_ReplaceMeshActuator.mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="xref py py-class docutils literal"><span class="pre">MeshProxy</span></code> or the name of the mesh that will replace the current one.</p>
+<p>Set to None to disable actuator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">MeshProxy</span></code> or None if no mesh is set</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_ReplaceMeshActuator.useDisplayMesh"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_ReplaceMeshActuator.useDisplayMesh"></a>
+<code class="descname">useDisplayMesh</code><a class="headerlink" href="#bge.types.KX_SCA_ReplaceMeshActuator.useDisplayMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>when true the displayed mesh is replaced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_ReplaceMeshActuator.usePhysicsMesh"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_ReplaceMeshActuator.usePhysicsMesh"></a>
+<code class="descname">usePhysicsMesh</code><a class="headerlink" href="#bge.types.KX_SCA_ReplaceMeshActuator.usePhysicsMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>when true the physics mesh is replaced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_SCA_ReplaceMeshActuator.instantReplaceMesh"><a name="//apple_ref/cpp/Method/bge.types.KX_SCA_ReplaceMeshActuator.instantReplaceMesh"></a>
+<code class="descname">instantReplaceMesh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SCA_ReplaceMeshActuator.instantReplaceMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Immediately replace mesh without delay.</p>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.KX_SCA_EndObjectActuator.html" title="previous chapter">KX_SCA_EndObjectActuator(SCA_IActuator)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.KX_Scene.html" title="next chapter">KX_Scene(PyObjectPlus)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.KX_Scene.html" title="KX_Scene(PyObjectPlus)">next</a> |</li>
+<li class="right">
+<a href="bge.types.KX_SCA_EndObjectActuator.html" title="KX_SCA_EndObjectActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

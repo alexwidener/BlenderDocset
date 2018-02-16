@@ -1,0 +1,1997 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Wm Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.world.html" rel="next" title="World Operators"/>
+<link href="bpy.ops.view3d.html" rel="prev" title="View3D Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.world.html" title="World Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.view3d.html" title="View3D Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.wm">
+<span id="wm-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.wm"></a>Wm Operators<a class="headerlink" href="#module-bpy.ops.wm" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.wm.addon_disable"><a name="//apple_ref/cpp/Function/bpy.ops.wm.addon_disable"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">addon_disable</code><span class="sig-paren">(</span><em>module=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.addon_disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable an add-on</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>module</strong> (<em>string, (optional, never None)</em>) – Module, Module name of the add-on to disable</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1902</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.addon_enable"><a name="//apple_ref/cpp/Function/bpy.ops.wm.addon_enable"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">addon_enable</code><span class="sig-paren">(</span><em>module=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.addon_enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable an add-on</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>module</strong> (<em>string, (optional, never None)</em>) – Module, Module name of the add-on to enable</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1858</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.addon_expand"><a name="//apple_ref/cpp/Function/bpy.ops.wm.addon_expand"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">addon_expand</code><span class="sig-paren">(</span><em>module=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.addon_expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display information and preferences for this add-on</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>module</strong> (<em>string, (optional, never None)</em>) – Module, Module name of the add-on to expand</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:2228</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.addon_install"><a name="//apple_ref/cpp/Function/bpy.ops.wm.addon_install"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">addon_install</code><span class="sig-paren">(</span><em>overwrite=True</em>, <em>target='DEFAULT'</em>, <em>filepath=""</em>, <em>filter_folder=True</em>, <em>filter_python=True</em>, <em>filter_glob="*.py;*.zip"</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.addon_install" title="Permalink to this definition">¶</a></dt>
+<dd><p>Install an add-on</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>overwrite</strong> (<em>boolean, (optional)</em>) – Overwrite, Remove existing add-ons with the same ID</li>
+<li><strong>target</strong> (<em>enum in ['DEFAULT', 'PREFS'], (optional)</em>) – Target Path</li>
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python</li>
+<li><strong>filter_glob</strong> (<em>string, (optional, never None)</em>) – filter_glob</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:2041</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.addon_refresh"><a name="//apple_ref/cpp/Function/bpy.ops.wm.addon_refresh"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">addon_refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.addon_refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scan add-on directories for new modules</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1985</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.addon_remove"><a name="//apple_ref/cpp/Function/bpy.ops.wm.addon_remove"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">addon_remove</code><span class="sig-paren">(</span><em>module=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.addon_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the add-on from the file system</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>module</strong> (<em>string, (optional, never None)</em>) – Module, Module name of the add-on to remove</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:2183</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.alembic_export"><a name="//apple_ref/cpp/Function/bpy.ops.wm.alembic_export"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">alembic_export</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>check_existing=True</em>, <em>filter_blender=False</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=True</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>start=1</em>, <em>end=1</em>, <em>xsamples=1</em>, <em>gsamples=1</em>, <em>sh_open=0.0</em>, <em>sh_close=1.0</em>, <em>selected=False</em>, <em>renderable_only=True</em>, <em>visible_layers_only=False</em>, <em>flatten=False</em>, <em>uvs=True</em>, <em>packuv=True</em>, <em>normals=True</em>, <em>vcolors=False</em>, <em>face_sets=False</em>, <em>subdiv_schema=False</em>, <em>apply_subdiv=False</em>, <em>compression_type='OGAWA'</em>, <em>global_scale=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.alembic_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export current scene in an Alembic archive</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>check_existing</strong> (<em>boolean, (optional)</em>) – Check Existing, Check and warn on overwriting existing files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>start</strong> (<em>int in [-inf, inf], (optional)</em>) – Start Frame, Start Frame</li>
+<li><strong>end</strong> (<em>int in [-inf, inf], (optional)</em>) – End Frame, End Frame</li>
+<li><strong>xsamples</strong> (<em>int in [1, 128], (optional)</em>) – Transform Samples, Number of times per frame transformations are sampled</li>
+<li><strong>gsamples</strong> (<em>int in [1, 128], (optional)</em>) – Geometry Samples, Number of times per frame object data are sampled</li>
+<li><strong>sh_open</strong> (<em>float in [-1, 1], (optional)</em>) – Shutter Open, Time at which the shutter is open</li>
+<li><strong>sh_close</strong> (<em>float in [-1, 1], (optional)</em>) – Shutter Close, Time at which the shutter is closed</li>
+<li><strong>selected</strong> (<em>boolean, (optional)</em>) – Selected Objects Only, Export only selected objects</li>
+<li><strong>renderable_only</strong> (<em>boolean, (optional)</em>) – Renderable Objects Only, Export only objects marked renderable in the outliner</li>
+<li><strong>visible_layers_only</strong> (<em>boolean, (optional)</em>) – Visible Layers Only, Export only objects in visible layers</li>
+<li><strong>flatten</strong> (<em>boolean, (optional)</em>) – Flatten Hierarchy, Do not preserve objects’ parent/children relationship</li>
+<li><strong>uvs</strong> (<em>boolean, (optional)</em>) – UVs, Export UVs</li>
+<li><strong>packuv</strong> (<em>boolean, (optional)</em>) – Pack UV Islands, Export UVs with packed island</li>
+<li><strong>normals</strong> (<em>boolean, (optional)</em>) – Normals, Export normals</li>
+<li><strong>vcolors</strong> (<em>boolean, (optional)</em>) – Vertex Colors, Export vertex colors</li>
+<li><strong>face_sets</strong> (<em>boolean, (optional)</em>) – Face Sets, Export per face shading group assignments</li>
+<li><strong>subdiv_schema</strong> (<em>boolean, (optional)</em>) – Use Subdivision Schema, Export meshes using Alembic’s subdivision schema</li>
+<li><strong>apply_subdiv</strong> (<em>boolean, (optional)</em>) – Apply Subsurf, Export subdivision surfaces as meshes</li>
+<li><strong>compression_type</strong> (<em>enum in ['OGAWA', 'HDF5'], (optional)</em>) – Compression</li>
+<li><strong>global_scale</strong> (<em>float in [0.0001, 1000], (optional)</em>) – Scale, Value by which to enlarge or shrink the objects with respect to the world’s origin</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.alembic_import"><a name="//apple_ref/cpp/Function/bpy.ops.wm.alembic_import"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">alembic_import</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>check_existing=True</em>, <em>filter_blender=False</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=True</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>scale=1.0</em>, <em>set_frame_range=True</em>, <em>validate_meshes=False</em>, <em>is_sequence=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.alembic_import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an Alembic archive</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>check_existing</strong> (<em>boolean, (optional)</em>) – Check Existing, Check and warn on overwriting existing files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>scale</strong> (<em>float in [0.0001, 1000], (optional)</em>) – Scale, Value by which to enlarge or shrink the objects with respect to the world’s origin</li>
+<li><strong>set_frame_range</strong> (<em>boolean, (optional)</em>) – Set Frame Range, If checked, update scene’s start and end frame to match those of the Alembic archive</li>
+<li><strong>validate_meshes</strong> (<em>boolean, (optional)</em>) – Validate Meshes, Check imported mesh objects for invalid data (slow)</li>
+<li><strong>is_sequence</strong> (<em>boolean, (optional)</em>) – Is Sequence, Set to true if the cache is split into separate files</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.appconfig_activate"><a name="//apple_ref/cpp/Function/bpy.ops.wm.appconfig_activate"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">appconfig_activate</code><span class="sig-paren">(</span><em>filepath=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.appconfig_activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1456</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.appconfig_default"><a name="//apple_ref/cpp/Function/bpy.ops.wm.appconfig_default"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">appconfig_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.appconfig_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1435</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.append"><a name="//apple_ref/cpp/Function/bpy.ops.wm.append"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">append</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>directory=""</em>, <em>filename=""</em>, <em>files=None</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=True</em>, <em>filemode=1</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>link=False</em>, <em>autoselect=True</em>, <em>active_layer=True</em>, <em>instance_groups=False</em>, <em>set_fake=False</em>, <em>use_recursive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append from a Library .blend file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – Directory, Directory of the file</li>
+<li><strong>filename</strong> (<em>string, (optional, never None)</em>) – File Name, Name of the file</li>
+<li><strong>files</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorFileListElement</span></code>, (optional)) – Files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>link</strong> (<em>boolean, (optional)</em>) – Link, Link the objects or datablocks rather than appending</li>
+<li><strong>autoselect</strong> (<em>boolean, (optional)</em>) – Select, Select new objects</li>
+<li><strong>active_layer</strong> (<em>boolean, (optional)</em>) – Active Layer, Put new objects on the active layer</li>
+<li><strong>instance_groups</strong> (<em>boolean, (optional)</em>) – Instance Groups, Create Dupli-Group instances for each group</li>
+<li><strong>set_fake</strong> (<em>boolean, (optional)</em>) – Fake User, Set Fake User for appended items (except Objects and Groups)</li>
+<li><strong>use_recursive</strong> (<em>boolean, (optional)</em>) – Localize All, Localize all appended data, including those indirectly linked from other libraries</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.blenderplayer_start"><a name="//apple_ref/cpp/Function/bpy.ops.wm.blenderplayer_start"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">blenderplayer_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.blenderplayer_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch the blender-player with the current blend-file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1535</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.call_menu"><a name="//apple_ref/cpp/Function/bpy.ops.wm.call_menu"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">call_menu</code><span class="sig-paren">(</span><em>name=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.call_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call (draw) a pre-defined menu</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Name of the menu</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.call_menu_pie"><a name="//apple_ref/cpp/Function/bpy.ops.wm.call_menu_pie"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">call_menu_pie</code><span class="sig-paren">(</span><em>name=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.call_menu_pie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call (draw) a pre-defined pie menu</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Name of the pie menu</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.collada_export"><a name="//apple_ref/cpp/Function/bpy.ops.wm.collada_export"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">collada_export</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>check_existing=True</em>, <em>filter_blender=False</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=True</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>apply_modifiers=False</em>, <em>export_mesh_type=0</em>, <em>export_mesh_type_selection='view'</em>, <em>selected=False</em>, <em>include_children=False</em>, <em>include_armatures=False</em>, <em>include_shapekeys=True</em>, <em>deform_bones_only=False</em>, <em>active_uv_only=False</em>, <em>include_uv_textures=False</em>, <em>include_material_textures=False</em>, <em>use_texture_copies=True</em>, <em>triangulate=True</em>, <em>use_object_instantiation=True</em>, <em>use_blender_profile=True</em>, <em>sort_by_name=False</em>, <em>export_transformation_type=0</em>, <em>export_transformation_type_selection='matrix'</em>, <em>open_sim=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.collada_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a Collada file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>check_existing</strong> (<em>boolean, (optional)</em>) – Check Existing, Check and warn on overwriting existing files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>apply_modifiers</strong> (<em>boolean, (optional)</em>) – Apply Modifiers, Apply modifiers to exported mesh (non destructive))</li>
+<li><strong>export_mesh_type</strong> (<em>int in [-inf, inf], (optional)</em>) – Resolution, Modifier resolution for export</li>
+<li><strong>export_mesh_type_selection</strong> (<em>enum in ['view', 'render'], (optional)</em>) – <p>Resolution, Modifier resolution for export</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">view</span></code> View, Apply modifier’s view settings.</li>
+<li><code class="docutils literal"><span class="pre">render</span></code> Render, Apply modifier’s render settings.</li>
+</ul>
+</li>
+<li><strong>selected</strong> (<em>boolean, (optional)</em>) – Selection Only, Export only selected elements</li>
+<li><strong>include_children</strong> (<em>boolean, (optional)</em>) – Include Children, Export all children of selected objects (even if not selected)</li>
+<li><strong>include_armatures</strong> (<em>boolean, (optional)</em>) – Include Armatures, Export related armatures (even if not selected)</li>
+<li><strong>include_shapekeys</strong> (<em>boolean, (optional)</em>) – Include Shape Keys, Export all Shape Keys from Mesh Objects</li>
+<li><strong>deform_bones_only</strong> (<em>boolean, (optional)</em>) – Deform Bones only, Only export deforming bones with armatures</li>
+<li><strong>active_uv_only</strong> (<em>boolean, (optional)</em>) – Only Selected UV Map, Export only the selected UV Map</li>
+<li><strong>include_uv_textures</strong> (<em>boolean, (optional)</em>) – Include UV Textures, Export textures assigned to the object UV Maps</li>
+<li><strong>include_material_textures</strong> (<em>boolean, (optional)</em>) – Include Material Textures, Export textures assigned to the object Materials</li>
+<li><strong>use_texture_copies</strong> (<em>boolean, (optional)</em>) – Copy, Copy textures to same folder where the .dae file is exported</li>
+<li><strong>triangulate</strong> (<em>boolean, (optional)</em>) – Triangulate, Export Polygons (Quads &amp; NGons) as Triangles</li>
+<li><strong>use_object_instantiation</strong> (<em>boolean, (optional)</em>) – Use Object Instances, Instantiate multiple Objects from same Data</li>
+<li><strong>use_blender_profile</strong> (<em>boolean, (optional)</em>) – Use Blender Profile, Export additional Blender specific information (for material, shaders, bones, etc.)</li>
+<li><strong>sort_by_name</strong> (<em>boolean, (optional)</em>) – Sort by Object name, Sort exported data by Object name</li>
+<li><strong>export_transformation_type</strong> (<em>int in [-inf, inf], (optional)</em>) – Transform, Transformation type for translation, scale and rotation</li>
+<li><strong>export_transformation_type_selection</strong> (<em>enum in ['matrix', 'transrotloc', 'both'], (optional)</em>) – <p>Transform, Transformation type for translation, scale and rotation</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">matrix</span></code> Matrix, Use &lt;matrix&gt; to specify transformations.</li>
+<li><code class="docutils literal"><span class="pre">transrotloc</span></code> TransRotLoc, Use &lt;translate&gt;, &lt;rotate&gt;, &lt;scale&gt; to specify transformations.</li>
+<li><code class="docutils literal"><span class="pre">both</span></code> Both, Use &lt;matrix&gt; AND &lt;translate&gt;, &lt;rotate&gt;, &lt;scale&gt; to specify transformations.</li>
+</ul>
+</li>
+<li><strong>open_sim</strong> (<em>boolean, (optional)</em>) – Export to SL/OpenSim, Compatibility mode for SL, OpenSim and other compatible online worlds</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.collada_import"><a name="//apple_ref/cpp/Function/bpy.ops.wm.collada_import"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">collada_import</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>filter_blender=False</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=True</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>import_units=False</em>, <em>fix_orientation=False</em>, <em>find_chains=False</em>, <em>auto_connect=False</em>, <em>min_chain_length=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.collada_import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a Collada file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>import_units</strong> (<em>boolean, (optional)</em>) – Import Units, If disabled match import to Blender’s current Unit settings, otherwise use the settings from the Imported scene</li>
+<li><strong>fix_orientation</strong> (<em>boolean, (optional)</em>) – Fix Leaf Bones, Fix Orientation of Leaf Bones (Collada does only support Joints)</li>
+<li><strong>find_chains</strong> (<em>boolean, (optional)</em>) – Find Bone Chains, Find best matching Bone Chains and ensure bones in chain are connected</li>
+<li><strong>auto_connect</strong> (<em>boolean, (optional)</em>) – Auto Connect, Set use_connect for parent bones which have exactly one child bone</li>
+<li><strong>min_chain_length</strong> (<em>int in [0, inf], (optional)</em>) – Minimum Chain Length, When searching Bone Chains disregard chains of length below this value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_collection_boolean_set"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_collection_boolean_set"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_collection_boolean_set</code><span class="sig-paren">(</span><em>data_path_iter=""</em>, <em>data_path_item=""</em>, <em>type='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_collection_boolean_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set boolean values for a collection of items</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path_iter</strong> (<em>string, (optional, never None)</em>) – data_path_iter, The data path relative to the context, must point to an iterable</li>
+<li><strong>data_path_item</strong> (<em>string, (optional, never None)</em>) – data_path_item, The data path from each iterable to the value (int or float)</li>
+<li><strong>type</strong> (<em>enum in ['TOGGLE', 'ENABLE', 'DISABLE'], (optional)</em>) – Type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:688</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_cycle_array"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_cycle_array"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_cycle_array</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>reverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_cycle_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context array value (useful for cycling the active mesh edit mode)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>reverse</strong> (<em>boolean, (optional)</em>) – Reverse, Cycle backwards</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:502</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_cycle_enum"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_cycle_enum"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_cycle_enum</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>reverse=False</em>, <em>wrap=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_cycle_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>reverse</strong> (<em>boolean, (optional)</em>) – Reverse, Cycle backwards</li>
+<li><strong>wrap</strong> (<em>boolean, (optional)</em>) – Wrap, Wrap back to the first/last values</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:446</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_cycle_int"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_cycle_int"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_cycle_int</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>reverse=False</em>, <em>wrap=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_cycle_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value (useful for cycling active material, vertex keys, groups, etc.)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>reverse</strong> (<em>boolean, (optional)</em>) – Reverse, Cycle backwards</li>
+<li><strong>wrap</strong> (<em>boolean, (optional)</em>) – Wrap, Wrap back to the first/last values</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:410</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_menu_enum"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_menu_enum"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_menu_enum</code><span class="sig-paren">(</span><em>data_path=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_menu_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:526</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_modal_mouse"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_modal_mouse"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_modal_mouse</code><span class="sig-paren">(</span><em>data_path_iter=""</em>, <em>data_path_item=""</em>, <em>header_text=""</em>, <em>input_scale=0.01</em>, <em>invert=False</em>, <em>initial_x=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_modal_mouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust arbitrary values with mouse input</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path_iter</strong> (<em>string, (optional, never None)</em>) – data_path_iter, The data path relative to the context, must point to an iterable</li>
+<li><strong>data_path_item</strong> (<em>string, (optional, never None)</em>) – data_path_item, The data path from each iterable to the value (int or float)</li>
+<li><strong>header_text</strong> (<em>string, (optional, never None)</em>) – Header Text, Text to display in header during scale</li>
+<li><strong>input_scale</strong> (<em>float in [-inf, inf], (optional)</em>) – input_scale, Scale the mouse movement by this value before applying the delta</li>
+<li><strong>invert</strong> (<em>boolean, (optional)</em>) – invert, Invert the mouse input</li>
+<li><strong>initial_x</strong> (<em>int in [-inf, inf], (optional)</em>) – initial_x</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:823</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_pie_enum"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_pie_enum"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_pie_enum</code><span class="sig-paren">(</span><em>data_path=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_pie_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:552</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_scale_float"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_scale_float"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_scale_float</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_scale_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale a float context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>float in [-inf, inf], (optional)</em>) – Value, Assign value</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:214</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_scale_int"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_scale_int"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_scale_int</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=1.0</em>, <em>always_step=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_scale_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale an int context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>float in [-inf, inf], (optional)</em>) – Value, Assign value</li>
+<li><strong>always_step</strong> (<em>boolean, (optional)</em>) – Always Step, Always adjust the value by a minimum of 1 when ‘value’ is not 1.0</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:247</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_boolean"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_boolean"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_boolean</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_boolean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>boolean, (optional)</em>) – Value, Assignment value</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:120</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_enum"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_enum"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_enum</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>string, (optional, never None)</em>) – Value, Assignment value (as a string)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:120</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_float"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_float"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_float</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=0.0</em>, <em>relative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>float in [-inf, inf], (optional)</em>) – Value, Assignment value</li>
+<li><strong>relative</strong> (<em>boolean, (optional)</em>) – Relative, Apply relative to the current value (delta)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:120</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_id"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_id"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_id</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value to an ID data-block</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>string, (optional, never None)</em>) – Value, Assign value</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:628</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_int"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_int"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_int</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=0</em>, <em>relative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>int in [-inf, inf], (optional)</em>) – Value, Assign value</li>
+<li><strong>relative</strong> (<em>boolean, (optional)</em>) – Relative, Apply relative to the current value (delta)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:120</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_string"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_string"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_string</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>string, (optional, never None)</em>) – Value, Assign value</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:120</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_set_value"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_set_value"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_set_value</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value</strong> (<em>string, (optional, never None)</em>) – Value, Assignment value (as a string)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:334</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_toggle"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_toggle</code><span class="sig-paren">(</span><em>data_path=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:350</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.context_toggle_enum"><a name="//apple_ref/cpp/Function/bpy.ops.wm.context_toggle_enum"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">context_toggle_enum</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>value_1=""</em>, <em>value_2=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.context_toggle_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle a context value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Context Attributes, RNA context string</li>
+<li><strong>value_1</strong> (<em>string, (optional, never None)</em>) – Value, Toggle enum</li>
+<li><strong>value_2</strong> (<em>string, (optional, never None)</em>) – Value, Toggle enum</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:379</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.copy_prev_settings"><a name="//apple_ref/cpp/Function/bpy.ops.wm.copy_prev_settings"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">copy_prev_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.copy_prev_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy settings from previous version</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1501</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.debug_menu"><a name="//apple_ref/cpp/Function/bpy.ops.wm.debug_menu"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">debug_menu</code><span class="sig-paren">(</span><em>debug_value=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.debug_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a popup to set the debug level</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>debug_value</strong> (<em>int in [-32768, 32767], (optional)</em>) – Debug Value</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.dependency_relations"><a name="//apple_ref/cpp/Function/bpy.ops.wm.dependency_relations"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">dependency_relations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.dependency_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dependency graph relations to the console</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.doc_view"><a name="//apple_ref/cpp/Function/bpy.ops.wm.doc_view"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">doc_view</code><span class="sig-paren">(</span><em>doc_id=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.doc_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load online reference docs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc_id</strong> (<em>string, (optional, never None)</em>) – Doc ID</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1015</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.doc_view_manual"><a name="//apple_ref/cpp/Function/bpy.ops.wm.doc_view_manual"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">doc_view_manual</code><span class="sig-paren">(</span><em>doc_id=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.doc_view_manual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load online manual</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc_id</strong> (<em>string, (optional, never None)</em>) – Doc ID</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:981</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.doc_view_manual_ui_context"><a name="//apple_ref/cpp/Function/bpy.ops.wm.doc_view_manual_ui_context"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">doc_view_manual_ui_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.doc_view_manual_ui_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>View a context based online manual in a web browser</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.interaction_preset_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.interaction_preset_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">interaction_preset_add</code><span class="sig-paren">(</span><em>name=""</em>, <em>remove_active=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.interaction_preset_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or remove an Application Interaction Preset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Name of the preset, used to make the path name</li>
+<li><strong>remove_active</strong> (<em>boolean, (optional)</em>) – remove_active</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/presets.py">startup/bl_operators/presets.py</a>:71</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.interface_theme_preset_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.interface_theme_preset_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">interface_theme_preset_add</code><span class="sig-paren">(</span><em>name=""</em>, <em>remove_active=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.interface_theme_preset_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or remove a theme preset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Name of the preset, used to make the path name</li>
+<li><strong>remove_active</strong> (<em>boolean, (optional)</em>) – remove_active</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/presets.py">startup/bl_operators/presets.py</a>:71</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyconfig_activate"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyconfig_activate"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyconfig_activate</code><span class="sig-paren">(</span><em>filepath=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyconfig_activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1424</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyconfig_export"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyconfig_export"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyconfig_export</code><span class="sig-paren">(</span><em>filepath="keymap.py"</em>, <em>filter_folder=True</em>, <em>filter_text=True</em>, <em>filter_python=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyconfig_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export key configuration to a python script</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1687</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyconfig_import"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyconfig_import"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyconfig_import</code><span class="sig-paren">(</span><em>filepath="keymap.py"</em>, <em>filter_folder=True</em>, <em>filter_text=True</em>, <em>filter_python=True</em>, <em>keep_original=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyconfig_import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import key configuration from a python script</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python</li>
+<li><strong>keep_original</strong> (<em>boolean, (optional)</em>) – Keep original, Keep original file after copying to configuration folder</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1625</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyconfig_preset_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyconfig_preset_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyconfig_preset_add</code><span class="sig-paren">(</span><em>name=""</em>, <em>remove_active=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyconfig_preset_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or remove a Key-config Preset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Name of the preset, used to make the path name</li>
+<li><strong>remove_active</strong> (<em>boolean, (optional)</em>) – remove_active</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/presets.py">startup/bl_operators/presets.py</a>:71</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyconfig_remove"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyconfig_remove"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyconfig_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyconfig_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove key config</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1813</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyconfig_test"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyconfig_test"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyconfig_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyconfig_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test key-config for conflicts</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1583</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyitem_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyitem_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyitem_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyitem_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add key map item</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1764</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyitem_remove"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyitem_remove"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyitem_remove</code><span class="sig-paren">(</span><em>item_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyitem_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove key map item</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<em>int in [-inf, inf], (optional)</em>) – Item Identifier, Identifier of the item to remove</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1795</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keyitem_restore"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keyitem_restore"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keyitem_restore</code><span class="sig-paren">(</span><em>item_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keyitem_restore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restore key map item</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item_id</strong> (<em>int in [-inf, inf], (optional)</em>) – Item Identifier, Identifier of the item to remove</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1749</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.keymap_restore"><a name="//apple_ref/cpp/Function/bpy.ops.wm.keymap_restore"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">keymap_restore</code><span class="sig-paren">(</span><em>all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.keymap_restore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restore key map(s)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>all</strong> (<em>boolean, (optional)</em>) – All Keymaps, Restore all keymaps to default</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1721</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.lib_reload"><a name="//apple_ref/cpp/Function/bpy.ops.wm.lib_reload"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">lib_reload</code><span class="sig-paren">(</span><em>library=""</em>, <em>filepath=""</em>, <em>directory=""</em>, <em>filename=""</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>relative_path=True</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.lib_reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the given library</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>library</strong> (<em>string, (optional, never None)</em>) – Library, Library to reload</li>
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – Directory, Directory of the file</li>
+<li><strong>filename</strong> (<em>string, (optional, never None)</em>) – File Name, Name of the file</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>relative_path</strong> (<em>boolean, (optional)</em>) – Relative Path, Select the file relative to the blend file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.lib_relocate"><a name="//apple_ref/cpp/Function/bpy.ops.wm.lib_relocate"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">lib_relocate</code><span class="sig-paren">(</span><em>library=""</em>, <em>filepath=""</em>, <em>directory=""</em>, <em>filename=""</em>, <em>files=None</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>relative_path=True</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.lib_relocate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relocate the given library to one or several others</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>library</strong> (<em>string, (optional, never None)</em>) – Library, Library to relocate</li>
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – Directory, Directory of the file</li>
+<li><strong>filename</strong> (<em>string, (optional, never None)</em>) – File Name, Name of the file</li>
+<li><strong>files</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorFileListElement</span></code>, (optional)) – Files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>relative_path</strong> (<em>boolean, (optional)</em>) – Relative Path, Select the file relative to the blend file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.link"><a name="//apple_ref/cpp/Function/bpy.ops.wm.link"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">link</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>directory=""</em>, <em>filename=""</em>, <em>files=None</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=True</em>, <em>filemode=1</em>, <em>relative_path=True</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>link=True</em>, <em>autoselect=True</em>, <em>active_layer=True</em>, <em>instance_groups=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link from a Library .blend file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – Directory, Directory of the file</li>
+<li><strong>filename</strong> (<em>string, (optional, never None)</em>) – File Name, Name of the file</li>
+<li><strong>files</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorFileListElement</span></code>, (optional)) – Files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>relative_path</strong> (<em>boolean, (optional)</em>) – Relative Path, Select the file relative to the blend file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>link</strong> (<em>boolean, (optional)</em>) – Link, Link the objects or datablocks rather than appending</li>
+<li><strong>autoselect</strong> (<em>boolean, (optional)</em>) – Select, Select new objects</li>
+<li><strong>active_layer</strong> (<em>boolean, (optional)</em>) – Active Layer, Put new objects on the active layer</li>
+<li><strong>instance_groups</strong> (<em>boolean, (optional)</em>) – Instance Groups, Create Dupli-Group instances for each group</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.memory_statistics"><a name="//apple_ref/cpp/Function/bpy.ops.wm.memory_statistics"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">memory_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.memory_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print memory statistics to the console</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.open_mainfile"><a name="//apple_ref/cpp/Function/bpy.ops.wm.open_mainfile"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">open_mainfile</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>load_ui=True</em>, <em>use_scripts=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.open_mainfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a Blender file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>load_ui</strong> (<em>boolean, (optional)</em>) – Load UI, Load user interface setup in the .blend file</li>
+<li><strong>use_scripts</strong> (<em>boolean, (optional)</em>) – Trusted Source, Allow .blend file to execute scripts automatically, default available from system preferences</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.operator_cheat_sheet"><a name="//apple_ref/cpp/Function/bpy.ops.wm.operator_cheat_sheet"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">operator_cheat_sheet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.operator_cheat_sheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1824</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.operator_defaults"><a name="//apple_ref/cpp/Function/bpy.ops.wm.operator_defaults"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">operator_defaults</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.operator_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the active operator to its default values</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.operator_pie_enum"><a name="//apple_ref/cpp/Function/bpy.ops.wm.operator_pie_enum"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">operator_pie_enum</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>prop_string=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.operator_pie_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Operator, Operator name (in python as string)</li>
+<li><strong>prop_string</strong> (<em>string, (optional, never None)</em>) – Property, Property name (as a string)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:588</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.operator_preset_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.operator_preset_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">operator_preset_add</code><span class="sig-paren">(</span><em>name=""</em>, <em>remove_active=False</em>, <em>operator=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.operator_preset_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or remove an Operator Preset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string, (optional, never None)</em>) – Name, Name of the preset, used to make the path name</li>
+<li><strong>remove_active</strong> (<em>boolean, (optional)</em>) – remove_active</li>
+<li><strong>operator</strong> (<em>string, (optional, never None)</em>) – Operator</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/presets.py">startup/bl_operators/presets.py</a>:71</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.path_open"><a name="//apple_ref/cpp/Function/bpy.ops.wm.path_open"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">path_open</code><span class="sig-paren">(</span><em>filepath=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.path_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a path in a file browser</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:866</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.previews_batch_clear"><a name="//apple_ref/cpp/Function/bpy.ops.wm.previews_batch_clear"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">previews_batch_clear</code><span class="sig-paren">(</span><em>files=None</em>, <em>directory=""</em>, <em>filter_blender=True</em>, <em>filter_folder=True</em>, <em>use_scenes=True</em>, <em>use_groups=True</em>, <em>use_objects=True</em>, <em>use_intern_data=True</em>, <em>use_trusted=False</em>, <em>use_backups=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.previews_batch_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear selected .blend file’s previews</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>files</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorFileListElement</span></code>, (optional)) – files</li>
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – directory</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – filter_blender</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – filter_folder</li>
+<li><strong>use_scenes</strong> (<em>boolean, (optional)</em>) – Scenes, Clear scenes’ previews</li>
+<li><strong>use_groups</strong> (<em>boolean, (optional)</em>) – Groups, Clear groups’ previews</li>
+<li><strong>use_objects</strong> (<em>boolean, (optional)</em>) – Objects, Clear objects’ previews</li>
+<li><strong>use_intern_data</strong> (<em>boolean, (optional)</em>) – Mat/Tex/..., Clear ‘internal’ previews (materials, textures, images, etc.)</li>
+<li><strong>use_trusted</strong> (<em>boolean, (optional)</em>) – Trusted Blend Files, Enable python evaluation for selected files</li>
+<li><strong>use_backups</strong> (<em>boolean, (optional)</em>) – Save Backups, Keep a backup (.blend1) version of the files when saving with cleared previews</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/file.py">startup/bl_operators/file.py</a>:208</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.previews_batch_generate"><a name="//apple_ref/cpp/Function/bpy.ops.wm.previews_batch_generate"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">previews_batch_generate</code><span class="sig-paren">(</span><em>files=None</em>, <em>directory=""</em>, <em>filter_blender=True</em>, <em>filter_folder=True</em>, <em>use_scenes=True</em>, <em>use_groups=True</em>, <em>use_objects=True</em>, <em>use_intern_data=True</em>, <em>use_trusted=False</em>, <em>use_backups=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.previews_batch_generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate selected .blend file’s previews</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>files</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorFileListElement</span></code>, (optional)) – files</li>
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – directory</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – filter_blender</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – filter_folder</li>
+<li><strong>use_scenes</strong> (<em>boolean, (optional)</em>) – Scenes, Generate scenes’ previews</li>
+<li><strong>use_groups</strong> (<em>boolean, (optional)</em>) – Groups, Generate groups’ previews</li>
+<li><strong>use_objects</strong> (<em>boolean, (optional)</em>) – Objects, Generate objects’ previews</li>
+<li><strong>use_intern_data</strong> (<em>boolean, (optional)</em>) – Mat/Tex/..., Generate ‘internal’ previews (materials, textures, images, etc.)</li>
+<li><strong>use_trusted</strong> (<em>boolean, (optional)</em>) – Trusted Blend Files, Enable python evaluation for selected files</li>
+<li><strong>use_backups</strong> (<em>boolean, (optional)</em>) – Save Backups, Keep a backup (.blend1) version of the files when saving with generated previews</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/file.py">startup/bl_operators/file.py</a>:99</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.previews_clear"><a name="//apple_ref/cpp/Function/bpy.ops.wm.previews_clear"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">previews_clear</code><span class="sig-paren">(</span><em>id_type={'GROUP'</em>, <em>'IMAGE'</em>, <em>'LAMP'</em>, <em>'MATERIAL'</em>, <em>'OBJECT'</em>, <em>'SCENE'</em>, <em>'TEXTURE'</em>, <em>'WORLD'}</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.previews_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear datablock previews (only for some types like objects, materials, textures, etc.)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id_type</strong> (<em>enum set in {'SCENE', 'GROUP', 'OBJECT', 'MATERIAL', 'LAMP', 'WORLD', 'TEXTURE', 'IMAGE'}, (optional)</em>) – DataBlock Type, Which datablock previews to clear</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.previews_ensure"><a name="//apple_ref/cpp/Function/bpy.ops.wm.previews_ensure"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">previews_ensure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.previews_ensure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure datablock previews are available and up-to-date (to be saved in .blend file, only for some types like materials, textures, etc.)</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.properties_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.properties_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">properties_add</code><span class="sig-paren">(</span><em>data_path=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.properties_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Property Edit, Property data_path edit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1341</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.properties_context_change"><a name="//apple_ref/cpp/Function/bpy.ops.wm.properties_context_change"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">properties_context_change</code><span class="sig-paren">(</span><em>context=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.properties_context_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jump to a different tab inside the properties editor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>context</strong> (<em>string, (optional, never None)</em>) – Context</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1387</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.properties_edit"><a name="//apple_ref/cpp/Function/bpy.ops.wm.properties_edit"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">properties_edit</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>property=""</em>, <em>value=""</em>, <em>min=-10000</em>, <em>max=10000.0</em>, <em>use_soft_limits=False</em>, <em>soft_min=-10000</em>, <em>soft_max=10000.0</em>, <em>description=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.properties_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Property Edit, Property data_path edit</li>
+<li><strong>property</strong> (<em>string, (optional, never None)</em>) – Property Name, Property name edit</li>
+<li><strong>value</strong> (<em>string, (optional, never None)</em>) – Property Value, Property value edit</li>
+<li><strong>min</strong> (<em>float in [-inf, inf], (optional)</em>) – Min</li>
+<li><strong>max</strong> (<em>float in [-inf, inf], (optional)</em>) – Max</li>
+<li><strong>use_soft_limits</strong> (<em>boolean, (optional)</em>) – Use Soft Limits</li>
+<li><strong>soft_min</strong> (<em>float in [-inf, inf], (optional)</em>) – Min</li>
+<li><strong>soft_max</strong> (<em>float in [-inf, inf], (optional)</em>) – Max</li>
+<li><strong>description</strong> (<em>string, (optional, never None)</em>) – Tooltip</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1161</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.properties_remove"><a name="//apple_ref/cpp/Function/bpy.ops.wm.properties_remove"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">properties_remove</code><span class="sig-paren">(</span><em>data_path=""</em>, <em>property=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.properties_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal use (edit a property data_path)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_path</strong> (<em>string, (optional, never None)</em>) – Property Edit, Property data_path edit</li>
+<li><strong>property</strong> (<em>string, (optional, never None)</em>) – Property Name, Property name edit</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1401</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.quit_blender"><a name="//apple_ref/cpp/Function/bpy.ops.wm.quit_blender"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">quit_blender</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.quit_blender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quit Blender</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.radial_control"><a name="//apple_ref/cpp/Function/bpy.ops.wm.radial_control"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">radial_control</code><span class="sig-paren">(</span><em>data_path_primary=""</em>, <em>data_path_secondary=""</em>, <em>use_secondary=""</em>, <em>rotation_path=""</em>, <em>color_path=""</em>, <em>fill_color_path=""</em>, <em>fill_color_override_path=""</em>, <em>fill_color_override_test_path=""</em>, <em>zoom_path=""</em>, <em>image_id=""</em>, <em>secondary_tex=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.radial_control" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set some size property (like e.g. brush size) with mouse wheel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data_path_primary</strong> (<em>string, (optional, never None)</em>) – Primary Data Path, Primary path of property to be set by the radial control</li>
+<li><strong>data_path_secondary</strong> (<em>string, (optional, never None)</em>) – Secondary Data Path, Secondary path of property to be set by the radial control</li>
+<li><strong>use_secondary</strong> (<em>string, (optional, never None)</em>) – Use Secondary, Path of property to select between the primary and secondary data paths</li>
+<li><strong>rotation_path</strong> (<em>string, (optional, never None)</em>) – Rotation Path, Path of property used to rotate the texture display</li>
+<li><strong>color_path</strong> (<em>string, (optional, never None)</em>) – Color Path, Path of property used to set the color of the control</li>
+<li><strong>fill_color_path</strong> (<em>string, (optional, never None)</em>) – Fill Color Path, Path of property used to set the fill color of the control</li>
+<li><strong>fill_color_override_path</strong> (<em>string, (optional, never None)</em>) – Fill Color Override Path</li>
+<li><strong>fill_color_override_test_path</strong> (<em>string, (optional, never None)</em>) – Fill Color Override Test</li>
+<li><strong>zoom_path</strong> (<em>string, (optional, never None)</em>) – Zoom Path, Path of property used to set the zoom level for the control</li>
+<li><strong>image_id</strong> (<em>string, (optional, never None)</em>) – Image ID, Path of ID that is used to generate an image for the control</li>
+<li><strong>secondary_tex</strong> (<em>boolean, (optional)</em>) – Secondary Texture, Tweak brush secondary/mask texture</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.read_factory_settings"><a name="//apple_ref/cpp/Function/bpy.ops.wm.read_factory_settings"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">read_factory_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.read_factory_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load default file and user preferences</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.read_history"><a name="//apple_ref/cpp/Function/bpy.ops.wm.read_history"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">read_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.read_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reloads history and bookmarks</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.read_homefile"><a name="//apple_ref/cpp/Function/bpy.ops.wm.read_homefile"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">read_homefile</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>load_ui=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.read_homefile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the default file (doesn’t save the current file)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to an alternative start-up file</li>
+<li><strong>load_ui</strong> (<em>boolean, (optional)</em>) – Load UI, Load user interface setup from the .blend file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.recover_auto_save"><a name="//apple_ref/cpp/Function/bpy.ops.wm.recover_auto_save"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">recover_auto_save</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=False</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='LIST_LONG'</em>, <em>sort_method='FILE_SORT_TIME'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.recover_auto_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open an automatically saved file to recover it</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.recover_last_session"><a name="//apple_ref/cpp/Function/bpy.ops.wm.recover_last_session"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">recover_last_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.recover_last_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the last closed file (“quit.blend”)</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.redraw_timer"><a name="//apple_ref/cpp/Function/bpy.ops.wm.redraw_timer"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">redraw_timer</code><span class="sig-paren">(</span><em>type='DRAW'</em>, <em>iterations=10</em>, <em>time_limit=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.redraw_timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple redraw timer to test the speed of updating the interface</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in ['DRAW', 'DRAW_SWAP', 'DRAW_WIN', 'DRAW_WIN_SWAP', 'ANIM_STEP', 'ANIM_PLAY', 'UNDO'], (optional)</em>) – <p>Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DRAW</span></code> Draw Region, Draw Region.</li>
+<li><code class="docutils literal"><span class="pre">DRAW_SWAP</span></code> Draw Region + Swap, Draw Region and Swap.</li>
+<li><code class="docutils literal"><span class="pre">DRAW_WIN</span></code> Draw Window, Draw Window.</li>
+<li><code class="docutils literal"><span class="pre">DRAW_WIN_SWAP</span></code> Draw Window + Swap, Draw Window and Swap.</li>
+<li><code class="docutils literal"><span class="pre">ANIM_STEP</span></code> Anim Step, Animation Steps.</li>
+<li><code class="docutils literal"><span class="pre">ANIM_PLAY</span></code> Anim Play, Animation Playback.</li>
+<li><code class="docutils literal"><span class="pre">UNDO</span></code> Undo/Redo, Undo/Redo.</li>
+</ul>
+</li>
+<li><strong>iterations</strong> (<em>int in [1, inf], (optional)</em>) – Iterations, Number of times to redraw</li>
+<li><strong>time_limit</strong> (<em>float in [0, inf], (optional)</em>) – Time Limit, Seconds to run the test for (override iterations)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.revert_mainfile"><a name="//apple_ref/cpp/Function/bpy.ops.wm.revert_mainfile"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">revert_mainfile</code><span class="sig-paren">(</span><em>use_scripts=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.revert_mainfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload the saved file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_scripts</strong> (<em>boolean, (optional)</em>) – Trusted Source, Allow .blend file to execute scripts automatically, default available from system preferences</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.save_as_mainfile"><a name="//apple_ref/cpp/Function/bpy.ops.wm.save_as_mainfile"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">save_as_mainfile</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>check_existing=True</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>compress=False</em>, <em>relative_remap=True</em>, <em>copy=False</em>, <em>use_mesh_compat=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.save_as_mainfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the current file in the desired location</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>check_existing</strong> (<em>boolean, (optional)</em>) – Check Existing, Check and warn on overwriting existing files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>compress</strong> (<em>boolean, (optional)</em>) – Compress, Write compressed .blend file</li>
+<li><strong>relative_remap</strong> (<em>boolean, (optional)</em>) – Remap Relative, Remap relative paths when saving in a different directory</li>
+<li><strong>copy</strong> (<em>boolean, (optional)</em>) – Save Copy, Save a copy of the actual working state but does not make saved file active</li>
+<li><strong>use_mesh_compat</strong> (<em>boolean, (optional)</em>) – Legacy Mesh Format, Save using legacy mesh format (no ngons) - WARNING: only saves tris and quads, other ngons will be lost (no implicit triangulation)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.save_homefile"><a name="//apple_ref/cpp/Function/bpy.ops.wm.save_homefile"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">save_homefile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.save_homefile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the current file the default .blend file, includes preferences</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.save_mainfile"><a name="//apple_ref/cpp/Function/bpy.ops.wm.save_mainfile"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">save_mainfile</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>check_existing=True</em>, <em>filter_blender=True</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=True</em>, <em>filter_blenlib=False</em>, <em>filemode=8</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em>, <em>compress=False</em>, <em>relative_remap=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.save_mainfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the current Blender file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>check_existing</strong> (<em>boolean, (optional)</em>) – Check Existing, Check and warn on overwriting existing files</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+<li><strong>compress</strong> (<em>boolean, (optional)</em>) – Compress, Write compressed .blend file</li>
+<li><strong>relative_remap</strong> (<em>boolean, (optional)</em>) – Remap Relative, Remap relative paths when saving in a different directory</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.save_userpref"><a name="//apple_ref/cpp/Function/bpy.ops.wm.save_userpref"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">save_userpref</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.save_userpref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save user preferences separately, overrides startup file preferences</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.search_menu"><a name="//apple_ref/cpp/Function/bpy.ops.wm.search_menu"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">search_menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.search_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pop-up a search menu over all available operators in current context</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.set_stereo_3d"><a name="//apple_ref/cpp/Function/bpy.ops.wm.set_stereo_3d"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">set_stereo_3d</code><span class="sig-paren">(</span><em>display_mode='ANAGLYPH'</em>, <em>anaglyph_type='RED_CYAN'</em>, <em>interlace_type='ROW_INTERLEAVED'</em>, <em>use_interlace_swap=False</em>, <em>use_sidebyside_crosseyed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.set_stereo_3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle 3D stereo support for current window (or change the display mode)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>display_mode</strong> (<em>enum in ['ANAGLYPH', 'INTERLACE', 'TIMESEQUENTIAL', 'SIDEBYSIDE', 'TOPBOTTOM'], (optional)</em>) – <p>Display Mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">ANAGLYPH</span></code> Anaglyph, Render views for left and right eyes as two differently filtered colors in a single image (anaglyph glasses are required).</li>
+<li><code class="docutils literal"><span class="pre">INTERLACE</span></code> Interlace, Render views for left and right eyes interlaced in a single image (3D-ready monitor is required).</li>
+<li><code class="docutils literal"><span class="pre">TIMESEQUENTIAL</span></code> Time Sequential, Render alternate eyes (also known as page flip, quad buffer support in the graphic card is required).</li>
+<li><code class="docutils literal"><span class="pre">SIDEBYSIDE</span></code> Side-by-Side, Render views for left and right eyes side-by-side.</li>
+<li><code class="docutils literal"><span class="pre">TOPBOTTOM</span></code> Top-Bottom, Render views for left and right eyes one above another.</li>
+</ul>
+</li>
+<li><strong>anaglyph_type</strong> (<em>enum in ['RED_CYAN', 'GREEN_MAGENTA', 'YELLOW_BLUE'], (optional)</em>) – Anaglyph Type</li>
+<li><strong>interlace_type</strong> (<em>enum in ['ROW_INTERLEAVED', 'COLUMN_INTERLEAVED', 'CHECKERBOARD_INTERLEAVED'], (optional)</em>) – Interlace Type</li>
+<li><strong>use_interlace_swap</strong> (<em>boolean, (optional)</em>) – Swap Left/Right, Swap left and right stereo channels</li>
+<li><strong>use_sidebyside_crosseyed</strong> (<em>boolean, (optional)</em>) – Cross-Eyed, Right eye should see left image and vice-versa</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.splash"><a name="//apple_ref/cpp/Function/bpy.ops.wm.splash"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">splash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.splash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the splash screen with release info</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.sysinfo"><a name="//apple_ref/cpp/Function/bpy.ops.wm.sysinfo"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">sysinfo</code><span class="sig-paren">(</span><em>filepath=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.sysinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate system information, saved into a text file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1479</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.theme_install"><a name="//apple_ref/cpp/Function/bpy.ops.wm.theme_install"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">theme_install</code><span class="sig-paren">(</span><em>overwrite=True</em>, <em>filepath=""</em>, <em>filter_folder=True</em>, <em>filter_glob="*.xml"</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.theme_install" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load and apply a Blender XML theme file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>overwrite</strong> (<em>boolean, (optional)</em>) – Overwrite, Remove existing theme file if exists</li>
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – filepath</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_glob</strong> (<em>string, (optional, never None)</em>) – filter_glob</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:1944</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.url_open"><a name="//apple_ref/cpp/Function/bpy.ops.wm.url_open"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">url_open</code><span class="sig-paren">(</span><em>url=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.url_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a website in the web-browser</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> (<em>string, (optional, never None)</em>) – URL, URL to open</td>
+</tr>
+<tr class="field-even field"><th class="field-name">File:</th><td class="field-body"><a class="reference external" href="http://svn.blender.org/svnroot/bf-blender/trunk/blender/release/scripts/startup/bl_operators/wm.py">startup/bl_operators/wm.py</a>:849</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.userpref_autoexec_path_add"><a name="//apple_ref/cpp/Function/bpy.ops.wm.userpref_autoexec_path_add"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">userpref_autoexec_path_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.userpref_autoexec_path_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add path to exclude from autoexecution</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.userpref_autoexec_path_remove"><a name="//apple_ref/cpp/Function/bpy.ops.wm.userpref_autoexec_path_remove"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">userpref_autoexec_path_remove</code><span class="sig-paren">(</span><em>index=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.userpref_autoexec_path_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove path to exclude from autoexecution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int in [0, inf], (optional)</em>) – Index</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.window_close"><a name="//apple_ref/cpp/Function/bpy.ops.wm.window_close"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">window_close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.window_close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the current Blender window</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.window_duplicate"><a name="//apple_ref/cpp/Function/bpy.ops.wm.window_duplicate"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">window_duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.window_duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate the current Blender window</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.wm.window_fullscreen_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.wm.window_fullscreen_toggle"></a>
+<code class="descclassname">bpy.ops.wm.</code><code class="descname">window_fullscreen_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.wm.window_fullscreen_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle the current window fullscreen</p>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.view3d.html" title="previous chapter">View3D Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.world.html" title="next chapter">World Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.world.html" title="World Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.view3d.html" title="View3D Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

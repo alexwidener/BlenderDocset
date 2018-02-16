@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>ThemeImageEditor(bpy_struct) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.ThemeInfo.html" rel="next" title="ThemeInfo(bpy_struct)"/>
+<link href="bpy.types.ThemeGraphEditor.html" rel="prev" title="ThemeGraphEditor(bpy_struct)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.ThemeInfo.html" title="ThemeInfo(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.ThemeGraphEditor.html" title="ThemeGraphEditor(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="themeimageeditor-bpy-struct"></span><h1>ThemeImageEditor(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.ThemeImageEditor"><a name="//apple_ref/cpp/Class/bpy.types.ThemeImageEditor"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">ThemeImageEditor</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.ThemeImageEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Theme settings for the Image Editor</p>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.edge_select"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.edge_select"></a>
+<code class="descname">edge_select</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.edge_select" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.editmesh_active"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.editmesh_active"></a>
+<code class="descname">editmesh_active</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.editmesh_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.face"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.face"></a>
+<code class="descname">face</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.face" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.face_dot"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.face_dot"></a>
+<code class="descname">face_dot</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.face_dot" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.face_select"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.face_select"></a>
+<code class="descname">face_select</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.face_select" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.facedot_size"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.facedot_size"></a>
+<code class="descname">facedot_size</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.facedot_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [1, 10], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.frame_current"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.frame_current"></a>
+<code class="descname">frame_current</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.frame_current" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.freestyle_face_mark"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.freestyle_face_mark"></a>
+<code class="descname">freestyle_face_mark</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.freestyle_face_mark" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.gp_vertex"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.gp_vertex"></a>
+<code class="descname">gp_vertex</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.gp_vertex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.gp_vertex_select"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.gp_vertex_select"></a>
+<code class="descname">gp_vertex_select</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.gp_vertex_select" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.gp_vertex_size"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.gp_vertex_size"></a>
+<code class="descname">gp_vertex_size</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.gp_vertex_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [1, 10], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_align"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_align"></a>
+<code class="descname">handle_align</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_align" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_auto"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_auto"></a>
+<code class="descname">handle_auto</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_auto" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_auto_clamped"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_auto_clamped"></a>
+<code class="descname">handle_auto_clamped</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_auto_clamped" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_free"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_free"></a>
+<code class="descname">handle_free</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_free" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_sel_align"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_sel_align"></a>
+<code class="descname">handle_sel_align</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_sel_align" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_sel_auto"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_sel_auto"></a>
+<code class="descname">handle_sel_auto</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_sel_auto" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_sel_auto_clamped"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_sel_auto_clamped"></a>
+<code class="descname">handle_sel_auto_clamped</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_sel_auto_clamped" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_sel_free"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_sel_free"></a>
+<code class="descname">handle_sel_free</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_sel_free" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_vertex"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_vertex"></a>
+<code class="descname">handle_vertex</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_vertex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_vertex_select"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_vertex_select"></a>
+<code class="descname">handle_vertex_select</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_vertex_select" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.handle_vertex_size"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.handle_vertex_size"></a>
+<code class="descname">handle_vertex_size</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.handle_vertex_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 255], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.metadatabg"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.metadatabg"></a>
+<code class="descname">metadatabg</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.metadatabg" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.metadatatext"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.metadatatext"></a>
+<code class="descname">metadatatext</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.metadatatext" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.paint_curve_handle"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.paint_curve_handle"></a>
+<code class="descname">paint_curve_handle</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.paint_curve_handle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.paint_curve_pivot"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.paint_curve_pivot"></a>
+<code class="descname">paint_curve_pivot</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.paint_curve_pivot" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.preview_stitch_active"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.preview_stitch_active"></a>
+<code class="descname">preview_stitch_active</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.preview_stitch_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.preview_stitch_edge"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.preview_stitch_edge"></a>
+<code class="descname">preview_stitch_edge</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.preview_stitch_edge" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.preview_stitch_face"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.preview_stitch_face"></a>
+<code class="descname">preview_stitch_face</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.preview_stitch_face" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.preview_stitch_stitchable"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.preview_stitch_stitchable"></a>
+<code class="descname">preview_stitch_stitchable</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.preview_stitch_stitchable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.preview_stitch_unstitchable"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.preview_stitch_unstitchable"></a>
+<code class="descname">preview_stitch_unstitchable</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.preview_stitch_unstitchable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.preview_stitch_vert"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.preview_stitch_vert"></a>
+<code class="descname">preview_stitch_vert</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.preview_stitch_vert" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.scope_back"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.scope_back"></a>
+<code class="descname">scope_back</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.scope_back" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.ThemeImageEditor.space"><a name="//apple_ref/cpp/Value/bpy.types.ThemeImageEditor.space"></a>
+<code class="descname">space</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for space</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ThemeSpaceGeneric.html#bpy.types.ThemeSpaceGeneric" title="bpy.types.ThemeSpaceGeneric"><code class="xref py py-class docutils literal"><span class="pre">ThemeSpaceGeneric</span></code></a>, (readonly, never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.uv_others"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.uv_others"></a>
+<code class="descname">uv_others</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.uv_others" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.uv_shadow"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.uv_shadow"></a>
+<code class="descname">uv_shadow</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.uv_shadow" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 4 items in [0, 1], default (0.0, 0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.vertex"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.vertex"></a>
+<code class="descname">vertex</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.vertex" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.vertex_select"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.vertex_select"></a>
+<code class="descname">vertex_select</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.vertex_select" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.vertex_size"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.vertex_size"></a>
+<code class="descname">vertex_size</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.vertex_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [1, 10], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.vertex_unreferenced"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.vertex_unreferenced"></a>
+<code class="descname">vertex_unreferenced</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.vertex_unreferenced" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ThemeImageEditor.wire_edit"><a name="//apple_ref/cpp/Attribute/bpy.types.ThemeImageEditor.wire_edit"></a>
+<code class="descname">wire_edit</code><a class="headerlink" href="#bpy.types.ThemeImageEditor.wire_edit" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, 1], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Theme.html#bpy.types.Theme.image_editor" title="bpy.types.Theme.image_editor"><code class="xref py py-class docutils literal"><span class="pre">Theme.image_editor</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.ThemeGraphEditor.html" title="previous chapter">ThemeGraphEditor(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.ThemeInfo.html" title="next chapter">ThemeInfo(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.ThemeInfo.html" title="ThemeInfo(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.ThemeGraphEditor.html" title="ThemeGraphEditor(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

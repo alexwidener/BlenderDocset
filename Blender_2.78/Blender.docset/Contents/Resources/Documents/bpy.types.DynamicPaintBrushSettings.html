@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>DynamicPaintBrushSettings(bpy_struct) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.DynamicPaintCanvasSettings.html" rel="next" title="DynamicPaintCanvasSettings(bpy_struct)"/>
+<link href="bpy.types.DupliObject.html" rel="prev" title="DupliObject(bpy_struct)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.DynamicPaintCanvasSettings.html" title="DynamicPaintCanvasSettings(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.DupliObject.html" title="DupliObject(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="dynamicpaintbrushsettings-bpy-struct"></span><h1>DynamicPaintBrushSettings(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.DynamicPaintBrushSettings"><a name="//apple_ref/cpp/Class/bpy.types.DynamicPaintBrushSettings"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">DynamicPaintBrushSettings</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brush settings</p>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.invert_proximity"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.invert_proximity"></a>
+<code class="descname">invert_proximity</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.invert_proximity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proximity falloff is applied inside the volume</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.material"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.material"></a>
+<code class="descname">material</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.material" title="Permalink to this definition">¶</a></dt>
+<dd><p>Material to use (if not defined, material linked to the mesh is used)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.Material.html#bpy.types.Material" title="bpy.types.Material"><code class="xref py py-class docutils literal"><span class="pre">Material</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.paint_alpha"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.paint_alpha"></a>
+<code class="descname">paint_alpha</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.paint_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint alpha</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.paint_color"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.paint_color"></a>
+<code class="descname">paint_color</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.paint_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color of the paint</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, inf], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.paint_distance"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.paint_distance"></a>
+<code class="descname">paint_distance</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.paint_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum distance from brush to mesh surface to affect paint</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 500], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.DynamicPaintBrushSettings.paint_ramp"><a name="//apple_ref/cpp/Value/bpy.types.DynamicPaintBrushSettings.paint_ramp"></a>
+<code class="descname">paint_ramp</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.paint_ramp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color ramp used to define proximity falloff</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ColorRamp.html#bpy.types.ColorRamp" title="bpy.types.ColorRamp"><code class="xref py py-class docutils literal"><span class="pre">ColorRamp</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.paint_source"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.paint_source"></a>
+<code class="descname">paint_source</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.paint_source" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘PARTICLE_SYSTEM’, ‘POINT’, ‘DISTANCE’, ‘VOLUME_DISTANCE’, ‘VOLUME’], default ‘VOLUME’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.paint_wetness"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.paint_wetness"></a>
+<code class="descname">paint_wetness</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.paint_wetness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint wetness, visible in wetmap (some effects only affect wet paint)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.particle_system"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.particle_system"></a>
+<code class="descname">particle_system</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.particle_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>The particle system to paint with</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ParticleSystem.html#bpy.types.ParticleSystem" title="bpy.types.ParticleSystem"><code class="xref py py-class docutils literal"><span class="pre">ParticleSystem</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.proximity_falloff"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.proximity_falloff"></a>
+<code class="descname">proximity_falloff</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.proximity_falloff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proximity falloff type</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘SMOOTH’, ‘CONSTANT’, ‘RAMP’], default ‘CONSTANT’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.ray_direction"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.ray_direction"></a>
+<code class="descname">ray_direction</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.ray_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ray direction to use for projection (if brush object is located in that direction it’s painted)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘CANVAS’, ‘BRUSH’, ‘Z_AXIS’], default ‘CANVAS’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.smooth_radius"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.smooth_radius"></a>
+<code class="descname">smooth_radius</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.smooth_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smooth falloff added after solid radius</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.smudge_strength"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.smudge_strength"></a>
+<code class="descname">smudge_strength</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.smudge_strength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smudge effect strength</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.solid_radius"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.solid_radius"></a>
+<code class="descname">solid_radius</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.solid_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radius that will be painted solid</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.01, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_absolute_alpha"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_absolute_alpha"></a>
+<code class="descname">use_absolute_alpha</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_absolute_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only increase alpha value if paint alpha is higher than existing</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_material"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_material"></a>
+<code class="descname">use_material</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_material" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use object material to define color and influence</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_negative_volume"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_negative_volume"></a>
+<code class="descname">use_negative_volume</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_negative_volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Negate influence inside the volume</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_paint_erase"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_paint_erase"></a>
+<code class="descname">use_paint_erase</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_paint_erase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erase / remove paint instead of adding it</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_particle_radius"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_particle_radius"></a>
+<code class="descname">use_particle_radius</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_particle_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use radius from particle settings</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_proximity_project"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_proximity_project"></a>
+<code class="descname">use_proximity_project</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_proximity_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brush is projected to canvas from defined direction within brush proximity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_proximity_ramp_alpha"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_proximity_ramp_alpha"></a>
+<code class="descname">use_proximity_ramp_alpha</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_proximity_ramp_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only read color ramp alpha</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_smudge"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_smudge"></a>
+<code class="descname">use_smudge</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_smudge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make this brush to smudge existing paint as it moves</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_velocity_alpha"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_velocity_alpha"></a>
+<code class="descname">use_velocity_alpha</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_velocity_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply brush influence by velocity color ramp alpha</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_velocity_color"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_velocity_color"></a>
+<code class="descname">use_velocity_color</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_velocity_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace brush color by velocity color ramp</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.use_velocity_depth"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.use_velocity_depth"></a>
+<code class="descname">use_velocity_depth</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.use_velocity_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply brush intersection depth (displace, waves) by velocity ramp alpha</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.velocity_max"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.velocity_max"></a>
+<code class="descname">velocity_max</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.velocity_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Velocity considered as maximum influence (Blender units per frame)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.0001, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.DynamicPaintBrushSettings.velocity_ramp"><a name="//apple_ref/cpp/Value/bpy.types.DynamicPaintBrushSettings.velocity_ramp"></a>
+<code class="descname">velocity_ramp</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.velocity_ramp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color ramp used to define brush velocity effect</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ColorRamp.html#bpy.types.ColorRamp" title="bpy.types.ColorRamp"><code class="xref py py-class docutils literal"><span class="pre">ColorRamp</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.wave_clamp"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.wave_clamp"></a>
+<code class="descname">wave_clamp</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.wave_clamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum level of surface intersection used to influence waves (use 0.0 to disable)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 50], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.wave_factor"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.wave_factor"></a>
+<code class="descname">wave_factor</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.wave_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplier for wave influence of this brush</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-2, 2], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.DynamicPaintBrushSettings.wave_type"><a name="//apple_ref/cpp/Attribute/bpy.types.DynamicPaintBrushSettings.wave_type"></a>
+<code class="descname">wave_type</code><a class="headerlink" href="#bpy.types.DynamicPaintBrushSettings.wave_type" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘CHANGE’, ‘DEPTH’, ‘FORCE’, ‘REFLECT’], default ‘DEPTH’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.DynamicPaintModifier.html#bpy.types.DynamicPaintModifier.brush_settings" title="bpy.types.DynamicPaintModifier.brush_settings"><code class="xref py py-class docutils literal"><span class="pre">DynamicPaintModifier.brush_settings</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.DupliObject.html" title="previous chapter">DupliObject(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.DynamicPaintCanvasSettings.html" title="next chapter">DynamicPaintCanvasSettings(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.DynamicPaintCanvasSettings.html" title="DynamicPaintCanvasSettings(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.DupliObject.html" title="DupliObject(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

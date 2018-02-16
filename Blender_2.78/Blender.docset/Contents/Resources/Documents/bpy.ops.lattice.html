@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Lattice Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.logic.html" rel="next" title="Logic Operators"/>
+<link href="bpy.ops.lamp.html" rel="prev" title="Lamp Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.logic.html" title="Logic Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.lamp.html" title="Lamp Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.lattice">
+<span id="lattice-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.lattice"></a>Lattice Operators<a class="headerlink" href="#module-bpy.ops.lattice" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.lattice.flip"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.flip"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">flip</code><span class="sig-paren">(</span><em>axis='U'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mirror all control points without inverting the lattice deform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axis</strong> (<em>enum in ['U', 'V', 'W'], (optional)</em>) – Flip Axis, Coordinates along this axis get flipped</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.make_regular"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.make_regular"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">make_regular</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.make_regular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set UVW control points a uniform distance apart</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.select_all"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.select_all"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">select_all</code><span class="sig-paren">(</span><em>action='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.select_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change selection of all UVW control points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action</strong> (<em>enum in ['TOGGLE', 'SELECT', 'DESELECT', 'INVERT'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">TOGGLE</span></code> Toggle, Toggle selection for all elements.</li>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert selection of all elements.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.select_less"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.select_less"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">select_less</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.select_less" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deselect vertices at the boundary of each selection region</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.select_mirror"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.select_mirror"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">select_mirror</code><span class="sig-paren">(</span><em>axis={'X'}</em>, <em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.select_mirror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select mirrored lattice points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>axis</strong> (<em>enum set in {'X', 'Y', 'Z'}, (optional)</em>) – Axis</li>
+<li><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.select_more"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.select_more"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">select_more</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.select_more" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select vertex directly linked to already selected ones</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.select_random"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.select_random"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">select_random</code><span class="sig-paren">(</span><em>percent=50.0</em>, <em>seed=0</em>, <em>action='SELECT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.select_random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly select UVW control points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>percent</strong> (<em>float in [0, 100], (optional)</em>) – Percent, Percentage of objects to select randomly</li>
+<li><strong>seed</strong> (<em>int in [0, inf], (optional)</em>) – Random Seed, Seed for the random number generator</li>
+<li><strong>action</strong> (<em>enum in ['SELECT', 'DESELECT'], (optional)</em>) – <p>Action, Selection action to execute</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.lattice.select_ungrouped"><a name="//apple_ref/cpp/Function/bpy.ops.lattice.select_ungrouped"></a>
+<code class="descclassname">bpy.ops.lattice.</code><code class="descname">select_ungrouped</code><span class="sig-paren">(</span><em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.lattice.select_ungrouped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select vertices without a group</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>extend</strong> (<em>boolean, (optional)</em>) – Extend, Extend the selection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.lamp.html" title="previous chapter">Lamp Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.logic.html" title="next chapter">Logic Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.logic.html" title="Logic Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.lamp.html" title="Lamp Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

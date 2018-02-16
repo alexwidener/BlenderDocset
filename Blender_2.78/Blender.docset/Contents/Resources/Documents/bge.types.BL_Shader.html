@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>BL_Shader(PyObjectPlus) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bge.types.html" rel="up" title="Game Types (bge.types)"/>
+<link href="bge.types.BL_ShapeActionActuator.html" rel="next" title="BL_ShapeActionActuator(SCA_IActuator)"/>
+<link href="bge.types.BL_ArmatureObject.html" rel="prev" title="BL_ArmatureObject(KX_GameObject)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.BL_ShapeActionActuator.html" title="BL_ShapeActionActuator(SCA_IActuator)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.BL_ArmatureObject.html" title="BL_ArmatureObject(KX_GameObject)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="bl-shader-pyobjectplus"></span><h1>BL_Shader(PyObjectPlus)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.PyObjectPlus.html#bge.types.PyObjectPlus" title="bge.types.PyObjectPlus"><code class="xref py py-class docutils literal"><span class="pre">PyObjectPlus</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.BL_Shader"><a name="//apple_ref/cpp/Class/bge.types.BL_Shader"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">BL_Shader</code><span class="sig-paren">(</span><em>PyObjectPlus</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader" title="Permalink to this definition">¶</a></dt>
+<dd><p>BL_Shader GLSL shaders.</p>
+<p>TODO - Description</p>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniformfv"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniformfv"></a>
+<code class="descname">setUniformfv</code><span class="sig-paren">(</span><em>name</em>, <em>fList</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniformfv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with a list of float values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>fList</strong> (<em>list[float]</em>) – a list (2, 3 or 4 elements) of float values</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.delSource"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.delSource"></a>
+<code class="descname">delSource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.delSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the shader. Use this method before the source is changed with <a class="reference internal" href="#bge.types.BL_Shader.setSource" title="bge.types.BL_Shader.setSource"><code class="xref py py-data docutils literal"><span class="pre">setSource</span></code></a>.</p>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.getFragmentProg"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.getFragmentProg"></a>
+<code class="descname">getFragmentProg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.getFragmentProg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the fragment program.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The fragment program.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string">string</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.getVertexProg"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.getVertexProg"></a>
+<code class="descname">getVertexProg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.getVertexProg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the vertex program.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The vertex program.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string">string</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.isValid"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.isValid"></a>
+<code class="descname">isValid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.isValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the shader is valid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the shader is valid</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setAttrib"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setAttrib"></a>
+<code class="descname">setAttrib</code><span class="sig-paren">(</span><em>enum</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setAttrib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set attribute location. (The parameter is ignored a.t.m. and the value of “tangent” is always used.)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enum</strong> (<em>integer</em>) – attribute location value</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setNumberOfPasses"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setNumberOfPasses"></a>
+<code class="descname">setNumberOfPasses</code><span class="sig-paren">(</span><em>max_pass</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setNumberOfPasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum number of passes. Not used a.t.m.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>max_pass</strong> (<em>integer</em>) – the maximum number of passes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setSampler"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setSampler"></a>
+<code class="descname">setSampler</code><span class="sig-paren">(</span><em>name</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set uniform texture sample index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – Uniform name</li>
+<li><strong>index</strong> (<em>integer</em>) – Texture sample index.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setSource"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setSource"></a>
+<code class="descname">setSource</code><span class="sig-paren">(</span><em>vertexProgram</em>, <em>fragmentProgram</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the vertex and fragment programs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>vertexProgram</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – Vertex program</li>
+<li><strong>fragmentProgram</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – Fragment program</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform1f"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform1f"></a>
+<code class="descname">setUniform1f</code><span class="sig-paren">(</span><em>name</em>, <em>fx</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform1f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 1 float value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>fx</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – Uniform value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform1i"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform1i"></a>
+<code class="descname">setUniform1i</code><span class="sig-paren">(</span><em>name</em>, <em>ix</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform1i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with an integer value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>ix</strong> (<em>integer</em>) – the uniform value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform2f"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform2f"></a>
+<code class="descname">setUniform2f</code><span class="sig-paren">(</span><em>name</em>, <em>fx</em>, <em>fy</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform2f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 2 float values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>fx</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – first float value</li>
+<li><strong>fy</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – second float value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform2i"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform2i"></a>
+<code class="descname">setUniform2i</code><span class="sig-paren">(</span><em>name</em>, <em>ix</em>, <em>iy</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform2i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 2 integer values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>ix</strong> (<em>integer</em>) – first integer value</li>
+<li><strong>iy</strong> (<em>integer</em>) – second integer value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform3f"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform3f"></a>
+<code class="descname">setUniform3f</code><span class="sig-paren">(</span><em>name</em>, <em>fx</em>, <em>fy</em>, <em>fz</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform3f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 3 float values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>fx</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – first float value</li>
+<li><strong>fy</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – second float value</li>
+<li><strong>fz</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – third float value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform3i"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform3i"></a>
+<code class="descname">setUniform3i</code><span class="sig-paren">(</span><em>name</em>, <em>ix</em>, <em>iy</em>, <em>iz</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform3i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 3 integer values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>ix</strong> (<em>integer</em>) – first integer value</li>
+<li><strong>iy</strong> (<em>integer</em>) – second integer value</li>
+<li><strong>iz</strong> (<em>integer</em>) – third integer value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform4f"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform4f"></a>
+<code class="descname">setUniform4f</code><span class="sig-paren">(</span><em>name</em>, <em>fx</em>, <em>fy</em>, <em>fz</em>, <em>fw</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform4f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 4 float values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>fx</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – first float value</li>
+<li><strong>fy</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – second float value</li>
+<li><strong>fz</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – third float value</li>
+<li><strong>fw</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.float" title="bmesh.types.BMLayerAccessFace.float"><em>float</em></a>) – fourth float value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniform4i"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniform4i"></a>
+<code class="descname">setUniform4i</code><span class="sig-paren">(</span><em>name</em>, <em>ix</em>, <em>iy</em>, <em>iz</em>, <em>iw</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniform4i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with 4 integer values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>ix</strong> (<em>integer</em>) – first integer value</li>
+<li><strong>iy</strong> (<em>integer</em>) – second integer value</li>
+<li><strong>iz</strong> (<em>integer</em>) – third integer value</li>
+<li><strong>iw</strong> (<em>integer</em>) – fourth integer value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniformDef"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniformDef"></a>
+<code class="descname">setUniformDef</code><span class="sig-paren">(</span><em>name</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniformDef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define a new uniform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>type</strong> (<em>UNI_NONE, UNI_INT, UNI_FLOAT, UNI_INT2, UNI_FLOAT2, UNI_INT3, UNI_FLOAT3, UNI_INT4, UNI_FLOAT4, UNI_MAT3, UNI_MAT4, UNI_MAX</em>) – uniform type</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniformMatrix3"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniformMatrix3"></a>
+<code class="descname">setUniformMatrix3</code><span class="sig-paren">(</span><em>name</em>, <em>mat</em>, <em>transpose</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniformMatrix3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with a 3x3 matrix value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>mat</strong> (<em>3x3 matrix</em>) – A 3x3 matrix [[f, f, f], [f, f, f], [f, f, f]]</li>
+<li><strong>transpose</strong> (<em>boolean</em>) – set to True to transpose the matrix</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniformMatrix4"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniformMatrix4"></a>
+<code class="descname">setUniformMatrix4</code><span class="sig-paren">(</span><em>name</em>, <em>mat</em>, <em>transpose</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniformMatrix4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with a 4x4 matrix value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>mat</strong> (<em>4x4 matrix</em>) – A 4x4 matrix [[f, f, f, f], [f, f, f, f], [f, f, f, f], [f, f, f, f]]</li>
+<li><strong>transpose</strong> (<em>boolean</em>) – set to True to transpose the matrix</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniformiv"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniformiv"></a>
+<code class="descname">setUniformiv</code><span class="sig-paren">(</span><em>name</em>, <em>iList</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniformiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with a list of integer values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</li>
+<li><strong>iList</strong> (<em>list[integer]</em>) – a list (2, 3 or 4 elements) of integer values</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.setUniformEyef"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.setUniformEyef"></a>
+<code class="descname">setUniformEyef</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.setUniformEyef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a uniform with a float value that reflects the eye being render in stereo mode:
+0.0 for the left eye, 0.5 for the right eye. In non stereo mode, the value of the uniform
+is fixed to 0.0. The typical use of this uniform is in stereo mode to sample stereo textures
+containing the left and right eye images in a top-bottom order.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessFace.string" title="bmesh.types.BMLayerAccessFace.string"><em>string</em></a>) – the uniform name</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.BL_Shader.validate"><a name="//apple_ref/cpp/Method/bge.types.BL_Shader.validate"></a>
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.BL_Shader.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the shader object.</p>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.BL_ArmatureObject.html" title="previous chapter">BL_ArmatureObject(KX_GameObject)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.BL_ShapeActionActuator.html" title="next chapter">BL_ShapeActionActuator(SCA_IActuator)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.BL_ShapeActionActuator.html" title="BL_ShapeActionActuator(SCA_IActuator)">next</a> |</li>
+<li class="right">
+<a href="bge.types.BL_ArmatureObject.html" title="BL_ArmatureObject(KX_GameObject)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

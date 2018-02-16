@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Buttons Operators — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.ops.html" rel="up" title="Operators (bpy.ops)"/>
+<link href="bpy.ops.cachefile.html" rel="next" title="Cachefile Operators"/>
+<link href="bpy.ops.brush.html" rel="prev" title="Brush Operators"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.cachefile.html" title="Cachefile Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.brush.html" title="Brush Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.buttons">
+<span id="buttons-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.buttons"></a>Buttons Operators<a class="headerlink" href="#module-bpy.ops.buttons" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.buttons.directory_browse"><a name="//apple_ref/cpp/Function/bpy.ops.buttons.directory_browse"></a>
+<code class="descclassname">bpy.ops.buttons.</code><code class="descname">directory_browse</code><span class="sig-paren">(</span><em>directory=""</em>, <em>filter_blender=False</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=False</em>, <em>filter_blenlib=False</em>, <em>filemode=9</em>, <em>relative_path=True</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.buttons.directory_browse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a directory browser, Hold Shift to open the file, Alt to browse containing directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>directory</strong> (<em>string, (optional, never None)</em>) – Directory, Directory of the file</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>relative_path</strong> (<em>boolean, (optional)</em>) – Relative Path, Select the file relative to the blend file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.buttons.file_browse"><a name="//apple_ref/cpp/Function/bpy.ops.buttons.file_browse"></a>
+<code class="descclassname">bpy.ops.buttons.</code><code class="descname">file_browse</code><span class="sig-paren">(</span><em>filepath=""</em>, <em>filter_blender=False</em>, <em>filter_backup=False</em>, <em>filter_image=False</em>, <em>filter_movie=False</em>, <em>filter_python=False</em>, <em>filter_font=False</em>, <em>filter_sound=False</em>, <em>filter_text=False</em>, <em>filter_btx=False</em>, <em>filter_collada=False</em>, <em>filter_alembic=False</em>, <em>filter_folder=False</em>, <em>filter_blenlib=False</em>, <em>filemode=9</em>, <em>relative_path=True</em>, <em>display_type='DEFAULT'</em>, <em>sort_method='FILE_SORT_ALPHA'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.buttons.file_browse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a file browser, Hold Shift to open the file, Alt to browse containing directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>string, (optional, never None)</em>) – File Path, Path to file</li>
+<li><strong>filter_blender</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_backup</strong> (<em>boolean, (optional)</em>) – Filter .blend files</li>
+<li><strong>filter_image</strong> (<em>boolean, (optional)</em>) – Filter image files</li>
+<li><strong>filter_movie</strong> (<em>boolean, (optional)</em>) – Filter movie files</li>
+<li><strong>filter_python</strong> (<em>boolean, (optional)</em>) – Filter python files</li>
+<li><strong>filter_font</strong> (<em>boolean, (optional)</em>) – Filter font files</li>
+<li><strong>filter_sound</strong> (<em>boolean, (optional)</em>) – Filter sound files</li>
+<li><strong>filter_text</strong> (<em>boolean, (optional)</em>) – Filter text files</li>
+<li><strong>filter_btx</strong> (<em>boolean, (optional)</em>) – Filter btx files</li>
+<li><strong>filter_collada</strong> (<em>boolean, (optional)</em>) – Filter COLLADA files</li>
+<li><strong>filter_alembic</strong> (<em>boolean, (optional)</em>) – Filter Alembic files</li>
+<li><strong>filter_folder</strong> (<em>boolean, (optional)</em>) – Filter folders</li>
+<li><strong>filter_blenlib</strong> (<em>boolean, (optional)</em>) – Filter Blender IDs</li>
+<li><strong>filemode</strong> (<em>int in [1, 9], (optional)</em>) – File Browser Mode, The setting for the file browser mode to load a .blend file, a library or a special file</li>
+<li><strong>relative_path</strong> (<em>boolean, (optional)</em>) – Relative Path, Select the file relative to the blend file</li>
+<li><strong>display_type</strong> (<em>enum in ['DEFAULT', 'LIST_SHORT', 'LIST_LONG', 'THUMBNAIL'], (optional)</em>) – <p>Display Type</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DEFAULT</span></code> Default, Automatically determine display type for files.</li>
+<li><code class="docutils literal"><span class="pre">LIST_SHORT</span></code> Short List, Display files as short list.</li>
+<li><code class="docutils literal"><span class="pre">LIST_LONG</span></code> Long List, Display files as a detailed list.</li>
+<li><code class="docutils literal"><span class="pre">THUMBNAIL</span></code> Thumbnails, Display files as thumbnails.</li>
+</ul>
+</li>
+<li><strong>sort_method</strong> (<em>enum in ['FILE_SORT_ALPHA', 'FILE_SORT_EXTENSION', 'FILE_SORT_TIME', 'FILE_SORT_SIZE'], (optional)</em>) – <p>File sorting mode</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_ALPHA</span></code> Sort alphabetically, Sort the file list alphabetically.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_EXTENSION</span></code> Sort by extension, Sort the file list by extension/type.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_TIME</span></code> Sort by time, Sort files by modification time.</li>
+<li><code class="docutils literal"><span class="pre">FILE_SORT_SIZE</span></code> Sort by size, Sort files by size.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.buttons.toolbox"><a name="//apple_ref/cpp/Function/bpy.ops.buttons.toolbox"></a>
+<code class="descclassname">bpy.ops.buttons.</code><code class="descname">toolbox</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.buttons.toolbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display button panel toolbox</p>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.brush.html" title="previous chapter">Brush Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.cachefile.html" title="next chapter">Cachefile Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.cachefile.html" title="Cachefile Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.brush.html" title="Brush Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

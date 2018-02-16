@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>BrushTextureSlot(TextureSlot) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.BuildModifier.html" rel="next" title="BuildModifier(Modifier)"/>
+<link href="bpy.types.BrushCapabilities.html" rel="prev" title="BrushCapabilities(bpy_struct)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.BuildModifier.html" title="BuildModifier(Modifier)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.BrushCapabilities.html" title="BrushCapabilities(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="brushtextureslot-textureslot"></span><h1>BrushTextureSlot(TextureSlot)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base classes — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a>, <a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot" title="bpy.types.TextureSlot"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.BrushTextureSlot"><a name="//apple_ref/cpp/Class/bpy.types.BrushTextureSlot"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">BrushTextureSlot</code><span class="sig-paren">(</span><em>TextureSlot</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.BrushTextureSlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Texture slot for textures in a Brush data-block</p>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.angle"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.angle"></a>
+<code class="descname">angle</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brush texture rotation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 6.28319], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.BrushTextureSlot.has_random_texture_angle"><a name="//apple_ref/cpp/Value/bpy.types.BrushTextureSlot.has_random_texture_angle"></a>
+<code class="descname">has_random_texture_angle</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.has_random_texture_angle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.BrushTextureSlot.has_texture_angle"><a name="//apple_ref/cpp/Value/bpy.types.BrushTextureSlot.has_texture_angle"></a>
+<code class="descname">has_texture_angle</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.has_texture_angle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.BrushTextureSlot.has_texture_angle_source"><a name="//apple_ref/cpp/Value/bpy.types.BrushTextureSlot.has_texture_angle_source"></a>
+<code class="descname">has_texture_angle_source</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.has_texture_angle_source" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.map_mode"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.map_mode"></a>
+<code class="descname">map_mode</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.map_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘VIEW_PLANE’, ‘AREA_PLANE’, ‘TILED’, ‘3D’, ‘RANDOM’, ‘STENCIL’], default ‘VIEW_PLANE’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.mask_map_mode"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.mask_map_mode"></a>
+<code class="descname">mask_map_mode</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.mask_map_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘VIEW_PLANE’, ‘TILED’, ‘RANDOM’, ‘STENCIL’], default ‘VIEW_PLANE’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.random_angle"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.random_angle"></a>
+<code class="descname">random_angle</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.random_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brush texture random angle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 6.28319], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.tex_paint_map_mode"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.tex_paint_map_mode"></a>
+<code class="descname">tex_paint_map_mode</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.tex_paint_map_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘VIEW_PLANE’, ‘TILED’, ‘3D’, ‘RANDOM’, ‘STENCIL’], default ‘VIEW_PLANE’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.use_rake"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.use_rake"></a>
+<code class="descname">use_rake</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.use_rake" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.BrushTextureSlot.use_random"><a name="//apple_ref/cpp/Attribute/bpy.types.BrushTextureSlot.use_random"></a>
+<code class="descname">use_random</code><a class="headerlink" href="#bpy.types.BrushTextureSlot.use_random" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.texture" title="bpy.types.TextureSlot.texture"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.texture</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.name" title="bpy.types.TextureSlot.name"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.name</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.offset" title="bpy.types.TextureSlot.offset"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.offset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.scale" title="bpy.types.TextureSlot.scale"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.scale</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.color" title="bpy.types.TextureSlot.color"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.color</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.blend_type" title="bpy.types.TextureSlot.blend_type"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.blend_type</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.use_stencil" title="bpy.types.TextureSlot.use_stencil"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.use_stencil</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.invert" title="bpy.types.TextureSlot.invert"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.invert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.use_rgb_to_intensity" title="bpy.types.TextureSlot.use_rgb_to_intensity"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.use_rgb_to_intensity</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.default_value" title="bpy.types.TextureSlot.default_value"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.default_value</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.TextureSlot.html#bpy.types.TextureSlot.output_node" title="bpy.types.TextureSlot.output_node"><code class="xref py py-class docutils literal"><span class="pre">TextureSlot.output_node</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Brush.html#bpy.types.Brush.mask_texture_slot" title="bpy.types.Brush.mask_texture_slot"><code class="xref py py-class docutils literal"><span class="pre">Brush.mask_texture_slot</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Brush.html#bpy.types.Brush.texture_slot" title="bpy.types.Brush.texture_slot"><code class="xref py py-class docutils literal"><span class="pre">Brush.texture_slot</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.BrushCapabilities.html" title="previous chapter">BrushCapabilities(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.BuildModifier.html" title="next chapter">BuildModifier(Modifier)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.BuildModifier.html" title="BuildModifier(Modifier)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.BrushCapabilities.html" title="BrushCapabilities(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

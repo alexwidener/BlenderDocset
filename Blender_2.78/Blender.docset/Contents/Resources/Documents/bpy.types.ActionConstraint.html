@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>ActionConstraint(Constraint) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.ActionFCurves.html" rel="next" title="ActionFCurves(bpy_struct)"/>
+<link href="bpy.types.ActionActuator.html" rel="prev" title="ActionActuator(Actuator)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.ActionFCurves.html" title="ActionFCurves(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.ActionActuator.html" title="ActionActuator(Actuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="actionconstraint-constraint"></span><h1>ActionConstraint(Constraint)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base classes — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a>, <a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint" title="bpy.types.Constraint"><code class="xref py py-class docutils literal"><span class="pre">Constraint</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.ActionConstraint"><a name="//apple_ref/cpp/Class/bpy.types.ActionConstraint"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">ActionConstraint</code><span class="sig-paren">(</span><em>Constraint</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.ActionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map an action to the transform axes of a bone</p>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.action"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.action"></a>
+<code class="descname">action</code><a class="headerlink" href="#bpy.types.ActionConstraint.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>The constraining action</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.Action.html#bpy.types.Action" title="bpy.types.Action"><code class="xref py py-class docutils literal"><span class="pre">Action</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.frame_end"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.frame_end"></a>
+<code class="descname">frame_end</code><a class="headerlink" href="#bpy.types.ActionConstraint.frame_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last frame of the Action to use</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [-500000, 500000], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.frame_start"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.frame_start"></a>
+<code class="descname">frame_start</code><a class="headerlink" href="#bpy.types.ActionConstraint.frame_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>First frame of the Action to use</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [-500000, 500000], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.max"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.max"></a>
+<code class="descname">max</code><a class="headerlink" href="#bpy.types.ActionConstraint.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum value for target channel range</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-1000, 1000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.min"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.min"></a>
+<code class="descname">min</code><a class="headerlink" href="#bpy.types.ActionConstraint.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum value for target channel range</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-1000, 1000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.subtarget"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.subtarget"></a>
+<code class="descname">subtarget</code><a class="headerlink" href="#bpy.types.ActionConstraint.subtarget" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.target"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.target"></a>
+<code class="descname">target</code><a class="headerlink" href="#bpy.types.ActionConstraint.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target Object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.Object.html#bpy.types.Object" title="bpy.types.Object"><code class="xref py py-class docutils literal"><span class="pre">Object</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.transform_channel"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.transform_channel"></a>
+<code class="descname">transform_channel</code><a class="headerlink" href="#bpy.types.ActionConstraint.transform_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation channel from the target that is used to key the Action</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘LOCATION_X’, ‘LOCATION_Y’, ‘LOCATION_Z’, ‘ROTATION_X’, ‘ROTATION_Y’, ‘ROTATION_Z’, ‘SCALE_X’, ‘SCALE_Y’, ‘SCALE_Z’], default ‘ROTATION_X’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ActionConstraint.use_bone_object_action"><a name="//apple_ref/cpp/Attribute/bpy.types.ActionConstraint.use_bone_object_action"></a>
+<code class="descname">use_bone_object_action</code><a class="headerlink" href="#bpy.types.ActionConstraint.use_bone_object_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bones only: apply the object’s transformation channels of the action to the constrained bone, instead of bone’s channels</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.name" title="bpy.types.Constraint.name"><code class="xref py py-class docutils literal"><span class="pre">Constraint.name</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.type" title="bpy.types.Constraint.type"><code class="xref py py-class docutils literal"><span class="pre">Constraint.type</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.owner_space" title="bpy.types.Constraint.owner_space"><code class="xref py py-class docutils literal"><span class="pre">Constraint.owner_space</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.target_space" title="bpy.types.Constraint.target_space"><code class="xref py py-class docutils literal"><span class="pre">Constraint.target_space</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.mute" title="bpy.types.Constraint.mute"><code class="xref py py-class docutils literal"><span class="pre">Constraint.mute</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.show_expanded" title="bpy.types.Constraint.show_expanded"><code class="xref py py-class docutils literal"><span class="pre">Constraint.show_expanded</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.is_valid" title="bpy.types.Constraint.is_valid"><code class="xref py py-class docutils literal"><span class="pre">Constraint.is_valid</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.active" title="bpy.types.Constraint.active"><code class="xref py py-class docutils literal"><span class="pre">Constraint.active</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.is_proxy_local" title="bpy.types.Constraint.is_proxy_local"><code class="xref py py-class docutils literal"><span class="pre">Constraint.is_proxy_local</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.influence" title="bpy.types.Constraint.influence"><code class="xref py py-class docutils literal"><span class="pre">Constraint.influence</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.error_location" title="bpy.types.Constraint.error_location"><code class="xref py py-class docutils literal"><span class="pre">Constraint.error_location</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.Constraint.html#bpy.types.Constraint.error_rotation" title="bpy.types.Constraint.error_rotation"><code class="xref py py-class docutils literal"><span class="pre">Constraint.error_rotation</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.ActionActuator.html" title="previous chapter">ActionActuator(Actuator)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.ActionFCurves.html" title="next chapter">ActionFCurves(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.ActionFCurves.html" title="ActionFCurves(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.ActionActuator.html" title="ActionActuator(Actuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>

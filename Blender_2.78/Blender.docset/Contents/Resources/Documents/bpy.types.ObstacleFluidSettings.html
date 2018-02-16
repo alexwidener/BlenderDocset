@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>ObstacleFluidSettings(FluidSettings) — Blender 2.78.0 0b13b7a - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.78.0 0b13b7a - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.78.0 0b13b7a - API documentation"/>
+<link href="bpy.types.html" rel="up" title="Types (bpy.types)"/>
+<link href="bpy.types.OceanModifier.html" rel="next" title="OceanModifier(Modifier)"/>
+<link href="bpy.types.ObjectSolverConstraint.html" rel="prev" title="ObjectSolverConstraint(Constraint)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.OceanModifier.html" title="OceanModifier(Modifier)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.ObjectSolverConstraint.html" title="ObjectSolverConstraint(Constraint)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="obstaclefluidsettings-fluidsettings"></span><h1>ObstacleFluidSettings(FluidSettings)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base classes — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a>, <a class="reference internal" href="bpy.types.FluidSettings.html#bpy.types.FluidSettings" title="bpy.types.FluidSettings"><code class="xref py py-class docutils literal"><span class="pre">FluidSettings</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.ObstacleFluidSettings"><a name="//apple_ref/cpp/Class/bpy.types.ObstacleFluidSettings"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">ObstacleFluidSettings</code><span class="sig-paren">(</span><em>FluidSettings</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.ObstacleFluidSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fluid simulation settings for obstacles in the simulation</p>
+<dl class="attribute">
+<dt id="bpy.types.ObstacleFluidSettings.impact_factor"><a name="//apple_ref/cpp/Attribute/bpy.types.ObstacleFluidSettings.impact_factor"></a>
+<code class="descname">impact_factor</code><a class="headerlink" href="#bpy.types.ObstacleFluidSettings.impact_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is an unphysical value for moving objects - it controls the impact an obstacle has on the fluid, =0 behaves a bit like outflow (deleting fluid), =1 is default, while &gt;1 results in high forces (can be used to tweak total mass)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-2, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ObstacleFluidSettings.partial_slip_factor"><a name="//apple_ref/cpp/Attribute/bpy.types.ObstacleFluidSettings.partial_slip_factor"></a>
+<code class="descname">partial_slip_factor</code><a class="headerlink" href="#bpy.types.ObstacleFluidSettings.partial_slip_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amount of mixing between no- and free-slip, 0 is no slip and 1 is free slip</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ObstacleFluidSettings.slip_type"><a name="//apple_ref/cpp/Attribute/bpy.types.ObstacleFluidSettings.slip_type"></a>
+<code class="descname">slip_type</code><a class="headerlink" href="#bpy.types.ObstacleFluidSettings.slip_type" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><code class="docutils literal"><span class="pre">NOSLIP</span></code> No Slip, Obstacle causes zero normal and tangential velocity (=sticky), default for all (only option for moving objects).</li>
+<li><code class="docutils literal"><span class="pre">PARTIALSLIP</span></code> Partial Slip, Mix between no-slip and free-slip (non moving objects only!).</li>
+<li><code class="docutils literal"><span class="pre">FREESLIP</span></code> Free Slip, Obstacle only causes zero normal velocity (=not sticky, non moving objects only!).</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘NOSLIP’, ‘PARTIALSLIP’, ‘FREESLIP’], default ‘NOSLIP’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ObstacleFluidSettings.use"><a name="//apple_ref/cpp/Attribute/bpy.types.ObstacleFluidSettings.use"></a>
+<code class="descname">use</code><a class="headerlink" href="#bpy.types.ObstacleFluidSettings.use" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object contributes to the fluid simulation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ObstacleFluidSettings.use_animated_mesh"><a name="//apple_ref/cpp/Attribute/bpy.types.ObstacleFluidSettings.use_animated_mesh"></a>
+<code class="descname">use_animated_mesh</code><a class="headerlink" href="#bpy.types.ObstacleFluidSettings.use_animated_mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export this mesh as an animated one (slower and enforces No Slip, only use if really necessary [e.g. armatures or parented objects], animated pos/rot/scale F-Curves do not require it)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ObstacleFluidSettings.volume_initialization"><a name="//apple_ref/cpp/Attribute/bpy.types.ObstacleFluidSettings.volume_initialization"></a>
+<code class="descname">volume_initialization</code><a class="headerlink" href="#bpy.types.ObstacleFluidSettings.volume_initialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume initialization type (WARNING: complex volumes might require too much memory and break simulation)</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">VOLUME</span></code> Volume, Use only the inner volume of the mesh.</li>
+<li><code class="docutils literal"><span class="pre">SHELL</span></code> Shell, Use only the outer shell of the mesh.</li>
+<li><code class="docutils literal"><span class="pre">BOTH</span></code> Both, Use both the inner volume and the outer shell of the mesh.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘VOLUME’, ‘SHELL’, ‘BOTH’], default ‘VOLUME’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.FluidSettings.html#bpy.types.FluidSettings.type" title="bpy.types.FluidSettings.type"><code class="xref py py-class docutils literal"><span class="pre">FluidSettings.type</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.ObjectSolverConstraint.html" title="previous chapter">ObjectSolverConstraint(Constraint)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.OceanModifier.html" title="next chapter">OceanModifier(Modifier)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.OceanModifier.html" title="OceanModifier(Modifier)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.ObjectSolverConstraint.html" title="ObjectSolverConstraint(Constraint)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.78.0 0b13b7a - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+</body>
+</html>
