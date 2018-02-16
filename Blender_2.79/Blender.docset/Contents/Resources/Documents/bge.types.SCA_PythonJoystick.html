@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>SCA_PythonJoystick(PyObjectPlus) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bge.types.SCA_PythonKeyboard.html" rel="next" title="SCA_PythonKeyboard(PyObjectPlus)"/>
+<link href="bge.types.SCA_PythonController.html" rel="prev" title="SCA_PythonController(SCA_IController)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.SCA_PythonKeyboard.html" title="SCA_PythonKeyboard(PyObjectPlus)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.SCA_PythonController.html" title="SCA_PythonController(SCA_IController)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="sca-pythonjoystick-pyobjectplus"></span><h1>SCA_PythonJoystick(PyObjectPlus)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.PyObjectPlus.html#bge.types.PyObjectPlus" title="bge.types.PyObjectPlus"><code class="xref py py-class docutils literal"><span class="pre">PyObjectPlus</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.SCA_PythonJoystick"><a name="//apple_ref/cpp/Class/bge.types.SCA_PythonJoystick"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">SCA_PythonJoystick</code><span class="sig-paren">(</span><em>PyObjectPlus</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.SCA_PythonJoystick" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Python interface to a joystick.</p>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.name"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.name"></a>
+<code class="descname">name</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name assigned to the joystick by the operating system. (read-only)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.activeButtons"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.activeButtons"></a>
+<code class="descname">activeButtons</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.activeButtons" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of active button values. (read-only)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.axisValues"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.axisValues"></a>
+<code class="descname">axisValues</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.axisValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the joysticks axis as a list of values <a class="reference internal" href="#bge.types.SCA_PythonJoystick.numAxis" title="bge.types.SCA_PythonJoystick.numAxis"><code class="xref py py-data docutils literal"><span class="pre">numAxis</span></code></a> long. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints.</td>
+</tr>
+</tbody>
+</table>
+<p>Each specifying the value of an axis between -1.0 and 1.0
+depending on how far the axis is pushed, 0 for nothing.
+The first 2 values are used by most joysticks and gamepads for directional control.
+3rd and 4th values are only on some joysticks and can be used for arbitary controls.</p>
+<ul class="simple">
+<li>left:[-1.0, 0.0, …]</li>
+<li>right:[1.0, 0.0, …]</li>
+<li>up:[0.0, -1.0, …]</li>
+<li>down:[0.0, 1.0, …]</li>
+</ul>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.hatValues"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.hatValues"></a>
+<code class="descname">hatValues</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.hatValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the joysticks hats as a list of values <a class="reference internal" href="#bge.types.SCA_PythonJoystick.numHats" title="bge.types.SCA_PythonJoystick.numHats"><code class="xref py py-data docutils literal"><span class="pre">numHats</span></code></a> long. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints</td>
+</tr>
+</tbody>
+</table>
+<p>Each specifying the direction of the hat from 1 to 12, 0 when inactive.</p>
+<p>Hat directions are as follows…</p>
+<ul class="simple">
+<li>0:None</li>
+<li>1:Up</li>
+<li>2:Right</li>
+<li>4:Down</li>
+<li>8:Left</li>
+<li>3:Up - Right</li>
+<li>6:Down - Right</li>
+<li>12:Down - Left</li>
+<li>9:Up - Left</li>
+</ul>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.numAxis"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.numAxis"></a>
+<code class="descname">numAxis</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.numAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of axes for the joystick at this index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.numButtons"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.numButtons"></a>
+<code class="descname">numButtons</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.numButtons" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of buttons for the joystick at this index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_PythonJoystick.numHats"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_PythonJoystick.numHats"></a>
+<code class="descname">numHats</code><a class="headerlink" href="#bge.types.SCA_PythonJoystick.numHats" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of hats for the joystick at this index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.SCA_PythonController.html" title="previous chapter">SCA_PythonController(SCA_IController)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.SCA_PythonKeyboard.html" title="next chapter">SCA_PythonKeyboard(PyObjectPlus)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.SCA_PythonKeyboard.html" title="SCA_PythonKeyboard(PyObjectPlus)">next</a> |</li>
+<li class="right">
+<a href="bge.types.SCA_PythonController.html" title="SCA_PythonController(SCA_IController)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

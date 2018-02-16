@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Application Data (bpy.app) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.app.handlers.html" rel="next" title="Application Handlers (bpy.app.handlers)"/>
+<link href="bpy.path.html" rel="prev" title="Path Utilities (bpy.path)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.app.handlers.html" title="Application Handlers (bpy.app.handlers)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.path.html" title="Path Utilities (bpy.path)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.app">
+<span id="application-data-bpy-app"></span><h1><a name="//apple_ref/cpp/Module/bpy.app"></a>Application Data (bpy.app)<a class="headerlink" href="#module-bpy.app" title="Permalink to this headline">¶</a></h1>
+<p>This module contains application values that remain unchanged during runtime.</p>
+<p>Submodules:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bpy.app.handlers.html">Application Handlers (bpy.app.handlers)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bpy.app.translations.html">Application Translations (bpy.app.translations)</a></li>
+</ul>
+</div>
+<dl class="attribute">
+<dt id="bpy.app.autoexec_fail"><a name="//apple_ref/cpp/Attribute/bpy.app.autoexec_fail"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">autoexec_fail</code><a class="headerlink" href="#bpy.app.autoexec_fail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.autoexec_fail_message"><a name="//apple_ref/cpp/Attribute/bpy.app.autoexec_fail_message"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">autoexec_fail_message</code><a class="headerlink" href="#bpy.app.autoexec_fail_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.autoexec_fail_quiet"><a name="//apple_ref/cpp/Attribute/bpy.app.autoexec_fail_quiet"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">autoexec_fail_quiet</code><a class="headerlink" href="#bpy.app.autoexec_fail_quiet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undocumented</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.binary_path_python"><a name="//apple_ref/cpp/Attribute/bpy.app.binary_path_python"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">binary_path_python</code><a class="headerlink" href="#bpy.app.binary_path_python" title="Permalink to this definition">¶</a></dt>
+<dd><p>String, the path to the python executable (read-only)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug"><a name="//apple_ref/cpp/Attribute/bpy.app.debug"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug</code><a class="headerlink" href="#bpy.app.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_depsgraph"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_depsgraph"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_depsgraph</code><a class="headerlink" href="#bpy.app.debug_depsgraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_events"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_events"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_events</code><a class="headerlink" href="#bpy.app.debug_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_ffmpeg"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_ffmpeg"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_ffmpeg</code><a class="headerlink" href="#bpy.app.debug_ffmpeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_freestyle"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_freestyle"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_freestyle</code><a class="headerlink" href="#bpy.app.debug_freestyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_gpumem"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_gpumem"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_gpumem</code><a class="headerlink" href="#bpy.app.debug_gpumem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_handlers"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_handlers"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_handlers</code><a class="headerlink" href="#bpy.app.debug_handlers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_python"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_python"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_python</code><a class="headerlink" href="#bpy.app.debug_python" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_simdata"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_simdata"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_simdata</code><a class="headerlink" href="#bpy.app.debug_simdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_value"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_value"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_value</code><a class="headerlink" href="#bpy.app.debug_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Int, number which can be set to non-zero values for testing purposes</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.debug_wm"><a name="//apple_ref/cpp/Attribute/bpy.app.debug_wm"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">debug_wm</code><a class="headerlink" href="#bpy.app.debug_wm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, for debug info (started with –debug / –debug_* matching this attribute name)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.driver_namespace"><a name="//apple_ref/cpp/Attribute/bpy.app.driver_namespace"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">driver_namespace</code><a class="headerlink" href="#bpy.app.driver_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary for drivers namespace, editable in-place, reset on file load (read-only)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.render_icon_size"><a name="//apple_ref/cpp/Attribute/bpy.app.render_icon_size"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">render_icon_size</code><a class="headerlink" href="#bpy.app.render_icon_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference size for icon/preview renders (read-only)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.render_preview_size"><a name="//apple_ref/cpp/Attribute/bpy.app.render_preview_size"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">render_preview_size</code><a class="headerlink" href="#bpy.app.render_preview_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference size for icon/preview renders (read-only)</p>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.app.tempdir"><a name="//apple_ref/cpp/Attribute/bpy.app.tempdir"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">tempdir</code><a class="headerlink" href="#bpy.app.tempdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>String, the temp directory used by blender (read-only)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.background"><a name="//apple_ref/cpp/Value/bpy.app.background"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">background</code><a class="headerlink" href="#bpy.app.background" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, True when blender is running without a user interface (started with -b)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.factory_startup"><a name="//apple_ref/cpp/Value/bpy.app.factory_startup"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">factory_startup</code><a class="headerlink" href="#bpy.app.factory_startup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean, True when blender is running with –factory-startup)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.translations">
+<code class="descclassname">bpy.app.</code><code class="descname">translations</code><a class="headerlink" href="#bpy.app.translations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application and addons internationalization API</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_branch"><a name="//apple_ref/cpp/Value/bpy.app.build_branch"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_branch</code><a class="headerlink" href="#bpy.app.build_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The branch this blender instance was built from</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_cflags"><a name="//apple_ref/cpp/Value/bpy.app.build_cflags"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_cflags</code><a class="headerlink" href="#bpy.app.build_cflags" title="Permalink to this definition">¶</a></dt>
+<dd><p>C compiler flags</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_commit_date"><a name="//apple_ref/cpp/Value/bpy.app.build_commit_date"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_commit_date</code><a class="headerlink" href="#bpy.app.build_commit_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date of commit this blender instance was built</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_commit_time"><a name="//apple_ref/cpp/Value/bpy.app.build_commit_time"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_commit_time</code><a class="headerlink" href="#bpy.app.build_commit_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time of commit this blender instance was built</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_cxxflags"><a name="//apple_ref/cpp/Value/bpy.app.build_cxxflags"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_cxxflags</code><a class="headerlink" href="#bpy.app.build_cxxflags" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++ compiler flags</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_date"><a name="//apple_ref/cpp/Value/bpy.app.build_date"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_date</code><a class="headerlink" href="#bpy.app.build_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date this blender instance was built</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_hash"><a name="//apple_ref/cpp/Value/bpy.app.build_hash"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_hash</code><a class="headerlink" href="#bpy.app.build_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>The commit hash this blender instance was built with</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_linkflags"><a name="//apple_ref/cpp/Value/bpy.app.build_linkflags"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_linkflags</code><a class="headerlink" href="#bpy.app.build_linkflags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary linking flags</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_platform"><a name="//apple_ref/cpp/Value/bpy.app.build_platform"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_platform</code><a class="headerlink" href="#bpy.app.build_platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>The platform this blender instance was built for</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_system"><a name="//apple_ref/cpp/Value/bpy.app.build_system"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_system</code><a class="headerlink" href="#bpy.app.build_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build system used</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_time"><a name="//apple_ref/cpp/Value/bpy.app.build_time"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_time</code><a class="headerlink" href="#bpy.app.build_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time this blender instance was built</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_type"><a name="//apple_ref/cpp/Value/bpy.app.build_type"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_type</code><a class="headerlink" href="#bpy.app.build_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of build (Release, Debug)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_commit_timestamp"><a name="//apple_ref/cpp/Value/bpy.app.build_commit_timestamp"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_commit_timestamp</code><a class="headerlink" href="#bpy.app.build_commit_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unix timestamp of commit this blender instance was built</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.binary_path"><a name="//apple_ref/cpp/Value/bpy.app.binary_path"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">binary_path</code><a class="headerlink" href="#bpy.app.binary_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of blenders executable, useful for utilities that spawn new instances</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.version_char"><a name="//apple_ref/cpp/Value/bpy.app.version_char"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">version_char</code><a class="headerlink" href="#bpy.app.version_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Blender version character (for minor releases)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.version_cycle"><a name="//apple_ref/cpp/Value/bpy.app.version_cycle"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">version_cycle</code><a class="headerlink" href="#bpy.app.version_cycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The release status of this build alpha/beta/rc/release</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.version_string"><a name="//apple_ref/cpp/Value/bpy.app.version_string"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">version_string</code><a class="headerlink" href="#bpy.app.version_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Blender version formatted as a string</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.version"><a name="//apple_ref/cpp/Value/bpy.app.version"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">version</code><a class="headerlink" href="#bpy.app.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Blender version as a tuple of 3 numbers. eg. (2, 50, 11)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.alembic"><a name="//apple_ref/cpp/Value/bpy.app.alembic"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">alembic</code><a class="headerlink" href="#bpy.app.alembic" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.alembic(supported=True, version=(1, 7, 1), version_string=’ 1,  7,  1’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.build_options"><a name="//apple_ref/cpp/Value/bpy.app.build_options"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">build_options</code><a class="headerlink" href="#bpy.app.build_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.build_options(bullet=True, codec_avi=True, codec_ffmpeg=True, codec_quicktime=False, codec_sndfile=True, compositor=True, cycles=True, cycles_osl=True, freestyle=True, gameengine=True, image_cineon=True, image_dds=True, image_frameserver=True, image_hdr=True, image_openexr=True, image_openjpeg=True, image_tiff=True, input_ndof=True, audaspace=True, international=True, openal=True, sdl=True, sdl_dynload=False, jack=True, libmv=True, mod_boolean=True, mod_fluid=True, mod_oceansim=True, …)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.ffmpeg"><a name="//apple_ref/cpp/Value/bpy.app.ffmpeg"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">ffmpeg</code><a class="headerlink" href="#bpy.app.ffmpeg" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.ffmpeg(supported=True, avcodec_version=(57, 89, 100), avcodec_version_string=‘57, 89, 100’, avdevice_version=(57, 6, 100), avdevice_version_string=‘57,  6, 100’, avformat_version=(57, 71, 100), avformat_version_string=‘57, 71, 100’, avutil_version=(55, 58, 100), avutil_version_string=‘55, 58, 100’, swscale_version=(4, 6, 100), swscale_version_string=’ 4,  6, 100’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.handlers">
+<code class="descclassname">bpy.app.</code><code class="descname">handlers</code><a class="headerlink" href="#bpy.app.handlers" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.handlers(frame_change_pre=[], frame_change_post=[], render_pre=[], render_post=[], render_write=[], render_stats=[], render_init=[], render_complete=[], render_cancel=[], load_pre=[], load_post=[], save_pre=[], save_post=[], scene_update_pre=[], scene_update_post=[], game_pre=[], game_post=[], version_update=[&lt;function do_versions at 0x7f50a5932840&gt;], persistent=&lt;class ‘persistent’&gt;)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.ocio"><a name="//apple_ref/cpp/Value/bpy.app.ocio"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">ocio</code><a class="headerlink" href="#bpy.app.ocio" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.ocio(supported=True, version=(1, 0, 9), version_string=’ 1,  0,  9’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.oiio"><a name="//apple_ref/cpp/Value/bpy.app.oiio"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">oiio</code><a class="headerlink" href="#bpy.app.oiio" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.oiio(supported=True, version=(1, 7, 15), version_string=’ 1,  7, 15’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.opensubdiv"><a name="//apple_ref/cpp/Value/bpy.app.opensubdiv"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">opensubdiv</code><a class="headerlink" href="#bpy.app.opensubdiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.opensubdiv(supported=True, version=(3, 1, 1), version_string=’ 3,  1,  1’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.openvdb"><a name="//apple_ref/cpp/Value/bpy.app.openvdb"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">openvdb</code><a class="headerlink" href="#bpy.app.openvdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.openvdb(supported=True, version=(3, 2, 0), version_string=’ 3,  2,  0’)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.app.sdl"><a name="//apple_ref/cpp/Value/bpy.app.sdl"></a>
+<code class="descclassname">bpy.app.</code><code class="descname">sdl</code><a class="headerlink" href="#bpy.app.sdl" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value bpy.app.sdl(supported=True, version=(1, 2, 15), version_string=‘1.2.15’, available=True)</p>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.path.html" title="previous chapter">Path Utilities (bpy.path)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.app.handlers.html" title="next chapter">Application Handlers (bpy.app.handlers)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.app.handlers.html" title="Application Handlers (bpy.app.handlers)">next</a> |</li>
+<li class="right">
+<a href="bpy.path.html" title="Path Utilities (bpy.path)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

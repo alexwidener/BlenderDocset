@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>SCA_JoystickSensor(SCA_ISensor) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bge.types.SCA_KeyboardSensor.html" rel="next" title="SCA_KeyboardSensor(SCA_ISensor)"/>
+<link href="bge.types.SCA_ISensor.html" rel="prev" title="SCA_ISensor(SCA_ILogicBrick)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.SCA_KeyboardSensor.html" title="SCA_KeyboardSensor(SCA_ISensor)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.SCA_ISensor.html" title="SCA_ISensor(SCA_ILogicBrick)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="sca-joysticksensor-sca-isensor"></span><h1>SCA_JoystickSensor(SCA_ISensor)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_ISensor.html#bge.types.SCA_ISensor" title="bge.types.SCA_ISensor"><code class="xref py py-class docutils literal"><span class="pre">SCA_ISensor</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.SCA_JoystickSensor"><a name="//apple_ref/cpp/Class/bge.types.SCA_JoystickSensor"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">SCA_JoystickSensor</code><span class="sig-paren">(</span><em>SCA_ISensor</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.SCA_JoystickSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>This sensor detects player joystick events.</p>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.axisValues"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.axisValues"></a>
+<code class="descname">axisValues</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.axisValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the joysticks axis as a list of values <a class="reference internal" href="#bge.types.SCA_JoystickSensor.numAxis" title="bge.types.SCA_JoystickSensor.numAxis"><code class="xref py py-data docutils literal"><span class="pre">numAxis</span></code></a> long. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints.</td>
+</tr>
+</tbody>
+</table>
+<p>Each specifying the value of an axis between -32767 and 32767 depending on how far the axis is pushed, 0 for nothing.
+The first 2 values are used by most joysticks and gamepads for directional control. 3rd and 4th values are only on some joysticks and can be used for arbitary controls.</p>
+<ul class="simple">
+<li>left:[-32767, 0, …]</li>
+<li>right:[32767, 0, …]</li>
+<li>up:[0, -32767, …]</li>
+<li>down:[0, 32767, …]</li>
+</ul>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.axisSingle"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.axisSingle"></a>
+<code class="descname">axisSingle</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.axisSingle" title="Permalink to this definition">¶</a></dt>
+<dd><p>like <a class="reference internal" href="#bge.types.SCA_JoystickSensor.axisValues" title="bge.types.SCA_JoystickSensor.axisValues"><code class="xref py py-data docutils literal"><span class="pre">axisValues</span></code></a> but returns a single axis value that is set by the sensor. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only use this for “Single Axis” type sensors otherwise it will raise an error.</p>
+</div>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.hatValues"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.hatValues"></a>
+<code class="descname">hatValues</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.hatValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the joysticks hats as a list of values <a class="reference internal" href="#bge.types.SCA_JoystickSensor.numHats" title="bge.types.SCA_JoystickSensor.numHats"><code class="xref py py-data docutils literal"><span class="pre">numHats</span></code></a> long. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints</td>
+</tr>
+</tbody>
+</table>
+<p>Each specifying the direction of the hat from 1 to 12, 0 when inactive.</p>
+<p>Hat directions are as follows…</p>
+<ul class="simple">
+<li>0:None</li>
+<li>1:Up</li>
+<li>2:Right</li>
+<li>4:Down</li>
+<li>8:Left</li>
+<li>3:Up - Right</li>
+<li>6:Down - Right</li>
+<li>12:Down - Left</li>
+<li>9:Up - Left</li>
+</ul>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.hatSingle"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.hatSingle"></a>
+<code class="descname">hatSingle</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.hatSingle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like <a class="reference internal" href="#bge.types.SCA_JoystickSensor.hatValues" title="bge.types.SCA_JoystickSensor.hatValues"><code class="xref py py-data docutils literal"><span class="pre">hatValues</span></code></a> but returns a single hat direction value that is set by the sensor. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.numAxis"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.numAxis"></a>
+<code class="descname">numAxis</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.numAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of axes for the joystick at this index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.numButtons"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.numButtons"></a>
+<code class="descname">numButtons</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.numButtons" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of buttons for the joystick at this index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.numHats"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.numHats"></a>
+<code class="descname">numHats</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.numHats" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of hats for the joystick at this index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.connected"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.connected"></a>
+<code class="descname">connected</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if a joystick is connected at this joysticks index. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.index"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.index"></a>
+<code class="descname">index</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>The joystick index to use (from 0 to 7). The first joystick is always 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.threshold"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.threshold"></a>
+<code class="descname">threshold</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Axis threshold. Joystick axis motion below this threshold wont trigger an event. Use values between (0 and 32767), lower values are more sensitive.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.button"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.button"></a>
+<code class="descname">button</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.button" title="Permalink to this definition">¶</a></dt>
+<dd><p>The button index the sensor reacts to (first button = 0). When the “All Events” toggle is set, this option has no effect.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.axis"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.axis"></a>
+<code class="descname">axis</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The axis this sensor reacts to, as a list of two values [axisIndex, axisDirection]</p>
+<ul class="simple">
+<li>axisIndex: the axis index to use when detecting axis movement, 1=primary directional control, 2=secondary directional control.</li>
+<li>axisDirection: 0=right, 1=up, 2=left, 3=down.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">[integer, integer]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_JoystickSensor.hat"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_JoystickSensor.hat"></a>
+<code class="descname">hat</code><a class="headerlink" href="#bge.types.SCA_JoystickSensor.hat" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hat the sensor reacts to, as a list of two values: [hatIndex, hatDirection]</p>
+<ul class="simple">
+<li>hatIndex: the hat index to use when detecting hat movement, 1=primary hat, 2=secondary hat (4 max).</li>
+<li>hatDirection: 1-12.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">[integer, integer]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.SCA_JoystickSensor.getButtonActiveList"><a name="//apple_ref/cpp/Method/bge.types.SCA_JoystickSensor.getButtonActiveList"></a>
+<code class="descname">getButtonActiveList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.SCA_JoystickSensor.getButtonActiveList" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list containing the indicies of the currently pressed buttons.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.SCA_JoystickSensor.getButtonStatus"><a name="//apple_ref/cpp/Method/bge.types.SCA_JoystickSensor.getButtonStatus"></a>
+<code class="descname">getButtonStatus</code><span class="sig-paren">(</span><em>buttonIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.SCA_JoystickSensor.getButtonStatus" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>buttonIndex</strong> (<em>integer</em>) – the button index, 0=first button</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The current pressed state of the specified button.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.SCA_ISensor.html" title="previous chapter">SCA_ISensor(SCA_ILogicBrick)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.SCA_KeyboardSensor.html" title="next chapter">SCA_KeyboardSensor(SCA_ISensor)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.SCA_KeyboardSensor.html" title="SCA_KeyboardSensor(SCA_ISensor)">next</a> |</li>
+<li class="right">
+<a href="bge.types.SCA_ISensor.html" title="SCA_ISensor(SCA_ILogicBrick)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

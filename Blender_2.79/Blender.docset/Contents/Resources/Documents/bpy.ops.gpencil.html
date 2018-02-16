@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Gpencil Operators — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.ops.graph.html" rel="next" title="Graph Operators"/>
+<link href="bpy.ops.font.html" rel="prev" title="Font Operators"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.ops.graph.html" title="Graph Operators">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.ops.font.html" title="Font Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.ops.gpencil">
+<span id="gpencil-operators"></span><h1><a name="//apple_ref/cpp/Module/bpy.ops.gpencil"></a>Gpencil Operators<a class="headerlink" href="#module-bpy.ops.gpencil" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy.ops.gpencil.active_frame_delete"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.active_frame_delete"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">active_frame_delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.active_frame_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the active frame for the active Grease Pencil Layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.active_frames_delete_all"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.active_frames_delete_all"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">active_frames_delete_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.active_frames_delete_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the active frame(s) of all editable Grease Pencil layers</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.blank_frame_add"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.blank_frame_add"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">blank_frame_add</code><span class="sig-paren">(</span><em>all_layers=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.blank_frame_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a blank frame on the current frame (all subsequently existing frames, if any, are shifted right by one frame)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>all_layers</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – All Layers, Create blank frame in all layers, not only active</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_add"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_add"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new Grease Pencil drawing brush for the active Grease Pencil data-block</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_change"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_change"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_change</code><span class="sig-paren">(</span><em>brush='DEFAULT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change active Grease Pencil drawing brush</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>brush</strong> (<em>enum in</em><em> [</em><em>'DEFAULT'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Grease Pencil Brush</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_copy"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_copy"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy current Grease Pencil drawing brush</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_move"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_move"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_move</code><span class="sig-paren">(</span><em>type='UP'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the active Grease Pencil drawing brush up/down in the list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'UP'</em><em>, </em><em>'DOWN'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_paint"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_paint"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_paint</code><span class="sig-paren">(</span><em>stroke=None</em>, <em>wait_for_input=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply tweaks to strokes by painting over the strokes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stroke</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorStrokeElement</span></code>, (optional)) – Stroke</li>
+<li><strong>wait_for_input</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Wait for Input, Enter a mini ‘sculpt-mode’ if enabled, otherwise, exit after drawing a single stroke</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_presets_create"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_presets_create"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_presets_create</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_presets_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a set of predefined Grease Pencil drawing brushes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_remove"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_remove"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove active Grease Pencil drawing brush</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.brush_select"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.brush_select"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">brush_select</code><span class="sig-paren">(</span><em>index=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.brush_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a Grease Pencil drawing brush</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int in</em><em> [</em><em>0</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Index, Index of Drawing Brush</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.convert"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.convert"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">convert</code><span class="sig-paren">(</span><em>type='PATH'</em>, <em>use_normalize_weights=True</em>, <em>radius_multiplier=1.0</em>, <em>use_link_strokes=True</em>, <em>timing_mode='FULL'</em>, <em>frame_range=100</em>, <em>start_frame=1</em>, <em>use_realtime=False</em>, <em>end_frame=250</em>, <em>gap_duration=0.0</em>, <em>gap_randomness=0.0</em>, <em>seed=0</em>, <em>use_timing_data=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the active Grease Pencil layer to a new Curve Object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in</em><em> [</em><em>'PATH'</em><em>, </em><em>'CURVE'</em><em>, </em><em>'POLY'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Type, Which type of curve to convert to</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">PATH</span></code> Path, Animation path.</li>
+<li><code class="docutils literal"><span class="pre">CURVE</span></code> Bezier Curve, Smooth Bezier curve.</li>
+<li><code class="docutils literal"><span class="pre">POLY</span></code> Polygon Curve, Bezier curve with straight-line segments (vector handles).</li>
+</ul>
+</li>
+<li><strong>use_normalize_weights</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Normalize Weight, Normalize weight (set from stroke width)</li>
+<li><strong>radius_multiplier</strong> (<em>float in</em><em> [</em><em>0</em><em>, </em><em>1000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Radius Fac, Multiplier for the points’ radii (set from stroke width)</li>
+<li><strong>use_link_strokes</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Link Strokes, Whether to link strokes with zero-radius sections of curves</li>
+<li><strong>timing_mode</strong> (<em>enum in</em><em> [</em><em>'NONE'</em><em>, </em><em>'LINEAR'</em><em>, </em><em>'FULL'</em><em>, </em><em>'CUSTOMGAP'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Timing Mode, How to use timing data stored in strokes</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">NONE</span></code> No Timing, Ignore timing.</li>
+<li><code class="docutils literal"><span class="pre">LINEAR</span></code> Linear, Simple linear timing.</li>
+<li><code class="docutils literal"><span class="pre">FULL</span></code> Original, Use the original timing, gaps included.</li>
+<li><code class="docutils literal"><span class="pre">CUSTOMGAP</span></code> Custom Gaps, Use the original timing, but with custom gap lengths (in frames).</li>
+</ul>
+</li>
+<li><strong>frame_range</strong> (<em>int in</em><em> [</em><em>1</em><em>, </em><em>10000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Frame Range, The duration of evaluation of the path control curve</li>
+<li><strong>start_frame</strong> (<em>int in</em><em> [</em><em>1</em><em>, </em><em>100000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Start Frame, The start frame of the path control curve</li>
+<li><strong>use_realtime</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Realtime, Whether the path control curve reproduces the drawing in realtime, starting from Start Frame</li>
+<li><strong>end_frame</strong> (<em>int in</em><em> [</em><em>1</em><em>, </em><em>100000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – End Frame, The end frame of the path control curve (if Realtime is not set)</li>
+<li><strong>gap_duration</strong> (<em>float in</em><em> [</em><em>0</em><em>, </em><em>10000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Gap Duration, Custom Gap mode: (Average) length of gaps, in frames (Note: Realtime value, will be scaled if Realtime is not set)</li>
+<li><strong>gap_randomness</strong> (<em>float in</em><em> [</em><em>0</em><em>, </em><em>10000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Gap Randomness, Custom Gap mode: Number of frames that gap lengths can vary</li>
+<li><strong>seed</strong> (<em>int in</em><em> [</em><em>0</em><em>, </em><em>1000</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Random Seed, Custom Gap mode: Random generator seed</li>
+<li><strong>use_timing_data</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Has Valid Timing, Whether the converted Grease Pencil layer has valid timing data (internal use)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.copy"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.copy"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy selected Grease Pencil points and strokes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.data_add"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.data_add"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">data_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.data_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new Grease Pencil data-block</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.data_unlink"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.data_unlink"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">data_unlink</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.data_unlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlink active Grease Pencil data-block</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.delete"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.delete"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">delete</code><span class="sig-paren">(</span><em>type='POINTS'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete selected Grease Pencil strokes, vertices, or frames</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'POINTS'</em><em>, </em><em>'STROKES'</em><em>, </em><em>'FRAME'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Type, Method used for deleting Grease Pencil data</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">POINTS</span></code> Points, Delete selected points and split strokes into segments.</li>
+<li><code class="docutils literal"><span class="pre">STROKES</span></code> Strokes, Delete selected strokes.</li>
+<li><code class="docutils literal"><span class="pre">FRAME</span></code> Frame, Delete active frame.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.dissolve"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.dissolve"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">dissolve</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.dissolve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete selected points without splitting strokes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.draw"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.draw"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">draw</code><span class="sig-paren">(</span><em>mode='DRAW'</em>, <em>stroke=None</em>, <em>wait_for_input=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make annotations on the active data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<em>enum in</em><em> [</em><em>'DRAW'</em><em>, </em><em>'DRAW_STRAIGHT'</em><em>, </em><em>'DRAW_POLY'</em><em>, </em><em>'ERASER'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Mode, Way to interpret mouse movements</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">DRAW</span></code> Draw Freehand, Draw freehand stroke(s).</li>
+<li><code class="docutils literal"><span class="pre">DRAW_STRAIGHT</span></code> Draw Straight Lines, Draw straight line segment(s).</li>
+<li><code class="docutils literal"><span class="pre">DRAW_POLY</span></code> Draw Poly Line, Click to place endpoints of straight line segments (connected).</li>
+<li><code class="docutils literal"><span class="pre">ERASER</span></code> Eraser, Erase Grease Pencil strokes.</li>
+</ul>
+</li>
+<li><strong>stroke</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorStrokeElement</span></code>, (optional)) – Stroke</li>
+<li><strong>wait_for_input</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Wait for Input, Wait for first click instead of painting immediately</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.duplicate"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.duplicate"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate the selected Grease Pencil strokes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.duplicate_move"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.duplicate_move"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">duplicate_move</code><span class="sig-paren">(</span><em>GPENCIL_OT_duplicate=None</em>, <em>TRANSFORM_OT_translate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.duplicate_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make copies of the selected Grease Pencil strokes and move them</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>GPENCIL_OT_duplicate</strong> (<code class="xref py py-class docutils literal"><span class="pre">GPENCIL_OT_duplicate</span></code>, (optional)) – Duplicate Strokes, Duplicate the selected Grease Pencil strokes</li>
+<li><strong>TRANSFORM_OT_translate</strong> (<code class="xref py py-class docutils literal"><span class="pre">TRANSFORM_OT_translate</span></code>, (optional)) – Translate, Translate (move) selected items</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.editmode_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.editmode_toggle"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">editmode_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.editmode_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enter/Exit edit mode for Grease Pencil strokes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.hide"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.hide"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">hide</code><span class="sig-paren">(</span><em>unselected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide selected/unselected Grease Pencil layers</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>unselected</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Unselected, Hide unselected rather than selected layers</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.interpolate"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.interpolate"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">interpolate</code><span class="sig-paren">(</span><em>shift=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolate grease pencil strokes between frames</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>shift</strong> (<em>float in</em><em> [</em><em>-1</em><em>, </em><em>1</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Shift, Bias factor for which frame has more influence on the interpolated strokes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.interpolate_reverse"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.interpolate_reverse"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">interpolate_reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.interpolate_reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove breakdown frames generated by interpolating between two Grease Pencil frames</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.interpolate_sequence"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.interpolate_sequence"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">interpolate_sequence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.interpolate_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate ‘in-betweens’ to smoothly interpolate between Grease Pencil frames</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_add"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_add"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new Grease Pencil layer for the active Grease Pencil data-block</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_change"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_change"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_change</code><span class="sig-paren">(</span><em>layer='DEFAULT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change active Grease Pencil layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>layer</strong> (<em>enum in</em><em> [</em><em>'DEFAULT'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Grease Pencil Layer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_duplicate"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_duplicate"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a copy of the active Grease Pencil layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_isolate"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_isolate"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_isolate</code><span class="sig-paren">(</span><em>affect_visibility=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_isolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle whether the active layer is the only one that can be edited and/or visible</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>affect_visibility</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Affect Visibility, In addition to toggling the editability, also affect the visibility</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_merge"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_merge"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_merge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge the current layer with the layer below</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_move"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_move"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_move</code><span class="sig-paren">(</span><em>type='UP'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the active Grease Pencil layer up/down in the list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'UP'</em><em>, </em><em>'DOWN'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.layer_remove"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.layer_remove"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">layer_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.layer_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove active Grease Pencil layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.lock_all"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.lock_all"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">lock_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.lock_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock all Grease Pencil layers to prevent them from being accidentally modified</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.move_to_layer"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.move_to_layer"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">move_to_layer</code><span class="sig-paren">(</span><em>layer='DEFAULT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.move_to_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move selected strokes to another layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>layer</strong> (<em>enum in</em><em> [</em><em>'DEFAULT'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Grease Pencil Layer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palette_add"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palette_add"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palette_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palette_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new Grease Pencil palette for the active Grease Pencil data-block</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palette_change"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palette_change"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palette_change</code><span class="sig-paren">(</span><em>palette='DEFAULT'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palette_change" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change active Grease Pencil palette</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>palette</strong> (<em>enum in</em><em> [</em><em>'DEFAULT'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Grease Pencil Palette</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palette_lock_layer"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palette_lock_layer"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palette_lock_layer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palette_lock_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock and hide any color not used in any layer</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palette_remove"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palette_remove"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palette_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palette_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove active Grease Pencil palette</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_add"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_add"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new Grease Pencil palette color for the active Grease Pencil data-block</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_copy"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_copy"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy current Grease Pencil palette color</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_hide"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_hide"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_hide</code><span class="sig-paren">(</span><em>unselected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide selected/unselected Grease Pencil colors</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>unselected</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Unselected, Hide unselected rather than selected colors</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_isolate"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_isolate"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_isolate</code><span class="sig-paren">(</span><em>affect_visibility=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_isolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle whether the active color is the only one that is editable and/or visible</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>affect_visibility</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Affect Visibility, In addition to toggling the editability, also affect the visibility</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_lock_all"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_lock_all"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_lock_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_lock_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock all Grease Pencil colors to prevent them from being accidentally modified</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_move"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_move"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_move</code><span class="sig-paren">(</span><em>direction='UP'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the active Grease Pencil palette color up/down in the list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>direction</strong> (<em>enum in</em><em> [</em><em>'UP'</em><em>, </em><em>'DOWN'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Direction</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_remove"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_remove"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove active Grease Pencil palette color</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_reveal"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_reveal"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_reveal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_reveal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unhide all hidden Grease Pencil palette colors</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_select"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_select"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_select</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all Grease Pencil strokes using current color</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.palettecolor_unlock_all"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.palettecolor_unlock_all"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">palettecolor_unlock_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.palettecolor_unlock_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlock all Grease Pencil colors so that they can be edited</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.paste"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.paste"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">paste</code><span class="sig-paren">(</span><em>type='COPY'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.paste" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paste previously copied strokes or copy and merge in active layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'COPY'</em><em>, </em><em>'MERGE'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.reproject"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.reproject"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">reproject</code><span class="sig-paren">(</span><em>type='PLANAR'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.reproject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reproject the selected strokes from the current viewpoint as if they had been newly drawn (e.g. to fix problems from accidental 3D cursor movement or accidental viewport changes, or for matching deforming geometry)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'PLANAR'</em><em>, </em><em>'SURFACE'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Projection Type</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">PLANAR</span></code> Planar, Reproject the strokes to end up on the same plane, as if drawn from the current viewpoint using ‘Cursor’ Stroke Placement.</li>
+<li><code class="docutils literal"><span class="pre">SURFACE</span></code> Surface, Reproject the strokes on to the scene geometry, as if drawn using ‘Surface’ placement.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.reveal"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.reveal"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">reveal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.reveal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show all Grease Pencil layers</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select</code><span class="sig-paren">(</span><em>extend=False</em>, <em>deselect=False</em>, <em>toggle=False</em>, <em>entire_strokes=False</em>, <em>location=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select Grease Pencil strokes and/or stroke points</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>extend</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Extend, Extend selection instead of deselecting everything first</li>
+<li><strong>deselect</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Deselect, Remove from selection</li>
+<li><strong>toggle</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Toggle Selection, Toggle the selection</li>
+<li><strong>entire_strokes</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Entire Strokes, Select entire strokes instead of just the nearest stroke vertex</li>
+<li><strong>location</strong> (<em>int array of 2 items in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Location, Mouse location</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_all"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_all"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_all</code><span class="sig-paren">(</span><em>action='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change selection of all Grease Pencil strokes currently visible</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>action</strong> (<em>enum in</em><em> [</em><em>'TOGGLE'</em><em>, </em><em>'SELECT'</em><em>, </em><em>'DESELECT'</em><em>, </em><em>'INVERT'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Action, Selection action to execute</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">TOGGLE</span></code> Toggle, Toggle selection for all elements.</li>
+<li><code class="docutils literal"><span class="pre">SELECT</span></code> Select, Select all elements.</li>
+<li><code class="docutils literal"><span class="pre">DESELECT</span></code> Deselect, Deselect all elements.</li>
+<li><code class="docutils literal"><span class="pre">INVERT</span></code> Invert, Invert selection of all elements.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_border"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_border"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_border</code><span class="sig-paren">(</span><em>gesture_mode=0</em>, <em>xmin=0</em>, <em>xmax=0</em>, <em>ymin=0</em>, <em>ymax=0</em>, <em>extend=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_border" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select Grease Pencil strokes within a rectangular region</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>gesture_mode</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Gesture Mode</li>
+<li><strong>xmin</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – X Min</li>
+<li><strong>xmax</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – X Max</li>
+<li><strong>ymin</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Y Min</li>
+<li><strong>ymax</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Y Max</li>
+<li><strong>extend</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Extend, Extend selection instead of deselecting everything first</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_circle"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_circle"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_circle</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em>, <em>radius=1</em>, <em>gesture_mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select Grease Pencil strokes using brush selection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – X</li>
+<li><strong>y</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Y</li>
+<li><strong>radius</strong> (<em>int in</em><em> [</em><em>1</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Radius</li>
+<li><strong>gesture_mode</strong> (<em>int in</em><em> [</em><em>-inf</em><em>, </em><em>inf</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Gesture Mode</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_first"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_first"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_first</code><span class="sig-paren">(</span><em>only_selected_strokes=False</em>, <em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select first point in Grease Pencil strokes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>only_selected_strokes</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Selected Strokes Only, Only select the first point of strokes that already have points selected</li>
+<li><strong>extend</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Extend, Extend selection instead of deselecting all other selected points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_grouped"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_grouped"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_grouped</code><span class="sig-paren">(</span><em>type='LAYER'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_grouped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all strokes with similar characteristics</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'LAYER'</em><em>, </em><em>'COLOR'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – <p>Type</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">LAYER</span></code> Layer, Shared layers.</li>
+<li><code class="docutils literal"><span class="pre">COLOR</span></code> Color, Shared colors.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_lasso"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_lasso"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_lasso</code><span class="sig-paren">(</span><em>path=None</em>, <em>deselect=False</em>, <em>extend=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_lasso" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select Grease Pencil strokes using lasso selection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code> of <code class="xref py py-class docutils literal"><span class="pre">OperatorMousePath</span></code>, (optional)) – Path</li>
+<li><strong>deselect</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Deselect, Deselect rather than select items</li>
+<li><strong>extend</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Extend, Extend selection instead of deselecting everything first</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_last"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_last"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_last</code><span class="sig-paren">(</span><em>only_selected_strokes=False</em>, <em>extend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_last" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select last point in Grease Pencil strokes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>only_selected_strokes</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Selected Strokes Only, Only select the last point of strokes that already have points selected</li>
+<li><strong>extend</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Extend, Extend selection instead of deselecting all other selected points</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_less"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_less"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_less</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_less" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shrink sets of selected Grease Pencil points</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_linked"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_linked"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_linked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_linked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all points in same strokes as already selected points</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.select_more"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.select_more"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">select_more</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.select_more" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grow sets of selected Grease Pencil points</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.selection_opacity_toggle"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.selection_opacity_toggle"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">selection_opacity_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.selection_opacity_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide/Unhide selected points for Grease Pencil strokes setting alpha factor</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.snap_cursor_to_selected"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.snap_cursor_to_selected"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">snap_cursor_to_selected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.snap_cursor_to_selected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Snap cursor to center of selected points</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.snap_to_cursor"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.snap_to_cursor"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">snap_to_cursor</code><span class="sig-paren">(</span><em>use_offset=True</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.snap_to_cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Snap selected points/strokes to the cursor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_offset</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – With Offset, Offset the entire stroke instead of selected points only</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.snap_to_grid"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.snap_to_grid"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">snap_to_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.snap_to_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Snap selected points to the nearest grid points</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_apply_thickness"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_apply_thickness"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_apply_thickness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_apply_thickness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the thickness change of the layer to its strokes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_arrange"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_arrange"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_arrange</code><span class="sig-paren">(</span><em>direction='UP'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_arrange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arrange selected strokes up/down in the drawing order of the active layer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>direction</strong> (<em>enum in</em><em> [</em><em>'UP'</em><em>, </em><em>'DOWN'</em><em>, </em><em>'TOP'</em><em>, </em><em>'BOTTOM'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Direction</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_change_color"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_change_color"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_change_color</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_change_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move selected strokes to active color</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_cyclical_set"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_cyclical_set"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_cyclical_set</code><span class="sig-paren">(</span><em>type='TOGGLE'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_cyclical_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close or open the selected stroke adding an edge from last to first point</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>type</strong> (<em>enum in</em><em> [</em><em>'CLOSE'</em><em>, </em><em>'OPEN'</em><em>, </em><em>'TOGGLE'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_flip"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_flip"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_flip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change direction of the points of the selected strokes</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_join"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_join"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_join</code><span class="sig-paren">(</span><em>type='JOIN'</em>, <em>leave_gaps=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join selected strokes (optionally as new stroke)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>enum in</em><em> [</em><em>'JOIN'</em><em>, </em><em>'JOINCOPY'</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Type</li>
+<li><strong>leave_gaps</strong> (<em>boolean</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Leave Gaps, Leave gaps between joined strokes instead of linking them</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_lock_color"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_lock_color"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_lock_color</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_lock_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock any color not used in any selected stroke</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.stroke_subdivide"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.stroke_subdivide"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">stroke_subdivide</code><span class="sig-paren">(</span><em>number_cuts=1</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.stroke_subdivide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subdivide between continuous selected points of the stroke adding a point half way between them</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>number_cuts</strong> (<em>int in</em><em> [</em><em>1</em><em>, </em><em>10</em><em>]</em><em>, </em><em>(</em><em>optional</em><em>)</em>) – Number of Cuts</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.ops.gpencil.unlock_all"><a name="//apple_ref/cpp/Function/bpy.ops.gpencil.unlock_all"></a>
+<code class="descclassname">bpy.ops.gpencil.</code><code class="descname">unlock_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.ops.gpencil.unlock_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlock all Grease Pencil layers so that they can be edited</p>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.ops.font.html" title="previous chapter">Font Operators</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.ops.graph.html" title="next chapter">Graph Operators</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.ops.graph.html" title="Graph Operators">next</a> |</li>
+<li class="right">
+<a href="bpy.ops.font.html" title="Font Operators">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.ops.html">Operators (bpy.ops)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

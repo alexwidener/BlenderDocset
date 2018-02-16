@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>CurvePaintSettings(bpy_struct) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.types.CurveSplines.html" rel="next" title="CurveSplines(bpy_struct)"/>
+<link href="bpy.types.CurveModifier.html" rel="prev" title="CurveModifier(Modifier)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.CurveSplines.html" title="CurveSplines(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.CurveModifier.html" title="CurveModifier(Modifier)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="curvepaintsettings-bpy-struct"></span><h1>CurvePaintSettings(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.CurvePaintSettings"><a name="//apple_ref/cpp/Class/bpy.types.CurvePaintSettings"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">CurvePaintSettings</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.CurvePaintSettings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.corner_angle"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.corner_angle"></a>
+<code class="descname">corner_angle</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.corner_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angles above this are considered corners</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 3.14159], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.curve_type"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.curve_type"></a>
+<code class="descname">curve_type</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.curve_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of curve to use for new strokes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘POLY’, ‘BEZIER’], default ‘POLY’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.depth_mode"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.depth_mode"></a>
+<code class="descname">depth_mode</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.depth_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method of projecting depth</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘CURSOR’, ‘SURFACE’], default ‘CURSOR’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.error_threshold"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.error_threshold"></a>
+<code class="descname">error_threshold</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.error_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow deviation for a smoother, less precise line</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [1, 100], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.fit_method"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.fit_method"></a>
+<code class="descname">fit_method</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.fit_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curve fitting method</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">REFIT</span></code> Refit, Incrementally re-fit the curve (high quality).</li>
+<li><code class="docutils literal"><span class="pre">SPLIT</span></code> Split, Split the curve until the tolerance is met (fast).</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘REFIT’, ‘SPLIT’], default ‘REFIT’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.radius_max"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.radius_max"></a>
+<code class="descname">radius_max</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.radius_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radius to use when the maximum pressure is applied (or when a tablet isn’t used)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.radius_min"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.radius_min"></a>
+<code class="descname">radius_min</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.radius_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum radius when the minimum pressure is applied (also the minimum when tapering)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 100], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.radius_taper_end"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.radius_taper_end"></a>
+<code class="descname">radius_taper_end</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.radius_taper_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Taper factor for the radius of each point along the curve</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.radius_taper_start"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.radius_taper_start"></a>
+<code class="descname">radius_taper_start</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.radius_taper_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Taper factor for the radius of each point along the curve</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.surface_offset"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.surface_offset"></a>
+<code class="descname">surface_offset</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.surface_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Offset the stroke from the surface</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-10, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.surface_plane"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.surface_plane"></a>
+<code class="descname">surface_plane</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.surface_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plane for projected stroke</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">NORMAL_VIEW</span></code> Normal/View, Draw perpendicular to the surface.</li>
+<li><code class="docutils literal"><span class="pre">NORMAL_SURFACE</span></code> Normal/Surface, Draw aligned to the surface.</li>
+<li><code class="docutils literal"><span class="pre">VIEW</span></code> View, Draw aligned to the viewport.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘NORMAL_VIEW’, ‘NORMAL_SURFACE’, ‘VIEW’], default ‘NORMAL_VIEW’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.use_corners_detect"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.use_corners_detect"></a>
+<code class="descname">use_corners_detect</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.use_corners_detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect corners and use non-aligned handles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.use_offset_absolute"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.use_offset_absolute"></a>
+<code class="descname">use_offset_absolute</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.use_offset_absolute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a fixed offset (don’t scale by the radius)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.use_pressure_radius"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.use_pressure_radius"></a>
+<code class="descname">use_pressure_radius</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.use_pressure_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map tablet pressure to curve radius</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.CurvePaintSettings.use_stroke_endpoints"><a name="//apple_ref/cpp/Attribute/bpy.types.CurvePaintSettings.use_stroke_endpoints"></a>
+<code class="descname">use_stroke_endpoints</code><a class="headerlink" href="#bpy.types.CurvePaintSettings.use_stroke_endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the start of the stroke for the depth</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.ToolSettings.html#bpy.types.ToolSettings.curve_paint_settings" title="bpy.types.ToolSettings.curve_paint_settings"><code class="xref py py-class docutils literal"><span class="pre">ToolSettings.curve_paint_settings</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.CurveModifier.html" title="previous chapter">CurveModifier(Modifier)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.CurveSplines.html" title="next chapter">CurveSplines(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.CurveSplines.html" title="CurveSplines(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.CurveModifier.html" title="CurveModifier(Modifier)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

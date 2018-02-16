@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>LineStyleAlphaModifiers(bpy_struct) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.types.LineStyleColorModifier.html" rel="next" title="LineStyleColorModifier(LineStyleModifier)"/>
+<link href="bpy.types.LineStyleAlphaModifier_Tangent.html" rel="prev" title="LineStyleAlphaModifier_Tangent(LineStyleAlphaModifier)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.LineStyleColorModifier.html" title="LineStyleColorModifier(LineStyleModifier)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.LineStyleAlphaModifier_Tangent.html" title="LineStyleAlphaModifier_Tangent(LineStyleAlphaModifier)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="linestylealphamodifiers-bpy-struct"></span><h1>LineStyleAlphaModifiers(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.LineStyleAlphaModifiers"><a name="//apple_ref/cpp/Class/bpy.types.LineStyleAlphaModifiers"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">LineStyleAlphaModifiers</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.LineStyleAlphaModifiers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alpha modifiers for changing line alphas</p>
+<dl class="method">
+<dt id="bpy.types.LineStyleAlphaModifiers.new"><a name="//apple_ref/cpp/Method/bpy.types.LineStyleAlphaModifiers.new"></a>
+<code class="descname">new</code><span class="sig-paren">(</span><em>name</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.LineStyleAlphaModifiers.new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a alpha modifier to line style</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string</em><em>, </em><em>(</em><em>never None</em><em>)</em>) – New name for the alpha modifier (not unique)</li>
+<li><strong>type</strong> (<em>enum in</em><em> [</em><em>'ALONG_STROKE'</em><em>, </em><em>'CREASE_ANGLE'</em><em>, </em><em>'CURVATURE_3D'</em><em>, </em><em>'DISTANCE_FROM_CAMERA'</em><em>, </em><em>'DISTANCE_FROM_OBJECT'</em><em>, </em><em>'MATERIAL'</em><em>, </em><em>'NOISE'</em><em>, </em><em>'TANGENT'</em><em>]</em>) – Alpha modifier type to add</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Newly added alpha modifier</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="bpy.types.LineStyleAlphaModifier.html#bpy.types.LineStyleAlphaModifier" title="bpy.types.LineStyleAlphaModifier"><code class="xref py py-class docutils literal"><span class="pre">LineStyleAlphaModifier</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.types.LineStyleAlphaModifiers.remove"><a name="//apple_ref/cpp/Method/bpy.types.LineStyleAlphaModifiers.remove"></a>
+<code class="descname">remove</code><span class="sig-paren">(</span><em>modifier</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.LineStyleAlphaModifiers.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a alpha modifier from line style</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>modifier</strong> (<a class="reference internal" href="bpy.types.LineStyleAlphaModifier.html#bpy.types.LineStyleAlphaModifier" title="bpy.types.LineStyleAlphaModifier"><code class="xref py py-class docutils literal"><span class="pre">LineStyleAlphaModifier</span></code></a>, (never None)) – Alpha modifier to remove</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.FreestyleLineStyle.html#bpy.types.FreestyleLineStyle.alpha_modifiers" title="bpy.types.FreestyleLineStyle.alpha_modifiers"><code class="xref py py-class docutils literal"><span class="pre">FreestyleLineStyle.alpha_modifiers</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.LineStyleAlphaModifier_Tangent.html" title="previous chapter">LineStyleAlphaModifier_Tangent(LineStyleAlphaModifier)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.LineStyleColorModifier.html" title="next chapter">LineStyleColorModifier(LineStyleModifier)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.LineStyleColorModifier.html" title="LineStyleColorModifier(LineStyleModifier)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.LineStyleAlphaModifier_Tangent.html" title="LineStyleAlphaModifier_Tangent(LineStyleAlphaModifier)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

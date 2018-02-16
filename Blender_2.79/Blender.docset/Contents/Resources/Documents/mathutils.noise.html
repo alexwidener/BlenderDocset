@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Noise Utilities (mathutils.noise) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="freestyle.html" rel="next" title="Freestyle Module (freestyle)"/>
+<link href="mathutils.interpolate.html" rel="prev" title="Interpolation Utilities (mathutils.interpolate)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="freestyle.html" title="Freestyle Module (freestyle)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="mathutils.interpolate.html" title="Interpolation Utilities (mathutils.interpolate)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="mathutils.html">Math Types &amp; Utilities (mathutils)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-mathutils.noise">
+<span id="noise-utilities-mathutils-noise"></span><h1><a name="//apple_ref/cpp/Module/mathutils.noise"></a>Noise Utilities (mathutils.noise)<a class="headerlink" href="#module-mathutils.noise" title="Permalink to this headline">¶</a></h1>
+<p>The Blender noise module</p>
+<dl class="function">
+<dt id="mathutils.noise.cell"><a name="//apple_ref/cpp/Function/mathutils.noise.cell"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">cell</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cell noise value at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The cell noise value.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.cell_vector"><a name="//apple_ref/cpp/Function/mathutils.noise.cell_vector"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">cell_vector</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.cell_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cell noise vector at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The cell noise vector.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.fractal"><a name="//apple_ref/cpp/Function/mathutils.noise.fractal"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">fractal</code><span class="sig-paren">(</span><em>position</em>, <em>H</em>, <em>lacunarity</em>, <em>octaves</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.fractal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the fractal Brownian motion (fBm) noise value from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>H</strong> (<em>float</em>) – The fractal increment factor.</li>
+<li><strong>lacunarity</strong> (<em>float</em>) – The gap between successive frequencies.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The fractal Brownian motion noise value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.hetero_terrain"><a name="//apple_ref/cpp/Function/mathutils.noise.hetero_terrain"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">hetero_terrain</code><span class="sig-paren">(</span><em>position</em>, <em>H</em>, <em>lacunarity</em>, <em>octaves</em>, <em>offset</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.hetero_terrain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the heterogeneous terrain value from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>H</strong> (<em>float</em>) – The fractal dimension of the roughest areas.</li>
+<li><strong>lacunarity</strong> (<em>float</em>) – The gap between successive frequencies.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>offset</strong> (<em>float</em>) – The height of the terrain above ‘sea level’.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The heterogeneous terrain value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.hybrid_multi_fractal"><a name="//apple_ref/cpp/Function/mathutils.noise.hybrid_multi_fractal"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">hybrid_multi_fractal</code><span class="sig-paren">(</span><em>position</em>, <em>H</em>, <em>lacunarity</em>, <em>octaves</em>, <em>offset</em>, <em>gain</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.hybrid_multi_fractal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns hybrid multifractal value from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>H</strong> (<em>float</em>) – The fractal dimension of the roughest areas.</li>
+<li><strong>lacunarity</strong> (<em>float</em>) – The gap between successive frequencies.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>offset</strong> (<em>float</em>) – The height of the terrain above ‘sea level’.</li>
+<li><strong>gain</strong> (<em>float</em>) – Scaling applied to the values.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The hybrid multifractal value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.multi_fractal"><a name="//apple_ref/cpp/Function/mathutils.noise.multi_fractal"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">multi_fractal</code><span class="sig-paren">(</span><em>position</em>, <em>H</em>, <em>lacunarity</em>, <em>octaves</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.multi_fractal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns multifractal noise value from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>H</strong> (<em>float</em>) – The fractal increment factor.</li>
+<li><strong>lacunarity</strong> (<em>float</em>) – The gap between successive frequencies.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The multifractal noise value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.noise"><a name="//apple_ref/cpp/Function/mathutils.noise.noise"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">noise</code><span class="sig-paren">(</span><em>position</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns noise value from the noise basis at the position specified.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The noise value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.noise_vector"><a name="//apple_ref/cpp/Function/mathutils.noise.noise_vector"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">noise_vector</code><span class="sig-paren">(</span><em>position</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.noise_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the noise vector from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The noise vector.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.random"><a name="//apple_ref/cpp/Function/mathutils.noise.random"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">random</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a random number in the range [0, 1].</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The random number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.random_unit_vector"><a name="//apple_ref/cpp/Function/mathutils.noise.random_unit_vector"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">random_unit_vector</code><span class="sig-paren">(</span><em>size=3</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.random_unit_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a unit vector with random entries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>size</strong> (<em>Int</em>) – The size of the vector to be produced.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The random unit vector.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.ridged_multi_fractal"><a name="//apple_ref/cpp/Function/mathutils.noise.ridged_multi_fractal"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">ridged_multi_fractal</code><span class="sig-paren">(</span><em>position</em>, <em>H</em>, <em>lacunarity</em>, <em>octaves</em>, <em>offset</em>, <em>gain</em>, <em>noise_basis=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.ridged_multi_fractal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns ridged multifractal value from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>H</strong> (<em>float</em>) – The fractal dimension of the roughest areas.</li>
+<li><strong>lacunarity</strong> (<em>float</em>) – The gap between successive frequencies.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>offset</strong> (<em>float</em>) – The height of the terrain above ‘sea level’.</li>
+<li><strong>gain</strong> (<em>float</em>) – Scaling applied to the values.</li>
+<li><strong>noise_basis</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The ridged multifractal value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.seed_set"><a name="//apple_ref/cpp/Function/mathutils.noise.seed_set"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">seed_set</code><span class="sig-paren">(</span><em>seed</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.seed_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the random seed used for random_unit_vector, random_vector and random.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>seed</strong> (<em>Int</em>) – Seed used for the random generator.
+When seed is zero, the current time will be used instead.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.turbulence"><a name="//apple_ref/cpp/Function/mathutils.noise.turbulence"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">turbulence</code><span class="sig-paren">(</span><em>position</em>, <em>octaves</em>, <em>hard</em>, <em>noise_basis=noise.types.STDPERLIN</em>, <em>amplitude_scale=0.5</em>, <em>frequency_scale=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.turbulence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the turbulence value from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>hard</strong> (<em>:boolean</em>) – Specifies whether returned turbulence is hard (sharp transitions) or soft (smooth transitions).</li>
+<li><strong>noise_basis</strong> (<em>Value in mathutils.noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+<li><strong>amplitude_scale</strong> (<em>float</em>) – The amplitude scaling factor.</li>
+<li><strong>frequency_scale</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The frequency scaling factor</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The turbulence value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.turbulence_vector"><a name="//apple_ref/cpp/Function/mathutils.noise.turbulence_vector"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">turbulence_vector</code><span class="sig-paren">(</span><em>position</em>, <em>octaves</em>, <em>hard</em>, <em>noise_basis=noise.types.STDPERLIN</em>, <em>amplitude_scale=0.5</em>, <em>frequency_scale=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.turbulence_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the turbulence vector from the noise basis at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>octaves</strong> (<em>int</em>) – The number of different noise frequencies used.</li>
+<li><strong>hard</strong> (<em>:boolean</em>) – Specifies whether returned turbulence is hard (sharp transitions) or soft (smooth transitions).</li>
+<li><strong>noise_basis</strong> (<em>Value in mathutils.noise.types</em><em> or </em><em>int</em>) – The type of noise to be evaluated.</li>
+<li><strong>amplitude_scale</strong> (<em>float</em>) – The amplitude scaling factor.</li>
+<li><strong>frequency_scale</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The frequency scaling factor</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The turbulence vector.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.variable_lacunarity"><a name="//apple_ref/cpp/Function/mathutils.noise.variable_lacunarity"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">variable_lacunarity</code><span class="sig-paren">(</span><em>position</em>, <em>distortion</em>, <em>noise_type1=noise.types.STDPERLIN</em>, <em>noise_type2=noise.types.STDPERLIN</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.variable_lacunarity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns variable lacunarity noise value, a distorted variety of noise, from noise type 1 distorted by noise type 2 at the specified position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>distortion</strong> (<em>float</em>) – The amount of distortion.</li>
+<li><strong>noise_type1</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise to be distorted.</li>
+<li><strong>noise_type2</strong> (<em>Value in noise.types</em><em> or </em><em>int</em>) – The type of noise used to distort noise_type1.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The variable lacunarity noise value.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="mathutils.noise.voronoi"><a name="//apple_ref/cpp/Function/mathutils.noise.voronoi"></a>
+<code class="descclassname">mathutils.noise.</code><code class="descname">voronoi</code><span class="sig-paren">(</span><em>position</em>, <em>distance_metric=noise.distance_metrics.DISTANCE</em>, <em>exponent=2.5</em><span class="sig-paren">)</span><a class="headerlink" href="#mathutils.noise.voronoi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of distances to the four closest features and their locations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>position</strong> (<a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a>) – The position to evaluate the selected noise function at.</li>
+<li><strong>distance_metric</strong> (<em>Value in noise.distance_metrics</em><em> or </em><em>int</em>) – Method of measuring distance.</li>
+<li><strong>exponent</strong> (<em>float</em>) – The exponent for Minkowski distance metric.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A list of distances to the four closest features and their locations.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list of four floats, list of four <a class="reference internal" href="mathutils.html#mathutils.Vector" title="mathutils.Vector"><code class="xref py py-class docutils literal"><span class="pre">mathutils.Vector</span></code></a> types</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="mathutils.interpolate.html" title="previous chapter">Interpolation Utilities (mathutils.interpolate)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="freestyle.html" title="next chapter">Freestyle Module (freestyle)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="freestyle.html" title="Freestyle Module (freestyle)">next</a> |</li>
+<li class="right">
+<a href="mathutils.interpolate.html" title="Interpolation Utilities (mathutils.interpolate)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="mathutils.html">Math Types &amp; Utilities (mathutils)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

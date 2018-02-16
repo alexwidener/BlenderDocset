@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>KX_VehicleWrapper(PyObjectPlus) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bge.types.KX_VertexProxy.html" rel="next" title="KX_VertexProxy(SCA_IObject)"/>
+<link href="bge.types.KX_TrackToActuator.html" rel="prev" title="KX_TrackToActuator(SCA_IActuator)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.KX_VertexProxy.html" title="KX_VertexProxy(SCA_IObject)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.KX_TrackToActuator.html" title="KX_TrackToActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="kx-vehiclewrapper-pyobjectplus"></span><h1>KX_VehicleWrapper(PyObjectPlus)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.PyObjectPlus.html#bge.types.PyObjectPlus" title="bge.types.PyObjectPlus"><code class="xref py py-class docutils literal"><span class="pre">PyObjectPlus</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.KX_VehicleWrapper"><a name="//apple_ref/cpp/Class/bge.types.KX_VehicleWrapper"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">KX_VehicleWrapper</code><span class="sig-paren">(</span><em>PyObjectPlus</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>KX_VehicleWrapper</p>
+<p>TODO - description</p>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.addWheel"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.addWheel"></a>
+<code class="descname">addWheel</code><span class="sig-paren">(</span><em>wheel</em>, <em>attachPos</em>, <em>downDir</em>, <em>axleDir</em>, <em>suspensionRestLength</em>, <em>wheelRadius</em>, <em>hasSteering</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.addWheel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a wheel to the vehicle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>wheel</strong> (<a class="reference internal" href="bge.types.KX_GameObject.html#bge.types.KX_GameObject" title="bge.types.KX_GameObject"><code class="xref py py-class docutils literal"><span class="pre">KX_GameObject</span></code></a> or a <a class="reference internal" href="bge.types.KX_GameObject.html#bge.types.KX_GameObject" title="bge.types.KX_GameObject"><code class="xref py py-class docutils literal"><span class="pre">KX_GameObject</span></code></a> name) – The object to use as a wheel.</li>
+<li><strong>attachPos</strong> (<em>vector of 3 floats</em>) – The position to attach the wheel, relative to the chassis object center.</li>
+<li><strong>downDir</strong> (<em>vector of 3 floats</em>) – The direction vector pointing down to where the vehicle should collide with the floor.</li>
+<li><strong>axleDir</strong> (<em>vector of 3 floats</em>) – The axis the wheel rotates around, relative to the chassis.</li>
+<li><strong>suspensionRestLength</strong> (<em>float</em>) – The length of the suspension when no forces are being applied.</li>
+<li><strong>wheelRadius</strong> (<em>float</em>) – The radius of the wheel (half the diameter).</li>
+<li><strong>hasSteering</strong> (<em>boolean</em>) – True if the wheel should turn with steering, typically used in front wheels.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.applyBraking"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.applyBraking"></a>
+<code class="descname">applyBraking</code><span class="sig-paren">(</span><em>force</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.applyBraking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a braking force to the specified wheel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>force</strong> (<em>float</em>) – the brake force</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – index of the wheel where the force needs to be applied</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.applyEngineForce"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.applyEngineForce"></a>
+<code class="descname">applyEngineForce</code><span class="sig-paren">(</span><em>force</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.applyEngineForce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply an engine force to the specified wheel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>force</strong> (<em>float</em>) – the engine force</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – index of the wheel where the force needs to be applied</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.getConstraintId"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.getConstraintId"></a>
+<code class="descname">getConstraintId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.getConstraintId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the constraint ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the constraint id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.getConstraintType"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.getConstraintType"></a>
+<code class="descname">getConstraintType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.getConstraintType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the constraint type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">constraint type</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.getNumWheels"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.getNumWheels"></a>
+<code class="descname">getNumWheels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.getNumWheels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of wheels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the number of wheels for this vehicle</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.getWheelOrientationQuaternion"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.getWheelOrientationQuaternion"></a>
+<code class="descname">getWheelOrientationQuaternion</code><span class="sig-paren">(</span><em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.getWheelOrientationQuaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the wheel orientation as a quaternion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">TODO Description</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">TODO - type should be quat as per method name but from the code it looks like a matrix</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.getWheelPosition"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.getWheelPosition"></a>
+<code class="descname">getWheelPosition</code><span class="sig-paren">(</span><em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.getWheelPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the specified wheel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">position vector</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list[x, y, z]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.getWheelRotation"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.getWheelRotation"></a>
+<code class="descname">getWheelRotation</code><span class="sig-paren">(</span><em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.getWheelRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rotation of the specified wheel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the wheel rotation</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.setRollInfluence"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.setRollInfluence"></a>
+<code class="descname">setRollInfluence</code><span class="sig-paren">(</span><em>rollInfluece</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.setRollInfluence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the specified wheel’s roll influence.
+The higher the roll influence the more the vehicle will tend to roll over in corners.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rollInfluece</strong> (<em>float</em>) – the wheel roll influence</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.setSteeringValue"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.setSteeringValue"></a>
+<code class="descname">setSteeringValue</code><span class="sig-paren">(</span><em>steering</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.setSteeringValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the specified wheel’s steering</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>steering</strong> (<em>float</em>) – the wheel steering</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.setSuspensionCompression"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.setSuspensionCompression"></a>
+<code class="descname">setSuspensionCompression</code><span class="sig-paren">(</span><em>compression</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.setSuspensionCompression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the specified wheel’s compression</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>compression</strong> (<em>float</em>) – the wheel compression</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.setSuspensionDamping"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.setSuspensionDamping"></a>
+<code class="descname">setSuspensionDamping</code><span class="sig-paren">(</span><em>damping</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.setSuspensionDamping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the specified wheel’s damping</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>damping</strong> (<em>float</em>) – the wheel damping</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.setSuspensionStiffness"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.setSuspensionStiffness"></a>
+<code class="descname">setSuspensionStiffness</code><span class="sig-paren">(</span><em>stiffness</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.setSuspensionStiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the specified wheel’s stiffness</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stiffness</strong> (<em>float</em>) – the wheel stiffness</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_VehicleWrapper.setTyreFriction"><a name="//apple_ref/cpp/Method/bge.types.KX_VehicleWrapper.setTyreFriction"></a>
+<code class="descname">setTyreFriction</code><span class="sig-paren">(</span><em>friction</em>, <em>wheelIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_VehicleWrapper.setTyreFriction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the specified wheel’s tyre friction</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>friction</strong> (<em>float</em>) – the tyre friction</li>
+<li><strong>wheelIndex</strong> (<em>integer</em>) – the wheel index</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.KX_TrackToActuator.html" title="previous chapter">KX_TrackToActuator(SCA_IActuator)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.KX_VertexProxy.html" title="next chapter">KX_VertexProxy(SCA_IObject)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.KX_VertexProxy.html" title="KX_VertexProxy(SCA_IObject)">next</a> |</li>
+<li class="right">
+<a href="bge.types.KX_TrackToActuator.html" title="KX_TrackToActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

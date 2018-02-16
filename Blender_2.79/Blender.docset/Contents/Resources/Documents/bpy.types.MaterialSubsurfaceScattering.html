@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>MaterialSubsurfaceScattering(bpy_struct) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.types.MaterialTextureSlot.html" rel="next" title="MaterialTextureSlot(TextureSlot)"/>
+<link href="bpy.types.MaterialStrand.html" rel="prev" title="MaterialStrand(bpy_struct)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.MaterialTextureSlot.html" title="MaterialTextureSlot(TextureSlot)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.MaterialStrand.html" title="MaterialStrand(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="materialsubsurfacescattering-bpy-struct"></span><h1>MaterialSubsurfaceScattering(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.MaterialSubsurfaceScattering"><a name="//apple_ref/cpp/Class/bpy.types.MaterialSubsurfaceScattering"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">MaterialSubsurfaceScattering</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering" title="Permalink to this definition">¶</a></dt>
+<dd><p>Diffuse subsurface scattering settings for a Material data-block</p>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.back"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.back"></a>
+<code class="descname">back</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back scattering weight</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.color"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.color"></a>
+<code class="descname">color</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0, inf], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.color_factor"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.color_factor"></a>
+<code class="descname">color_factor</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.color_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blend factor for SSS colors</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.error_threshold"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.error_threshold"></a>
+<code class="descname">error_threshold</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.error_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error tolerance (low values are slower and higher quality)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-inf, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.front"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.front"></a>
+<code class="descname">front</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.front" title="Permalink to this definition">¶</a></dt>
+<dd><p>Front scattering weight</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 2], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.ior"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.ior"></a>
+<code class="descname">ior</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.ior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Index of refraction (higher values are denser)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-inf, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.radius"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.radius"></a>
+<code class="descname">radius</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mean red/green/blue scattering path length</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [0.001, inf], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.scale"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.scale"></a>
+<code class="descname">scale</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object scale factor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [-inf, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.texture_factor"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.texture_factor"></a>
+<code class="descname">texture_factor</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.texture_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Texture scattering blend factor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MaterialSubsurfaceScattering.use"><a name="//apple_ref/cpp/Attribute/bpy.types.MaterialSubsurfaceScattering.use"></a>
+<code class="descname">use</code><a class="headerlink" href="#bpy.types.MaterialSubsurfaceScattering.use" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable diffuse subsurface scattering effects in a material</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Material.html#bpy.types.Material.subsurface_scattering" title="bpy.types.Material.subsurface_scattering"><code class="xref py py-class docutils literal"><span class="pre">Material.subsurface_scattering</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.MaterialStrand.html" title="previous chapter">MaterialStrand(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.MaterialTextureSlot.html" title="next chapter">MaterialTextureSlot(TextureSlot)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.MaterialTextureSlot.html" title="MaterialTextureSlot(TextureSlot)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.MaterialStrand.html" title="MaterialStrand(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

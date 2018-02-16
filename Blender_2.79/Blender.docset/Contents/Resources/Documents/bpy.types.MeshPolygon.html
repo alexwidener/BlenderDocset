@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>MeshPolygon(bpy_struct) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.types.MeshPolygonFloatProperty.html" rel="next" title="MeshPolygonFloatProperty(bpy_struct)"/>
+<link href="bpy.types.MeshPaintMaskProperty.html" rel="prev" title="MeshPaintMaskProperty(bpy_struct)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.MeshPolygonFloatProperty.html" title="MeshPolygonFloatProperty(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.MeshPaintMaskProperty.html" title="MeshPaintMaskProperty(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="meshpolygon-bpy-struct"></span><h1>MeshPolygon(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.MeshPolygon"><a name="//apple_ref/cpp/Class/bpy.types.MeshPolygon"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">MeshPolygon</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.MeshPolygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Polygon in a Mesh data-block</p>
+<dl class="data">
+<dt id="bpy.types.MeshPolygon.area"><a name="//apple_ref/cpp/Value/bpy.types.MeshPolygon.area"></a>
+<code class="descname">area</code><a class="headerlink" href="#bpy.types.MeshPolygon.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read only area of this polygon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, inf], default 0.0, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.MeshPolygon.center"><a name="//apple_ref/cpp/Value/bpy.types.MeshPolygon.center"></a>
+<code class="descname">center</code><a class="headerlink" href="#bpy.types.MeshPolygon.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center of this polygon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [-inf, inf], default (0.0, 0.0, 0.0), (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.hide"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.hide"></a>
+<code class="descname">hide</code><a class="headerlink" href="#bpy.types.MeshPolygon.hide" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.MeshPolygon.index"><a name="//apple_ref/cpp/Value/bpy.types.MeshPolygon.index"></a>
+<code class="descname">index</code><a class="headerlink" href="#bpy.types.MeshPolygon.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Index of this polygon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, inf], default 0, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.loop_start"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.loop_start"></a>
+<code class="descname">loop_start</code><a class="headerlink" href="#bpy.types.MeshPolygon.loop_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Index of the first loop of this polygon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, inf], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.loop_total"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.loop_total"></a>
+<code class="descname">loop_total</code><a class="headerlink" href="#bpy.types.MeshPolygon.loop_total" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of loops used by this polygon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, inf], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.material_index"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.material_index"></a>
+<code class="descname">material_index</code><a class="headerlink" href="#bpy.types.MeshPolygon.material_index" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 32767], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.MeshPolygon.normal"><a name="//apple_ref/cpp/Value/bpy.types.MeshPolygon.normal"></a>
+<code class="descname">normal</code><a class="headerlink" href="#bpy.types.MeshPolygon.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local space unit length normal vector for this polygon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [-1, 1], default (0.0, 0.0, 0.0), (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.select"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.select"></a>
+<code class="descname">select</code><a class="headerlink" href="#bpy.types.MeshPolygon.select" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.use_freestyle_mark"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.use_freestyle_mark"></a>
+<code class="descname">use_freestyle_mark</code><a class="headerlink" href="#bpy.types.MeshPolygon.use_freestyle_mark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Face mark for Freestyle line rendering</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.use_smooth"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.use_smooth"></a>
+<code class="descname">use_smooth</code><a class="headerlink" href="#bpy.types.MeshPolygon.use_smooth" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.MeshPolygon.vertices"><a name="//apple_ref/cpp/Attribute/bpy.types.MeshPolygon.vertices"></a>
+<code class="descname">vertices</code><a class="headerlink" href="#bpy.types.MeshPolygon.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex indices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int array of 3 items in [0, inf], default (0, 0, 0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.MeshPolygon.edge_keys"><a name="//apple_ref/cpp/Value/bpy.types.MeshPolygon.edge_keys"></a>
+<code class="descname">edge_keys</code><a class="headerlink" href="#bpy.types.MeshPolygon.edge_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>(readonly)</p>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.MeshPolygon.loop_indices"><a name="//apple_ref/cpp/Value/bpy.types.MeshPolygon.loop_indices"></a>
+<code class="descname">loop_indices</code><a class="headerlink" href="#bpy.types.MeshPolygon.loop_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>(readonly)</p>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.types.MeshPolygon.flip"><a name="//apple_ref/cpp/Method/bpy.types.MeshPolygon.flip"></a>
+<code class="descname">flip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.MeshPolygon.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invert winding of this polygon (flip its normal)</p>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Mesh.html#bpy.types.Mesh.polygons" title="bpy.types.Mesh.polygons"><code class="xref py py-class docutils literal"><span class="pre">Mesh.polygons</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.MeshPaintMaskProperty.html" title="previous chapter">MeshPaintMaskProperty(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.MeshPolygonFloatProperty.html" title="next chapter">MeshPolygonFloatProperty(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.MeshPolygonFloatProperty.html" title="MeshPolygonFloatProperty(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.MeshPaintMaskProperty.html" title="MeshPaintMaskProperty(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

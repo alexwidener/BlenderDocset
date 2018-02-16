@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>KX_TrackToActuator(SCA_IActuator) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bge.types.KX_VehicleWrapper.html" rel="next" title="KX_VehicleWrapper(PyObjectPlus)"/>
+<link href="bge.types.KX_TouchSensor.html" rel="prev" title="KX_TouchSensor(SCA_ISensor)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.KX_VehicleWrapper.html" title="KX_VehicleWrapper(PyObjectPlus)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.KX_TouchSensor.html" title="KX_TouchSensor(SCA_ISensor)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="kx-tracktoactuator-sca-iactuator"></span><h1>KX_TrackToActuator(SCA_IActuator)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_IActuator.html#bge.types.SCA_IActuator" title="bge.types.SCA_IActuator"><code class="xref py py-class docutils literal"><span class="pre">SCA_IActuator</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.KX_TrackToActuator"><a name="//apple_ref/cpp/Class/bge.types.KX_TrackToActuator"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">KX_TrackToActuator</code><span class="sig-paren">(</span><em>SCA_IActuator</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_TrackToActuator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit Object actuator in Track To mode.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Track To Actuators will be ignored if at game start, the object to track to is invalid.</p>
+<p>This will generate a warning in the console:</p>
+<div class="last highlight-none"><div class="highlight"><pre><span></span>GameObject 'Name' no object in EditObjectActuator 'ActuatorName'
+</pre></div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="bge.types.KX_TrackToActuator.object"><a name="//apple_ref/cpp/Attribute/bge.types.KX_TrackToActuator.object"></a>
+<code class="descname">object</code><a class="headerlink" href="#bge.types.KX_TrackToActuator.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>the object this actuator tracks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bge.types.KX_GameObject.html#bge.types.KX_GameObject" title="bge.types.KX_GameObject"><code class="xref py py-class docutils literal"><span class="pre">KX_GameObject</span></code></a> or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_TrackToActuator.time"><a name="//apple_ref/cpp/Attribute/bge.types.KX_TrackToActuator.time"></a>
+<code class="descname">time</code><a class="headerlink" href="#bge.types.KX_TrackToActuator.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>the time in frames with which to delay the tracking motion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_TrackToActuator.use3D"><a name="//apple_ref/cpp/Attribute/bge.types.KX_TrackToActuator.use3D"></a>
+<code class="descname">use3D</code><a class="headerlink" href="#bge.types.KX_TrackToActuator.use3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>the tracking motion to use 3D.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_TrackToActuator.upAxis"><a name="//apple_ref/cpp/Attribute/bge.types.KX_TrackToActuator.upAxis"></a>
+<code class="descname">upAxis</code><a class="headerlink" href="#bge.types.KX_TrackToActuator.upAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The axis that points upward.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer from 0 to 2</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>KX_TRACK_UPAXIS_POS_X</li>
+<li>KX_TRACK_UPAXIS_POS_Y</li>
+<li>KX_TRACK_UPAXIS_POS_Z</li>
+</ul>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_TrackToActuator.trackAxis"><a name="//apple_ref/cpp/Attribute/bge.types.KX_TrackToActuator.trackAxis"></a>
+<code class="descname">trackAxis</code><a class="headerlink" href="#bge.types.KX_TrackToActuator.trackAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The axis that points to the target object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer from 0 to 5</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>KX_TRACK_TRAXIS_POS_X</li>
+<li>KX_TRACK_TRAXIS_POS_Y</li>
+<li>KX_TRACK_TRAXIS_POS_Z</li>
+<li>KX_TRACK_TRAXIS_NEG_X</li>
+<li>KX_TRACK_TRAXIS_NEG_Y</li>
+<li>KX_TRACK_TRAXIS_NEG_Z</li>
+</ul>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.KX_TouchSensor.html" title="previous chapter">KX_TouchSensor(SCA_ISensor)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.KX_VehicleWrapper.html" title="next chapter">KX_VehicleWrapper(PyObjectPlus)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.KX_VehicleWrapper.html" title="KX_VehicleWrapper(PyObjectPlus)">next</a> |</li>
+<li class="right">
+<a href="bge.types.KX_TouchSensor.html" title="KX_TouchSensor(SCA_ISensor)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

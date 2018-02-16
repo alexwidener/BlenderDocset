@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>SCA_KeyboardSensor(SCA_ISensor) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bge.types.SCA_MouseSensor.html" rel="next" title="SCA_MouseSensor(SCA_ISensor)"/>
+<link href="bge.types.SCA_JoystickSensor.html" rel="prev" title="SCA_JoystickSensor(SCA_ISensor)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.SCA_MouseSensor.html" title="SCA_MouseSensor(SCA_ISensor)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.SCA_JoystickSensor.html" title="SCA_JoystickSensor(SCA_ISensor)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="sca-keyboardsensor-sca-isensor"></span><h1>SCA_KeyboardSensor(SCA_ISensor)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_ISensor.html#bge.types.SCA_ISensor" title="bge.types.SCA_ISensor"><code class="xref py py-class docutils literal"><span class="pre">SCA_ISensor</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.SCA_KeyboardSensor"><a name="//apple_ref/cpp/Class/bge.types.SCA_KeyboardSensor"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">SCA_KeyboardSensor</code><span class="sig-paren">(</span><em>SCA_ISensor</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.SCA_KeyboardSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>A keyboard sensor detects player key presses.</p>
+<p>See module <a class="reference internal" href="bge.events.html#module-bge.events" title="bge.events"><code class="xref py py-mod docutils literal"><span class="pre">bge.events</span></code></a> for keycode values.</p>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.key"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.key"></a>
+<code class="descname">key</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key code this sensor is looking for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">keycode from <a class="reference internal" href="bge.events.html#module-bge.events" title="bge.events"><code class="xref py py-mod docutils literal"><span class="pre">bge.events</span></code></a> module</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.hold1"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.hold1"></a>
+<code class="descname">hold1</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.hold1" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key code for the first modifier this sensor is looking for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">keycode from <a class="reference internal" href="bge.events.html#module-bge.events" title="bge.events"><code class="xref py py-mod docutils literal"><span class="pre">bge.events</span></code></a> module</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.hold2"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.hold2"></a>
+<code class="descname">hold2</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.hold2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key code for the second modifier this sensor is looking for.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">keycode from <a class="reference internal" href="bge.events.html#module-bge.events" title="bge.events"><code class="xref py py-mod docutils literal"><span class="pre">bge.events</span></code></a> module</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.toggleProperty"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.toggleProperty"></a>
+<code class="descname">toggleProperty</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.toggleProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the property that indicates whether or not to log keystrokes as a string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.targetProperty"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.targetProperty"></a>
+<code class="descname">targetProperty</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.targetProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the property that receives keystrokes in case in case a string is logged.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.useAllKeys"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.useAllKeys"></a>
+<code class="descname">useAllKeys</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.useAllKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to determine whether or not to accept all keys.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.SCA_KeyboardSensor.events"><a name="//apple_ref/cpp/Attribute/bge.types.SCA_KeyboardSensor.events"></a>
+<code class="descname">events</code><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.events" title="Permalink to this definition">¶</a></dt>
+<dd><p>a list of pressed keys that have either been pressed, or just released, or are active this frame. (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list [[<a class="reference internal" href="bge.events.html#keyboard-keys"><span class="std std-ref">keycode</span></a>, <a class="reference internal" href="bge.logic.html#input-status"><span class="std std-ref">status</span></a>], …]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.SCA_KeyboardSensor.getKeyStatus"><a name="//apple_ref/cpp/Method/bge.types.SCA_KeyboardSensor.getKeyStatus"></a>
+<code class="descname">getKeyStatus</code><span class="sig-paren">(</span><em>keycode</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.SCA_KeyboardSensor.getKeyStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the status of a key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>keycode</strong> (<em>integer</em>) – The code that represents the key you want to get the state of, use one of <a class="reference internal" href="bge.events.html#keyboard-keys"><span class="std std-ref">these constants</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The state of the given key, can be one of <a class="reference internal" href="bge.logic.html#input-status"><span class="std std-ref">these constants</span></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.SCA_JoystickSensor.html" title="previous chapter">SCA_JoystickSensor(SCA_ISensor)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.SCA_MouseSensor.html" title="next chapter">SCA_MouseSensor(SCA_ISensor)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.SCA_MouseSensor.html" title="SCA_MouseSensor(SCA_ISensor)">next</a> |</li>
+<li class="right">
+<a href="bge.types.SCA_JoystickSensor.html" title="SCA_JoystickSensor(SCA_ISensor)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

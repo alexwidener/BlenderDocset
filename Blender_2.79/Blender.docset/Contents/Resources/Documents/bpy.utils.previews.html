@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>bpy.utils submodule (bpy.utils.previews) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.utils.units.html" rel="next" title="bpy.utils submodule (bpy.utils.units)"/>
+<link href="bpy.utils.html" rel="prev" title="Utilities (bpy.utils)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.utils.units.html" title="bpy.utils submodule (bpy.utils.units)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.utils.html" title="Utilities (bpy.utils)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.utils.html">Utilities (bpy.utils)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.utils.previews">
+<span id="bpy-utils-submodule-bpy-utils-previews"></span><h1><a name="//apple_ref/cpp/Module/bpy.utils.previews"></a>bpy.utils submodule (bpy.utils.previews)<a class="headerlink" href="#module-bpy.utils.previews" title="Permalink to this headline">¶</a></h1>
+<p>This module contains utility functions to handle custom previews.</p>
+<p>It behaves as a high-level ‘cached’ previews manager.</p>
+<p>This allows scripts to generate their own previews, and use them as icons in UI widgets
+(‘icon_value’ for UILayout functions).</p>
+<div class="section" id="custom-icon-example">
+<h2>Custom Icon Example<a class="headerlink" href="#custom-icon-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># This sample script demonstrates how to place a custom icon on a button or</span>
+<span class="c1"># menu entry.</span>
+<span class="c1">#</span>
+<span class="c1"># IMPORTANT NOTE: if you run this sample, there will be no icon in the button</span>
+<span class="c1"># You need to replace the image path with a real existing one.</span>
+<span class="c1"># For distributable scripts, it is recommended to place the icons inside the</span>
+<span class="c1"># addon folder and access it relative to the py script file for portability</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># Other use cases for UI-previews:</span>
+<span class="c1"># - provide a fixed list of previews to select from</span>
+<span class="c1"># - provide a dynamic list of preview (eg. calculated from reading a directory)</span>
+<span class="c1">#</span>
+<span class="c1"># For the above use cases, see the template 'ui_previews_dynamic_enum.py"</span>
+
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">bpy</span>
+
+
+<span class="k">class</span> <span class="nc">PreviewsExamplePanel</span><span class="p">(</span><span class="n">bpy</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">Panel</span><span class="p">):</span>
+    <span class="sd">"""Creates a Panel in the Object properties window"""</span>
+    <span class="n">bl_label</span> <span class="o">=</span> <span class="s2">"Previews Example Panel"</span>
+    <span class="n">bl_idname</span> <span class="o">=</span> <span class="s2">"OBJECT_PT_previews"</span>
+    <span class="n">bl_space_type</span> <span class="o">=</span> <span class="s1">'PROPERTIES'</span>
+    <span class="n">bl_region_type</span> <span class="o">=</span> <span class="s1">'WINDOW'</span>
+    <span class="n">bl_context</span> <span class="o">=</span> <span class="s2">"object"</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layout</span>
+        <span class="n">pcoll</span> <span class="o">=</span> <span class="n">preview_collections</span><span class="p">[</span><span class="s2">"main"</span><span class="p">]</span>
+
+        <span class="n">row</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">row</span><span class="p">()</span>
+        <span class="n">my_icon</span> <span class="o">=</span> <span class="n">pcoll</span><span class="p">[</span><span class="s2">"my_icon"</span><span class="p">]</span>
+        <span class="n">row</span><span class="o">.</span><span class="n">operator</span><span class="p">(</span><span class="s2">"render.render"</span><span class="p">,</span> <span class="n">icon_value</span><span class="o">=</span><span class="n">my_icon</span><span class="o">.</span><span class="n">icon_id</span><span class="p">)</span>
+
+        <span class="c1"># my_icon.icon_id can be used in any UI function that accepts</span>
+        <span class="c1"># icon_value # try also setting text=""</span>
+        <span class="c1"># to get an icon only operator button</span>
+
+
+<span class="c1"># We can store multiple preview collections here,</span>
+<span class="c1"># however in this example we only store "main"</span>
+<span class="n">preview_collections</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+
+    <span class="c1"># Note that preview collections returned by bpy.utils.previews</span>
+    <span class="c1"># are regular py objects - you can use them to store custom data.</span>
+    <span class="kn">import</span> <span class="nn">bpy.utils.previews</span>
+    <span class="n">pcoll</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">previews</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+
+    <span class="c1"># path to the folder where the icon is</span>
+    <span class="c1"># the path is calculated relative to this py file inside the addon folder</span>
+    <span class="n">my_icons_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">"icons"</span><span class="p">)</span>
+
+    <span class="c1"># load a preview thumbnail of a file and store in the previews collection</span>
+    <span class="n">pcoll</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"my_icon"</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">my_icons_dir</span><span class="p">,</span> <span class="s2">"icon-image.png"</span><span class="p">),</span> <span class="s1">'IMAGE'</span><span class="p">)</span>
+
+    <span class="n">preview_collections</span><span class="p">[</span><span class="s2">"main"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pcoll</span>
+
+    <span class="n">bpy</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">register_class</span><span class="p">(</span><span class="n">PreviewsExamplePanel</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">unregister</span><span class="p">():</span>
+
+    <span class="k">for</span> <span class="n">pcoll</span> <span class="ow">in</span> <span class="n">preview_collections</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="n">bpy</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">previews</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">pcoll</span><span class="p">)</span>
+    <span class="n">preview_collections</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="n">bpy</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">unregister_class</span><span class="p">(</span><span class="n">PreviewsExamplePanel</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">register</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="bpy.utils.previews.new"><a name="//apple_ref/cpp/Function/bpy.utils.previews.new"></a>
+<code class="descclassname">bpy.utils.previews.</code><code class="descname">new</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.previews.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a new preview collection.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#bpy.utils.previews.ImagePreviewCollection" title="bpy.utils.previews.ImagePreviewCollection"><code class="xref py py-class docutils literal"><span class="pre">ImagePreviewCollection</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy.utils.previews.remove"><a name="//apple_ref/cpp/Function/bpy.utils.previews.remove"></a>
+<code class="descclassname">bpy.utils.previews.</code><code class="descname">remove</code><span class="sig-paren">(</span><em>pcoll</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.previews.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the specified previews collection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pcoll</strong> (<a class="reference internal" href="#bpy.utils.previews.ImagePreviewCollection" title="bpy.utils.previews.ImagePreviewCollection"><code class="xref py py-class docutils literal"><span class="pre">ImagePreviewCollection</span></code></a>) – Preview collection to close.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="class">
+<dt id="bpy.utils.previews.ImagePreviewCollection"><a name="//apple_ref/cpp/Class/bpy.utils.previews.ImagePreviewCollection"></a>
+<em class="property">class </em><code class="descclassname">bpy.utils.previews.</code><code class="descname">ImagePreviewCollection</code><a class="headerlink" href="#bpy.utils.previews.ImagePreviewCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary-like class of previews.</p>
+<p>This is a subclass of Python’s built-in dict type,
+used to store multiple image previews.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>instance with <a class="reference internal" href="#bpy.utils.previews.new" title="bpy.utils.previews.new"><code class="xref py py-mod docutils literal"><span class="pre">bpy.utils.previews.new</span></code></a></li>
+<li>keys must be <code class="docutils literal"><span class="pre">str</span></code> type.</li>
+<li>values will be <a class="reference internal" href="bpy.types.ImagePreview.html#bpy.types.ImagePreview" title="bpy.types.ImagePreview"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.ImagePreview</span></code></a></li>
+</ul>
+</div>
+<dl class="method">
+<dt id="bpy.utils.previews.ImagePreviewCollection.clear"><a name="//apple_ref/cpp/Method/bpy.utils.previews.ImagePreviewCollection.clear"></a>
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.previews.ImagePreviewCollection.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all previews.</p>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.utils.previews.ImagePreviewCollection.close"><a name="//apple_ref/cpp/Method/bpy.utils.previews.ImagePreviewCollection.close"></a>
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.previews.ImagePreviewCollection.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the collection and clear all previews.</p>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.utils.previews.ImagePreviewCollection.load"><a name="//apple_ref/cpp/Method/bpy.utils.previews.ImagePreviewCollection.load"></a>
+<code class="descname">load</code><span class="sig-paren">(</span><em>name</em>, <em>filepath</em>, <em>filetype</em>, <em>force_reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.previews.ImagePreviewCollection.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a new preview from given file path, or return existing one matching <code class="docutils literal"><span class="pre">name</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>string</em>) – The name (unique id) identifying the preview.</li>
+<li><strong>filepath</strong> (<em>string</em>) – The file path to generate the preview from.</li>
+<li><strong>filetype</strong> (<em>string</em>) – The type of file, needed to generate the preview in [‘IMAGE’, ‘MOVIE’, ‘BLEND’, ‘FONT’].</li>
+<li><strong>force_reload</strong> (<em>bool</em>) – If True, force running thumbnail manager even if preview already exists in cache.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The Preview matching given name, or a new empty one.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="bpy.types.ImagePreview.html#bpy.types.ImagePreview" title="bpy.types.ImagePreview"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.ImagePreview</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.utils.previews.ImagePreviewCollection.new"><a name="//apple_ref/cpp/Method/bpy.utils.previews.ImagePreviewCollection.new"></a>
+<code class="descname">new</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.utils.previews.ImagePreviewCollection.new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a new empty preview, or return existing one matching <code class="docutils literal"><span class="pre">name</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>string</em>) – The name (unique id) identifying the preview.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The Preview matching given name, or a new empty one.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ImagePreview.html#bpy.types.ImagePreview" title="bpy.types.ImagePreview"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.ImagePreview</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h3><a href="contents.html">Table Of Contents</a></h3>
+<ul>
+<li><a class="reference internal" href="#">bpy.utils submodule (bpy.utils.previews)</a><ul>
+<li><a class="reference internal" href="#custom-icon-example">Custom Icon Example</a></li>
+</ul>
+</li>
+</ul>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.utils.html" title="previous chapter">Utilities (bpy.utils)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.utils.units.html" title="next chapter">bpy.utils submodule (bpy.utils.units)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.utils.units.html" title="bpy.utils submodule (bpy.utils.units)">next</a> |</li>
+<li class="right">
+<a href="bpy.utils.html" title="Utilities (bpy.utils)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.utils.html">Utilities (bpy.utils)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

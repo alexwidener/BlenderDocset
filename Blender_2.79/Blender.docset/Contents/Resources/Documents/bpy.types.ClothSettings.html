@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>ClothSettings(bpy_struct) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.types.ClothSolverResult.html" rel="next" title="ClothSolverResult(bpy_struct)"/>
+<link href="bpy.types.ClothModifier.html" rel="prev" title="ClothModifier(Modifier)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.ClothSolverResult.html" title="ClothSolverResult(bpy_struct)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.ClothModifier.html" title="ClothModifier(Modifier)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="clothsettings-bpy-struct"></span><h1>ClothSettings(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.ClothSettings"><a name="//apple_ref/cpp/Class/bpy.types.ClothSettings"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">ClothSettings</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.ClothSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloth simulation settings for an object</p>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.air_damping"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.air_damping"></a>
+<code class="descname">air_damping</code><a class="headerlink" href="#bpy.types.ClothSettings.air_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Air has normally some thickness which slows falling things down</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.bending_damping"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.bending_damping"></a>
+<code class="descname">bending_damping</code><a class="headerlink" href="#bpy.types.ClothSettings.bending_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Damping of bending motion</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.bending_stiffness"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.bending_stiffness"></a>
+<code class="descname">bending_stiffness</code><a class="headerlink" href="#bpy.types.ClothSettings.bending_stiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrinkle coefficient (higher = less smaller but more big wrinkles)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.bending_stiffness_max"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.bending_stiffness_max"></a>
+<code class="descname">bending_stiffness_max</code><a class="headerlink" href="#bpy.types.ClothSettings.bending_stiffness_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum bending stiffness value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.collider_friction"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.collider_friction"></a>
+<code class="descname">collider_friction</code><a class="headerlink" href="#bpy.types.ClothSettings.collider_friction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.density_strength"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.density_strength"></a>
+<code class="descname">density_strength</code><a class="headerlink" href="#bpy.types.ClothSettings.density_strength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Influence of target density on the simulation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.density_target"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.density_target"></a>
+<code class="descname">density_target</code><a class="headerlink" href="#bpy.types.ClothSettings.density_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum density of hair</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.ClothSettings.effector_weights"><a name="//apple_ref/cpp/Value/bpy.types.ClothSettings.effector_weights"></a>
+<code class="descname">effector_weights</code><a class="headerlink" href="#bpy.types.ClothSettings.effector_weights" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.EffectorWeights.html#bpy.types.EffectorWeights" title="bpy.types.EffectorWeights"><code class="xref py py-class docutils literal"><span class="pre">EffectorWeights</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.goal_default"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.goal_default"></a>
+<code class="descname">goal_default</code><a class="headerlink" href="#bpy.types.ClothSettings.goal_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default Goal (vertex target position) value, when no Vertex Group used</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.goal_friction"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.goal_friction"></a>
+<code class="descname">goal_friction</code><a class="headerlink" href="#bpy.types.ClothSettings.goal_friction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Goal (vertex target position) friction</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 50], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.goal_max"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.goal_max"></a>
+<code class="descname">goal_max</code><a class="headerlink" href="#bpy.types.ClothSettings.goal_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Goal maximum, vertex group weights are scaled to match this range</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.goal_min"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.goal_min"></a>
+<code class="descname">goal_min</code><a class="headerlink" href="#bpy.types.ClothSettings.goal_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Goal minimum, vertex group weights are scaled to match this range</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.goal_spring"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.goal_spring"></a>
+<code class="descname">goal_spring</code><a class="headerlink" href="#bpy.types.ClothSettings.goal_spring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Goal (vertex target position) spring stiffness</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 0.999], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.gravity"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.gravity"></a>
+<code class="descname">gravity</code><a class="headerlink" href="#bpy.types.ClothSettings.gravity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gravity or external force vector</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float array of 3 items in [-100, 100], default (0.0, 0.0, 0.0)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.internal_friction"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.internal_friction"></a>
+<code class="descname">internal_friction</code><a class="headerlink" href="#bpy.types.ClothSettings.internal_friction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.mass"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.mass"></a>
+<code class="descname">mass</code><a class="headerlink" href="#bpy.types.ClothSettings.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mass of cloth material</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.pin_stiffness"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.pin_stiffness"></a>
+<code class="descname">pin_stiffness</code><a class="headerlink" href="#bpy.types.ClothSettings.pin_stiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pin (vertex target position) spring stiffness</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 50], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.quality"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.quality"></a>
+<code class="descname">quality</code><a class="headerlink" href="#bpy.types.ClothSettings.quality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quality of the simulation in steps per frame (higher is better quality but slower)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [1, inf], default 0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.rest_shape_key"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.rest_shape_key"></a>
+<code class="descname">rest_shape_key</code><a class="headerlink" href="#bpy.types.ClothSettings.rest_shape_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shape key to use the rest spring lengths from</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.ShapeKey.html#bpy.types.ShapeKey" title="bpy.types.ShapeKey"><code class="xref py py-class docutils literal"><span class="pre">ShapeKey</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.sewing_force_max"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.sewing_force_max"></a>
+<code class="descname">sewing_force_max</code><a class="headerlink" href="#bpy.types.ClothSettings.sewing_force_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum sewing force</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.shrink_max"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.shrink_max"></a>
+<code class="descname">shrink_max</code><a class="headerlink" href="#bpy.types.ClothSettings.shrink_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max amount to shrink cloth by</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.shrink_min"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.shrink_min"></a>
+<code class="descname">shrink_min</code><a class="headerlink" href="#bpy.types.ClothSettings.shrink_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Min amount to shrink cloth by</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.spring_damping"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.spring_damping"></a>
+<code class="descname">spring_damping</code><a class="headerlink" href="#bpy.types.ClothSettings.spring_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Damping of cloth velocity (higher = more smooth, less jiggling)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 50], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.structural_stiffness"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.structural_stiffness"></a>
+<code class="descname">structural_stiffness</code><a class="headerlink" href="#bpy.types.ClothSettings.structural_stiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overall stiffness of structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.structural_stiffness_max"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.structural_stiffness_max"></a>
+<code class="descname">structural_stiffness_max</code><a class="headerlink" href="#bpy.types.ClothSettings.structural_stiffness_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum structural stiffness value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 10000], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.time_scale"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.time_scale"></a>
+<code class="descname">time_scale</code><a class="headerlink" href="#bpy.types.ClothSettings.time_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloth speed is multiplied by this value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, inf], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.use_dynamic_mesh"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.use_dynamic_mesh"></a>
+<code class="descname">use_dynamic_mesh</code><a class="headerlink" href="#bpy.types.ClothSettings.use_dynamic_mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make simulation respect deformations in the base mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.use_pin_cloth"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.use_pin_cloth"></a>
+<code class="descname">use_pin_cloth</code><a class="headerlink" href="#bpy.types.ClothSettings.use_pin_cloth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable pinning of cloth vertices to other objects/positions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.use_sewing_springs"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.use_sewing_springs"></a>
+<code class="descname">use_sewing_springs</code><a class="headerlink" href="#bpy.types.ClothSettings.use_sewing_springs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pulls loose edges together</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.use_stiffness_scale"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.use_stiffness_scale"></a>
+<code class="descname">use_stiffness_scale</code><a class="headerlink" href="#bpy.types.ClothSettings.use_stiffness_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>If enabled, stiffness can be scaled along a weight painted vertex group</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.vel_damping"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.vel_damping"></a>
+<code class="descname">vel_damping</code><a class="headerlink" href="#bpy.types.ClothSettings.vel_damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Damp velocity to help cloth reach the resting position faster (1.0 = no damping, 0.0 = fully dampened)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0, 1], default 0.0</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.vertex_group_bending"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.vertex_group_bending"></a>
+<code class="descname">vertex_group_bending</code><a class="headerlink" href="#bpy.types.ClothSettings.vertex_group_bending" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex group for fine control over bending stiffness</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.vertex_group_mass"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.vertex_group_mass"></a>
+<code class="descname">vertex_group_mass</code><a class="headerlink" href="#bpy.types.ClothSettings.vertex_group_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex Group for pinning of vertices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.vertex_group_shrink"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.vertex_group_shrink"></a>
+<code class="descname">vertex_group_shrink</code><a class="headerlink" href="#bpy.types.ClothSettings.vertex_group_shrink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex Group for shrinking cloth</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.vertex_group_structural_stiffness"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.vertex_group_structural_stiffness"></a>
+<code class="descname">vertex_group_structural_stiffness</code><a class="headerlink" href="#bpy.types.ClothSettings.vertex_group_structural_stiffness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex group for fine control over structural stiffness</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string, default “”, (never None)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.ClothSettings.voxel_cell_size"><a name="//apple_ref/cpp/Attribute/bpy.types.ClothSettings.voxel_cell_size"></a>
+<code class="descname">voxel_cell_size</code><a class="headerlink" href="#bpy.types.ClothSettings.voxel_cell_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of the voxel grid cells for interaction effects</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float in [0.0001, 10000], default 0.1</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.ClothModifier.html#bpy.types.ClothModifier.settings" title="bpy.types.ClothModifier.settings"><code class="xref py py-class docutils literal"><span class="pre">ClothModifier.settings</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.ClothModifier.html" title="previous chapter">ClothModifier(Modifier)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.ClothSolverResult.html" title="next chapter">ClothSolverResult(bpy_struct)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.ClothSolverResult.html" title="ClothSolverResult(bpy_struct)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.ClothModifier.html" title="ClothModifier(Modifier)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>

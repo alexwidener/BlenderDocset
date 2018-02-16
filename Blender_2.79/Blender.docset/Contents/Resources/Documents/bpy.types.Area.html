@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Area(bpy_struct) — Blender 2.79.0 855d2955c49 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.79.0 855d2955c49 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="_static/favicon.ico" rel="shortcut icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bpy.types.AreaLamp.html" rel="next" title="AreaLamp(Lamp)"/>
+<link href="bpy.types.AnyType.html" rel="prev" title="AnyType(bpy_struct)"/>
+</head>
+<body>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy.types.AreaLamp.html" title="AreaLamp(Lamp)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy.types.AnyType.html" title="AnyType(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy.types">
+<span id="area-bpy-struct"></span><h1>Area(bpy_struct)<a class="headerlink" href="#module-bpy.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct" title="bpy.types.bpy_struct"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct</span></code></a></p>
+<dl class="class">
+<dt id="bpy.types.Area"><a name="//apple_ref/cpp/Class/bpy.types.Area"></a>
+<em class="property">class </em><code class="descclassname">bpy.types.</code><code class="descname">Area</code><span class="sig-paren">(</span><em>bpy_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.Area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Area in a subdivided screen, containing an editor</p>
+<dl class="data">
+<dt id="bpy.types.Area.height"><a name="//apple_ref/cpp/Value/bpy.types.Area.height"></a>
+<code class="descname">height</code><a class="headerlink" href="#bpy.types.Area.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Area height</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 32767], default 0, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.Area.regions"><a name="//apple_ref/cpp/Value/bpy.types.Area.regions"></a>
+<code class="descname">regions</code><a class="headerlink" href="#bpy.types.Area.regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regions this area is subdivided in</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.bpy_prop_collection.html#bpy.types.bpy_prop_collection" title="bpy.types.bpy_prop_collection"><code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code></a> of <a class="reference internal" href="bpy.types.Region.html#bpy.types.Region" title="bpy.types.Region"><code class="xref py py-class docutils literal"><span class="pre">Region</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Area.show_menus"><a name="//apple_ref/cpp/Attribute/bpy.types.Area.show_menus"></a>
+<code class="descname">show_menus</code><a class="headerlink" href="#bpy.types.Area.show_menus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show menus in the header</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean, default False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.Area.spaces"><a name="//apple_ref/cpp/Value/bpy.types.Area.spaces"></a>
+<code class="descname">spaces</code><a class="headerlink" href="#bpy.types.Area.spaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spaces contained in this area, the first being the active space (NOTE: Useful for example to restore a previously used 3D view space in a certain area to get the old view orientation)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bpy.types.AreaSpaces.html#bpy.types.AreaSpaces" title="bpy.types.AreaSpaces"><code class="xref py py-class docutils literal"><span class="pre">AreaSpaces</span></code></a> <a class="reference internal" href="bpy.types.bpy_prop_collection.html#bpy.types.bpy_prop_collection" title="bpy.types.bpy_prop_collection"><code class="xref py py-class docutils literal"><span class="pre">bpy_prop_collection</span></code></a> of <a class="reference internal" href="bpy.types.Space.html#bpy.types.Space" title="bpy.types.Space"><code class="xref py py-class docutils literal"><span class="pre">Space</span></code></a>, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bpy.types.Area.type"><a name="//apple_ref/cpp/Attribute/bpy.types.Area.type"></a>
+<code class="descname">type</code><a class="headerlink" href="#bpy.types.Area.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current editor type for this area</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">EMPTY</span></code> Empty.</li>
+<li><code class="docutils literal"><span class="pre">VIEW_3D</span></code> 3D View, 3D viewport.</li>
+<li><code class="docutils literal"><span class="pre">TIMELINE</span></code> Timeline, Timeline and playback controls.</li>
+<li><code class="docutils literal"><span class="pre">GRAPH_EDITOR</span></code> Graph Editor, Edit drivers and keyframe interpolation.</li>
+<li><code class="docutils literal"><span class="pre">DOPESHEET_EDITOR</span></code> Dope Sheet, Adjust timing of keyframes.</li>
+<li><code class="docutils literal"><span class="pre">NLA_EDITOR</span></code> NLA Editor, Combine and layer Actions.</li>
+<li><code class="docutils literal"><span class="pre">IMAGE_EDITOR</span></code> UV/Image Editor, View and edit images and UV Maps.</li>
+<li><code class="docutils literal"><span class="pre">CLIP_EDITOR</span></code> Movie Clip Editor, Motion tracking tools.</li>
+<li><code class="docutils literal"><span class="pre">SEQUENCE_EDITOR</span></code> Video Sequence Editor, Video editing tools.</li>
+<li><code class="docutils literal"><span class="pre">NODE_EDITOR</span></code> Node Editor, Editor for node-based shading and compositing tools.</li>
+<li><code class="docutils literal"><span class="pre">TEXT_EDITOR</span></code> Text Editor, Edit scripts and in-file documentation.</li>
+<li><code class="docutils literal"><span class="pre">LOGIC_EDITOR</span></code> Logic Editor, Game logic editing.</li>
+<li><code class="docutils literal"><span class="pre">PROPERTIES</span></code> Properties, Edit properties of active object and related data-blocks.</li>
+<li><code class="docutils literal"><span class="pre">OUTLINER</span></code> Outliner, Overview of scene graph and all available data-blocks.</li>
+<li><code class="docutils literal"><span class="pre">USER_PREFERENCES</span></code> User Preferences, Edit persistent configuration settings.</li>
+<li><code class="docutils literal"><span class="pre">INFO</span></code> Info, Main menu bar and list of error messages (drag down to expand and display).</li>
+<li><code class="docutils literal"><span class="pre">FILE_BROWSER</span></code> File Browser, Browse for files and assets.</li>
+<li><code class="docutils literal"><span class="pre">CONSOLE</span></code> Python Console, Interactive programmatic console for advanced editing and script development.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">enum in [‘EMPTY’, ‘VIEW_3D’, ‘TIMELINE’, ‘GRAPH_EDITOR’, ‘DOPESHEET_EDITOR’, ‘NLA_EDITOR’, ‘IMAGE_EDITOR’, ‘CLIP_EDITOR’, ‘SEQUENCE_EDITOR’, ‘NODE_EDITOR’, ‘TEXT_EDITOR’, ‘LOGIC_EDITOR’, ‘PROPERTIES’, ‘OUTLINER’, ‘USER_PREFERENCES’, ‘INFO’, ‘FILE_BROWSER’, ‘CONSOLE’], default ‘VIEW_3D’</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.Area.width"><a name="//apple_ref/cpp/Value/bpy.types.Area.width"></a>
+<code class="descname">width</code><a class="headerlink" href="#bpy.types.Area.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Area width</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [0, 32767], default 0, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.Area.x"><a name="//apple_ref/cpp/Value/bpy.types.Area.x"></a>
+<code class="descname">x</code><a class="headerlink" href="#bpy.types.Area.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window relative vertical location of the area</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [-inf, inf], default 0, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy.types.Area.y"><a name="//apple_ref/cpp/Value/bpy.types.Area.y"></a>
+<code class="descname">y</code><a class="headerlink" href="#bpy.types.Area.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window relative horizontal location of the area</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int in [-inf, inf], default 0, (readonly)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.types.Area.tag_redraw"><a name="//apple_ref/cpp/Method/bpy.types.Area.tag_redraw"></a>
+<code class="descname">tag_redraw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.Area.tag_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>tag_redraw</p>
+</dd></dl>
+<dl class="method">
+<dt id="bpy.types.Area.header_text_set"><a name="//apple_ref/cpp/Method/bpy.types.Area.header_text_set"></a>
+<code class="descname">header_text_set</code><span class="sig-paren">(</span><em>text=""</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy.types.Area.header_text_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the header text</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"/>
+<col class="field-body"/>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>string</em><em>, </em><em>(</em><em>optional</em><em>, </em><em>never None</em><em>)</em>) – Text, New string for the header, no argument clears the text</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+<p class="rubric">Inherited Properties</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.id_data" title="bpy.types.bpy_struct.id_data"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.id_data</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+</ul>
+</td></tr></table>
+<p class="rubric">Inherited Functions</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.as_pointer" title="bpy.types.bpy_struct.as_pointer"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.as_pointer</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_add" title="bpy.types.bpy_struct.driver_add"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_add</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.driver_remove" title="bpy.types.bpy_struct.driver_remove"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.driver_remove</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.get" title="bpy.types.bpy_struct.get"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.get</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_hidden" title="bpy.types.bpy_struct.is_property_hidden"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_hidden</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_readonly" title="bpy.types.bpy_struct.is_property_readonly"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_readonly</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.is_property_set" title="bpy.types.bpy_struct.is_property_set"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.is_property_set</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.items" title="bpy.types.bpy_struct.items"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.items</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_delete" title="bpy.types.bpy_struct.keyframe_delete"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_delete</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keyframe_insert" title="bpy.types.bpy_struct.keyframe_insert"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keyframe_insert</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.keys" title="bpy.types.bpy_struct.keys"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.keys</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_from_id" title="bpy.types.bpy_struct.path_from_id"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_from_id</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.path_resolve" title="bpy.types.bpy_struct.path_resolve"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.path_resolve</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.property_unset" title="bpy.types.bpy_struct.property_unset"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.property_unset</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.type_recast" title="bpy.types.bpy_struct.type_recast"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.type_recast</span></code></a></li>
+<li><a class="reference internal" href="bpy.types.bpy_struct.html#bpy.types.bpy_struct.values" title="bpy.types.bpy_struct.values"><code class="xref py py-class docutils literal"><span class="pre">bpy_struct.values</span></code></a></li>
+</ul>
+</td></tr></table>
+<p class="rubric">References</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Context.html#bpy.types.Context.area" title="bpy.types.Context.area"><code class="xref py py-class docutils literal"><span class="pre">Context.area</span></code></a></li>
+</ul>
+</td><td><ul class="simple">
+<li><a class="reference internal" href="bpy.types.Screen.html#bpy.types.Screen.areas" title="bpy.types.Screen.areas"><code class="xref py py-class docutils literal"><span class="pre">Screen.areas</span></code></a></li>
+</ul>
+</td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<p class="logo"><a href="contents.html">
+<img alt="Logo" class="logo" src="_static/blender_logo.svg"/>
+</a></p>
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy.types.AnyType.html" title="previous chapter">AnyType(bpy_struct)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy.types.AreaLamp.html" title="next chapter">AreaLamp(Lamp)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="search.html" class="search" method="get">
+<div><input name="q" type="text"/></div>
+<div><input type="submit" value="Go"/></div>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy.types.AreaLamp.html" title="AreaLamp(Lamp)">next</a> |</li>
+<li class="right">
+<a href="bpy.types.AnyType.html" title="AnyType(bpy_struct)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.79.0 855d2955c49 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy.types.html">Types (bpy.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+    </div>
+</body>
+</html>
