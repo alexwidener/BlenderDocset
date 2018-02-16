@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.types.KX_SoundActuator.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>KX_SoundActuator(SCA_IActuator) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bge.types.html" rel="up" title="Game Types (bge.types)"/>
+<link href="bge.types.KX_StateActuator.html" rel="next" title="KX_StateActuator(SCA_IActuator)"/>
+<link href="bge.types.KX_SceneActuator.html" rel="prev" title="KX_SceneActuator(SCA_IActuator)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.KX_StateActuator.html" title="KX_StateActuator(SCA_IActuator)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.KX_SceneActuator.html" title="KX_SceneActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="kx-soundactuator-sca-iactuator"></span><h1>KX_SoundActuator(SCA_IActuator)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_IActuator.html#bge.types.SCA_IActuator" title="bge.types.SCA_IActuator"><code class="xref py py-class docutils literal"><span class="pre">SCA_IActuator</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.KX_SoundActuator"><a name="//apple_ref/cpp/Class/bge.types.KX_SoundActuator"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">KX_SoundActuator</code><span class="sig-paren">(</span><em>SCA_IActuator</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SoundActuator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sound Actuator.</p>
+<p>The <a class="reference internal" href="#bge.types.KX_SoundActuator.startSound" title="bge.types.KX_SoundActuator.startSound"><code class="xref py py-data docutils literal"><span class="pre">startSound</span></code></a>, <a class="reference internal" href="#bge.types.KX_SoundActuator.pauseSound" title="bge.types.KX_SoundActuator.pauseSound"><code class="xref py py-data docutils literal"><span class="pre">pauseSound</span></code></a> and <a class="reference internal" href="#bge.types.KX_SoundActuator.stopSound" title="bge.types.KX_SoundActuator.stopSound"><code class="xref py py-data docutils literal"><span class="pre">stopSound</span></code></a> do not require the actuator to be activated - they act instantly provided that the actuator has been activated once at least.</p>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.volume"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.volume"></a>
+<code class="descname">volume</code><a class="headerlink" href="#bge.types.KX_SoundActuator.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>The volume (gain) of the sound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.time"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.time"></a>
+<code class="descname">time</code><a class="headerlink" href="#bge.types.KX_SoundActuator.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current position in the audio stream (in seconds).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.pitch"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.pitch"></a>
+<code class="descname">pitch</code><a class="headerlink" href="#bge.types.KX_SoundActuator.pitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>The pitch of the sound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.mode"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.mode"></a>
+<code class="descname">mode</code><a class="headerlink" href="#bge.types.KX_SoundActuator.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation mode of the actuator. Can be one of <a class="reference internal" href="bge.logic.html#logic-sound-actuator"><span>these constants</span></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.sound"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.sound"></a>
+<code class="descname">sound</code><a class="headerlink" href="#bge.types.KX_SoundActuator.sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sound the actuator should play.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">Audaspace factory</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.is3D"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.is3D"></a>
+<code class="descname">is3D</code><a class="headerlink" href="#bge.types.KX_SoundActuator.is3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the actuator should be using 3D sound. (read-only)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.volume_maximum"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.volume_maximum"></a>
+<code class="descname">volume_maximum</code><a class="headerlink" href="#bge.types.KX_SoundActuator.volume_maximum" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum gain of the sound, no matter how near it is.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.volume_minimum"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.volume_minimum"></a>
+<code class="descname">volume_minimum</code><a class="headerlink" href="#bge.types.KX_SoundActuator.volume_minimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum gain of the sound, no matter how far it is away.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.distance_reference"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.distance_reference"></a>
+<code class="descname">distance_reference</code><a class="headerlink" href="#bge.types.KX_SoundActuator.distance_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance where the sound has a gain of 1.0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.distance_maximum"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.distance_maximum"></a>
+<code class="descname">distance_maximum</code><a class="headerlink" href="#bge.types.KX_SoundActuator.distance_maximum" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum distance at which you can hear the sound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.attenuation"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.attenuation"></a>
+<code class="descname">attenuation</code><a class="headerlink" href="#bge.types.KX_SoundActuator.attenuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The influence factor on volume depending on distance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.cone_angle_inner"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.cone_angle_inner"></a>
+<code class="descname">cone_angle_inner</code><a class="headerlink" href="#bge.types.KX_SoundActuator.cone_angle_inner" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angle of the inner cone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.cone_angle_outer"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.cone_angle_outer"></a>
+<code class="descname">cone_angle_outer</code><a class="headerlink" href="#bge.types.KX_SoundActuator.cone_angle_outer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angle of the outer cone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SoundActuator.cone_volume_outer"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SoundActuator.cone_volume_outer"></a>
+<code class="descname">cone_volume_outer</code><a class="headerlink" href="#bge.types.KX_SoundActuator.cone_volume_outer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The gain outside the outer cone (the gain in the outer cone will be interpolated between this value and the normal gain in the inner cone).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_SoundActuator.startSound"><a name="//apple_ref/cpp/Method/bge.types.KX_SoundActuator.startSound"></a>
+<code class="descname">startSound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SoundActuator.startSound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the sound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_SoundActuator.pauseSound"><a name="//apple_ref/cpp/Method/bge.types.KX_SoundActuator.pauseSound"></a>
+<code class="descname">pauseSound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SoundActuator.pauseSound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses the sound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_SoundActuator.stopSound"><a name="//apple_ref/cpp/Method/bge.types.KX_SoundActuator.stopSound"></a>
+<code class="descname">stopSound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SoundActuator.stopSound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the sound.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.KX_SceneActuator.html" title="previous chapter">KX_SceneActuator(SCA_IActuator)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.KX_StateActuator.html" title="next chapter">KX_StateActuator(SCA_IActuator)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.KX_StateActuator.html" title="KX_StateActuator(SCA_IActuator)">next</a> |</li>
+<li class="right">
+<a href="bge.types.KX_SceneActuator.html" title="KX_SceneActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.types.KX_SoundActuator.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+</html>

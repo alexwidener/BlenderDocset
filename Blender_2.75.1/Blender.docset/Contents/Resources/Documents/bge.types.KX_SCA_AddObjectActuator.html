@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.types.KX_SCA_AddObjectActuator.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>KX_SCA_AddObjectActuator(SCA_IActuator) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bge.types.html" rel="up" title="Game Types (bge.types)"/>
+<link href="bge.types.KX_SCA_DynamicActuator.html" rel="next" title="KX_SCA_DynamicActuator(SCA_IActuator)"/>
+<link href="bge.types.KX_RaySensor.html" rel="prev" title="KX_RaySensor(SCA_ISensor)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.KX_SCA_DynamicActuator.html" title="KX_SCA_DynamicActuator(SCA_IActuator)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.KX_RaySensor.html" title="KX_RaySensor(SCA_ISensor)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="kx-sca-addobjectactuator-sca-iactuator"></span><h1>KX_SCA_AddObjectActuator(SCA_IActuator)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_IActuator.html#bge.types.SCA_IActuator" title="bge.types.SCA_IActuator"><code class="xref py py-class docutils literal"><span class="pre">SCA_IActuator</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.KX_SCA_AddObjectActuator"><a name="//apple_ref/cpp/Class/bge.types.KX_SCA_AddObjectActuator"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">KX_SCA_AddObjectActuator</code><span class="sig-paren">(</span><em>SCA_IActuator</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit Object Actuator (in Add Object Mode)</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>An Add Object actuator will be ignored if at game start, the linked object doesn’t exist (or is empty) or the linked object is in an active layer.</p>
+<div class="last highlight-none"><div class="highlight"><pre>Error: GameObject 'Name' has a AddObjectActuator 'ActuatorName' without object (in 'nonactive' layer)
+</pre></div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_AddObjectActuator.object"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_AddObjectActuator.object"></a>
+<code class="descname">object</code><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>the object this actuator adds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bge.types.KX_GameObject.html#bge.types.KX_GameObject" title="bge.types.KX_GameObject"><code class="xref py py-class docutils literal"><span class="pre">KX_GameObject</span></code></a> or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_AddObjectActuator.objectLastCreated"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_AddObjectActuator.objectLastCreated"></a>
+<code class="descname">objectLastCreated</code><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator.objectLastCreated" title="Permalink to this definition">¶</a></dt>
+<dd><p>the last added object from this actuator (read-only).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="bge.types.KX_GameObject.html#bge.types.KX_GameObject" title="bge.types.KX_GameObject"><code class="xref py py-class docutils literal"><span class="pre">KX_GameObject</span></code></a> or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_AddObjectActuator.time"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_AddObjectActuator.time"></a>
+<code class="descname">time</code><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>the lifetime of added objects, in frames. Set to 0 to disable automatic deletion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_AddObjectActuator.linearVelocity"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_AddObjectActuator.linearVelocity"></a>
+<code class="descname">linearVelocity</code><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator.linearVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>the initial linear velocity of added objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list [vx, vy, vz]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_SCA_AddObjectActuator.angularVelocity"><a name="//apple_ref/cpp/Attribute/bge.types.KX_SCA_AddObjectActuator.angularVelocity"></a>
+<code class="descname">angularVelocity</code><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator.angularVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>the initial angular velocity of added objects.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list [vx, vy, vz]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_SCA_AddObjectActuator.instantAddObject"><a name="//apple_ref/cpp/Method/bge.types.KX_SCA_AddObjectActuator.instantAddObject"></a>
+<code class="descname">instantAddObject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_SCA_AddObjectActuator.instantAddObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>adds the object without needing to calling SCA_PythonController.activate()</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use objectLastCreated to get the newly created object.</p>
+</div>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.KX_RaySensor.html" title="previous chapter">KX_RaySensor(SCA_ISensor)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.KX_SCA_DynamicActuator.html" title="next chapter">KX_SCA_DynamicActuator(SCA_IActuator)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.KX_SCA_DynamicActuator.html" title="KX_SCA_DynamicActuator(SCA_IActuator)">next</a> |</li>
+<li class="right">
+<a href="bge.types.KX_RaySensor.html" title="KX_RaySensor(SCA_ISensor)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.types.KX_SCA_AddObjectActuator.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:56 GMT -->
+</html>

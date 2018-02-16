@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.types.KX_PolyProxy.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:57 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>KX_PolyProxy(SCA_IObject) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bge.types.html" rel="up" title="Game Types (bge.types)"/>
+<link href="bge.types.KX_RadarSensor.html" rel="next" title="KX_RadarSensor(KX_NearSensor)"/>
+<link href="bge.types.KX_ParentActuator.html" rel="prev" title="KX_ParentActuator(SCA_IActuator)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bge.types.KX_RadarSensor.html" title="KX_RadarSensor(KX_NearSensor)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bge.types.KX_ParentActuator.html" title="KX_ParentActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bge.types">
+<span id="kx-polyproxy-sca-iobject"></span><h1>KX_PolyProxy(SCA_IObject)<a class="headerlink" href="#module-bge.types" title="Permalink to this headline">¶</a></h1>
+<p>base class — <a class="reference internal" href="bge.types.SCA_IObject.html#bge.types.SCA_IObject" title="bge.types.SCA_IObject"><code class="xref py py-class docutils literal"><span class="pre">SCA_IObject</span></code></a></p>
+<dl class="class">
+<dt id="bge.types.KX_PolyProxy"><a name="//apple_ref/cpp/Class/bge.types.KX_PolyProxy"></a>
+<em class="property">class </em><code class="descclassname">bge.types.</code><code class="descname">KX_PolyProxy</code><span class="sig-paren">(</span><em>SCA_IObject</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A polygon holds the index of the vertex forming the poylgon.</p>
+<p>Note:
+The polygon attributes are read-only, you need to retrieve the vertex proxy if you want
+to change the vertex settings.</p>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.material_name"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.material_name"></a>
+<code class="descname">material_name</code><a class="headerlink" href="#bge.types.KX_PolyProxy.material_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of polygon material, empty if no material.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.material"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.material"></a>
+<code class="descname">material</code><a class="headerlink" href="#bge.types.KX_PolyProxy.material" title="Permalink to this definition">¶</a></dt>
+<dd><p>The material of the polygon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">KX_PolygonMaterial</span></code> or <a class="reference internal" href="bge.types.KX_BlenderMaterial.html#bge.types.KX_BlenderMaterial" title="bge.types.KX_BlenderMaterial"><code class="xref py py-class docutils literal"><span class="pre">KX_BlenderMaterial</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.texture_name"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.texture_name"></a>
+<code class="descname">texture_name</code><a class="headerlink" href="#bge.types.KX_PolyProxy.texture_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The texture name of the polygon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.material_id"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.material_id"></a>
+<code class="descname">material_id</code><a class="headerlink" href="#bge.types.KX_PolyProxy.material_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The material index of the polygon, use this to retrieve vertex proxy from mesh proxy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.v1"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.v1"></a>
+<code class="descname">v1</code><a class="headerlink" href="#bge.types.KX_PolyProxy.v1" title="Permalink to this definition">¶</a></dt>
+<dd><p>vertex index of the first vertex of the polygon, use this to retrieve vertex proxy from mesh proxy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.v2"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.v2"></a>
+<code class="descname">v2</code><a class="headerlink" href="#bge.types.KX_PolyProxy.v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>vertex index of the second vertex of the polygon, use this to retrieve vertex proxy from mesh proxy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.v3"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.v3"></a>
+<code class="descname">v3</code><a class="headerlink" href="#bge.types.KX_PolyProxy.v3" title="Permalink to this definition">¶</a></dt>
+<dd><p>vertex index of the third vertex of the polygon, use this to retrieve vertex proxy from mesh proxy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.v4"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.v4"></a>
+<code class="descname">v4</code><a class="headerlink" href="#bge.types.KX_PolyProxy.v4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertex index of the fourth vertex of the polygon, 0 if polygon has only 3 vertex
+Use this to retrieve vertex proxy from mesh proxy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.visible"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.visible"></a>
+<code class="descname">visible</code><a class="headerlink" href="#bge.types.KX_PolyProxy.visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>visible state of the polygon: 1=visible, 0=invisible.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="attribute">
+<dt id="bge.types.KX_PolyProxy.collide"><a name="//apple_ref/cpp/Attribute/bge.types.KX_PolyProxy.collide"></a>
+<code class="descname">collide</code><a class="headerlink" href="#bge.types.KX_PolyProxy.collide" title="Permalink to this definition">¶</a></dt>
+<dd><p>collide state of the polygon: 1=receives collision, 0=collision free.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getMaterialName"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getMaterialName"></a>
+<code class="descname">getMaterialName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getMaterialName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the polygon material name with MA prefix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">material name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string">string</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getMaterial"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getMaterial"></a>
+<code class="descname">getMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The polygon material</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">KX_PolygonMaterial</span></code> or <a class="reference internal" href="bge.types.KX_BlenderMaterial.html#bge.types.KX_BlenderMaterial" title="bge.types.KX_BlenderMaterial"><code class="xref py py-class docutils literal"><span class="pre">KX_BlenderMaterial</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getTextureName"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getTextureName"></a>
+<code class="descname">getTextureName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getTextureName" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The texture name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string">string</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getMaterialIndex"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getMaterialIndex"></a>
+<code class="descname">getMaterialIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getMaterialIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the material bucket index of the polygon.
+This index and the ones returned by getVertexIndex() are needed to retrieve the vertex proxy from <code class="xref py py-class docutils literal"><span class="pre">MeshProxy</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the material index in the mesh</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getNumVertex"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getNumVertex"></a>
+<code class="descname">getNumVertex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getNumVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertex of the polygon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of vertex, 3 or 4.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.isVisible"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.isVisible"></a>
+<code class="descname">isVisible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.isVisible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the polygon is visible or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">0=invisible, 1=visible</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.isCollider"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.isCollider"></a>
+<code class="descname">isCollider</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.isCollider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the polygon is receives collision or not</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">0=collision free, 1=receives collision</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">integer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getVertexIndex"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getVertexIndex"></a>
+<code class="descname">getVertexIndex</code><span class="sig-paren">(</span><em>vertex</em><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getVertexIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mesh vertex index of a polygon vertex
+This index and the one returned by getMaterialIndex() are needed to retrieve the vertex proxy from <code class="xref py py-class docutils literal"><span class="pre">MeshProxy</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vertex</strong> – index of the vertex in the polygon: 0-&gt;3</li>
+<li><strong>vertex</strong> – integer</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">mesh vertex index</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">integer</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="method">
+<dt id="bge.types.KX_PolyProxy.getMesh"><a name="//apple_ref/cpp/Method/bge.types.KX_PolyProxy.getMesh"></a>
+<code class="descname">getMesh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bge.types.KX_PolyProxy.getMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mesh proxy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">mesh proxy</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">MeshProxy</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bge.types.KX_ParentActuator.html" title="previous chapter">KX_ParentActuator(SCA_IActuator)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bge.types.KX_RadarSensor.html" title="next chapter">KX_RadarSensor(KX_NearSensor)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bge.types.KX_RadarSensor.html" title="KX_RadarSensor(KX_NearSensor)">next</a> |</li>
+<li class="right">
+<a href="bge.types.KX_ParentActuator.html" title="KX_ParentActuator(SCA_IActuator)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bge.types.html">Game Types (bge.types)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bge.types.KX_PolyProxy.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:57 GMT -->
+</html>

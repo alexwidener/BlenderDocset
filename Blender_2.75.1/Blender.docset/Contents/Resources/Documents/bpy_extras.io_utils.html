@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy_extras.io_utils.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:57 GMT -->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>bpy_extras submodule (bpy_extras.io_utils) — Blender 2.75.1 - API documentation</title>
+<link href="_static/classic.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.75.1 - API',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<link href="contents.html" rel="top" title="Blender 2.75.1 - API documentation"/>
+<link href="bpy_extras.html" rel="up" title="Extra Utilities (bpy_extras)"/>
+<link href="bpy_extras.image_utils.html" rel="next" title="bpy_extras submodule (bpy_extras.image_utils)"/>
+<link href="bpy_extras.object_utils.html" rel="prev" title="bpy_extras submodule (bpy_extras.object_utils)"/>
+</head>
+<body role="document">
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a accesskey="N" href="bpy_extras.image_utils.html" title="bpy_extras submodule (bpy_extras.image_utils)">next</a> |</li>
+<li class="right">
+<a accesskey="P" href="bpy_extras.object_utils.html" title="bpy_extras submodule (bpy_extras.object_utils)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a accesskey="U" href="bpy_extras.html">Extra Utilities (bpy_extras)</a> »</li>
+</ul>
+</div>
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="module-bpy_extras.io_utils">
+<span id="bpy-extras-submodule-bpy-extras-io-utils"></span><h1><a name="//apple_ref/cpp/Module/bpy_extras.io_utils"></a>bpy_extras submodule (bpy_extras.io_utils)<a class="headerlink" href="#module-bpy_extras.io_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bpy_extras.io_utils.orientation_helper_factory"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.orientation_helper_factory"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">orientation_helper_factory</code><span class="sig-paren">(</span><em>name</em>, <em>axis_forward='Y'</em>, <em>axis_up='Z'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.orientation_helper_factory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.axis_conversion"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.axis_conversion"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">axis_conversion</code><span class="sig-paren">(</span><em>from_forward='Y'</em>, <em>from_up='Z'</em>, <em>to_forward='Y'</em>, <em>to_up='Z'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.axis_conversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each argument us an axis in [‘X’, ‘Y’, ‘Z’, ‘-X’, ‘-Y’, ‘-Z’]
+where the first 2 are a source and the second 2 are the target.</p>
+</dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.axis_conversion_ensure"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.axis_conversion_ensure"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">axis_conversion_ensure</code><span class="sig-paren">(</span><em>operator</em>, <em>forward_attr</em>, <em>up_attr</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.axis_conversion_ensure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to ensure an operator has valid axis conversion settings, intended
+to be used from <a class="reference internal" href="bpy.types.Operator.html#bpy.types.Operator.check" title="bpy.types.Operator.check"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Operator.check</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>operator</strong> (<a class="reference internal" href="bpy.types.Operator.html#bpy.types.Operator" title="bpy.types.Operator"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Operator</span></code></a>) – the operator to access axis attributes from.</li>
+<li><strong>forward_attr</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – attribute storing the forward axis</li>
+<li><strong>up_attr</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – attribute storing the up axis</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">True if the value was modified.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.create_derived_objects"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.create_derived_objects"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">create_derived_objects</code><span class="sig-paren">(</span><em>scene</em>, <em>ob</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.create_derived_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.free_derived_objects"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.free_derived_objects"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">free_derived_objects</code><span class="sig-paren">(</span><em>ob</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.free_derived_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.unpack_list"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.unpack_list"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">unpack_list</code><span class="sig-paren">(</span><em>list_of_tuples</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.unpack_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.unpack_face_list"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.unpack_face_list"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">unpack_face_list</code><span class="sig-paren">(</span><em>list_of_tuples</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.unpack_face_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.path_reference"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.path_reference"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">path_reference</code><span class="sig-paren">(</span><em>filepath</em>, <em>base_src</em>, <em>base_dst</em>, <em>mode='AUTO'</em>, <em>copy_subdir=''</em>, <em>copy_set=None</em>, <em>library=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.path_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a filepath relative to a destination directory, for use with
+exporters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filepath</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – the file path to return,
+supporting blenders relative ‘//’ prefix.</li>
+<li><strong>base_src</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – the directory the <em>filepath</em> is relative too
+(normally the blend file).</li>
+<li><strong>base_dst</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – the directory the <em>filepath</em> will be referenced from
+(normally the export path).</li>
+<li><strong>mode</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – the method used get the path in
+[‘AUTO’, ‘ABSOLUTE’, ‘RELATIVE’, ‘MATCH’, ‘STRIP’, ‘COPY’]</li>
+<li><strong>copy_subdir</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – the subdirectory of <em>base_dst</em> to use when mode=’COPY’.</li>
+<li><strong>copy_set</strong> (<em>set</em>) – collect from/to pairs when mode=’COPY’,
+pass to <em>path_reference_copy</em> when exporting is done.</li>
+<li><strong>library</strong> (<a class="reference internal" href="bpy.types.Library.html#bpy.types.Library" title="bpy.types.Library"><code class="xref py py-class docutils literal"><span class="pre">bpy.types.Library</span></code></a> or None) – The library this path is relative to.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the new filepath.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string">string</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.path_reference_copy"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.path_reference_copy"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">path_reference_copy</code><span class="sig-paren">(</span><em>copy_set</em>, <em>report=&lt;built-in function print&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.path_reference_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute copying files of path_reference</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>copy_set</strong> (<em>set</em>) – set of (from, to) pairs to copy.</li>
+<li><strong>report</strong> (<em>function</em>) – function used for reporting warnings, takes a string argument.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="function">
+<dt id="bpy_extras.io_utils.unique_name"><a name="//apple_ref/cpp/Function/bpy_extras.io_utils.unique_name"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">unique_name</code><span class="sig-paren">(</span><em>key</em>, <em>name</em>, <em>name_dict</em>, <em>name_max=-1</em>, <em>clean_func=None</em>, <em>sep='.'</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.unique_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function for storing unique names which may have special characters
+stripped and restricted to a maximum length.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name"></col>
+<col class="field-body"></col>
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> (any hashable object associated with the <em>name</em>.) – unique item this name belongs to, name_dict[key] will be reused
+when available.
+This can be the object, mesh, material, etc instance its self.</li>
+<li><strong>name</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – The name used to create a unique value in <em>name_dict</em>.</li>
+<li><strong>name_dict</strong> (<em>dict</em>) – This is used to cache namespace to ensure no collisions
+occur, this should be an empty dict initially and only modified by this
+function.</li>
+<li><strong>clean_func</strong> (<em>function</em>) – Function to call on <em>name</em> before creating a unique value.</li>
+<li><strong>sep</strong> (<a class="reference internal" href="bmesh.types.html#bmesh.types.BMLayerAccessEdge.string" title="bmesh.types.BMLayerAccessEdge.string"><em>string</em></a>) – Separator to use when between the name and a number when a
+duplicate name is found.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<dl class="data">
+<dt id="bpy_extras.io_utils.path_reference_mode"><a name="//apple_ref/cpp/Constant/bpy_extras.io_utils.path_reference_mode"></a>
+<code class="descclassname">bpy_extras.io_utils.</code><code class="descname">path_reference_mode</code><a class="headerlink" href="#bpy_extras.io_utils.path_reference_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>constant value (&lt;built-in function EnumProperty&gt;, {‘name’: ‘Path Mode’, ‘items’: ((‘AUTO’, ‘Auto’, ‘Use Relative paths with subdirectories only’), (‘ABSOLUTE’, ‘Absolute’, ‘Always write absolute paths’), (‘RELATIVE’, ‘Relative’, ‘Always write relative paths (where possible)’), (‘MATCH’, ‘Match’, ‘Match Absolute/Relative setting with input path’), (‘STRIP’, ‘Strip Path’, ‘Filename only’), (‘COPY’, ‘Copy’, ‘Copy the file to the destination path (or subdirectory)’)), ‘default’: ‘AUTO’, ‘description’: ‘Method used to reference paths’, ‘attr’: ‘path_mode’})</p>
+</dd></dl>
+<dl class="class">
+<dt id="bpy_extras.io_utils.ExportHelper"><a name="//apple_ref/cpp/Class/bpy_extras.io_utils.ExportHelper"></a>
+<em class="property">class </em><code class="descclassname">bpy_extras.io_utils.</code><code class="descname">ExportHelper</code><a class="headerlink" href="#bpy_extras.io_utils.ExportHelper" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="bpy_extras.io_utils.ExportHelper.check"><a name="//apple_ref/cpp/Method/bpy_extras.io_utils.ExportHelper.check"></a>
+<code class="descname">check</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.ExportHelper.check" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="method">
+<dt id="bpy_extras.io_utils.ExportHelper.invoke"><a name="//apple_ref/cpp/Method/bpy_extras.io_utils.ExportHelper.invoke"></a>
+<code class="descname">invoke</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.ExportHelper.invoke" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="class">
+<dt id="bpy_extras.io_utils.ImportHelper"><a name="//apple_ref/cpp/Class/bpy_extras.io_utils.ImportHelper"></a>
+<em class="property">class </em><code class="descclassname">bpy_extras.io_utils.</code><code class="descname">ImportHelper</code><a class="headerlink" href="#bpy_extras.io_utils.ImportHelper" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="bpy_extras.io_utils.ImportHelper.check"><a name="//apple_ref/cpp/Method/bpy_extras.io_utils.ImportHelper.check"></a>
+<code class="descname">check</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.ImportHelper.check" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="method">
+<dt id="bpy_extras.io_utils.ImportHelper.invoke"><a name="//apple_ref/cpp/Method/bpy_extras.io_utils.ImportHelper.invoke"></a>
+<code class="descname">invoke</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#bpy_extras.io_utils.ImportHelper.invoke" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+<div class="sphinxsidebarwrapper">
+<h4>Previous topic</h4>
+<p class="topless"><a href="bpy_extras.object_utils.html" title="previous chapter">bpy_extras submodule (bpy_extras.object_utils)</a></p>
+<h4>Next topic</h4>
+<p class="topless"><a href="bpy_extras.image_utils.html" title="next chapter">bpy_extras submodule (bpy_extras.image_utils)</a></p>
+<div id="searchbox" role="search" style="display: none">
+<h3>Quick search</h3>
+<form action="http://www.blender.org/api/blender_python_api_2_75_1/search.html" class="search" method="get">
+<input name="q" type="text"/>
+<input type="submit" value="Go"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+<p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+<div aria-label="related navigation" class="related" role="navigation">
+<h3>Navigation</h3>
+<ul>
+<li class="right" style="margin-right: 10px">
+<a href="genindex.html" title="General Index">index</a></li>
+<li class="right">
+<a href="py-modindex.html" title="Python Module Index">modules</a> |</li>
+<li class="right">
+<a href="bpy_extras.image_utils.html" title="bpy_extras submodule (bpy_extras.image_utils)">next</a> |</li>
+<li class="right">
+<a href="bpy_extras.object_utils.html" title="bpy_extras submodule (bpy_extras.object_utils)">previous</a> |</li>
+<li class="nav-item nav-item-0"><a href="contents.html">Blender 2.75.1 - API documentation</a> »</li>
+<li class="nav-item nav-item-1"><a href="bpy_extras.html">Extra Utilities (bpy_extras)</a> »</li>
+</ul>
+</div>
+<div class="footer" role="contentinfo">
+        © Copyright Blender Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+</body>
+<!-- Mirrored from www.blender.org/api/blender_python_api_2_75_1/bpy_extras.io_utils.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Aug 2015 01:48:57 GMT -->
+</html>
